@@ -1,0 +1,773 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>States of Nigeria – HTEA</title>
+    <!-- Luxury Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* ============================================================
+           RESET & BASE
+           ============================================================ */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', sans-serif; background: #f5f6f8; color: #2c3e50; line-height: 1.6; }
+        h1, h2, h3, h4 { font-family: 'Playfair Display', serif; }
+        a { text-decoration: none; }
+
+      /* ============================================================
+           NAVIGATION
+           ============================================================ */
+        nav {
+            background: #0b1f2a; /* Deep Navy */
+            color: #ffffff;
+            padding: 16px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+            position: relative;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 6px; /* REDUCED GAP */
+        }
+
+        .logo-img {
+            width: 60px;
+            height: 60px;
+            object-fit: contain;
+        }
+
+        .logo-text {
+            display: flex;
+            flex-direction: column;
+            line-height: 1;
+        }
+
+        .brand-name {
+            font-size: 1.6rem;
+            font-weight: 800;
+            color: #ffffff;
+            letter-spacing: 0.5px;
+        }
+
+        .brand-name span { color: #D4AF37; }
+
+        .tagline {
+            font-size: 0.6rem;
+            color: #94a3b8;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .hamburger {
+            display: none;
+            font-size: 2rem;
+            cursor: pointer;
+            color: #D4AF37;
+            user-select: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 25px;
+            align-items: center;
+        }
+
+        .nav-links a {
+            color: #ffffff;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: color 0.2s;
+        }
+
+        .nav-links a:hover { color: #D4AF37; }
+
+        .nav-cta {
+            background: #D4AF37;
+            color: #0b1f2a !important;
+            padding: 8px 20px;
+            border-radius: 40px;
+            font-weight: 700;
+            transition: 0.2s;
+        }
+
+        .nav-cta:hover {
+            background: #e6c04c;
+            transform: scale(1.05);
+        }
+        @media (max-width: 768px) {
+            .hamburger { display: block; }
+            .nav-links {
+                display: none;
+                width: 100%;
+                flex-direction: column;
+                align-items: center;
+                gap: 15px;
+                padding: 20px 0;
+                background: #0b1f2a;
+                position: absolute;
+                top: 70px;
+                left: 0;
+                z-index: 999;
+                border-bottom: 2px solid #D4AF37;
+            }
+            .nav-links.active { display: flex; }
+            .nav-links a { width: 100%; text-align: center; padding: 8px 0; }
+            .nav-cta { width: 80%; text-align: center; }
+            .logo-img {
+                width: 40px;
+                height: 40px;
+            }
+            .brand-name {
+                font-size: 1.2rem;
+            }
+            .tagline {
+                font-size: 0.5rem;
+            }
+        }
+
+        /* ============================================================
+           HERO HEADER
+           ============================================================ */
+        .page-header {
+            background: linear-gradient(rgba(11, 31, 42, 0.88), rgba(11, 31, 42, 0.95)),
+                        url('https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1200&q=80');
+            background-size: cover;
+            background-position: center;
+            color: #ffffff;
+            padding: 80px 20px 60px;
+            text-align: center;
+        }
+
+        .page-header h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 16px;
+        }
+
+        .page-header h1 span { color: #D4AF37; }
+
+        .page-header .tagline {
+            font-size: 1.1rem;
+            max-width: 650px;
+            margin: 0 auto;
+            opacity: 0.9;
+            line-height: 1.7;
+        }
+
+        /* ============================================================
+           CONTAINER
+           ============================================================ */
+        .container { max-width: 1200px; margin: 0 auto; padding: 60px 20px; }
+
+        /* ============================================================
+           STATES GRID
+           ============================================================ */
+        .states-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-bottom: 50px;
+        }
+
+        .state-card {
+            background: #ffffff;
+            border-radius: 16px;
+            padding: 30px;
+            text-align: center;
+            border: 1px solid #eef2f7;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+            transition: 0.3s;
+            position: relative;
+        }
+
+        .state-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+            border-color: #D4AF37;
+        }
+
+        .state-card.active {
+            border: 2px solid #D4AF37;
+            background: linear-gradient(135deg, #0b1f2a, #1a2a3a);
+            color: #ffffff;
+        }
+
+        .state-card.active .status-badge {
+            background: #D4AF37;
+            color: #0b1f2a;
+        }
+
+        .state-card .status-badge {
+            display: inline-block;
+            background: #f8f9fa;
+            padding: 6px 14px;
+            border-radius: 40px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 12px;
+        }
+
+        .state-card .state-icon {
+            font-size: 2.5rem;
+            margin-bottom: 12px;
+            display: block;
+        }
+
+        .state-card h3 {
+            font-size: 1.4rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        .state-card p {
+            font-size: 0.85rem;
+            line-height: 1.6;
+            margin-bottom: 8px;
+        }
+
+        /* ============================================================
+           CTA SECTION
+           ============================================================ */
+        .cta-section {
+            background: #ffffff;
+            border-radius: 16px;
+            padding: 50px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+            border: 1px solid #eef2f7;
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        .cta-section h2 {
+            font-size: 2.2rem;
+            margin-bottom: 16px;
+        }
+
+        .cta-section h2 span { color: #D4AF37; }
+
+        .cta-section p {
+            color: #7f8c8d;
+            margin-bottom: 24px;
+        }
+
+        .cta-section .btn-primary {
+            background: #D4AF37;
+            color: #0b1f2a;
+            padding: 16px 36px;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 1rem;
+            display: inline-block;
+            transition: 0.2s;
+            box-shadow: 0 4px 15px rgba(212, 175, 55, 0.4);
+        }
+
+        .cta-section .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(212, 175, 55, 0.5);
+        }
+
+        /* ============================================================
+           CONTACT
+           ============================================================ */
+        .contact-section {
+            background: #ffffff;
+            border-radius: 16px;
+            padding: 50px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+            border: 1px solid #eef2f7;
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        .contact-section h2 {
+            font-size: 2.2rem;
+            margin-bottom: 16px;
+        }
+
+        .contact-section h2 span { color: #D4AF37; }
+
+        .contact-section p {
+            color: #7f8c8d;
+            margin-bottom: 24px;
+        }
+
+        .contact-details {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-bottom: 30px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            background: #f8f9fa;
+            padding: 12px 24px;
+            border-radius: 40px;
+            border: 1px solid #eef2f7;
+        }
+
+        .contact-item .icon {
+            font-size: 1.5rem;
+        }
+
+        .contact-item .info {
+            font-weight: 600;
+            color: #0b1f2a;
+        }
+
+        /* ============================================================
+           WHATSAPP FLOATING BUTTON
+           ============================================================ */
+        .wa-float {
+            position: fixed;
+            bottom: 24px;
+            right: 24px;
+            background: #25D366;
+            color: white;
+            padding: 14px 20px;
+            border-radius: 50px;
+            font-weight: 700;
+            text-decoration: none;
+            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            z-index: 999;
+            font-size: 0.95rem;
+        }
+
+        .wa-float:hover { transform: scale(1.05); }
+
+        /* ============================================================
+           RESPONSIVE
+           ============================================================ */
+        @media (max-width: 768px) {
+            .page-header h1 { font-size: 2.2rem; }
+            .states-grid { grid-template-columns: 1fr 1fr; }
+            .cta-section { padding: 30px; }
+            .contact-section { padding: 30px; }
+            .contact-details { gap: 12px; }
+            .contact-item { padding: 10px 16px; }
+        }
+
+        @media (max-width: 480px) {
+            .states-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ===== NAVIGATION ===== -->
+    <nav>
+        <div class="logo">
+            <img src="img/award-logo4.png" alt="HTEA Logo" class="logo-img">
+            <div class="logo-text">
+                <span class="brand-name">HTE<span>A</span></span>
+                <span class="tagline">Hospitality & <br>Tourism Excellence <br>Awards</span>
+            </div>
+        </div>
+        <div class="hamburger" onclick="toggleMenu()">☰</div>
+        <div class="nav-links" id="navLinks">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="values.html">Values</a>
+            <a href="states.html">States</a>
+            <a href="https://kwashate.netlify.app">KWASHATE (Kwara Edition)</a>
+            <a href="contact.html" class="nav-cta">Contact Us</a>
+        </div>
+    </nav>
+
+    <!-- ===== HERO HEADER ===== -->
+    <header class="page-header">
+        <h1>States of <span>Nigeria</span></h1>
+        <p class="tagline">
+            HTEA is a national platform. Every state in Nigeria has the opportunity to host the awards,
+            celebrate its hospitality champions, and showcase its unique culture to the nation.
+        </p>
+    </header>
+
+    <!-- ===== MAIN CONTENT ===== -->
+    <section class="container">
+
+        <!-- ===== STATES GRID ===== -->
+        <div class="states-grid">
+
+            <!-- KWARA STATE (Active Host) -->
+            <div class="state-card active">
+                <span class="status-badge">Current Host</span>
+                <span class="state-icon">🏆</span>
+                <h3>Kwara State</h3>
+                <p>The inaugural edition of HTEA (2026). A state with rich cultural heritage and a growing hospitality sector.</p>
+                <a href="https://kwashate.netlify.app" style="color:#D4AF37; font-weight:700;">Visit KWASHATE 2026 →</a>
+            </div>
+
+            <!-- OSUN STATE -->
+            <div class="state-card">
+                <span class="status-badge">Next Host 2027</span>
+                <span class="state-icon">🌿</span>
+                <h3>Osun State</h3>
+                <p>The "Land of Virtue" – rich in sacred groves, cultural festivals, and growing tourism potential.</p>
+            </div>
+
+            <!-- OYO STATE -->
+            <div class="state-card">
+                <span class="status-badge">Upcoming 2028</span>
+                <span class="state-icon">🏛️</span>
+                <h3>Oyo State</h3>
+                <p>Home to the ancient city of Ibadan and a thriving hospitality and educational hub.</p>
+            </div>
+
+            <!-- ABIA STATE -->
+            <div class="state-card">
+                <span class="status-badge">Open</span>
+                <span class="state-icon">🤝</span>
+                <h3>Abia State</h3>
+                <p>Known for commerce and entrepreneurship. A potential host for a future edition.</p>
+            </div>
+
+            <!-- ADAMAWA STATE -->
+            <div class="state-card">
+                <span class="status-badge">Open</span>
+                <span class="state-icon">🌄</span>
+                <h3>Adamawa State</h3>
+                <p>The "Land of Beauty" – home to the Mandara Mountains and diverse cultures.</p>
+            </div>
+
+            <!-- AKWA IBOM STATE -->
+            <div class="state-card">
+                <span class="status-badge">Open</span>
+                <span class="state-icon">🏖️</span>
+                <h3>Akwa Ibom State</h3>
+                <p>Rich in oil, tourism, and cultural heritage. Strong potential for hospitality awards.</p>
+            </div>
+
+            <!-- ANAMBRA STATE -->
+            <div class="state-card">
+                <span class="status-badge">Open</span>
+                <span class="state-icon">🍽️</span>
+                <h3>Anambra State</h3>
+                <p>Home of Nigeria's culinary giants and a vibrant commercial hub.</p>
+            </div>
+
+            <!-- BAUCHI STATE -->
+            <div class="state-card">
+                <span class="status-badge">Open</span>
+                <span class="state-icon">🏞️</span>
+                <h3>Bauchi State</h3>
+                <p>Home to Yankari National Park, one of Nigeria's premier wildlife reserves.</p>
+            </div>
+
+            <!-- BAYELSA STATE -->
+            <div class="state-card">
+                <span class="status-badge">Open</span>
+                <span class="state-icon">🌊</span>
+                <h3>Bayelsa State</h3>
+                <p>The "Glory of the East" – rich in riverine tourism and cultural traditions.</p>
+            </div>
+
+            <!-- BENUE STATE -->
+            <div class="state-card">
+                <span class="status-badge">Open</span>
+                <span class="state-icon">🍞</span>
+                <h3>Benue State</h3>
+                <p>The "Food Basket of the Nation" – a natural fit for our food fair component.</p>
+            </div>
+
+            <!-- BORNO STATE -->
+            <div class="state-card">
+                <span class="status-badge">Open</span>
+                <span class="state-icon">🏰</span>
+                <h3>Borno State</h3>
+                <p>Home to Lake Chad and the historic city of Maiduguri. Resilient and growing.</p>
+            </div>
+
+            <!-- CROSS RIVER STATE -->
+            <div class="state-card">
+                <span class="status-badge">Open</span>
+                <span class="state-icon">🦁</span>
+                <h3>Cross River State</h3>
+                <p>Home to the Calabar Carnival and Obudu Cattle Ranch. A tourism powerhouse.</p>
+            </div>
+
+            <!-- DELTA STATE -->
+            <div class="state-card">
+                <span class="status-badge">Open</span>
+                <span class="state-icon">🛢️</span>
+                <h3>Delta State</h3>
+                <p>Rich in oil, culture, and the Niger Delta's natural beauty.</p>
+            </div>
+
+            <!-- EBONYI STATE -->
+            <div class="state-card">
+                <span class="status-badge">Open</span>
+                <span class="state-icon">⛰️</span>
+                <h3>Ebonyi State</h3>
+                <p>The "Salt of the Nation" – known for rice production and mineral resources.</p>
+            </div>
+
+            <!-- EDO STATE -->
+            <div class="state-card">
+                <span class="status-badge">Open</span>
+                <span class="state-icon">🎨</span>
+                <h3>Edo State</h3>
+                <p>Home to the Benin Kingdom, renowned for its art and cultural heritage.</p>
+            </div>
+
+            <!-- EKITI STATE -->
+            <div class="state-card">
+                <span class="status-badge">Open</span>
+                <span class="state-icon">🌳</span>
+                <h3>Ekiti State</h3>
+                <p>The "Land of Honour" – known for natural springs and rich cultural traditions.</p>
+            </div>
+
+            <!-- ENUGU STATE -->
+            <div class="state-card">
+                <span class="status-badge">Open</span>
+                <span class="state-icon">🏭</span>
+                <h3>Enugu State</h3>
+                <p>Home to the Coal City and a growing business and entertainment hub.</p>
+            </div>
+
+            <!-- GOMBE STATE -->
+            <div class="state-card">
+                <span class="status-badge">Open</span>
+                <span class="state-icon">🏞️</span>
+                <h3>Gombe State</h3>
+                <p>The "Jewel in the Savannah" – home to the Dadin Kowa Dam and rich landscapes.</p>
+            </div>
+
+            <!-- IMO STATE -->
+            <div class="state-card">
+                <span class="status-badge">Open</span>
+                <span class="state-icon">🏆</span>
+                <h3>Imo State</h3>
+                <p>The "Eastern Heartland" – known for hospitality, commerce, and cultural pride.</p>
+            </div>
+
+            <!-- JIGAWA STATE -->
+            <div class="state-card">
+                <span class="status-badge">Open</span>
+                <span class="state-icon">🌾</span>
+                <h3>Jigawa State</h3>
+                <p>A state rich in agricultural produce and historical significance.</p>
+            </div>
+
+            <!-- KADUNA STATE -->
+            <div class="state-card">
+                <span class="status-badge">Open</span>
+                <span class="state-icon">🏔️</span>
+                <h3>Kaduna State</h3>
+                <p>Home to the Kajuru Castle and diverse cultural traditions.</p>
+            </div>
+
+            <!-- KANO STATE -->
+            <div class="state-card">
+                <span class="status-badge">Open</span>
+                <span class="state-icon">🏰</span>
+                <h3>Kano State</h3>
+                <p>The "Centre of Commerce" – one of Nigeria's oldest and most vibrant cities.</p>
+            </div>
+
+            <!-- KATSINA STATE -->
+            <div class="state-card">
+                <span class="status-badge">Open</span>
+                <span class="state-icon">🏛️</span>
+                <h3>Katsina State</h3>
+                <p>Home to the famous Gobarau Minaret and a rich cultural heritage.</p>
+            </div>
+
+            <!-- KEBBI STATE -->
+            <div class="state-card">
+                <span class="status-badge">Open</span>
+                <span class="state-icon">🌍</span>
+                <h3>Kebbi State</h3>
+                <p>The "Land of Equity" – known for the Argungu Fishing Festival.</p>
+            </div>
+
+            <!-- KOGI STATE -->
+            <div class="state-card">
+                <span class="status-badge">Open</span>
+                <span class="state-icon">⛰️</span>
+                <h3>Kogi State</h3>
+                <p>The "Confluence State" – where the Niger and Benue rivers meet.</p>
+            </div>
+
+            <!-- KWARA STATE (Already Hosting) -->
+            <div class="state-card active">
+                <span class="status-badge">Current Host</span>
+                <span class="state-icon">🏆</span>
+                <h3>Kwara State</h3>
+                <p>The inaugural edition of HTEA (2026). A state with rich cultural heritage and a growing hospitality sector.</p>
+                <a href="https://kwashate.netlify.app" style="color:#D4AF37; font-weight:700;">Visit KWASHATE 2026 →</a>
+            </div>
+
+            <!-- LAGOS STATE -->
+            <div class="state-card">
+                <span class="status-badge">Open</span>
+                <span class="state-icon">🌆</span>
+                <h3>Lagos State</h3>
+                <p>The "Centre of Excellence" – Nigeria's commercial capital and hospitality hub.</p>
+            </div>
+
+            <!-- NASARAWA STATE -->
+            <div class="state-card">
+                <span class="status-badge">Open</span>
+                <span class="state-icon">⛰️</span>
+                <h3>Nasarawa State</h3>
+                <p>Home to the Farin Ruwa Falls and rich mineral resources.</p>
+            </div>
+
+            <!-- NIGER STATE -->
+            <div class="state-card">
+                <span class="status-badge">Open</span>
+                <span class="state-icon">🌊</span>
+                <h3>Niger State</h3>
+                <p>The "Power State" – home to the Kainji Dam and Gurara Falls.</p>
+            </div>
+
+            <!-- OGUN STATE -->
+            <div class="state-card">
+                <span class="status-badge">Open</span>
+                <span class="state-icon">🏭</span>
+                <h3>Ogun State</h3>
+                <p>The "Gateway State" – a growing industrial and tourism hub.</p>
+            </div>
+
+            <!-- ONDO STATE -->
+            <div class="state-card">
+                <span class="status-badge">Open</span>
+                <span class="state-icon">🌴</span>
+                <h3>Ondo State</h3>
+                <p>Home to the Idanre Hills and rich cocoa production.</p>
+            </div>
+
+            <!-- OSUN STATE (Next Host) -->
+            <div class="state-card active">
+                <span class="status-badge">Next Host 2027</span>
+                <span class="state-icon">🌿</span>
+                <h3>Osun State</h3>
+                <p>The "Land of Virtue" – rich in sacred groves, cultural festivals, and growing tourism potential.</p>
+            </div>
+
+            <!-- OYO STATE (Upcoming) -->
+            <div class="state-card active">
+                <span class="status-badge">Upcoming 2028</span>
+                <span class="state-icon">🏛️</span>
+                <h3>Oyo State</h3>
+                <p>Home to the ancient city of Ibadan and a thriving hospitality and educational hub.</p>
+            </div>
+
+            <!-- PLATEAU STATE -->
+            <div class="state-card">
+                <span class="status-badge">Open</span>
+                <span class="state-icon">🏔️</span>
+                <h3>Plateau State</h3>
+                <p>The "Home of Peace" – known for its cool climate and Jos Wildlife Park.</p>
+            </div>
+
+            <!-- RIVERS STATE -->
+            <div class="state-card">
+                <span class="status-badge">Open</span>
+                <span class="state-icon">🌊</span>
+                <h3>Rivers State</h3>
+                <p>The "Treasure Base" – Nigeria's oil hub with a thriving nightlife and hospitality scene.</p>
+            </div>
+
+            <!-- SOKOTO STATE -->
+            <div class="state-card">
+                <span class="status-badge">Open</span>
+                <span class="state-icon">🕌</span>
+                <h3>Sokoto State</h3>
+                <p>The "Seat of the Caliphate" – rich in Islamic history and cultural traditions.</p>
+            </div>
+
+            <!-- TARABA STATE -->
+            <div class="state-card">
+                <span class="status-badge">Open</span>
+                <span class="state-icon">🐘</span>
+                <h3>Taraba State</h3>
+                <p>The "Nature's Gift to the Nation" – home to the Mambilla Plateau.</p>
+            </div>
+
+            <!-- YOBE STATE -->
+            <div class="state-card">
+                <span class="status-badge">Open</span>
+                <span class="state-icon">🏜️</span>
+                <h3>Yobe State</h3>
+                <p>Home to the Dufuna Canoe and rich archaeological history.</p>
+            </div>
+
+            <!-- ZAMFARA STATE -->
+            <div class="state-card">
+                <span class="status-badge">Open</span>
+                <span class="state-icon">🛡️</span>
+                <h3>Zamfara State</h3>
+                <p>The "Home of Solid Minerals" – with growing tourism potential.</p>
+            </div>
+
+            <!-- FCT ABUJA -->
+            <div class="state-card">
+                <span class="status-badge">Open</span>
+                <span class="state-icon">🏛️</span>
+                <h3>FCT Abuja</h3>
+                <p>The "Center of Unity" – Nigeria's capital city and home to many international events.</p>
+            </div>
+
+        </div>
+
+        <!-- ===== CTA SECTION ===== -->
+        <div class="cta-section">
+            <h2>Is Your <span>State</span> Ready to Host?</h2>
+            <p>
+                Every state has the opportunity to host HTEA. If you are a state government, tourism board,
+                or hospitality association looking to bring national recognition to your state, we'd love
+                to hear from you.
+            </p>
+            <a href="https://wa.me/2348039661354?text=Hello%20HTEA%20Team!%20I%20would%20like%20to%20explore%20hosting%20HTEA%20in%20my%20state." class="btn-primary">📱 Express Interest</a>
+        </div>
+
+        <!-- ===== CONTACT ===== -->
+        <div class="contact-section" id="contact">
+            <h2>Get In <span>Touch</span></h2>
+            <p>Have a question or want to discuss hosting HTEA in your state?</p>
+            <div class="contact-details">
+                <div class="contact-item">
+                    <span class="icon">📞</span>
+                    <span class="info">08039661354</span>
+                </div>
+                <div class="contact-item">
+                    <span class="icon">📧</span>
+                    <span class="info">oborimusa@gmail.com</span>
+                </div>
+            </div>
+            <a href="https://wa.me/2348039661354?text=Hello%20HTEA%20Team!%20I%20would%20like%20to%20explore%20hosting%20HTEA%20in%20my%20state." class="btn-primary">📱 Chat on WhatsApp</a>
+        </div>
+    </section>
+
+    <!-- ===== WHATSAPP FLOATING BUTTON ===== -->
+    <a href="https://wa.me/2348039661354?text=Hello%20HTEA%20Team!%20I%20need%20more%20information." class="wa-float">💬 Chat with us</a>
+
+    <!-- ===== JAVASCRIPT ===== -->
+    <script>
+        function toggleMenu() {
+            var menu = document.getElementById("navLinks");
+            menu.classList.toggle("active");
+        }
+    </script>
+
+</body>
+</html>
