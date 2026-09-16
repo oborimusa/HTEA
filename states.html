@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Editions – HTEA</title>
+<meta name="description" content="HTEA rotates across all 36 states + FCT. See past, current, and upcoming editions.">
+<link rel="icon" type="image/png" href="img/award-logo4.png">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family:'Inter',sans-serif; background:#f5f6f8; color:#2c3e50; line-height:1.6; }
+h1,h2,h3,h4 { font-family:'Playfair Display',serif; }
+a { text-decoration:none; color:inherit; }
+nav { background:#0b1f2a; color:#fff; padding:16px 30px; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; box-shadow:0 2px 10px rgba(0,0,0,0.3); position:sticky; top:0; z-index:100; }
+.logo { display:flex; align-items:center; gap:8px; }
+.logo-link { display: flex; align-items: center; text-decoration: none; }
+.logo-img { width: 60px; height: 60px; object-fit: contain; border-radius: 50%; }
+.logo-text { display:flex; flex-direction:column; line-height:1.1; }
+.brand-name { font-size:1.6rem; font-weight:800; color:#fff; }
+.brand-name span { color:#D4AF37; }
+.tagline { font-size:0.6rem; color:#94a3b8; text-transform:uppercase; letter-spacing:2px; }
+.hamburger { display:none; font-size:2rem; cursor:pointer; color:#D4AF37; }
+.nav-links { display:flex; gap:25px; align-items:center; }
+.nav-links a { color:#fff; font-weight:600; font-size:0.9rem; }
+.nav-links a:hover { color:#D4AF37; }
+.nav-cta { background:#D4AF37; color:#0b1f2a !important; padding:8px 20px; border-radius:40px; font-weight:700; }
+@media (max-width:900px){
+  .hamburger{display:block}
+  .nav-links{display:none;width:100%;flex-direction:column;align-items:center;gap:15px;padding:20px 0;background:#0b1f2a;position:absolute;top:90px;left:0;z-index:999;border-bottom:2px solid #D4AF37}
+  .nav-links.active{display:flex}
+  .nav-links a{width:100%;text-align:center;padding:8px 0}
+  .nav-cta{width:80%;text-align:center}
+}
+.page-hero { background:linear-gradient(rgba(11,31,42,0.9),rgba(11,31,42,0.95)),url('https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1200&q=80'); background-size:cover; background-position:center; color:#fff; padding:100px 20px 70px; text-align:center; }
+.page-hero h1 { font-size:3rem; margin-bottom:12px; }
+.page-hero h1 span { color:#D4AF37; }
+.page-hero p { max-width:700px; margin:0 auto; opacity:0.9; font-size:1.1rem; }
+.container { max-width:1100px; margin:0 auto; padding:60px 20px; }
+
+.current-card { background:linear-gradient(135deg,#0b1f2a,#1e293b); border-radius:16px; padding:40px; color:#fff; margin-bottom:40px; border:2px solid #D4AF37; text-align:center; }
+.current-card .label { display:inline-block; background:#D4AF37; color:#0b1f2a; font-weight:700; font-size:0.75rem; padding:5px 14px; border-radius:40px; letter-spacing:1.5px; text-transform:uppercase; margin-bottom:16px; }
+.current-card h2 { font-size:2rem; margin-bottom:12px; }
+.current-card h2 span { color:#D4AF37; }
+.current-card p { color:#cbd5e1; margin-bottom:24px; font-size:1.05rem; }
+.current-card .btns { display:flex; gap:14px; justify-content:center; flex-wrap:wrap; }
+.btn-primary { background:#D4AF37; color:#0b1f2a; padding:14px 30px; border-radius:40px; font-weight:700; font-size:0.95rem; transition:0.2s; display:inline-block; }
+.btn-primary:hover { background:#e6c04c; transform:scale(1.05); }
+.btn-outline { background:transparent; color:#D4AF37; padding:14px 30px; border:2px solid #D4AF37; border-radius:40px; font-weight:700; font-size:0.95rem; transition:0.2s; display:inline-block; }
+.btn-outline:hover { background:#D4AF37; color:#0b1f2a; }
+
+.editions-table { background:#fff; border-radius:16px; padding:30px; box-shadow:0 4px 20px rgba(0,0,0,0.05); border:1px solid #eef2f7; overflow-x:auto; margin-bottom:40px; }
+table { width:100%; border-collapse:collapse; min-width:600px; }
+thead { background:#0b1f2a; color:#fff; }
+th { padding:16px 18px; text-align:left; font-family:'Inter',sans-serif; font-size:0.8rem; text-transform:uppercase; letter-spacing:1px; font-weight:700; }
+th:first-child { border-top-left-radius:10px; }
+th:last-child { border-top-right-radius:10px; }
+td { padding:18px; border-bottom:1px solid #eef2f7; font-size:0.95rem; }
+tr:last-child td { border-bottom:none; }
+tr:hover td { background:#f8f9fa; }
+.year-cell { font-weight:800; color:#D4AF37; font-family:'Playfair Display',serif; font-size:1.2rem; }
+.status-live { background:#D4AF37; color:#0b1f2a; padding:5px 14px; border-radius:40px; font-size:0.75rem; font-weight:700; text-transform:uppercase; letter-spacing:0.5px; }
+.status-planning { background:#e2e8f0; color:#475569; padding:5px 14px; border-radius:40px; font-size:0.75rem; font-weight:700; text-transform:uppercase; letter-spacing:0.5px; }
+.status-open { background:#0ea5e9; color:#fff; padding:5px 14px; border-radius:40px; font-size:0.75rem; font-weight:700; text-transform:uppercase; letter-spacing:0.5px; }
+.table-link { color:#D4AF37; font-weight:700; font-size:0.9rem; }
+.table-link:hover { text-decoration:underline; }
+.table-disabled { color:#94a3b8; font-size:0.9rem; }
+
+/* JUDGING ACROSS EDITIONS */
+.judging-section { background:#fff; border-radius:16px; padding:50px; box-shadow:0 4px 20px rgba(0,0,0,0.05); border:1px solid #eef2f7; margin-bottom:40px; }
+.judging-section h2 { font-size:2rem; color:#0b1f2a; margin-bottom:16px; text-align:center; }
+.judging-section h2 span { color:#D4AF37; }
+.judging-section .lead { text-align:center; color:#7f8c8d; font-size:1.05rem; max-width:700px; margin:0 auto 40px; line-height:1.8; }
+
+.judge-diagram { display:grid; grid-template-columns:1fr; gap:24px; margin-bottom:40px; }
+.judge-tier { background:#f8f9fa; border-radius:14px; padding:30px; border-left:6px solid #D4AF37; }
+.judge-tier.rotating { border-left-color:#0ea5e9; }
+.judge-tier .tier-label { display:inline-block; font-size:0.72rem; font-weight:700; padding:5px 14px; border-radius:40px; letter-spacing:1.5px; text-transform:uppercase; margin-bottom:12px; background:#D4AF37; color:#0b1f2a; }
+.judge-tier.rotating .tier-label { background:#0ea5e9; color:#fff; }
+.judge-tier h3 { font-size:1.4rem; color:#0b1f2a; margin-bottom:10px; }
+.judge-tier h3 span { color:#D4AF37; }
+.judge-tier p { color:#2c3e50; font-size:1rem; line-height:1.8; }
+
+.edition-panels { background:#f8f9fa; border-radius:14px; padding:30px; }
+.edition-panels h3 { font-size:1.4rem; color:#0b1f2a; margin-bottom:20px; text-align:center; }
+.edition-panels h3 span { color:#D4AF37; }
+.panel-row { display:grid; grid-template-columns:120px 1fr auto; gap:20px; align-items:center; padding:18px 0; border-bottom:1px dashed #e2e8f0; }
+.panel-row:last-child { border-bottom:none; }
+.panel-row .yr { font-weight:800; color:#D4AF37; font-family:'Playfair Display',serif; font-size:1.15rem; }
+.panel-row .details { color:#2c3e50; font-size:0.95rem; }
+.panel-row .details strong { color:#0b1f2a; }
+.panel-row .status-pill { font-size:0.72rem; font-weight:700; padding:5px 12px; border-radius:40px; text-transform:uppercase; letter-spacing:0.5px; white-space:nowrap; }
+.panel-row .pill-active { background:#D4AF37; color:#0b1f2a; }
+.panel-row .pill-pending { background:#e2e8f0; color:#475569; }
+@media (max-width:700px) {
+  .panel-row { grid-template-columns:1fr; gap:6px; text-align:left; }
+  .judging-section { padding:30px; }
+}
+
+@media (max-width:768px){ .page-hero h1{font-size:2.2rem} }
+footer { background:#0b1f2a; color:#94a3b8; padding:50px 20px 30px; text-align:center; margin-top:60px; }
+.footer-brand { font-size:1.6rem; font-weight:800; color:#fff; margin-bottom:8px; font-family:'Playfair Display',serif; }
+.footer-brand span { color:#D4AF37; }
+.footer-tagline { font-size:0.85rem; color:#D4AF37; text-transform:uppercase; letter-spacing:2px; margin-bottom:20px; }
+.footer-edition { background:rgba(212,175,55,0.1); border:1px solid #D4AF37; border-radius:12px; padding:14px 20px; display:inline-block; margin-bottom:24px; font-size:0.9rem; color:#cbd5e1; }
+.footer-edition a { color:#D4AF37; font-weight:700; }
+.footer-links { display:flex; justify-content:center; gap:22px; flex-wrap:wrap; margin-bottom:24px; }
+.footer-links a { color:#cbd5e1; font-size:0.9rem; }
+.footer-links a:hover { color:#D4AF37; }
+.copyright { font-size:0.8rem; color:#64748b; border-top:1px solid #1e293b; padding-top:20px; max-width:900px; margin:0 auto; }
+</style>
+</head>
+<body>
+<nav>
+  <div class="logo">
+    <a href="index.html" class="logo-link">
+        <img src="img/award-logo4.png" alt="HTEA Logo" class="logo-img">
+        <div class="logo-text">
+            <span class="brand-name">HTE<span>A</span></span>
+            <span class="tagline">Hospitality &<br>Tourism Excellence<br>Awards</span>
+        </div>
+    </a>
+</div>
+  <div class="hamburger" onclick="toggleMenu()">☰</div>
+  <div class="nav-links" id="navLinks">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="values.html">Values</a>
+    <a href="states.html">States</a>
+    <a href="https://kwashate.netlify.app">KWASHATE</a>
+    <a href="contact.html" class="nav-cta">Contact Us</a>
+  </div>
+</nav>
+
+<header class="page-hero">
+  <h1>Editions & <span>States</span></h1>
+  <p>HTEA is not a one-off event. It is a national movement — one state at a time.</p>
+</header>
+
+<main class="container">
+
+  <div class="current-card">
+    <span class="label">🏆 Now Live</span>
+    <h2>2026 Edition: <span>KWASHATE</span></h2>
+    <p>Kwara State Hospitality & Tourism Expo — hosted in Ilorin. Nominations open. Tables available. Sponsorship packages live.</p>
+    <div class="btns">
+      <a href="https://kwashate.netlify.app" class="btn-primary">Visit KWASHATE →</a>
+      <a href="https://kwashate.netlify.app/nominate.html" class="btn-outline">Nominate Now</a>
+    </div>
+  </div>
+
+  <div class="editions-table">
+    <table>
+      <thead>
+        <tr>
+          <th>Year</th>
+          <th>Host State</th>
+          <th>Edition</th>
+          <th>Status</th>
+          <th>Event Site</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="year-cell">2026</td>
+          <td><strong>Kwara State</strong></td>
+          <td>KWASHATE 2026</td>
+          <td><span class="status-live">Live</span></td>
+          <td><a href="https://kwashate.netlify.app" class="table-link">Visit →</a></td>
+        </tr>
+        <tr>
+          <td class="year-cell">2027</td>
+          <td>Osun State</td>
+          <td>OSUNHATE 2027</td>
+          <td><span class="status-planning">Planning</span></td>
+          <td><span class="table-disabled">Coming Soon</span></td>
+        </tr>
+        <tr>
+          <td class="year-cell">2028</td>
+          <td>Oyo State</td>
+          <td>OYOHATE 2028</td>
+          <td><span class="status-planning">Planning</span></td>
+          <td><span class="table-disabled">Coming Soon</span></td>
+        </tr>
+        <tr>
+          <td class="year-cell">2029</td>
+          <td>Your State</td>
+          <td>Open for Bidding</td>
+          <td><span class="status-open">Open</span></td>
+          <td><a href="contact.html" class="table-link">Apply to Host →</a></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- JUDGING ACROSS EDITIONS -->
+  <div class="judging-section">
+    <h2>Judging Across <span>Editions</span></h2>
+    <p class="lead">Because HTEA travels to a new state each year, the judging structure has two tiers — one permanent, one rotating.</p>
+
+    <div class="judge-diagram">
+      <div class="judge-tier">
+        <span class="tier-label">Permanent · Applies to All Editions</span>
+        <h3>HTEA <span>National Board</span></h3>
+        <p>The National Board is the permanent custodian of the HTEA standard. It stays the same regardless of which state hosts the awards — ensuring that "Best Luxury Hotel" means the same thing in Kwara as it will in Osun, Oyo, or anywhere else.</p>
+      </div>
+
+      <div class="judge-tier rotating">
+        <span class="tier-label">Rotating · Different Panel per Edition</span>
+        <h3>Edition <span>Judging Panel</span></h3>
+        <p>Each host state assembles its own seven-person Judging Panel — 3 from the state's Hotel Owners Association, 2 from the state government, and 2 from the state's business sector. This panel is dissolved after each edition, and a new one is formed for the next state.</p>
+      </div>
+    </div>
+
+    <div class="edition-panels">
+      <h3>Panel Status by <span>Edition</span></h3>
+
+      <div class="panel-row">
+        <div class="yr">2026</div>
+        <div class="details"><strong>KWASHATE Judging Panel</strong> — Kwara State. 7 judges serving the 2026 edition only.</div>
+        <div class="status-pill pill-active">Announcing Soon</div>
+      </div>
+      <div class="panel-row">
+        <div class="yr">2027</div>
+        <div class="details"><strong>OSUNHATE Judging Panel</strong> — Osun State. To be assembled in 2027 under National Board oversight.</div>
+        <div class="status-pill pill-pending">Pending</div>
+      </div>
+      <div class="panel-row">
+        <div class="yr">2028</div>
+        <div class="details"><strong>OYOHATE Judging Panel</strong> — Oyo State. To be assembled in 2028.</div>
+        <div class="status-pill pill-pending">Pending</div>
+      </div>
+      <div class="panel-row">
+        <div class="yr">2029</div>
+        <div class="details"><strong>Open for Bidding</strong> — Host state will assemble its own edition panel when confirmed.</div>
+        <div class="status-pill pill-pending">Open</div>
+      </div>
+    </div>
+  </div>
+
+</main>
+
+<footer>
+  <div class="footer-brand">HTE<span>A</span></div>
+  <div class="footer-tagline">Building the Future of Hospitality Excellence</div>
+  <div class="footer-edition">Current Edition: <a href="https://kwashate.netlify.app">KWASHATE 2026 — Kwara State →</a></div>
+  <div class="footer-links">
+    <a href="index.html">Home</a><a href="about.html">About</a><a href="values.html">Values</a><a href="states.html">States</a><a href="contact.html">Contact</a>
+  </div>
+  <div class="copyright">© 2026 HTEA. All rights reserved.</div>
+</footer>
+
+<script>function toggleMenu(){document.getElementById("navLinks").classList.toggle("active");}</script>
+</body>
+</html>

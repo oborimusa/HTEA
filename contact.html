@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact Us – HTEA</title>
+<meta name="description" content="Partner with HTEA — Nigeria's premier hospitality and tourism awards platform.">
+<link rel="icon" type="image/png" href="img/award-logo4.png">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family:'Inter',sans-serif; background:#f5f6f8; color:#2c3e50; line-height:1.6; }
+h1,h2,h3,h4 { font-family:'Playfair Display',serif; }
+a { text-decoration:none; color:inherit; }
+nav { background:#0b1f2a; color:#fff; padding:16px 30px; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; box-shadow:0 2px 10px rgba(0,0,0,0.3); position:sticky; top:0; z-index:100; }
+.logo { display:flex; align-items:center; gap:8px; }
+.logo-link { display: flex; align-items: center; text-decoration: none; }
+.logo-img { width: 60px; height: 60px; object-fit: contain; border-radius: 50%; }
+.logo-text { display:flex; flex-direction:column; line-height:1.1; }
+.brand-name { font-size:1.6rem; font-weight:800; color:#fff; }
+.brand-name span { color:#D4AF37; }
+.tagline { font-size:0.6rem; color:#94a3b8; text-transform:uppercase; letter-spacing:2px; }
+.hamburger { display:none; font-size:2rem; cursor:pointer; color:#D4AF37; }
+.nav-links { display:flex; gap:25px; align-items:center; }
+.nav-links a { color:#fff; font-weight:600; font-size:0.9rem; }
+.nav-links a:hover { color:#D4AF37; }
+.nav-cta { background:#D4AF37; color:#0b1f2a !important; padding:8px 20px; border-radius:40px; font-weight:700; }
+@media (max-width:900px){
+  .hamburger{display:block}
+  .nav-links{display:none;width:100%;flex-direction:column;align-items:center;gap:15px;padding:20px 0;background:#0b1f2a;position:absolute;top:90px;left:0;z-index:999;border-bottom:2px solid #D4AF37}
+  .nav-links.active{display:flex}
+  .nav-links a{width:100%;text-align:center;padding:8px 0}
+  .nav-cta{width:80%;text-align:center}
+}
+.page-hero { background:linear-gradient(rgba(11,31,42,0.9),rgba(11,31,42,0.95)),url('https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1200&q=80'); background-size:cover; background-position:center; color:#fff; padding:100px 20px 70px; text-align:center; }
+.page-hero h1 { font-size:3rem; margin-bottom:12px; }
+.page-hero h1 span { color:#D4AF37; }
+.page-hero p { max-width:700px; margin:0 auto; opacity:0.9; font-size:1.1rem; }
+.container { max-width:900px; margin:0 auto; padding:60px 20px; }
+.contact-grid { display:grid; grid-template-columns:1fr 1fr; gap:30px; }
+@media (max-width:768px){ .contact-grid{grid-template-columns:1fr} }
+.contact-card { background:#fff; border-radius:16px; padding:40px; border:1px solid #eef2f7; box-shadow:0 4px 20px rgba(0,0,0,0.05); }
+.contact-card h2 { font-size:1.7rem; color:#0b1f2a; margin-bottom:20px; }
+.contact-card h2 span { color:#D4AF37; }
+.contact-item { display:flex; align-items:center; gap:14px; padding:16px 0; border-bottom:1px dashed #eef2f7; }
+.contact-item:last-child { border-bottom:none; }
+.contact-item .icon { font-size:1.6rem; }
+.contact-item .label { font-size:0.8rem; color:#7f8c8d; text-transform:uppercase; letter-spacing:1px; }
+.contact-item .value { font-weight:600; color:#0b1f2a; font-size:1rem; }
+.contact-item .value a { color:#0b1f2a; }
+.contact-item .value a:hover { color:#D4AF37; }
+.socials-block { margin-top:24px; display:flex; gap:14px; flex-wrap:wrap; }
+.social-btn { background:#0b1f2a; color:#D4AF37; padding:12px 24px; border-radius:40px; font-weight:600; font-size:0.9rem; border:1px solid #D4AF37; transition:0.2s; }
+.social-btn:hover { background:#D4AF37; color:#0b1f2a; }
+form label { display:block; font-size:0.85rem; font-weight:600; color:#0b1f2a; margin-bottom:6px; text-transform:uppercase; letter-spacing:0.5px; }
+form input, form select, form textarea { width:100%; padding:12px 16px; border:1px solid #e2e8f0; border-radius:10px; font-family:'Inter',sans-serif; font-size:0.95rem; margin-bottom:16px; background:#f8f9fa; transition:0.2s; }
+form input:focus, form select:focus, form textarea:focus { outline:none; border-color:#D4AF37; background:#fff; }
+form textarea { min-height:120px; resize:vertical; }
+.btn-submit { background:#D4AF37; color:#0b1f2a; padding:14px 32px; border:none; border-radius:40px; font-weight:700; font-size:1rem; cursor:pointer; transition:0.2s; width:100%; }
+.btn-submit:hover { background:#e6c04c; transform:translateY(-2px); }
+@media (max-width:768px){ .page-hero h1{font-size:2.2rem} .contact-card{padding:28px} }
+footer { background:#0b1f2a; color:#94a3b8; padding:50px 20px 30px; text-align:center; margin-top:60px; }
+.footer-brand { font-size:1.6rem; font-weight:800; color:#fff; margin-bottom:8px; font-family:'Playfair Display',serif; }
+.footer-brand span { color:#D4AF37; }
+.footer-tagline { font-size:0.85rem; color:#D4AF37; text-transform:uppercase; letter-spacing:2px; margin-bottom:24px; }
+.footer-links { display:flex; justify-content:center; gap:22px; flex-wrap:wrap; margin-bottom:24px; }
+.footer-links a { color:#cbd5e1; font-size:0.9rem; }
+.footer-links a:hover { color:#D4AF37; }
+.footer-social { display:flex; justify-content:center; gap:16px; margin-bottom:24px; }
+.footer-social a { color:#D4AF37; font-size:0.9rem; border:1px solid #D4AF37; padding:8px 18px; border-radius:40px; transition:0.2s; }
+.footer-social a:hover { background:#D4AF37; color:#0b1f2a; }
+.copyright { font-size:0.8rem; color:#64748b; border-top:1px solid #1e293b; padding-top:20px; max-width:900px; margin:0 auto; }
+</style>
+</head>
+<body>
+<nav>
+  <div class="logo">
+    <a href="index.html" class="logo-link">
+        <img src="img/award-logo4.png" alt="HTEA Logo" class="logo-img">
+        <div class="logo-text">
+            <span class="brand-name">HTE<span>A</span></span>
+            <span class="tagline">Hospitality &<br>Tourism Excellence<br>Awards</span>
+        </div>
+    </a>
+</div>
+  <div class="hamburger" onclick="toggleMenu()">☰</div>
+  <div class="nav-links" id="navLinks">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="values.html">Values</a>
+    <a href="states.html">States</a>
+    <a href="https://kwashate.netlify.app">KWASHATE</a>
+    <a href="contact.html" class="nav-cta">Contact Us</a>
+  </div>
+</nav>
+
+<header class="page-hero">
+  <h1>Get In <span>Touch</span></h1>
+  <p>Ready to partner with Nigeria's premier hospitality awards platform?</p>
+</header>
+
+<main class="container">
+  <div class="contact-grid">
+    <div class="contact-card">
+      <h2>Contact <span>Details</span></h2>
+      <div class="contact-item">
+        <span class="icon">📞</span>
+        <div>
+          <div class="label">Business Phone</div>
+          <div class="value">[Add number]</div>
+        </div>
+      </div>
+      <div class="contact-item">
+        <span class="icon">📧</span>
+        <div>
+          <div class="label">General Inquiries</div>
+          <div class="value"><a href="mailto:info@hteanigeria.com">info@hteanigeria.com</a></div>
+        </div>
+      </div>
+      <div class="contact-item">
+        <span class="icon">📧</span>
+        <div>
+          <div class="label">Partnerships</div>
+          <div class="value"><a href="mailto:partnerships@hteanigeria.com">partnerships@hteanigeria.com</a></div>
+        </div>
+      </div>
+      <div class="contact-item">
+        <span class="icon">📧</span>
+        <div>
+          <div class="label">Press</div>
+          <div class="value"><a href="mailto:press@hteanigeria.com">press@hteanigeria.com</a></div>
+        </div>
+      </div>
+      <div class="socials-block">
+        <a href="https://instagram.com/hteanigeria" target="_blank" rel="noopener" class="social-btn">📸 Instagram</a>
+        <a href="https://linkedin.com/company/hteanigeria" target="_blank" rel="noopener" class="social-btn">💼 LinkedIn</a>
+        <a href="https://wa.me/2348039661354" target="_blank" rel="noopener" class="social-btn">💬 WhatsApp</a>
+      </div>
+    </div>
+
+    <div class="contact-card">
+      <h2>Send a <span>Message</span></h2>
+      <form action="mailto:info@hteanigeria.com" method="post" enctype="text/plain">
+        <label>Your Name</label>
+        <input type="text" name="name" required>
+        <label>Your Email</label>
+        <input type="email" name="email" required>
+        <label>Subject</label>
+        <select name="subject">
+          <option>Nomination</option>
+          <option>Sponsorship / Partnership</option>
+          <option>Press</option>
+          <option>General Inquiry</option>
+        </select>
+        <label>Message</label>
+        <textarea name="message" required></textarea>
+        <button type="submit" class="btn-submit">Send Message</button>
+      </form>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div class="footer-brand">HTE<span>A</span></div>
+  <div class="footer-tagline">Building the Future of Hospitality Excellence</div>
+  <div class="footer-edition">Current Edition: <a href="https://kwashate.netlify.app">KWASHATE 2026 — Kwara State →</a></div>
+  <div class="footer-links">
+    <a href="index.html">Home</a><a href="about.html">About</a><a href="values.html">Values</a><a href="states.html">States</a><a href="contact.html">Contact</a>
+  </div>
+  <div class="copyright">© 2026 HTEA. All rights reserved.</div>
+</footer>
+
+<script>function toggleMenu(){document.getElementById("navLinks").classList.toggle("active");}</script>
+</body>
+</html>
