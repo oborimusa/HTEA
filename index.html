@@ -35,6 +35,73 @@
             .nav-cta { width: 80%; text-align: center; }
         }
 
+                /* ===== TRUST BAR ===== */
+        .trust-bar {
+            background: #0b1f2a;
+            border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+            padding: 20px 30px;
+        }
+
+        .trust-bar-inner {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+
+        .trust-label {
+            font-family: 'Inter', sans-serif;
+            font-size: 0.75rem;
+            font-weight: 700;
+            color: #94a3b8;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            white-space: nowrap;
+        }
+
+        .trust-logos {
+            display: flex;
+            align-items: center;
+            gap: 32px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .trust-logos a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            height: 36px;
+            filter: grayscale(100%) brightness(0.7);
+            opacity: 0.7;
+            transition: 0.3s;
+        }
+
+        .trust-logos a:hover {
+            filter: grayscale(0%) brightness(1);
+            opacity: 1;
+            transform: scale(1.08);
+        }
+
+        .trust-logos img {
+            height: 36px;
+            width: auto;
+            max-width: 110px;
+            object-fit: contain;
+            display: block;
+        }
+
+        @media (max-width: 768px) {
+            .trust-bar { padding: 16px 20px; }
+            .trust-bar-inner { gap: 20px; }
+            .trust-label { font-size: 0.65rem; letter-spacing: 1.5px; }
+            .trust-logos { gap: 20px; }
+            .trust-logos img { height: 28px; max-width: 80px; }
+        }
+
         .hero { background: linear-gradient(rgba(11,31,42,0.88), rgba(11,31,42,0.95)), url('https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1200&q=80'); background-size: cover; background-position: center; color: #fff; padding: 120px 20px 80px; text-align: center; position: relative; overflow: hidden; }
         .hero h1 { font-size: 3.2rem; font-weight: 700; margin-bottom: 12px; line-height: 1.2; position: relative; z-index: 1; }
         .hero h1 span { background: linear-gradient(135deg, #D4AF37, #f5e6a3, #D4AF37); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
@@ -143,6 +210,39 @@
         .vm-card p { color: #e2e8f0; font-size: 1.1rem; line-height: 1.8; }
         @media (max-width: 768px) { .vision-mission { grid-template-columns: 1fr; } }
 
+        .partners-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 24px; margin-bottom: 50px; }
+        .partner-card { background: #fff; border-radius: 16px; padding: 30px; border: 1px solid #eef2f7; box-shadow: 0 4px 20px rgba(0,0,0,0.05); text-align: center; transition: 0.3s; position: relative; }
+        .partner-card:hover { transform: translateY(-6px); border-color: #D4AF37; box-shadow: 0 8px 30px rgba(0,0,0,0.1); }
+        .partner-badge { display: inline-block; background: #D4AF37; color: #0b1f2a; font-size: 0.7rem; font-weight: 700; padding: 5px 12px; border-radius: 40px; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 16px; }
+       .partner-logo {
+    width: 120px;
+    height: 120px;
+    background: white;
+    border-radius: 12px;
+    margin: 0 auto 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #94a3b8;
+    font-size: 0.7rem;
+    border: 1px solid #eef2f7;
+    padding: 12px;
+    overflow: hidden;
+}
+
+.partner-logo img {
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    display: block;
+}
+        .partner-card h4 { font-size: 1.1rem; color: #0b1f2a; margin-bottom: 8px; }
+        .partner-card p { font-size: 0.9rem; color: #7f8c8d; line-height: 1.7; margin-bottom: 16px; }
+        .partner-link { color: #D4AF37; font-weight: 700; font-size: 0.9rem; }
+        .partner-link:hover { text-decoration: underline; }
+
         .how-it-works { background: #fff; border-radius: 16px; padding: 50px; box-shadow: 0 4px 20px rgba(0,0,0,0.05); border: 1px solid #eef2f7; text-align: center; margin-bottom: 50px; }
         .how-it-works h2 { font-size: 2.2rem; margin-bottom: 16px; }
         .how-it-works h2 span { color: #D4AF37; }
@@ -215,10 +315,31 @@
         <a href="about.html">About</a>
         <a href="values.html">Values</a>
         <a href="states.html">States</a>
+        <a href="tourism-window.html">Tourism Window</a>
         <a href="https://kwashate.netlify.app">KWASHATE</a>
         <a href="contact.html" class="nav-cta">Contact Us</a>
     </div>
 </nav>
+<!-- ===== TRUST BAR ===== -->
+<!-- <section class="trust-bar">
+    <div class="trust-bar-inner">
+        <span class="trust-label">Trusted by</span>
+        <div class="trust-logos">
+            <a href="https://hospitalityrecruit.netlify.app" target="_blank" rel="noopener" title="HospitalityRecruit">
+                <img src="img/Hospitalityrecruit logo (2).jpg" alt="HospitalityRecruit">
+            </a>
+            <a href="https://cutevenue.netlify.app" target="_blank" rel="noopener" title="CuteVenue">
+                <img src="img/cutevenue-logo.jpg" alt="CuteVenue">
+            </a>
+            <a href="https://onestackda.netlify.app" target="_blank" rel="noopener" title="OneStack Digital Agency">
+                <img src="img/onestackda-logo.png" alt="OneStack Digital Agency">
+            </a>
+            <a href="#" title="Drecot Printing Press">
+                <img src="img/2.png" alt="Drecot Printing Press">
+            </a>
+        </div>
+    </div>
+</section> -->
 
 <header class="hero">
     <h1>Building the Future of <span>Hospitality Excellence</span></h1>
@@ -310,6 +431,59 @@
     <div class="judges-intro">
         <p>HTEA operates a <strong>two-tier judging system</strong>. A permanent <strong>National Board</strong> sets the standard and oversees every edition. Each host state then assembles its own <strong>Edition Judging Panel</strong> to score local nominees. This keeps the brand consistent nationally while ensuring judges understand the local market.</p>
     </div>
+
+    <!-- ===== OFFICIAL PARTNERS ===== -->
+<div class="section-title">Official <span>Partners</span></div>
+<div class="section-subtitle">Trusted organizations supporting HTEA and KWASHATE 2026</div>
+
+<div class="partners-grid">
+
+    <!-- Official Web Partner -->
+    <div class="partner-card">
+        <div class="partner-badge">Official Web Partner</div>
+        <div class="partner-logo">
+            <img src="img/onestackda-logo.png" alt="">
+        </div>
+        <h4>OneStack Digital Agency</h4>
+        <p>Designs, builds, and maintains the HTEA and KWASHATE digital platforms.</p>
+        <a href="https://onestackda.com" target="_blank" class="partner-link">Visit Site →</a>
+    </div>
+
+    <!-- Official Printing Partner -->
+    <div class="partner-card">
+        <div class="partner-badge">Official Printing Partner</div>
+        <div class="partner-logo">
+            <img src="img/2.png" alt="Drecot Printing press logo">
+        </div>
+        <h4>Drecot Printing Press</h4>
+        <p>Produces all HTEA print materials — certificates, trophies plaques, and event collateral.</p>
+        <a href="https://drecotprintingpress.netlify.app" target="_blank" class="partner-link">Visit Site →</a>
+    </div>
+
+    <!-- Talent Partner -->
+    <div class="partner-card">
+        <div class="partner-badge">Talent Partner</div>
+        <div class="partner-logo">
+            <img src="img/Hospitalityrecruit logo (2).jpg" alt="">
+        </div>
+        <h4>HospitalityRecruit</h4>
+        <p>Connects HTEA winners and nominees with elite hospitality employers across Africa.</p>
+        <a href="https://hospitalityrecruit.netlify.app" target="_blank" class="partner-link">Visit Site →</a>
+    </div>
+
+    <!-- Venue Partner -->
+    <!-- Launch Partner -->
+<div class="partner-card">
+    <div class="partner-badge" style="background: #0ea5e9; color: #fff;">Launch Partner</div>
+    <div class="partner-logo">
+        <img src="img/cutevenue-logo.jpg" alt="CuteVenue logo">
+    </div>
+    <h4>CuteVenue</h4>
+    <p>Nigeria's smartest event hall booking platform — launching 2026. HTEA is proud to support their launch.</p>
+    <span class="partner-coming-soon">Coming Soon</span>
+</div>
+
+</div>
 
     <!-- TIER 1: NATIONAL BOARD -->
     <div class="tier-block national">
@@ -434,18 +608,18 @@
     <div class="section-subtitle">The people behind HTEA</div>
 
     <div class="people-grid">
-        <div class="person-card"><div class="avatar">Photo</div><h4>[Name]</h4><div class="role">Founder & CEO</div><p>[Brief bio]</p></div>
-        <div class="person-card"><div class="avatar">Photo</div><h4>[Name]</h4><div class="role">Head of Operations</div><p>[Brief bio]</p></div>
-        <div class="person-card"><div class="avatar">Photo</div><h4>[Name]</h4><div class="role">Head of Partnerships</div><p>[Brief bio]</p></div>
-        <div class="person-card"><div class="avatar">Photo</div><h4>[Name]</h4><div class="role">Head of Media & Communications</div><p>[Brief bio]</p></div>
-        <div class="person-card"><div class="avatar">Photo</div><h4>[Name]</h4><div class="role">Head of Nominations & Verification</div><p>[Brief bio]</p></div>
+        <div class="person-card"><div class="avatar"><img src="img/musa.jpeg" alt="picture"></div><h4>Dahiru Obori</h4><div class="role">Founder & CEO</div><p><p>A 35-year hospitality veteran. Founder of HospitalityRecruit, Drecot Consults, and OneStack Digital Agency. YouWin! awardee. Leads HTEA as Founder &amp; CEO.</p></div>
+        <div class="person-card"><div class="avatar"><img src="img/testimonial-2.jpg" alt="picture"></div><h4>Adedayo Olawale </h4><div class="role">Head of Operations</div><p>[Brief bio]</p></div>
+        <div class="person-card"><div class="avatar"><img src="img/testimonial-1.jpg" alt="picture"></div><h4>Augustina Ibeh</h4><div class="role">Head of Partnerships</div><p>[Brief bio]</p></div>
+        <!-- <div class="person-card"><div class="avatar">Photo</div><h4>[Name]</h4><div class="role">Head of Media & Communications</div><p>[Brief bio]</p></div>
+        <div class="person-card"><div class="avatar">Photo</div><h4>[Name]</h4><div class="role">Head of Nominations & Verification</div><p>[Brief bio]</p></div> -->
     </div>
 
     <div class="contact-section" id="contact">
         <h2>Get In <span style="color:#D4AF37;">Touch</span></h2>
         <p>Ready to partner with Nigeria's premier hospitality awards platform?</p>
         <div class="contact-details">
-            <div class="contact-item"><span class="icon">📞</span><span class="info">[Business Phone]</span></div>
+            <div class="contact-item"><span class="icon">📞</span><span class="info">070575222</span></div>
             <div class="contact-item"><span class="icon">📧</span><span class="info"><a href="mailto:info@hteanigeria.com">info@hteanigeria.com</a></span></div>
             <div class="contact-item"><span class="icon">📧</span><span class="info"><a href="mailto:partnerships@hteanigeria.com">partnerships@hteanigeria.com</a></span></div>
         </div>
