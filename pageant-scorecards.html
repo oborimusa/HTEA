@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mr. &amp; Mrs. KWASHATE — Judge Scorecards</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family:'Inter',sans-serif; background:#e2e8f0; padding:24px 16px; color:#0b1f2a; }
+
+.page-header { text-align:center; max-width:900px; margin:0 auto 30px; }
+.page-header h1 { font-family:'Playfair Display',serif; font-size:2rem; margin-bottom:8px; }
+.page-header p { color:#475569; font-size:0.95rem; line-height:1.7; }
+.page-header .note { background:#fff; border-left:4px solid #D4AF37; padding:14px 18px; border-radius:8px; margin-top:16px; font-size:0.88rem; color:#334155; text-align:left; }
+
+.scorecard {
+    background:#fff;
+    border:2px solid #0b1f2a;
+    border-radius:14px;
+    padding:32px;
+    max-width:900px;
+    margin:0 auto 30px;
+    page-break-after:always;
+}
+.scorecard:last-child { page-break-after:auto; }
+
+.sc-header { border-bottom:3px solid #D4AF37; padding-bottom:16px; margin-bottom:22px; display:flex; justify-content:space-between; align-items:flex-end; flex-wrap:wrap; gap:12px; }
+.sc-header .sc-title { flex:1; min-width:220px; }
+.sc-header .sc-title .sc-num { font-size:0.7rem; font-weight:700; color:#D4AF37; letter-spacing:2px; text-transform:uppercase; }
+.sc-header .sc-title h2 { font-family:'Playfair Display',serif; font-size:1.6rem; color:#0b1f2a; margin-top:4px; }
+.sc-header .sc-title .sc-sub { font-size:0.85rem; color:#64748b; margin-top:4px; }
+.sc-header .sc-weight-box { text-align:center; padding:8px 18px; background:#0b1f2a; border-radius:10px; }
+.sc-header .sc-weight-box .weight-val { font-family:'Playfair Display',serif; font-size:1.8rem; font-weight:800; color:#D4AF37; line-height:1; }
+.sc-header .sc-weight-box .weight-label { font-size:0.65rem; color:#cbd5e1; text-transform:uppercase; letter-spacing:1.5px; margin-top:4px; }
+
+.info-row { display:grid; grid-template-columns:1fr 1fr; gap:14px; margin-bottom:22px; }
+@media (max-width:600px){ .info-row{grid-template-columns:1fr} }
+.info-field { border-bottom:1.5px solid #94a3b8; padding:6px 4px; }
+.info-field .lbl { font-size:0.72rem; color:#64748b; text-transform:uppercase; letter-spacing:1.2px; font-weight:600; }
+.info-field .val-space { height:22px; }
+
+.criteria-table { width:100%; border-collapse:collapse; margin-bottom:22px; }
+.criteria-table thead { background:#0b1f2a; color:#fff; }
+.criteria-table th { padding:10px 12px; text-align:left; font-size:0.75rem; text-transform:uppercase; letter-spacing:1px; font-weight:700; }
+.criteria-table th.center { text-align:center; }
+.criteria-table td { padding:14px 12px; border-bottom:1px solid #e2e8f0; font-size:0.92rem; vertical-align:middle; }
+.criteria-table tbody tr:nth-child(even) { background:#f8fafc; }
+.criteria-table .crit-name { font-weight:700; color:#0b1f2a; }
+.criteria-table .crit-desc { font-size:0.82rem; color:#64748b; margin-top:4px; line-height:1.5; }
+.criteria-table .score-cell { text-align:center; font-family:'Playfair Display',serif; font-weight:700; font-size:1.05rem; }
+.criteria-table .score-cell input { border:none; border-bottom:1.5px solid #94a3b8; width:50px; text-align:center; font-size:1rem; font-family:'Playfair Display',serif; color:#0b1f2a; background:transparent; padding:4px; }
+.criteria-table .max-cell { text-align:center; color:#64748b; font-size:0.9rem; font-weight:600; }
+.criteria-table .weight-col { text-align:center; font-size:0.85rem; color:#D4AF37; font-weight:700; }
+
+.total-row { background:#0b1f2a; color:#fff; border-radius:10px; padding:16px 20px; display:flex; justify-content:space-between; align-items:center; margin-bottom:22px; flex-wrap:wrap; gap:12px; }
+.total-row .total-label { font-size:0.9rem; text-transform:uppercase; letter-spacing:1.5px; font-weight:700; }
+.total-row .total-label span { color:#D4AF37; }
+.total-row .total-score { display:flex; align-items:center; gap:14px; }
+.total-row .total-score .total-num { font-family:'Playfair Display',serif; font-size:2rem; font-weight:800; color:#D4AF37; }
+.total-row .total-score input { border:none; border-bottom:2px solid #D4AF37; width:70px; text-align:center; font-size:1.6rem; font-family:'Playfair Display',serif; color:#D4AF37; background:transparent; font-weight:800; }
+
+.comments-block { border:1.5px solid #cbd5e1; border-radius:10px; padding:16px; margin-bottom:22px; min-height:100px; }
+.comments-block .lbl { font-size:0.75rem; color:#64748b; text-transform:uppercase; letter-spacing:1.2px; font-weight:600; margin-bottom:10px; }
+.comments-block .line { border-bottom:1px dashed #cbd5e1; height:26px; margin-bottom:6px; }
+.comments-block .line:last-child { margin-bottom:0; border-bottom:none; }
+
+.signature-row { display:flex; justify-content:space-between; gap:20px; flex-wrap:wrap; }
+.signature-row .sig-box { flex:1; min-width:200px; }
+.signature-row .sig-box .lbl { font-size:0.72rem; color:#64748b; text-transform:uppercase; letter-spacing:1.2px; font-weight:600; margin-bottom:6px; }
+.signature-row .sig-box .sig-line { border-bottom:1.5px solid #0b1f2a; height:34px; }
+
+.scale-note { background:#fffbea; border-left:4px solid #D4AF37; padding:12px 16px; border-radius:8px; font-size:0.85rem; color:#713f12; margin-bottom:20px; line-height:1.7; }
+.scale-note strong { color:#0b1f2a; }
+
+@media print {
+    body { background:#fff; padding:0; }
+    .page-header { display:none; }
+    .scorecard { border:1.5px solid #000; box-shadow:none; margin:0; padding:24px; border-radius:0; }
+    .total-row { background:#000 !important; -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+    .criteria-table thead { background:#000 !important; -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+    .sc-weight-box { background:#000 !important; -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+}
+</style>
+</head>
+<body>
+
+<div class="page-header">
+    <h1>Mr. &amp; Mrs. KWASHATE 2026 — Judge Scorecards</h1>
+    <p>Three official scorecards. One per pillar. Print one set per judge. Total maximum score across all three pillars: <strong>100 points</strong>.</p>
+    <div class="note">
+        <strong>Instructions for judges:</strong> Score each contestant on every criterion. Do not skip any line. Total each column at the bottom. The final score across all three scorecards determines the winner. Fill in the contestant's name and number at the top of each card before they perform.
+    </div>
+</div>
+
+<!-- ============== SCORECARD 1 — THE HEAT ============== -->
+<div class="scorecard">
+    <div class="sc-header">
+        <div class="sc-title">
+            <div class="sc-num">Scorecard 01 — The Heat</div>
+            <h2>🔥 Cooking Competition</h2>
+            <div class="sc-sub">Live cook-off • Food Fair • 45–60 minutes</div>
+        </div>
+        <div class="sc-weight-box">
+            <div class="weight-val">30%</div>
+            <div class="weight-label">of Total Score</div>
+        </div>
+    </div>
+
+    <div class="info-row">
+        <div class="info-field"><div class="lbl">Contestant Name</div><div class="val-space"></div></div>
+        <div class="info-field"><div class="lbl">Contestant Number</div><div class="val-space"></div></div>
+        <div class="info-field"><div class="lbl">Judge Name</div><div class="val-space"></div></div>
+        <div class="info-field"><div class="lbl">Date</div><div class="val-space"></div></div>
+    </div>
+
+    <div class="scale-note">
+        <strong>Scoring scale:</strong> Score each criterion from <strong>1 (poor) to 10 (exceptional)</strong>. Maximum per criterion is 10 points. Totals are calculated below.
+    </div>
+
+    <table class="criteria-table">
+        <thead>
+            <tr>
+                <th>Criterion</th>
+                <th class="center" style="width:110px;">Score (1–10)</th>
+                <th class="center" style="width:90px;">Weight</th>
+                <th class="center" style="width:90px;">Weighted</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    <div class="crit-name">Technique</div>
+                    <div class="crit-desc">Knife skills, timing, heat control, hygiene, workspace management</div>
+                </td>
+                <td class="score-cell"><input type="text" maxlength="2"></td>
+                <td class="weight-col">40%</td>
+                <td class="max-cell">__</td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="crit-name">Taste</div>
+                    <div class="crit-desc">Flavour balance, seasoning, doneness, texture, coherence of the dish</div>
+                </td>
+                <td class="score-cell"><input type="text" maxlength="2"></td>
+                <td class="weight-col">40%</td>
+                <td class="max-cell">__</td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="crit-name">Use of Basket</div>
+                    <div class="crit-desc">Creative use of local Kwara ingredients — at least 70% of the basket</div>
+                </td>
+                <td class="score-cell"><input type="text" maxlength="2"></td>
+                <td class="weight-col">20%</td>
+                <td class="max-cell">__</td>
+            </tr>
+            <tr>
+                <td colspan="3" style="text-align:right; font-weight:700; color:#0b1f2a;">Subtotal (Heat)</td>
+                <td class="score-cell"><input type="text" maxlength="3" style="border-color:#D4AF37;"></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="comments-block">
+        <div class="lbl">Judge's Comments</div>
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+    </div>
+
+    <div class="signature-row">
+        <div class="sig-box"><div class="lbl">Judge Signature</div><div class="sig-line"></div></div>
+        <div class="sig-box"><div class="lbl">Time</div><div class="sig-line"></div></div>
+    </div>
+</div>
+
+<!-- ============== SCORECARD 2 — THE ART ============== -->
+<div class="scorecard">
+    <div class="sc-header">
+        <div class="sc-title">
+            <div class="sc-num">Scorecard 02 — The Art</div>
+            <h2>🎨 Presentation &amp; Storytelling</h2>
+            <div class="sc-sub">Plating and story • Food Fair • 15 minutes per contestant</div>
+        </div>
+        <div class="sc-weight-box">
+            <div class="weight-val">20%</div>
+            <div class="weight-label">of Total Score</div>
+        </div>
+    </div>
+
+    <div class="info-row">
+        <div class="info-field"><div class="lbl">Contestant Name</div><div class="val-space"></div></div>
+        <div class="info-field"><div class="lbl">Contestant Number</div><div class="val-space"></div></div>
+        <div class="info-field"><div class="lbl">Judge Name</div><div class="val-space"></div></div>
+        <div class="info-field"><div class="lbl">Date</div><div class="val-space"></div></div>
+    </div>
+
+    <div class="scale-note">
+        <strong>Scoring scale:</strong> Score each criterion from <strong>1 (poor) to 10 (exceptional)</strong>. Maximum per criterion is 10 points.
+    </div>
+
+    <table class="criteria-table">
+        <thead>
+            <tr>
+                <th>Criterion</th>
+                <th class="center" style="width:110px;">Score (1–10)</th>
+                <th class="center" style="width:90px;">Weight</th>
+                <th class="center" style="width:90px;">Weighted</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    <div class="crit-name">Plating</div>
+                    <div class="crit-desc">Colour balance, negative space, cleanliness of the plate, visual impact</div>
+                </td>
+                <td class="score-cell"><input type="text" maxlength="2"></td>
+                <td class="weight-col">40%</td>
+                <td class="max-cell">__</td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="crit-name">Table Setting</div>
+                    <div class="crit-desc">Correct placement of cutlery, glassware, napkin; professional standard</div>
+                </td>
+                <td class="score-cell"><input type="text" maxlength="2"></td>
+                <td class="weight-col">20%</td>
+                <td class="max-cell">__</td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="crit-name">Storytelling</div>
+                    <div class="crit-desc">30-second story — name of dish, meaning, origin of ingredients, cultural link</div>
+                </td>
+                <td class="score-cell"><input type="text" maxlength="2"></td>
+                <td class="weight-col">40%</td>
+                <td class="max-cell">__</td>
+            </tr>
+            <tr>
+                <td colspan="3" style="text-align:right; font-weight:700; color:#0b1f2a;">Subtotal (Art)</td>
+                <td class="score-cell"><input type="text" maxlength="3" style="border-color:#D4AF37;"></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="comments-block">
+        <div class="lbl">Judge's Comments</div>
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+    </div>
+
+    <div class="signature-row">
+        <div class="sig-box"><div class="lbl">Judge Signature</div><div class="sig-line"></div></div>
+        <div class="sig-box"><div class="lbl">Time</div><div class="sig-line"></div></div>
+    </div>
+</div>
+
+<!-- ============== SCORECARD 3 — THE HEART ============== -->
+<div class="scorecard">
+    <div class="sc-header">
+        <div class="sc-title">
+            <div class="sc-num">Scorecard 03 — The Heart</div>
+            <h2>❤️ Service &amp; Intelligence</h2>
+            <div class="sc-sub">Three uniform appearances • Awards Night • 5 minutes per contestant</div>
+        </div>
+        <div class="sc-weight-box">
+            <div class="weight-val">50%</div>
+            <div class="weight-label">of Total Score</div>
+        </div>
+    </div>
+
+    <div class="info-row">
+        <div class="info-field"><div class="lbl">Contestant Name</div><div class="val-space"></div></div>
+        <div class="info-field"><div class="lbl">Contestant Number</div><div class="val-space"></div></div>
+        <div class="info-field"><div class="lbl">Judge Name</div><div class="val-space"></div></div>
+        <div class="info-field"><div class="lbl">Date</div><div class="val-space"></div></div>
+    </div>
+
+    <div class="scale-note">
+        <strong>Scoring scale:</strong> Score each criterion from <strong>1 (poor) to 10 (exceptional)</strong>. Each of the three appearances (Front Office, Housekeeping, F&amp;B) is scored separately, then averaged.
+    </div>
+
+    <table class="criteria-table">
+        <thead>
+            <tr>
+                <th>Criterion</th>
+                <th class="center" style="width:110px;">Score (1–10)</th>
+                <th class="center" style="width:90px;">Weight</th>
+                <th class="center" style="width:90px;">Weighted</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    <div class="crit-name">Composure</div>
+                    <div class="crit-desc">Stays calm and composed under pressure. Doesn't panic, freeze, or speak over others.</div>
+                </td>
+                <td class="score-cell"><input type="text" maxlength="2"></td>
+                <td class="weight-col">20%</td>
+                <td class="max-cell">__</td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="crit-name">Problem-Solving</div>
+                    <div class="crit-desc">Solution is practical, hospitality-appropriate, and shows clear thinking.</div>
+                </td>
+                <td class="score-cell"><input type="text" maxlength="2"></td>
+                <td class="weight-col">30%</td>
+                <td class="max-cell">__</td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="crit-name">Empathy</div>
+                    <div class="crit-desc">Treats the guest as a human being, not a problem. Acknowledges the guest's feelings.</div>
+                </td>
+                <td class="score-cell"><input type="text" maxlength="2"></td>
+                <td class="weight-col">30%</td>
+                <td class="max-cell">__</td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="crit-name">Communication</div>
+                    <div class="crit-desc">Clear, warm, confident. Correct tone and register for the scenario.</div>
+                </td>
+                <td class="score-cell"><input type="text" maxlength="2"></td>
+                <td class="weight-col">20%</td>
+                <td class="max-cell">__</td>
+            </tr>
+            <tr>
+                <td colspan="3" style="text-align:right; font-weight:700; color:#0b1f2a;">Subtotal (Heart)</td>
+                <td class="score-cell"><input type="text" maxlength="3" style="border-color:#D4AF37;"></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="comments-block">
+        <div class="lbl">Judge's Comments</div>
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+    </div>
+
+    <div class="signature-row">
+        <div class="sig-box"><div class="lbl">Judge Signature</div><div class="sig-line"></div></div>
+        <div class="sig-box"><div class="lbl">Time</div><div class="sig-line"></div></div>
+    </div>
+</div>
+
+<!-- ============== FINAL TALLY SHEET ============== -->
+<div class="scorecard">
+    <div class="sc-header">
+        <div class="sc-title">
+            <div class="sc-num">Final Tally Sheet</div>
+            <h2>🏆 Contestant Total</h2>
+            <div class="sc-sub">Use one per contestant. Complete after all three pillars are scored.</div>
+        </div>
+    </div>
+
+    <div class="info-row">
+        <div class="info-field"><div class="lbl">Contestant Name</div><div class="val-space"></div></div>
+        <div class="info-field"><div class="lbl">Contestant Number</div><div class="val-space"></div></div>
+    </div>
+
+    <table class="criteria-table">
+        <thead>
+            <tr>
+                <th>Pillar</th>
+                <th class="center" style="width:120px;">Raw Score</th>
+                <th class="center" style="width:90px;">Weight</th>
+                <th class="center" style="width:120px;">Weighted Score</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="crit-name">🔥 The Heat</td>
+                <td class="score-cell"><input type="text" maxlength="3"></td>
+                <td class="weight-col">30%</td>
+                <td class="score-cell"><input type="text" maxlength="3"></td>
+            </tr>
+            <tr>
+                <td class="crit-name">🎨 The Art</td>
+                <td class="score-cell"><input type="text" maxlength="3"></td>
+                <td class="weight-col">20%</td>
+                <td class="score-cell"><input type="text" maxlength="3"></td>
+            </tr>
+            <tr>
+                <td class="crit-name">❤️ The Heart</td>
+                <td class="score-cell"><input type="text" maxlength="3"></td>
+                <td class="weight-col">50%</td>
+                <td class="score-cell"><input type="text" maxlength="3"></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="total-row">
+        <div class="total-label">FINAL <span>SCORE</span> (out of 100)</div>
+        <div class="total-score"><input type="text" maxlength="3"></div>
+    </div>
+
+    <div class="comments-block">
+        <div class="lbl">Overall Judge Notes</div>
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+    </div>
+
+    <div class="signature-row">
+        <div class="sig-box"><div class="lbl">Head Judge Signature</div><div class="sig-line"></div></div>
+        <div class="sig-box"><div class="lbl">Date</div><div class="sig-line"></div></div>
+    </div>
+</div>
+
+</body>
+</html>

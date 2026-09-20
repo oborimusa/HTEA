@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Apply — Mr. &amp; Mrs. KWASHATE 2026</title>
+<meta name="description" content="Apply to compete in Mr. & Mrs. KWASHATE 2026 — the pageant for Kwara's hospitality professionals.">
+<link rel="icon" type="image/png" href="img/award-logo4.png">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family:'Inter',sans-serif; background:#f5f6f8; color:#2c3e50; line-height:1.6; }
+h1,h2,h3,h4 { font-family:'Playfair Display',serif; }
+a { text-decoration:none; color:inherit; }
+
+nav { background:#0b1f2a; color:#fff; padding:16px 30px; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; box-shadow:0 2px 10px rgba(0,0,0,0.3); position:sticky; top:0; z-index:100; }
+.logo { display:flex; align-items:center; gap:8px; }
+.logo-link { display:flex; align-items:center; gap:10px; }
+.logo-img { width:60px; height:60px; object-fit:contain; border-radius:50%; }
+.logo-text { display:flex; flex-direction:column; line-height:1.1; }
+.brand-name { font-size:1.6rem; font-weight:800; color:#fff; }
+.brand-name span { color:#D4AF37; }
+.tagline { font-size:0.6rem; color:#94a3b8; text-transform:uppercase; letter-spacing:2px; }
+.hamburger { display:none; font-size:2rem; cursor:pointer; color:#D4AF37; }
+.nav-links { display:flex; gap:22px; align-items:center; }
+.nav-links a { color:#fff; font-weight:600; font-size:0.9rem; }
+.nav-links a:hover { color:#D4AF37; }
+.nav-cta { background:#D4AF37; color:#0b1f2a !important; padding:8px 20px; border-radius:40px; font-weight:700; }
+@media (max-width:900px){
+  .hamburger{display:block}
+  .nav-links{display:none;width:100%;flex-direction:column;align-items:center;gap:15px;padding:20px 0;background:#0b1f2a;position:absolute;top:90px;left:0;z-index:999;border-bottom:2px solid #D4AF37}
+  .nav-links.active{display:flex}
+  .nav-links a{width:100%;text-align:center;padding:8px 0}
+  .nav-cta{width:80%;text-align:center}
+}
+
+.page-hero { background:linear-gradient(rgba(11,31,42,0.9),rgba(11,31,42,0.95)),url('https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1200&q=80'); background-size:cover; background-position:center; color:#fff; padding:90px 20px 60px; text-align:center; }
+.page-hero .crown { font-size:3rem; margin-bottom:12px; }
+.page-hero h1 { font-size:2.6rem; margin-bottom:12px; }
+.page-hero h1 span { color:#D4AF37; }
+.page-hero p { max-width:640px; margin:0 auto; opacity:0.9; font-size:1.05rem; line-height:1.8; }
+
+.container { max-width:820px; margin:0 auto; padding:50px 20px; }
+
+.intro-strip { background:#fff; border-radius:14px; padding:28px; border:1px solid #eef2f7; box-shadow:0 4px 20px rgba(0,0,0,0.05); margin-bottom:30px; display:flex; gap:20px; align-items:center; flex-wrap:wrap; }
+.intro-strip .intro-icon { font-size:2.4rem; flex-shrink:0; }
+.intro-strip .intro-body { flex:1; min-width:240px; }
+.intro-strip .intro-body h3 { font-size:1.15rem; color:#0b1f2a; margin-bottom:6px; }
+.intro-strip .intro-body p { font-size:0.9rem; color:#7f8c8d; line-height:1.7; }
+
+.form-card { background:#fff; border-radius:16px; padding:44px; border:1px solid #eef2f7; box-shadow:0 4px 20px rgba(0,0,0,0.05); }
+.form-card h2 { font-size:1.6rem; color:#0b1f2a; margin-bottom:8px; }
+.form-card h2 span { color:#D4AF37; }
+.form-card .lead { color:#7f8c8d; font-size:0.95rem; margin-bottom:30px; line-height:1.7; }
+
+fieldset { border:none; margin-bottom:32px; padding-bottom:32px; border-bottom:1px dashed #eef2f7; }
+fieldset:last-of-type { border-bottom:none; padding-bottom:0; }
+fieldset legend { font-family:'Playfair Display',serif; font-size:1.15rem; font-weight:700; color:#0b1f2a; margin-bottom:20px; padding-right:12px; }
+fieldset legend .legend-num { display:inline-block; background:#D4AF37; color:#0b1f2a; font-family:'Inter',sans-serif; font-size:0.75rem; font-weight:700; padding:3px 10px; border-radius:40px; margin-right:10px; vertical-align:middle; }
+
+.field { margin-bottom:18px; }
+.field label { display:block; font-size:0.82rem; font-weight:600; color:#0b1f2a; margin-bottom:6px; text-transform:uppercase; letter-spacing:0.5px; }
+.field label .req { color:#e74c3c; }
+.field input[type="text"],
+.field input[type="email"],
+.field input[type="tel"],
+.field input[type="date"],
+.field input[type="number"],
+.field select,
+.field textarea {
+    width:100%; padding:12px 14px; border:1.5px solid #e2e8f0; border-radius:10px;
+    font-family:'Inter',sans-serif; font-size:0.95rem; background:#f8f9fa; color:#0b1f2a;
+    transition:0.2s;
+}
+.field input:focus, .field select:focus, .field textarea:focus { outline:none; border-color:#D4AF37; background:#fff; }
+.field textarea { min-height:110px; resize:vertical; font-family:'Inter',sans-serif; }
+.field .hint { font-size:0.78rem; color:#94a3b8; margin-top:5px; line-height:1.5; }
+
+.field-row { display:grid; grid-template-columns:1fr 1fr; gap:16px; }
+@media (max-width:600px){ .field-row { grid-template-columns:1fr; } }
+
+.radio-group { display:flex; gap:14px; flex-wrap:wrap; margin-top:6px; }
+.radio-group label { display:flex; align-items:center; gap:8px; padding:10px 18px; background:#f8f9fa; border:1.5px solid #e2e8f0; border-radius:10px; cursor:pointer; font-weight:600; text-transform:none; letter-spacing:0; font-size:0.9rem; transition:0.2s; }
+.radio-group label:hover { border-color:#D4AF37; }
+.radio-group input[type="radio"] { accent-color:#D4AF37; }
+.radio-group input[type="radio"]:checked + span { color:#D4AF37; }
+
+.checkbox-field { display:flex; align-items:flex-start; gap:12px; padding:14px; background:#f8f9fa; border-radius:10px; border:1.5px solid #eef2f7; margin-bottom:12px; }
+.checkbox-field input[type="checkbox"] { margin-top:4px; accent-color:#D4AF37; flex-shrink:0; width:18px; height:18px; }
+.checkbox-field label { font-size:0.9rem; color:#2c3e50; line-height:1.6; cursor:pointer; text-transform:none; letter-spacing:0; font-weight:400; margin:0; }
+
+.file-field { border:2px dashed #cbd5e1; border-radius:10px; padding:24px; text-align:center; background:#f8f9fa; transition:0.2s; }
+.file-field:hover { border-color:#D4AF37; background:#fff; }
+.file-field input[type="file"] { display:none; }
+.file-field .file-label { display:inline-block; background:#0b1f2a; color:#D4AF37; padding:10px 22px; border-radius:40px; font-weight:700; font-size:0.88rem; cursor:pointer; transition:0.2s; }
+.file-field .file-label:hover { background:#1e293b; }
+.file-field .file-hint { font-size:0.8rem; color:#94a3b8; margin-top:10px; }
+
+.submit-btn { width:100%; background:#D4AF37; color:#0b1f2a; padding:18px 30px; border:none; border-radius:50px; font-weight:700; font-size:1.05rem; cursor:pointer; transition:0.2s; font-family:'Inter',sans-serif; box-shadow:0 4px 15px rgba(212,175,55,0.4); }
+.submit-btn:hover { background:#e6c04c; transform:translateY(-2px); box-shadow:0 6px 20px rgba(212,175,55,0.5); }
+
+.form-note { text-align:center; font-size:0.85rem; color:#7f8c8d; margin-top:18px; line-height:1.6; }
+
+.what-next { background:#0b1f2a; border-radius:16px; padding:36px 30px; color:#fff; margin-top:36px; border-left:6px solid #D4AF37; }
+.what-next h3 { font-size:1.3rem; color:#D4AF37; margin-bottom:16px; }
+.what-next ol { list-style:none; counter-reset:wn; }
+.what-next ol li { counter-increment:wn; padding:10px 0 10px 40px; position:relative; color:#e2e8f0; font-size:0.95rem; line-height:1.7; }
+.what-next ol li::before { content:counter(wn); position:absolute; left:0; top:10px; width:26px; height:26px; background:#D4AF37; color:#0b1f2a; border-radius:50%; display:flex; align-items:center; justify-content:center; font-weight:800; font-size:0.8rem; }
+
+footer { background:#0b1f2a; color:#94a3b8; padding:50px 20px 30px; text-align:center; margin-top:60px; }
+.footer-brand { font-size:1.6rem; font-weight:800; color:#fff; margin-bottom:8px; font-family:'Playfair Display',serif; }
+.footer-brand span { color:#D4AF37; }
+.footer-tagline { font-size:0.85rem; color:#D4AF37; text-transform:uppercase; letter-spacing:2px; margin-bottom:20px; }
+.footer-links { display:flex; justify-content:center; gap:22px; flex-wrap:wrap; margin-bottom:24px; }
+.footer-links a { color:#cbd5e1; font-size:0.9rem; }
+.footer-links a:hover { color:#D4AF37; }
+.copyright { font-size:0.8rem; color:#64748b; border-top:1px solid #1e293b; padding-top:20px; max-width:900px; margin:0 auto; }
+
+@media (max-width:768px){
+  .page-hero h1{font-size:2rem}
+  .form-card{padding:28px 22px}
+}
+</style>
+</head>
+<body>
+
+<nav>
+    <div class="logo">
+        <a href="index.html" class="logo-link">
+            <img src="img/award-logo4.png" alt="HTEA Logo" class="logo-img">
+            <div class="logo-text">
+                <span class="brand-name">HTE<span>A</span></span>
+                <span class="tagline">Hospitality &<br>Tourism Excellence<br>Awards</span>
+            </div>
+        </a>
+    </div>
+    <div class="hamburger" onclick="toggleMenu()">☰</div>
+    <div class="nav-links" id="navLinks">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="pageant.html">Pageant</a>
+        <a href="food-fair.html">Food Fair</a>
+        <a href="https://kwashate.netlify.app">KWASHATE</a>
+        <a href="contact.html" class="nav-cta">Contact Us</a>
+    </div>
+</nav>
+
+<header class="page-hero">
+    <div class="crown">👑</div>
+    <h1>Apply for Mr. &amp; Mrs. <span>KWASHATE 2026</span></h1>
+    <p>Complete this form to be considered for the 2026 pageant. Applications are reviewed on a rolling basis until finalists are selected.</p>
+</header>
+
+<main class="container">
+
+    <div class="intro-strip">
+        <div class="intro-icon">📋</div>
+        <div class="intro-body">
+            <h3>Before You Apply</h3>
+            <p>You must be currently employed in Kwara's hospitality or tourism sector. You will need a letter from your employer confirming your role. Read the <a href="pageant.html" style="color:#D4AF37; font-weight:700;">full pageant page</a> for eligibility and the contestant journey.</p>
+        </div>
+    </div>
+
+    <div class="form-card">
+        <h2>Application <span>Form</span></h2>
+        <p class="lead">All fields marked with <span style="color:#e74c3c;">*</span> are required. Submissions are confidential.</p>
+
+        <form action="mailto:info@hteanigeria.com.ng" method="post" enctype="text/plain">
+
+            <!-- SECTION 1: PERSONAL -->
+            <fieldset>
+                <legend><span class="legend-num">01</span>Personal Information</legend>
+
+                <div class="field">
+                    <label>Full Name <span class="req">*</span></label>
+                    <input type="text" name="full_name" required>
+                </div>
+
+                <div class="field-row">
+                    <div class="field">
+                        <label>Date of Birth <span class="req">*</span></label>
+                        <input type="date" name="dob" required>
+                        <div class="hint">You must be between 21 and 40 years old.</div>
+                    </div>
+                    <div class="field">
+                        <label>Gender <span class="req">*</span></label>
+                        <select name="gender" required>
+                            <option value="">Select</option>
+                            <option value="Male">Male</option>
+                            <option value="Female">Female</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="field-row">
+                    <div class="field">
+                        <label>Phone Number <span class="req">*</span></label>
+                        <input type="tel" name="phone" required placeholder="e.g. 0803 000 0000">
+                    </div>
+                    <div class="field">
+                        <label>Email Address <span class="req">*</span></label>
+                        <input type="email" name="email" required>
+                    </div>
+                </div>
+
+                <div class="field">
+                    <label>Residential Address in Kwara State <span class="req">*</span></label>
+                    <input type="text" name="address" required>
+                </div>
+
+                <div class="field">
+                    <label>Do You Currently Work in the Hospitality / Tourism Sector? <span class="req">*</span></label>
+                    <div class="radio-group">
+                        <label><input type="radio" name="sector" value="Yes" required><span>Yes</span></label>
+                        <label><input type="radio" name="sector" value="No"><span>No</span></label>
+                    </div>
+                    <div class="hint">If you answered "No", you are not eligible for this pageant.</div>
+                </div>
+            </fieldset>
+
+            <!-- SECTION 2: EMPLOYMENT -->
+            <fieldset>
+                <legend><span class="legend-num">02</span>Employment Details</legend>
+
+                <div class="field">
+                    <label>Name of Employer / Business <span class="req">*</span></label>
+                    <input type="text" name="employer" required>
+                </div>
+
+                <div class="field-row">
+                    <div class="field">
+                        <label>Your Role / Job Title <span class="req">*</span></label>
+                        <input type="text" name="role" required placeholder="e.g. Front Desk Officer">
+                    </div>
+                    <div class="field">
+                        <label>Department You Represent <span class="req">*</span></label>
+                        <select name="department" required>
+                            <option value="">Select a department</option>
+                            <option value="Front Office">Front Office</option>
+                            <option value="Housekeeping">Housekeeping</option>
+                            <option value="Food & Beverage">Food &amp; Beverage</option>
+                            <option value="Kitchen / Culinary">Kitchen / Culinary</option>
+                            <option value="Management">Management</option>
+                            <option value="Other">Other</option>
+                        </select>
+                        <div class="hint">This determines your uniform on Awards Night.</div>
+                    </div>
+                </div>
+
+                <div class="field">
+                    <label>Years of Experience in Hospitality / Tourism <span class="req">*</span></label>
+                    <input type="number" name="experience_years" min="0" max="50" required>
+                </div>
+
+                <div class="field">
+                    <label>Employer's Contact (Name and Phone Number) <span class="req">*</span></label>
+                    <input type="text" name="employer_contact" required>
+                    <div class="hint">We will contact your employer to verify your employment.</div>
+                </div>
+            </fieldset>
+
+            <!-- SECTION 3: EXPERIENCE -->
+            <fieldset>
+                <legend><span class="legend-num">03</span>Your Experience &amp; Motivation</legend>
+
+                <div class="field">
+                    <label>Why Do You Want to Be Mr./Mrs. KWASHATE? <span class="req">*</span></label>
+                    <textarea name="motivation" required placeholder="Tell us in 150–300 words why you should represent Kwara's hospitality sector."></textarea>
+                    <div class="hint">Be specific. Generic answers will not advance to the next round.</div>
+                </div>
+
+                <div class="field">
+                    <label>What is Your Signature Dish? <span class="req">*</span></label>
+                    <input type="text" name="signature_dish" required placeholder="e.g. Efo Riro with Pounded Yam">
+                </div>
+
+                <div class="field">
+                    <label>Describe a Time You Handled a Difficult Guest Situation <span class="req">*</span></label>
+                    <textarea name="guest_situation" required placeholder="Tell us what happened, what you did, and what the outcome was. 100–200 words."></textarea>
+                </div>
+
+                <div class="field">
+                    <label>Any Special Skills or Talent You'd Bring to the Role? (Optional)</label>
+                    <input type="text" name="talent" placeholder="e.g. Public speaking, pastry, cultural dance">
+                </div>
+            </fieldset>
+
+            <!-- SECTION 4: DOCUMENTS -->
+            <fieldset>
+                <legend><span class="legend-num">04</span>Supporting Documents</legend>
+
+                <div class="field">
+                    <label>Employer's Letter of Confirmation <span class="req">*</span></label>
+                    <div class="file-field">
+                        <input type="file" id="employer_letter" name="employer_letter" accept=".pdf,.jpg,.jpeg,.png">
+                        <label for="employer_letter" class="file-label">📎 Choose File</label>
+                        <div class="file-hint">PDF or image. Max 5MB.</div>
+                    </div>
+                </div>
+
+                <div class="field">
+                    <label>Recent Passport Photograph <span class="req">*</span></label>
+                    <div class="file-field">
+                        <input type="file" id="photo" name="photo" accept=".jpg,.jpeg,.png">
+                        <label for="photo" class="file-label">📷 Choose Photo</label>
+                        <div class="file-hint">White or plain background. Max 5MB.</div>
+                    </div>
+                </div>
+
+                <div class="field">
+                    <label>Valid ID (NIN, Driver's License, or Passport) <span class="req">*</span></label>
+                    <div class="file-field">
+                        <input type="file" id="id_card" name="id_card" accept=".pdf,.jpg,.jpeg,.png">
+                        <label for="id_card" class="file-label">🪪 Choose ID</label>
+                        <div class="file-hint">Used only for verification. Never shared publicly.</div>
+                    </div>
+                </div>
+            </fieldset>
+
+            <!-- SECTION 5: DECLARATIONS -->
+            <fieldset>
+                <legend><span class="legend-num">05</span>Declarations</legend>
+
+                <div class="checkbox-field">
+                    <input type="checkbox" id="declare1" name="declare1" required>
+                    <label for="declare1">I confirm that all information provided is accurate and that I am currently employed in Kwara's hospitality or tourism sector. <span class="req" style="color:#e74c3c;">*</span></label>
+                </div>
+
+                <div class="checkbox-field">
+                    <input type="checkbox" id="declare2" name="declare2" required>
+                    <label for="declare2">I understand that this is a professional pageant, not a beauty contest, and that I will be judged on skill, craft, and character. <span class="req" style="color:#e74c3c;">*</span></label>
+                </div>
+
+                <div class="checkbox-field">
+                    <input type="checkbox" id="declare3" name="declare3" required>
+                    <label for="declare3">I agree to be available for all pageant phases, including the bootcamp, Food Fair, and Awards Night. <span class="req" style="color:#e74c3c;">*</span></label>
+                </div>
+
+                <div class="checkbox-field">
+                    <input type="checkbox" id="declare4" name="declare4" required>
+                    <label for="declare4">I consent to HTEA contacting my employer for verification and to the use of my image and name in pageant-related promotion if I am selected. <span class="req" style="color:#e74c3c;">*</span></label>
+                </div>
+
+            </fieldset>
+
+            <button type="submit" class="submit-btn">Submit Application →</button>
+
+            <p class="form-note">
+                Submissions go to <strong>info@hteanigeria.com.ng</strong>.<br>
+                You will receive an acknowledgment within 48 hours.
+            </p>
+
+        </form>
+    </div>
+
+    <!-- WHAT NEXT -->
+    <div class="what-next">
+        <h3>What Happens After You Apply</h3>
+        <ol>
+            <li>We review your application within 5 working days.</li>
+            <li>Shortlisted applicants are invited to an in-person audition in Ilorin.</li>
+            <li>Finalists are notified and invited to the bootcamp.</li>
+            <li>Finalists compete at the Food Fair and Awards Night.</li>
+            <li>The two winners are crowned Mr. &amp; Mrs. KWASHATE 2026.</li>
+        </ol>
+    </div>
+
+</main>
+
+<footer>
+    <div class="footer-brand">HTE<span>A</span></div>
+    <div class="footer-tagline">Building the Future of Hospitality Excellence</div>
+    <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="pageant.html">Pageant</a>
+        <a href="food-fair.html">Food Fair</a>
+        <a href="contact.html">Contact</a>
+    </div>
+    <div class="copyright">© 2026 HTEA — Hospitality &amp; Tourism Excellence Awards. All rights reserved.</div>
+</footer>
+
+<script>function toggleMenu(){document.getElementById("navLinks").classList.toggle("active");}</script>
+</body>
+</html>

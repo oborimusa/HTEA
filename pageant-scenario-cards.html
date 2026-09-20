@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mr. &amp; Mrs. KWASHATE — Scenario Cards</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family:'Inter',sans-serif; background:#e2e8f0; padding:20px; color:#0b1f2a; }
+.page-header { text-align:center; margin-bottom:30px; }
+.page-header h1 { font-family:'Playfair Display',serif; font-size:1.8rem; color:#0b1f2a; margin-bottom:6px; }
+.page-header p { color:#64748b; font-size:0.9rem; }
+
+.grid { display:grid; grid-template-columns:repeat(auto-fill, minmax(300px,1fr)); gap:16px; max-width:1200px; margin:0 auto; }
+
+.card {
+    background:#fff;
+    border:2px solid #0b1f2a;
+    border-radius:12px;
+    padding:22px;
+    page-break-inside:avoid;
+    display:flex;
+    flex-direction:column;
+    min-height:200px;
+}
+.card .dept {
+    display:inline-block;
+    background:#0b1f2a;
+    color:#D4AF37;
+    font-size:0.65rem;
+    font-weight:700;
+    padding:4px 12px;
+    border-radius:40px;
+    letter-spacing:1.5px;
+    text-transform:uppercase;
+    margin-bottom:12px;
+    align-self:flex-start;
+}
+.card .dept.fo { background:#0b1f2a; color:#D4AF37; }
+.card .dept.hk { background:#0ea5e9; color:#fff; }
+.card .dept.fb { background:#D4AF37; color:#0b1f2a; }
+
+.card h3 {
+    font-family:'Playfair Display',serif;
+    font-size:1.05rem;
+    color:#0b1f2a;
+    margin-bottom:10px;
+    line-height:1.3;
+}
+
+.card .scenario {
+    font-size:0.88rem;
+    line-height:1.7;
+    color:#2c3e50;
+    flex-grow:1;
+    font-style:italic;
+}
+
+.card .prompt {
+    margin-top:14px;
+    padding-top:12px;
+    border-top:1px dashed #cbd5e1;
+    font-size:0.78rem;
+    color:#64748b;
+    font-weight:600;
+    text-transform:uppercase;
+    letter-spacing:1px;
+}
+
+.card .card-num {
+    position:absolute;
+    top:10px;
+    right:14px;
+    font-size:0.65rem;
+    color:#94a3b8;
+    font-weight:700;
+}
+
+.card { position:relative; }
+
+@media print {
+    body { background:#fff; padding:10px; }
+    .page-header { display:none; }
+    .grid { grid-template-columns:repeat(2, 1fr); gap:10px; max-width:none; }
+    .card { border-color:#000; min-height:180px; }
+}
+</style>
+</head>
+<body>
+
+<div class="page-header">
+    <h1>Mr. &amp; Mrs. KWASHATE 2026 — Scenario Cards</h1>
+    <p>Print on A5/A6 card stock, cut along borders, shuffle by department, draw at random during The Heart round.</p>
+</div>
+
+<div class="grid">
+
+    <!-- FRONT OFFICE CARDS -->
+    <div class="card">
+        <span class="card-num">FO-01</span>
+        <span class="dept fo">🛎️ Front Office</span>
+        <h3>The Cancelled Booking</h3>
+        <p class="scenario">A guest arrives at 2 AM. Their booking was cancelled by a system glitch. The hotel is fully booked. They are exhausted and furious.</p>
+        <p class="prompt">What do you do?</p>
+    </div>
+
+    <div class="card">
+        <span class="card-num">FO-02</span>
+        <span class="dept fo">🛎️ Front Office</span>
+        <h3>The VIP Who Isn't on the List</h3>
+        <p class="scenario">A well-known public figure arrives, insisting they have a reservation. Their name is not in the system, and all suites are occupied.</p>
+        <p class="prompt">What do you do?</p>
+    </div>
+
+    <div class="card">
+        <span class="card-num">FO-03</span>
+        <span class="dept fo">🛎️ Front Office</span>
+        <h3>The Wrongly Charged Bill</h3>
+        <p class="scenario">A guest checking out discovers a ₦50,000 charge they did not authorise. They refuse to leave the desk until it's resolved.</p>
+        <p class="prompt">What do you do?</p>
+    </div>
+
+    <div class="card">
+        <span class="card-num">FO-04</span>
+        <span class="dept fo">🛎️ Front Office</span>
+        <h3>The Lost Passport</h3>
+        <p class="scenario">A guest reports their passport missing 30 minutes before their international flight. They're panicking.</p>
+        <p class="prompt">What do you do?</p>
+    </div>
+
+    <div class="card">
+        <span class="card-num">FO-05</span>
+        <span class="dept fo">🛎️ Front Office</span>
+        <h3>The Overbooked Night</h3>
+        <p class="scenario">Your hotel is overbooked by 4 rooms. Two families with children are waiting in the lobby. It's 9 PM.</p>
+        <p class="prompt">What do you do?</p>
+    </div>
+
+    <!-- HOUSEKEEPING CARDS -->
+    <div class="card">
+        <span class="card-num">HK-01</span>
+        <span class="dept hk">🛏️ Housekeeping</span>
+        <h3>The Crying Guest</h3>
+        <p class="scenario">You enter a room to clean. The guest is crying — they've just received bad news.</p>
+        <p class="prompt">What do you do?</p>
+    </div>
+
+    <div class="card">
+        <span class="card-num">HK-02</span>
+        <span class="dept hk">🛏️ Housekeeping</span>
+        <h3>The Found Wallet</h3>
+        <p class="scenario">While cleaning, you find a wallet under the bed with ₦200,000 cash and a foreign ID. The guest checked out an hour ago.</p>
+        <p class="prompt">What do you do?</p>
+    </div>
+
+    <div class="card">
+        <span class="card-num">HK-03</span>
+        <span class="dept hk">🛏️ Housekeeping</span>
+        <h3>The Blood Stain</h3>
+        <p class="scenario">You find a blood stain on the bedsheets. The guest has already left for the day. Your supervisor is not available.</p>
+        <p class="prompt">What do you do?</p>
+    </div>
+
+    <div class="card">
+        <span class="card-num">HK-04</span>
+        <span class="dept hk">🛏️ Housekeeping</span>
+        <h3>The Complaint About Cleanliness</h3>
+        <p class="scenario">A guest returns to their room, takes one look at the bathroom, and demands to speak to the manager. They claim it's unacceptable.</p>
+        <p class="prompt">What do you do?</p>
+    </div>
+
+    <div class="card">
+        <span class="card-num">HK-05</span>
+        <span class="dept hk">🛏️ Housekeeping</span>
+        <h3>The Unattended Child</h3>
+        <p class="scenario">You enter a room to clean. A 6-year-old child is alone in the room. The parents are not present.</p>
+        <p class="prompt">What do you do?</p>
+    </div>
+
+    <!-- FOOD & BEVERAGE CARDS -->
+    <div class="card">
+        <span class="card-num">FB-01</span>
+        <span class="dept fb">🍽️ Food &amp; Beverage</span>
+        <h3>The Cold Food Complaint</h3>
+        <p class="scenario">A guest complains loudly in the lobby that their food was cold. Other guests are watching.</p>
+        <p class="prompt">What do you do?</p>
+    </div>
+
+    <div class="card">
+        <span class="card-num">FB-02</span>
+        <span class="dept fb">🍽️ Food &amp; Beverage</span>
+        <h3>The Allergy Emergency</h3>
+        <p class="scenario">A guest takes one bite of their meal, then says they're allergic to peanuts — which they didn't mention when ordering. Their lips are swelling.</p>
+        <p class="prompt">What do you do?</p>
+    </div>
+
+    <div class="card">
+        <span class="card-num">FB-03</span>
+        <span class="dept fb">🍽️ Food &amp; Beverage</span>
+        <h3>The Never-Returning Guest</h3>
+        <p class="scenario">A guest checks out and says they will never return because of one bad experience. You have 60 seconds to change their mind.</p>
+        <p class="prompt">What do you do?</p>
+    </div>
+
+    <div class="card">
+        <span class="card-num">FB-04</span>
+        <span class="dept fb">🍽️ Food &amp; Beverage</span>
+        <h3>The Wrong Order</h3>
+        <p class="scenario">You serve a table. One guest says they ordered the fish, not the chicken. The kitchen is closed for the night.</p>
+        <p class="prompt">What do you do?</p>
+    </div>
+
+    <div class="card">
+        <span class="card-num">FB-05</span>
+        <span class="dept fb">🍽️ Food &amp; Beverage</span>
+        <h3>The Tipping Dilemma</h3>
+        <p class="scenario">A guest hands you ₦5,000 as a tip, but you notice they left their phone on the table. They've just walked out the door.</p>
+        <p class="prompt">What do you do?</p>
+    </div>
+
+</div>
+
+</body>
+</html>

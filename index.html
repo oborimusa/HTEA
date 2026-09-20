@@ -142,6 +142,112 @@
             .ce-right { justify-content: center; }
         }
 
+                /* ===== THE KWASHATE EXPERIENCE ===== */
+        .experience-section {
+            background: #f8f9fa;
+            padding: 70px 0;
+            border-top: 1px solid #eef2f7;
+            border-bottom: 1px solid #eef2f7;
+        }
+
+        .experience-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 28px;
+            margin-bottom: 30px;
+        }
+
+        .experience-card {
+            background: #fff;
+            border-radius: 16px;
+            padding: 40px 30px;
+            border: 1px solid #eef2f7;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+            transition: 0.3s;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .experience-card:hover {
+            transform: translateY(-6px);
+            border-color: #D4AF37;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.1);
+        }
+
+        .experience-card.featured {
+            border: 2px solid #D4AF37;
+            box-shadow: 0 8px 30px rgba(212,175,55,0.15);
+        }
+
+        .exp-icon {
+            font-size: 3rem;
+            margin-bottom: 16px;
+            text-align: center;
+        }
+
+        .exp-badge {
+            display: inline-block;
+            background: #0b1f2a;
+            color: #D4AF37;
+            font-size: 0.7rem;
+            font-weight: 700;
+            padding: 5px 14px;
+            border-radius: 40px;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            margin: 0 auto 16px;
+        }
+
+        .experience-card h3 {
+            font-size: 1.4rem;
+            color: #0b1f2a;
+            margin-bottom: 14px;
+            text-align: center;
+        }
+
+        .experience-card p {
+            font-size: 0.95rem;
+            color: #7f8c8d;
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+
+        .exp-list {
+            list-style: none;
+            margin-top: auto;
+            padding-top: 20px;
+            border-top: 1px dashed #eef2f7;
+        }
+
+        .exp-list li {
+            padding: 7px 0 7px 22px;
+            position: relative;
+            font-size: 0.88rem;
+            color: #2c3e50;
+        }
+
+        .exp-list li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #D4AF37;
+            font-weight: 700;
+        }
+
+        .experience-note {
+            text-align: center;
+            color: #7f8c8d;
+            font-size: 0.9rem;
+            font-style: italic;
+            margin-top: 20px;
+        }
+
+        @media (max-width: 768px) {
+            .experience-section { padding: 40px 0; }
+            .experience-card { padding: 30px 24px; }
+        }
+
         .container { max-width: 1100px; margin: 0 auto; padding: 60px 20px; }
         .section-title { text-align: center; font-size: 2.4rem; font-weight: 700; margin-bottom: 8px; color: #0b1f2a; }
         .section-title span { color: #D4AF37; }
@@ -316,6 +422,8 @@
         <a href="values.html">Values</a>
         <a href="states.html">States</a>
         <a href="tourism-window.html">Tourism Window</a>
+        <a href="pageant.html">Pageant</a>
+        <a href="food-fair.html">Food Fair</a>
         <a href="https://kwashate.netlify.app">KWASHATE</a>
         <a href="contact.html" class="nav-cta">Contact Us</a>
     </div>
@@ -370,6 +478,64 @@
             <a href="https://kwashate.netlify.app" class="ce-btn">Visit KWASHATE →</a>
             <a href="https://kwashate.netlify.app/nominate.html" class="ce-btn-outline">Nominate Now</a>
         </div>
+    </div>
+</section>
+
+<!-- ===== THE KWASHATE EXPERIENCE ===== -->
+<section class="experience-section">
+    <div class="container">
+
+        <div class="section-title">The KWASHATE <span>Experience</span></div>
+        <div class="section-subtitle">Three programs. One celebration of Kwara's hospitality excellence.</div>
+
+        <div class="experience-grid">
+
+            <!-- Card 1: The Award -->
+            <div class="experience-card">
+                <div class="exp-icon">🏆</div>
+                <div class="exp-badge">Award Night</div>
+                <h3>The HTEA Gold Award</h3>
+                <p>The crowning moment. 18 categories. 4 sectors. One black-tie gala honoring the hotels, restaurants, transport companies, and tourism innovators defining Kwara's hospitality standard.</p>
+                <ul class="exp-list">
+                    <li>18 award categories</li>
+                    <li>Live voting results</li>
+                    <li>Keynote speakers & entertainment</li>
+                    <li>Press & media coverage</li>
+                </ul>
+            </div>
+
+            <!-- Card 2: Food Fair -->
+            <div class="experience-card featured">
+                <div class="exp-icon">🍽️</div>
+                <div class="exp-badge">Food Exhibition</div>
+                <h3>KWASHATE Food Fair</h3>
+                <p>A celebration of Nigerian cuisine and Kwara's local vendors. Restaurants, caterers, and food entrepreneurs exhibit, sell, and compete — while the pageant's cooking challenge unfolds on stage.</p>
+                <ul class="exp-list">
+                    <li>Vendor stalls & tasting</li>
+                    <li>Live cooking competition</li>
+                    <li>Local Kwara ingredients showcase</li>
+                    <li>Open to the public</li>
+                </ul>
+            </div>
+
+            <!-- Card 3: Pageant -->
+            <div class="experience-card">
+                <div class="exp-icon">👑</div>
+                <div class="exp-badge">Pageant</div>
+                <h3>Mr. &amp; Mrs. KWASHATE</h3>
+                <p>Hospitality professionals compete to become the face of Kwara's tourism industry. They cook. They present. They handle real guest scenarios — dressed in the uniform of the department they represent.</p>
+                <ul class="exp-list">
+                    <li>Front Office • Housekeeping • F&amp;B</li>
+                    <li>Live cooking challenge</li>
+                    <li>Scenario-based Q&amp;A</li>
+                    <li>Winners become official HTEA ambassadors</li>
+                </ul>
+            </div>
+
+        </div>
+
+        <p class="experience-note">All three programs take place during KWASHATE 2026 in Ilorin, Kwara State.</p>
+
     </div>
 </section>
 
@@ -611,7 +777,7 @@
         <div class="person-card"><div class="avatar"><img src="img/musa.jpeg" alt="picture"></div><h4>Dahiru Obori</h4><div class="role">Founder & CEO</div><p><p>A 35-year hospitality veteran. Founder of HospitalityRecruit, Drecot Consults, and OneStack Digital Agency. YouWin! awardee. Leads HTEA as Founder &amp; CEO.</p></div>
         <div class="person-card"><div class="avatar"><img src="img/testimonial-2.jpg" alt="picture"></div><h4>Adedayo Olawale </h4><div class="role">Head of Operations</div><p>[Brief bio]</p></div>
         <div class="person-card"><div class="avatar"><img src="img/testimonial-1.jpg" alt="picture"></div><h4>Augustina Ibeh</h4><div class="role">Head of Partnerships</div><p>A 5-year marketing and business development professional. Founder of T Data Connect, with deep experience across the hospitality industry. Serves HTEA as Head of Partnerships.</p></div>
-        <div class="person-card"><div class="avatar"><img src="img/olaseyi.jpeg" alt=""></div><h4>DARE, Oluwasheyi Isaac</h4><div class="role">Head of Finace</div><p>A 15-year accounting veteran. ICAN-certified and specializes in hospitality-sector financial management. Founder of Distinct Global Ventures &amp; General Merchandise and former Accountant at Rotana Hotel Ltd. Serves HTEA as Chief Financial Officer</p></div>
+        <div class="person-card"><div class="avatar"><img src="img/olaseyi.jpeg" alt=""></div><h4>DARE, Oluwasheyi Isaac</h4><div class="role">Head of Finace</div><p>A 15-year accounting veteran. ICAN-certified and specializes in hospitality-sector financial management. Founder of Distinct Global Ventures &amp; General Merchandise and former Accountant at Rotana Hotel Ltd. Serves HTEA as Head of Finance</p></div>
         <!-- <div class="person-card"><div class="avatar"><img src="img/olaseyi.jpeg" alt=""></div><h4>DARE, Oluwasheyi Isaac</h4><div class="role">Head of Media & Communications</div><p>[Brief bio]</p></div>
         <div class="person-card"><div class="avatar">Photo</div><h4>[Name]</h4><div class="role">Head of Nominations & Verification</div><p>[Brief bio]</p></div> --> 
     </div>

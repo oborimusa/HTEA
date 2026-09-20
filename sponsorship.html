@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sponsorship Tiers — Mr. &amp; Mrs. KWASHATE &amp; Food Fair</title>
+<meta name="description" content="Sponsorship packages for the KWASHATE 2026 Food Fair and Mr. & Mrs. KWASHATE pageant.">
+<link rel="icon" type="image/png" href="img/award-logo4.png">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family:'Inter',sans-serif; background:#f5f6f8; color:#2c3e50; line-height:1.6; }
+h1,h2,h3,h4 { font-family:'Playfair Display',serif; }
+a { text-decoration:none; color:inherit; }
+
+nav { background:#0b1f2a; color:#fff; padding:16px 30px; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; box-shadow:0 2px 10px rgba(0,0,0,0.3); position:sticky; top:0; z-index:100; }
+.logo { display:flex; align-items:center; gap:8px; }
+.logo-link { display:flex; align-items:center; gap:10px; }
+.logo-img { width:60px; height:60px; object-fit:contain; border-radius:50%; }
+.logo-text { display:flex; flex-direction:column; line-height:1.1; }
+.brand-name { font-size:1.6rem; font-weight:800; color:#fff; }
+.brand-name span { color:#D4AF37; }
+.tagline { font-size:0.6rem; color:#94a3b8; text-transform:uppercase; letter-spacing:2px; }
+.hamburger { display:none; font-size:2rem; cursor:pointer; color:#D4AF37; }
+.nav-links { display:flex; gap:22px; align-items:center; }
+.nav-links a { color:#fff; font-weight:600; font-size:0.9rem; }
+.nav-links a:hover { color:#D4AF37; }
+.nav-cta { background:#D4AF37; color:#0b1f2a !important; padding:8px 20px; border-radius:40px; font-weight:700; }
+@media (max-width:900px){
+  .hamburger{display:block}
+  .nav-links{display:none;width:100%;flex-direction:column;align-items:center;gap:15px;padding:20px 0;background:#0b1f2a;position:absolute;top:90px;left:0;z-index:999;border-bottom:2px solid #D4AF37}
+  .nav-links.active{display:flex}
+  .nav-links a{width:100%;text-align:center;padding:8px 0}
+  .nav-cta{width:80%;text-align:center}
+}
+
+.page-hero { background:linear-gradient(rgba(11,31,42,0.9),rgba(11,31,42,0.95)),url('https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1200&q=80'); background-size:cover; background-position:center; color:#fff; padding:100px 20px 70px; text-align:center; }
+.page-hero h1 { font-size:2.8rem; margin-bottom:14px; line-height:1.2; }
+.page-hero h1 span { color:#D4AF37; }
+.page-hero p { max-width:720px; margin:0 auto 28px; opacity:0.9; font-size:1.05rem; line-height:1.8; }
+.hero-btns { display:flex; gap:14px; justify-content:center; flex-wrap:wrap; }
+.btn-primary { background:#D4AF37; color:#0b1f2a; padding:15px 34px; border-radius:40px; font-weight:700; font-size:1rem; transition:0.2s; display:inline-block; }
+.btn-primary:hover { background:#e6c04c; transform:scale(1.05); }
+.btn-outline { background:transparent; color:#fff; padding:15px 34px; border:2px solid #D4AF37; border-radius:40px; font-weight:700; font-size:1rem; transition:0.2s; display:inline-block; }
+.btn-outline:hover { background:#D4AF37; color:#0b1f2a; }
+
+.container { max-width:1200px; margin:0 auto; padding:60px 20px; }
+.section-title { text-align:center; font-size:2.2rem; font-weight:700; margin-bottom:8px; color:#0b1f2a; }
+.section-title span { color:#D4AF37; }
+.section-subtitle { text-align:center; color:#7f8c8d; margin-bottom:44px; font-size:1.05rem; }
+
+.intro-card { background:#fff; border-radius:16px; padding:40px; border:1px solid #eef2f7; box-shadow:0 4px 20px rgba(0,0,0,0.05); margin-bottom:50px; text-align:center; max-width:900px; margin-left:auto; margin-right:auto; }
+.intro-card p { font-size:1.05rem; line-height:1.9; color:#2c3e50; }
+
+/* SPONSOR TYPE TOGGLE */
+.type-header { display:grid; grid-template-columns:1fr; gap:20px; margin-bottom:40px; }
+@media (min-width:900px) { .type-header { grid-template-columns:1fr 1fr; } }
+.type-block { background:#fff; border-radius:16px; padding:30px; border:1px solid #eef2f7; box-shadow:0 4px 20px rgba(0,0,0,0.05); text-align:center; }
+.type-block .type-icon { font-size:2.4rem; margin-bottom:10px; }
+.type-block h3 { font-size:1.3rem; color:#0b1f2a; margin-bottom:8px; }
+.type-block h3 span { color:#D4AF37; }
+.type-block p { font-size:0.92rem; color:#7f8c8d; line-height:1.7; }
+
+/* TIER TABLES */
+.tier-section { background:#fff; border-radius:16px; padding:50px 40px; border:1px solid #eef2f7; box-shadow:0 4px 20px rgba(0,0,0,0.05); margin-bottom:40px; }
+.tier-section h2 { font-size:1.9rem; color:#0b1f2a; margin-bottom:8px; text-align:center; }
+.tier-section h2 span { color:#D4AF37; }
+.tier-section .lead { text-align:center; color:#7f8c8d; margin-bottom:36px; font-size:1rem; }
+
+.tier-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:24px; }
+.tier { background:#f8f9fa; border-radius:14px; padding:32px 26px; border:1px solid #eef2f7; transition:0.3s; display:flex; flex-direction:column; position:relative; }
+.tier:hover { transform:translateY(-4px); border-color:#D4AF37; box-shadow:0 8px 30px rgba(0,0,0,0.08); }
+.tier.featured { background:#0b1f2a; color:#fff; border:2px solid #D4AF37; }
+.tier .tier-badge { display:inline-block; background:#D4AF37; color:#0b1f2a; font-size:0.65rem; font-weight:700; padding:4px 12px; border-radius:40px; letter-spacing:1.5px; text-transform:uppercase; margin-bottom:14px; align-self:flex-start; }
+.tier h3 { font-size:1.3rem; color:#0b1f2a; margin-bottom:6px; }
+.tier.featured h3 { color:#fff; }
+.tier .tier-price { font-family:'Playfair Display',serif; font-size:1.9rem; font-weight:800; color:#D4AF37; margin:14px 0 20px; }
+.tier ul { list-style:none; margin-bottom:24px; }
+.tier ul li { padding:8px 0 8px 24px; position:relative; font-size:0.9rem; color:#2c3e50; line-height:1.6; }
+.tier.featured ul li { color:#cbd5e1; }
+.tier ul li::before { content:"✓"; position:absolute; left:0; color:#D4AF37; font-weight:700; }
+.tier .tier-cta { margin-top:auto; }
+.tier .tier-cta a { display:block; text-align:center; background:#D4AF37; color:#0b1f2a; padding:12px 22px; border-radius:40px; font-weight:700; font-size:0.92rem; transition:0.2s; }
+.tier .tier-cta a:hover { background:#e6c04c; }
+.tier.featured .tier-cta a { background:#D4AF37; }
+
+/* WHY SPONSOR */
+.why-card { background:#fff; border-radius:16px; padding:50px 40px; border:1px solid #eef2f7; box-shadow:0 4px 20px rgba(0,0,0,0.05); margin-bottom:40px; }
+.why-card h2 { font-size:1.9rem; color:#0b1f2a; margin-bottom:36px; text-align:center; }
+.why-card h2 span { color:#D4AF37; }
+.why-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:24px; }
+.why-item { background:#f8f9fa; border-radius:12px; padding:28px 24px; border-left:4px solid #D4AF37; }
+.why-item .why-icon { font-size:1.8rem; margin-bottom:10px; }
+.why-item h4 { font-size:1.05rem; color:#0b1f2a; margin-bottom:8px; }
+.why-item p { font-size:0.9rem; color:#7f8c8d; line-height:1.7; }
+
+/* CTA */
+.final-cta { background:linear-gradient(135deg,#0b1f2a,#1e293b); border-radius:16px; padding:56px 40px; text-align:center; color:#fff; border:2px solid #D4AF37; }
+.final-cta h2 { font-size:2rem; margin-bottom:12px; }
+.final-cta h2 span { color:#D4AF37; }
+.final-cta p { color:#cbd5e1; font-size:1.05rem; margin-bottom:28px; max-width:640px; margin-left:auto; margin-right:auto; line-height:1.8; }
+.final-cta .btn-row { display:flex; gap:14px; justify-content:center; flex-wrap:wrap; }
+
+footer { background:#0b1f2a; color:#94a3b8; padding:50px 20px 30px; text-align:center; margin-top:60px; }
+.footer-brand { font-size:1.6rem; font-weight:800; color:#fff; margin-bottom:8px; font-family:'Playfair Display',serif; }
+.footer-brand span { color:#D4AF37; }
+.footer-tagline { font-size:0.85rem; color:#D4AF37; text-transform:uppercase; letter-spacing:2px; margin-bottom:20px; }
+.footer-links { display:flex; justify-content:center; gap:22px; flex-wrap:wrap; margin-bottom:24px; }
+.footer-links a { color:#cbd5e1; font-size:0.9rem; }
+.footer-links a:hover { color:#D4AF37; }
+.copyright { font-size:0.8rem; color:#64748b; border-top:1px solid #1e293b; padding-top:20px; max-width:900px; margin:0 auto; }
+
+@media (max-width:768px){
+  .page-hero h1{font-size:2rem}
+  .tier-section,.why-card,.final-cta{padding:32px 22px}
+}
+</style>
+</head>
+<body>
+
+<nav>
+    <div class="logo">
+        <a href="index.html" class="logo-link">
+            <img src="img/award-logo4.png" alt="HTEA Logo" class="logo-img">
+            <div class="logo-text">
+                <span class="brand-name">HTE<span>A</span></span>
+                <span class="tagline">Hospitality &<br>Tourism Excellence<br>Awards</span>
+            </div>
+        </a>
+    </div>
+    <div class="hamburger" onclick="toggleMenu()">☰</div>
+    <div class="nav-links" id="navLinks">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="pageant.html">Pageant</a>
+        <a href="food-fair.html">Food Fair</a>
+        <a href="sponsorship.html">Sponsorship</a>
+        <a href="https://kwashate.netlify.app">KWASHATE</a>
+        <a href="contact.html" class="nav-cta">Contact Us</a>
+    </div>
+</nav>
+
+<header class="page-hero">
+    <h1>Sponsorship <span>Packages</span></h1>
+    <p>Put your brand in front of hotel owners, restaurateurs, tourism operators, media, and the public — across the KWASHATE 2026 Food Fair and Mr. &amp; Mrs. KWASHATE pageant.</p>
+    <div class="hero-btns">
+        <a href="#pageant-tiers" class="btn-primary">Pageant Sponsorship</a>
+        <a href="#fair-tiers" class="btn-outline">Food Fair Sponsorship</a>
+    </div>
+</header>
+
+<main class="container">
+
+    <div class="intro-card">
+        <p>Two sponsorship tracks. One audience. Sponsors can choose to back the <strong>pageant</strong>, the <strong>food fair</strong>, or <strong>both</strong> at a combined rate. Every tier includes media visibility, on-stage recognition, and a spot in the event program.</p>
+    </div>
+
+    <!-- TWO TRACKS -->
+    <div class="type-header">
+        <div class="type-block">
+            <div class="type-icon">👑</div>
+            <h3>Mr. &amp; Mrs. <span>KWASHATE</span></h3>
+            <p>A professional pageant selecting the official ambassadors of Kwara's hospitality and tourism sector. Reaches industry professionals, media, and the general public.</p>
+        </div>
+        <div class="type-block">
+            <div class="type-icon">🍽️</div>
+            <h3>KWASHATE <span>Food Fair</span></h3>
+            <p>A full day of tasting, exhibition, and networking. Reaches restaurants, caterers, food entrepreneurs, and the public. High foot traffic, high visibility.</p>
+        </div>
+    </div>
+
+    <!-- PAGEANT TIERS -->
+    <div class="tier-section" id="pageant-tiers">
+        <h2>👑 Pageant <span>Sponsorship</span></h2>
+        <p class="lead">Back the pageant. Reach hospitality professionals and media.</p>
+
+        <div class="tier-grid">
+
+            <div class="tier">
+                <span class="tier-badge">Bronze</span>
+                <h3>Pageant Supporter</h3>
+                <div class="tier-price">₦ —</div>
+                <ul>
+                    <li>Logo on pageant program</li>
+                    <li>Mention in opening remarks</li>
+                    <li>1 VIP seat at Awards Night</li>
+                    <li>Social media mention (1 post)</li>
+                </ul>
+                <div class="tier-cta"><a href="mailto:info@hteanigeria.com.ng?subject=Pageant%20Sponsorship%20-%20Supporter">Enquire Now</a></div>
+            </div>
+
+            <div class="tier">
+                <span class="tier-badge">Silver</span>
+                <h3>Pageant Partner</h3>
+                <div class="tier-price">₦ —</div>
+                <ul>
+                    <li>All Bronze benefits</li>
+                    <li>Logo on all pageant materials</li>
+                    <li>Stage mention during Awards Night</li>
+                    <li>3 VIP seats</li>
+                    <li>Featured social media post</li>
+                    <li>Logo on bootcamp materials</li>
+                </ul>
+                <div class="tier-cta"><a href="mailto:info@hteanigeria.com.ng?subject=Pageant%20Sponsorship%20-%20Partner">Enquire Now</a></div>
+            </div>
+
+            <div class="tier featured">
+                <span class="tier-badge">Gold</span>
+                <h3>Pageant Headline Sponsor</h3>
+                <div class="tier-price">₦ —</div>
+                <ul>
+                    <li>All Silver benefits</li>
+                    <li>"Presented by [Your Brand]" on stage and in media</li>
+                    <li>Logo on winner's sash and crown box</li>
+                    <li>Naming rights for one pageant round (e.g. "The [Brand] Heart Round")</li>
+                    <li>6 VIP seats at Awards Night</li>
+                    <li>Feature in press releases</li>
+                    <li>Dedicated social media campaign (3 posts + 1 reel)</li>
+                </ul>
+                <div class="tier-cta"><a href="mailto:info@hteanigeria.com.ng?subject=Pageant%20Sponsorship%20-%20Headline">Enquire Now</a></div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- FOOD FAIR TIERS -->
+    <div class="tier-section" id="fair-tiers">
+        <h2>🍽️ Food Fair <span>Sponsorship</span></h2>
+        <p class="lead">Back the fair. Reach vendors, restaurateurs, and the public.</p>
+
+        <div class="tier-grid">
+
+            <div class="tier">
+                <span class="tier-badge">Bronze</span>
+                <h3>Fair Supporter</h3>
+                <div class="tier-price">₦ —</div>
+                <ul>
+                    <li>Logo on fair signage</li>
+                    <li>Mention in fair opening</li>
+                    <li>Banner placement in vendor area</li>
+                    <li>Social media mention (1 post)</li>
+                </ul>
+                <div class="tier-cta"><a href="mailto:info@hteanigeria.com.ng?subject=Food%20Fair%20Sponsorship%20-%20Supporter">Enquire Now</a></div>
+            </div>
+
+            <div class="tier">
+                <span class="tier-badge">Silver</span>
+                <h3>Fair Partner</h3>
+                <div class="tier-price">₦ —</div>
+                <ul>
+                    <li>All Bronze benefits</li>
+                    <li>Logo on all fair materials</li>
+                    <li>Booth space for your brand</li>
+                    <li>Stage mention during cooking challenge</li>
+                    <li>Featured social media post</li>
+                </ul>
+                <div class="tier-cta"><a href="mailto:info@hteanigeria.com.ng?subject=Food%20Fair%20Sponsorship%20-%20Partner">Enquire Now</a></div>
+            </div>
+
+            <div class="tier featured">
+                <span class="tier-badge">Gold</span>
+                <h3>Fair Headline Sponsor</h3>
+                <div class="tier-price">₦ —</div>
+                <ul>
+                    <li>All Silver benefits</li>
+                    <li>"KWASHATE Food Fair — Powered by [Your Brand]"</li>
+                    <li>Naming rights for the cooking challenge</li>
+                    <li>Premium booth in prime location</li>
+                    <li>Featured in all press releases</li>
+                    <li>Dedicated social media campaign (3 posts + 1 reel)</li>
+                    <li>Live logo on stage backdrop</li>
+                </ul>
+                <div class="tier-cta"><a href="mailto:info@hteanigeria.com.ng?subject=Food%20Fair%20Sponsorship%20-%20Headline">Enquire Now</a></div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- COMBINED -->
+    <div class="tier-section">
+        <h2>🤝 Combined <span>Sponsorship</span></h2>
+        <p class="lead">Back both the pageant and the food fair at a combined rate. Best value for maximum visibility.</p>
+
+        <div class="tier-grid">
+            <div class="tier featured" style="grid-column:1/-1; max-width:600px; margin:0 auto;">
+                <span class="tier-badge">Best Value</span>
+                <h3>KWASHATE 2026 Title Sponsor</h3>
+                <div class="tier-price">₦ —</div>
+                <ul>
+                    <li>Everything in Pageant Headline + Food Fair Headline</li>
+                    <li>"KWASHATE 2026 — Powered by [Your Brand]"</li>
+                    <li>Logo on all event materials, tickets, and media</li>
+                    <li>Opening remarks at Awards Night</li>
+                    <li>10 VIP seats at Awards Night</li>
+                    <li>Premium booth + pageant round naming rights</li>
+                    <li>Full press and media campaign</li>
+                    <li>Featured in KWASHATE recap documentary</li>
+                </ul>
+                <div class="tier-cta"><a href="mailto:info@hteanigeria.com.ng?subject=KWASHATE%202026%20Title%20Sponsor">Become Title Sponsor</a></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- WHY SPONSOR -->
+    <div class="why-card">
+        <h2>Why <span>Sponsor</span> KWASHATE 2026</h2>
+        <div class="why-grid">
+            <div class="why-item">
+                <div class="why-icon">🎯</div>
+                <h4>Targeted Audience</h4>
+                <p>Hotel owners, restaurateurs, tourism operators, food entrepreneurs, and government officials — all in one room.</p>
+            </div>
+            <div class="why-item">
+                <div class="why-icon">📸</div>
+                <h4>Media Coverage</h4>
+                <p>Press features, social media campaigns, and a KWASHATE recap documentary that continues to promote your brand after the event.</p>
+            </div>
+            <div class="why-item">
+                <div class="why-icon">🏆</div>
+                <h4>Category Ownership</h4>
+                <p>Headline sponsors get naming rights to specific rounds or challenges — permanent brand association with prestige moments.</p>
+            </div>
+            <div class="why-item">
+                <div class="why-icon">🌍</div>
+                <h4>National Platform</h4>
+                <p>KWASHATE is the Kwara edition of HTEA — Nigeria's rotating awards platform. Sponsor today, get visibility across future states.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- CTA -->
+    <div class="final-cta">
+        <h2>Ready to <span>Sponsor?</span></h2>
+        <p>Sponsorship slots are limited. Contact us to receive the full media kit, audience numbers, and a custom proposal for your brand.</p>
+        <div class="btn-row">
+            <a href="mailto:partnerships@hteanigeria.com.ng?subject=KWASHATE%202026%20Sponsorship%20Enquiry" class="btn-primary">📧 Request Media Kit</a>
+            <a href="https://wa.me/2348039661354?text=Hello%20HTEA%20Team!%20I%20am%20interested%20in%20sponsoring%20KWASHATE%202026" class="btn-outline">💬 Chat on WhatsApp</a>
+        </div>
+    </div>
+
+</main>
+
+<footer>
+    <div class="footer-brand">HTE<span>A</span></div>
+    <div class="footer-tagline">Building the Future of Hospitality Excellence</div>
+    <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="pageant.html">Pageant</a>
+        <a href="food-fair.html">Food Fair</a>
+        <a href="sponsorship.html">Sponsorship</a>
+        <a href="contact.html">Contact</a>
+    </div>
+    <div class="copyright">© 2026 HTEA — Hospitality &amp; Tourism Excellence Awards. All rights reserved.</div>
+</footer>
+
+<script>function toggleMenu(){document.getElementById("navLinks").classList.toggle("active");}</script>
+</body>
+</html>

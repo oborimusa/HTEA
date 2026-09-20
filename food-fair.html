@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>KWASHATE Food Fair – HTEA</title>
+<meta name="description" content="The KWASHATE Food Fair — a celebration of Nigerian cuisine and Kwara's local food vendors. Vendor registration open.">
+<link rel="icon" type="image/png" href="img/award-logo4.png">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family:'Inter',sans-serif; background:#f5f6f8; color:#2c3e50; line-height:1.6; }
+h1,h2,h3,h4 { font-family:'Playfair Display',serif; }
+a { text-decoration:none; color:inherit; }
+
+nav { background:#0b1f2a; color:#fff; padding:16px 30px; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; box-shadow:0 2px 10px rgba(0,0,0,0.3); position:sticky; top:0; z-index:100; }
+.logo { display:flex; align-items:center; gap:8px; }
+.logo-link { display:flex; align-items:center; gap:10px; text-decoration:none; }
+.logo-img { width:60px; height:60px; object-fit:contain; border-radius:50%; }
+.logo-text { display:flex; flex-direction:column; line-height:1.1; }
+.brand-name { font-size:1.6rem; font-weight:800; color:#fff; }
+.brand-name span { color:#D4AF37; }
+.tagline { font-size:0.6rem; color:#94a3b8; text-transform:uppercase; letter-spacing:2px; }
+.hamburger { display:none; font-size:2rem; cursor:pointer; color:#D4AF37; }
+.nav-links { display:flex; gap:22px; align-items:center; }
+.nav-links a { color:#fff; font-weight:600; font-size:0.9rem; }
+.nav-links a:hover { color:#D4AF37; }
+.nav-cta { background:#D4AF37; color:#0b1f2a !important; padding:8px 20px; border-radius:40px; font-weight:700; }
+@media (max-width:900px){
+  .hamburger{display:block}
+  .nav-links{display:none;width:100%;flex-direction:column;align-items:center;gap:15px;padding:20px 0;background:#0b1f2a;position:absolute;top:90px;left:0;z-index:999;border-bottom:2px solid #D4AF37}
+  .nav-links.active{display:flex}
+  .nav-links a{width:100%;text-align:center;padding:8px 0}
+  .nav-cta{width:80%;text-align:center}
+}
+
+.page-hero { background:linear-gradient(rgba(11,31,42,0.9),rgba(11,31,42,0.95)),url('https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1200&q=80'); background-size:cover; background-position:center; color:#fff; padding:110px 20px 80px; text-align:center; }
+.page-hero .em { font-size:3.5rem; margin-bottom:16px; }
+.page-hero h1 { font-size:3rem; margin-bottom:14px; line-height:1.2; }
+.page-hero h1 span { color:#D4AF37; }
+.page-hero p { max-width:720px; margin:0 auto 28px; opacity:0.9; font-size:1.1rem; line-height:1.8; }
+.hero-btns { display:flex; gap:14px; justify-content:center; flex-wrap:wrap; }
+.btn-primary { background:#D4AF37; color:#0b1f2a; padding:15px 34px; border-radius:40px; font-weight:700; font-size:1rem; transition:0.2s; display:inline-block; }
+.btn-primary:hover { background:#e6c04c; transform:scale(1.05); }
+.btn-outline { background:transparent; color:#fff; padding:15px 34px; border:2px solid #D4AF37; border-radius:40px; font-weight:700; font-size:1rem; transition:0.2s; display:inline-block; }
+.btn-outline:hover { background:#D4AF37; color:#0b1f2a; }
+
+.container { max-width:1100px; margin:0 auto; padding:60px 20px; }
+.section-title { text-align:center; font-size:2.2rem; font-weight:700; margin-bottom:8px; color:#0b1f2a; }
+.section-title span { color:#D4AF37; }
+.section-subtitle { text-align:center; color:#7f8c8d; margin-bottom:44px; font-size:1.05rem; }
+
+.intro-card { background:#fff; border-radius:16px; padding:44px; border:1px solid #eef2f7; box-shadow:0 4px 20px rgba(0,0,0,0.05); margin-bottom:50px; text-align:center; }
+.intro-card p { font-size:1.08rem; line-height:1.9; color:#2c3e50; max-width:820px; margin:0 auto 14px; }
+.intro-card p:last-child { margin-bottom:0; }
+
+/* HIGHLIGHTS */
+.highlights-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:24px; margin-bottom:50px; }
+.highlight-card { background:#fff; border-radius:16px; padding:34px 26px; border:1px solid #eef2f7; box-shadow:0 4px 20px rgba(0,0,0,0.05); transition:0.3s; text-align:center; }
+.highlight-card:hover { transform:translateY(-6px); border-color:#D4AF37; box-shadow:0 8px 30px rgba(0,0,0,0.1); }
+.highlight-card .h-icon { font-size:2.8rem; margin-bottom:14px; }
+.highlight-card h3 { font-size:1.2rem; color:#0b1f2a; margin-bottom:10px; }
+.highlight-card p { font-size:0.92rem; color:#7f8c8d; line-height:1.7; }
+
+/* VENDOR TIERS */
+.tiers-card { background:#fff; border-radius:16px; padding:44px; border:1px solid #eef2f7; box-shadow:0 4px 20px rgba(0,0,0,0.05); margin-bottom:50px; }
+.tiers-card h2 { font-size:1.8rem; color:#0b1f2a; margin-bottom:12px; text-align:center; }
+.tiers-card h2 span { color:#D4AF37; }
+.tiers-card .lead { text-align:center; color:#7f8c8d; margin-bottom:32px; font-size:1rem; }
+.tiers-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:24px; }
+.tier-card { background:#f8f9fa; border-radius:14px; padding:30px 24px; border:1px solid #eef2f7; text-align:center; transition:0.3s; display:flex; flex-direction:column; }
+.tier-card:hover { border-color:#D4AF37; }
+.tier-card.featured { background:#0b1f2a; color:#fff; border:2px solid #D4AF37; }
+.tier-badge { display:inline-block; background:#D4AF37; color:#0b1f2a; font-size:0.7rem; font-weight:700; padding:4px 12px; border-radius:40px; letter-spacing:1.5px; text-transform:uppercase; margin-bottom:14px; }
+.tier-card h3 { font-size:1.3rem; color:#0b1f2a; margin-bottom:8px; }
+.tier-card.featured h3 { color:#fff; }
+.tier-price { font-family:'Playfair Display',serif; font-size:2rem; font-weight:800; color:#D4AF37; margin-bottom:16px; }
+.tier-card ul { list-style:none; text-align:left; margin-bottom:20px; }
+.tier-card ul li { padding:7px 0 7px 22px; position:relative; font-size:0.9rem; color:#2c3e50; }
+.tier-card.featured ul li { color:#cbd5e1; }
+.tier-card ul li::before { content:"✓"; position:absolute; left:0; color:#D4AF37; font-weight:700; }
+.tier-card .tier-cta { margin-top:auto; }
+.tier-card .tier-cta a { display:inline-block; background:#D4AF37; color:#0b1f2a; padding:10px 24px; border-radius:40px; font-weight:700; font-size:0.9rem; transition:0.2s; }
+.tier-card .tier-cta a:hover { background:#e6c04c; }
+
+/* AUDIENCE */
+.audience-card { background:#fff; border-radius:16px; padding:44px; border:1px solid #eef2f7; box-shadow:0 4px 20px rgba(0,0,0,0.05); margin-bottom:50px; }
+.audience-card h2 { font-size:1.8rem; color:#0b1f2a; margin-bottom:24px; text-align:center; }
+.audience-card h2 span { color:#D4AF37; }
+.audience-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:24px; }
+.audience-item { background:#f8f9fa; border-radius:12px; padding:26px 22px; border-left:4px solid #D4AF37; }
+.audience-item h4 { font-size:1.05rem; color:#0b1f2a; margin-bottom:8px; }
+.audience-item p { font-size:0.9rem; color:#7f8c8d; line-height:1.7; }
+
+/* REQUIREMENTS */
+.req-card { background:#fff; border-radius:16px; padding:44px; border:1px solid #eef2f7; box-shadow:0 4px 20px rgba(0,0,0,0.05); margin-bottom:50px; }
+.req-card h2 { font-size:1.8rem; color:#0b1f2a; margin-bottom:24px; text-align:center; }
+.req-card h2 span { color:#D4AF37; }
+.req-grid { display:grid; grid-template-columns:1fr 1fr; gap:30px; }
+@media (max-width:700px){ .req-grid{grid-template-columns:1fr} }
+.req-col h4 { font-size:0.85rem; color:#0b1f2a; margin-bottom:14px; text-transform:uppercase; letter-spacing:1px; }
+.req-col ul { list-style:none; }
+.req-col ul li { padding:8px 0 8px 26px; position:relative; font-size:0.93rem; color:#2c3e50; line-height:1.7; }
+.req-col.provide ul li::before { content:"✓"; position:absolute; left:0; color:#D4AF37; font-weight:700; }
+.req-col.bring ul li::before { content:"•"; position:absolute; left:8px; color:#D4AF37; font-weight:700; font-size:1.2rem; }
+
+/* CTA */
+.apply-cta { background:linear-gradient(135deg,#0b1f2a,#1e293b); border-radius:16px; padding:56px 40px; text-align:center; color:#fff; border:2px solid #D4AF37; }
+.apply-cta .cta-emoji { font-size:2.8rem; margin-bottom:16px; }
+.apply-cta h2 { font-size:2rem; margin-bottom:12px; }
+.apply-cta h2 span { color:#D4AF37; }
+.apply-cta p { color:#cbd5e1; font-size:1.05rem; margin-bottom:28px; max-width:640px; margin-left:auto; margin-right:auto; line-height:1.8; }
+.apply-cta .btn-row { display:flex; gap:14px; justify-content:center; flex-wrap:wrap; }
+
+footer { background:#0b1f2a; color:#94a3b8; padding:50px 20px 30px; text-align:center; margin-top:60px; }
+.footer-brand { font-size:1.6rem; font-weight:800; color:#fff; margin-bottom:8px; font-family:'Playfair Display',serif; }
+.footer-brand span { color:#D4AF37; }
+.footer-tagline { font-size:0.85rem; color:#D4AF37; text-transform:uppercase; letter-spacing:2px; margin-bottom:20px; }
+.footer-edition { background:rgba(212,175,55,0.1); border:1px solid #D4AF37; border-radius:12px; padding:14px 20px; display:inline-block; margin-bottom:24px; font-size:0.9rem; color:#cbd5e1; }
+.footer-edition a { color:#D4AF37; font-weight:700; }
+.footer-links { display:flex; justify-content:center; gap:22px; flex-wrap:wrap; margin-bottom:24px; }
+.footer-links a { color:#cbd5e1; font-size:0.9rem; }
+.footer-links a:hover { color:#D4AF37; }
+.copyright { font-size:0.8rem; color:#64748b; border-top:1px solid #1e293b; padding-top:20px; max-width:900px; margin:0 auto; }
+
+@media (max-width:768px){
+  .page-hero h1{font-size:2.1rem}
+  .intro-card,.tiers-card,.audience-card,.req-card,.apply-cta{padding:30px}
+}
+</style>
+</head>
+<body>
+
+<nav>
+    <div class="logo">
+        <a href="index.html" class="logo-link">
+            <img src="img/award-logo4.png" alt="HTEA Logo" class="logo-img">
+            <div class="logo-text">
+                <span class="brand-name">HTE<span>A</span></span>
+                <span class="tagline">Hospitality &<br>Tourism Excellence<br>Awards</span>
+            </div>
+        </a>
+    </div>
+    <div class="hamburger" onclick="toggleMenu()">☰</div>
+    <div class="nav-links" id="navLinks">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="values.html">Values</a>
+        <a href="states.html">States</a>
+        <a href="tourism-window.html">Tourism Window</a>
+        <a href="pageant.html">Pageant</a>
+        <a href="food-fair.html">Food Fair</a>
+        <a href="https://kwashate.netlify.app">KWASHATE</a>
+        <a href="contact.html" class="nav-cta">Contact Us</a>
+    </div>
+</nav>
+
+<header class="page-hero">
+    <div class="em">🍽️</div>
+    <h1>KWASHATE <span>Food Fair</span></h1>
+    <p>A celebration of Nigerian cuisine and Kwara's local food vendors. Restaurants, caterers, and food entrepreneurs exhibit, sell, and compete — while the pageant's live cooking challenge unfolds on stage.</p>
+    <div class="hero-btns">
+        <a href="#vendor" class="btn-primary">Register as a Vendor</a>
+        <a href="#highlights" class="btn-outline">What to Expect</a>
+    </div>
+</header>
+
+<main class="container">
+
+    <div class="intro-card">
+        <p>Food is the gateway to culture — and Kwara has one of Nigeria's richest culinary traditions. The <strong>KWASHATE Food Fair</strong> brings together restaurants, caterers, food entrepreneurs, and home cooks for a full day of tasting, exhibition, and networking.</p>
+        <p>Vendors get real exposure to hotel owners, restaurateurs, tourism operators, and media — the exact audience that can turn a local food business into a household name.</p>
+    </div>
+
+    <!-- HIGHLIGHTS -->
+    <div class="section-title" id="highlights">What Happens at the <span>Fair</span></div>
+    <div class="section-subtitle">One day. Multiple activations. Open to the public.</div>
+
+    <div class="highlights-grid">
+        <div class="highlight-card">
+            <div class="h-icon">🍲</div>
+            <h3>Vendor Stalls</h3>
+            <p>Restaurants, caterers, and food entrepreneurs exhibit and sell signature dishes to a live audience.</p>
+        </div>
+        <div class="highlight-card">
+            <div class="h-icon">🔥</div>
+            <h3>Live Cooking Challenge</h3>
+            <p>Mr. &amp; Mrs. KWASHATE contestants compete in "The Heat" — a sealed-basket cooking challenge on stage.</p>
+        </div>
+        <div class="highlight-card">
+            <div class="h-icon">🥗</div>
+            <h3>Local Ingredient Showcase</h3>
+            <p>Highlighting the produce, spices, and local ingredients that make Kwara cuisine distinct.</p>
+        </div>
+        <div class="highlight-card">
+            <div class="h-icon">🤝</div>
+            <h3>B2B Networking</h3>
+            <p>Hotel F&amp;B managers, restaurateurs, and caterers meet suppliers and collaborators.</p>
+        </div>
+    </div>
+
+    <!-- VENDOR TIERS -->
+    <div class="tiers-card" id="vendor">
+        <h2>Vendor <span>Packages</span></h2>
+        <p class="lead">Choose the package that fits your business. Limited stalls available.</p>
+
+        <div class="tiers-grid">
+
+            <div class="tier-card">
+                <span class="tier-badge">Starter</span>
+                <h3>Standard Stall</h3>
+                <div class="tier-price">₦ —</div>
+                <ul>
+                    <li>Standard booth space</li>
+                    <li>Table and 2 chairs</li>
+                    <li>Brand name on event program</li>
+                    <li>Social media mention</li>
+                    <li>1 vendor pass</li>
+                </ul>
+                <div class="tier-cta"><a href="https://wa.me/2348039661354?text=I%20want%20the%20Standard%20Stall%20package%20for%20KWASHATE%20Food%20Fair">Book Now</a></div>
+            </div>
+
+            <div class="tier-card featured">
+                <span class="tier-badge">Most Popular</span>
+                <h3>Premium Stall</h3>
+                <div class="tier-price">₦ —</div>
+                <ul>
+                    <li>Larger booth in prime position</li>
+                    <li>Table, 3 chairs, branded banner</li>
+                    <li>Logo on event banner and program</li>
+                    <li>Featured social media post</li>
+                    <li>3 vendor passes</li>
+                    <li>Mention during cooking challenge</li>
+                </ul>
+                <div class="tier-cta"><a href="https://wa.me/2348039661354?text=I%20want%20the%20Premium%20Stall%20package%20for%20KWASHATE%20Food%20Fair">Book Now</a></div>
+            </div>
+
+            <div class="tier-card">
+                <span class="tier-badge">Headline</span>
+                <h3>Anchor Vendor</h3>
+                <div class="tier-price">₦ —</div>
+                <ul>
+                    <li>Largest booth + stage-side position</li>
+                    <li>Named "Anchor Vendor" of the fair</li>
+                    <li>Logo on all event materials</li>
+                    <li>Dedicated press mention</li>
+                    <li>5 vendor passes</li>
+                    <li>Category of the cooking challenge sponsored in your name</li>
+                </ul>
+                <div class="tier-cta"><a href="https://wa.me/2348039661354?text=I%20want%20the%20Anchor%20Vendor%20package%20for%20KWASHATE%20Food%20Fair">Book Now</a></div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- AUDIENCE -->
+    <div class="audience-card">
+        <h2>Who You'll <span>Meet</span></h2>
+        <div class="audience-grid">
+            <div class="audience-item">
+                <h4>🏨 Hotel F&amp;B Managers</h4>
+                <p>Looking for suppliers, signature dishes, and talent to bring into their operations.</p>
+            </div>
+            <div class="audience-item">
+                <h4>🍽️ Restaurant Owners</h4>
+                <p>Exploring collaborations, menu expansions, and cross-promotions with other vendors.</p>
+            </div>
+            <div class="audience-item">
+                <h4>📰 Media &amp; Content Creators</h4>
+                <p>Food bloggers, lifestyle press, and content creators covering Kwara's food scene.</p>
+            </div>
+            <div class="audience-item">
+                <h4>👥 The Public</h4>
+                <p>Hundreds of visitors attending to taste, buy, and discover new local food brands.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- REQUIREMENTS -->
+    <div class="req-card">
+        <h2>Vendor <span>Requirements</span></h2>
+        <div class="req-grid">
+            <div class="req-col provide">
+                <h4>What KWASHATE Provides</h4>
+                <ul>
+                    <li>Booth space with basic structure</li>
+                    <li>Table and chairs per package tier</li>
+                    <li>Electricity point access</li>
+                    <li>Event program listing</li>
+                    <li>Security and crowd management</li>
+                    <li>Waste disposal</li>
+                </ul>
+            </div>
+            <div class="req-col bring">
+                <h4>What You Must Bring</h4>
+                <ul>
+                    <li>Your own cooking equipment (per your menu)</li>
+                    <li>Food handling and hygiene compliance</li>
+                    <li>NAFDAC compliance for packaged goods</li>
+                    <li>Branding materials (banner, signboard)</li>
+                    <li>Staff uniform for your team</li>
+                    <li>Change of cash / POS terminal</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- CTA -->
+    <div class="apply-cta">
+        <div class="cta-emoji">🍽️</div>
+        <h2>Ready to <span>Exhibit?</span></h2>
+        <p>Stalls are limited. Register early to secure a prime position. Vendor applications close when all slots are filled.</p>
+        <div class="btn-row">
+            <a href="https://wa.me/2348039661354?text=Hello%20HTEA%20Team!%20I%20want%20to%20register%20as%20a%20vendor%20for%20the%20KWASHATE%20Food%20Fair" class="btn-primary">💬 Register on WhatsApp</a>
+            <a href="mailto:info@hteanigeria.com.ng?subject=KWASHATE%20Food%20Fair%20Vendor%20Registration" class="btn-outline">📧 Email Registration</a>
+        </div>
+    </div>
+
+</main>
+
+<footer>
+    <div class="footer-brand">HTE<span>A</span></div>
+    <div class="footer-tagline">Building the Future of Hospitality Excellence</div>
+    <div class="footer-edition">Current Edition: <a href="https://kwashate.netlify.app">KWASHATE 2026 — Kwara State →</a></div>
+    <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="states.html">States</a>
+        <a href="values.html">Values</a>
+        <a href="tourism-window.html">Tourism Window</a>
+        <a href="pageant.html">Pageant</a>
+        <a href="food-fair.html">Food Fair</a>
+        <a href="https://kwashate.netlify.app">KWASHATE</a>
+        <a href="contact.html">Contact</a>
+    </div>
+    <div class="copyright">© 2026 HTEA — Hospitality &amp; Tourism Excellence Awards. All rights reserved.</div>
+</footer>
+
+<script>function toggleMenu(){document.getElementById("navLinks").classList.toggle("active");}</script>
+</body>
+</html>
