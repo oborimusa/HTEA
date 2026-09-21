@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Buy Tickets — KWASHATE 2026</title>
+<meta name="description" content="Buy entry tickets for KWASHATE 2026 — Awards Night, Food Fair, and Mr. & Mrs. KWASHATE pageant.">
+<link rel="icon" type="image/png" href="img/award-logo4.png">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+<script src="https://js.paystack.co/v1/inline.js"></script>
+<style>
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family:'Inter',sans-serif; background:#f5f6f8; color:#2c3e50; line-height:1.6; }
+h1,h2,h3,h4 { font-family:'Playfair Display',serif; }
+a { text-decoration:none; color:inherit; }
+
+nav { background:#0b1f2a; color:#fff; padding:16px 30px; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; box-shadow:0 2px 10px rgba(0,0,0,0.3); position:sticky; top:0; z-index:100; }
+.logo { display:flex; align-items:center; gap:8px; }
+.logo-link { display:flex; align-items:center; gap:10px; }
+.logo-img { width:60px; height:60px; object-fit:contain; border-radius:50%; }
+.logo-text { display:flex; flex-direction:column; line-height:1.1; }
+.brand-name { font-size:1.6rem; font-weight:800; color:#fff; }
+.brand-name span { color:#D4AF37; }
+.tagline { font-size:0.6rem; color:#94a3b8; text-transform:uppercase; letter-spacing:2px; }
+.hamburger { display:none; font-size:2rem; cursor:pointer; color:#D4AF37; }
+.nav-links { display:flex; gap:20px; align-items:center; }
+.nav-links a { color:#fff; font-weight:600; font-size:0.88rem; }
+.nav-links a:hover { color:#D4AF37; }
+.nav-cta { background:#D4AF37; color:#0b1f2a !important; padding:8px 20px; border-radius:40px; font-weight:700; }
+@media (max-width:1000px){
+  .hamburger{display:block}
+  .nav-links{display:none;width:100%;flex-direction:column;align-items:center;gap:15px;padding:20px 0;background:#0b1f2a;position:absolute;top:90px;left:0;z-index:999;border-bottom:2px solid #D4AF37}
+  .nav-links.active{display:flex}
+  .nav-links a{width:100%;text-align:center;padding:8px 0}
+  .nav-cta{width:80%;text-align:center}
+}
+
+.page-hero { background:linear-gradient(rgba(11,31,42,0.9),rgba(11,31,42,0.95)),url('https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1200&q=80'); background-size:cover; background-position:center; color:#fff; padding:90px 20px 60px; text-align:center; }
+.page-hero h1 { font-size:2.6rem; margin-bottom:12px; }
+.page-hero h1 span { color:#D4AF37; }
+.page-hero p { max-width:640px; margin:0 auto; opacity:0.9; font-size:1.05rem; line-height:1.8; }
+
+.container { max-width:1000px; margin:0 auto; padding:50px 20px; }
+
+.ticket-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:24px; margin-bottom:40px; }
+
+.ticket-card { background:#fff; border-radius:16px; padding:34px 28px; border:1px solid #eef2f7; box-shadow:0 4px 20px rgba(0,0,0,0.05); transition:0.3s; display:flex; flex-direction:column; position:relative; }
+.ticket-card:hover { transform:translateY(-6px); border-color:#D4AF37; box-shadow:0 8px 30px rgba(0,0,0,0.1); }
+.ticket-card.featured { border:2px solid #D4AF37; box-shadow:0 8px 30px rgba(212,175,55,0.15); }
+.ticket-badge { display:inline-block; background:#D4AF37; color:#0b1f2a; font-size:0.68rem; font-weight:700; padding:5px 14px; border-radius:40px; text-transform:uppercase; letter-spacing:1.5px; margin-bottom:16px; align-self:flex-start; }
+.ticket-card h3 { font-size:1.3rem; color:#0b1f2a; margin-bottom:8px; }
+.ticket-type { font-size:0.85rem; color:#7f8c8d; text-transform:uppercase; letter-spacing:1px; margin-bottom:16px; }
+.ticket-price { font-family:'Playfair Display',serif; font-size:2.4rem; font-weight:800; color:#D4AF37; margin-bottom:20px; }
+.ticket-price small { font-size:0.95rem; color:#7f8c8d; font-family:'Inter',sans-serif; font-weight:400; }
+.ticket-features { list-style:none; margin-bottom:24px; flex-grow:1; }
+.ticket-features li { padding:7px 0 7px 24px; position:relative; font-size:0.9rem; color:#2c3e50; }
+.ticket-features li::before { content:"✓"; position:absolute; left:0; color:#D4AF37; font-weight:700; }
+.ticket-btn { background:#D4AF37; color:#0b1f2a; padding:14px 28px; border:none; border-radius:40px; font-weight:700; font-size:0.95rem; cursor:pointer; transition:0.2s; width:100%; font-family:'Inter',sans-serif; }
+.ticket-btn:hover { background:#e6c04c; transform:translateY(-2px); }
+
+/* CHECKOUT FORM */
+.checkout-section { background:#fff; border-radius:16px; padding:40px; border:1px solid #eef2f7; box-shadow:0 4px 20px rgba(0,0,0,0.05); margin-bottom:40px; display:none; }
+.checkout-section.active { display:block; }
+.checkout-section h2 { font-size:1.6rem; color:#0b1f2a; margin-bottom:8px; }
+.checkout-section h2 span { color:#D4AF37; }
+.checkout-summary { background:#f8f9fa; border-radius:12px; padding:18px 22px; margin-bottom:24px; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:12px; }
+.checkout-summary .label { font-size:0.85rem; color:#7f8c8d; text-transform:uppercase; letter-spacing:1px; }
+.checkout-summary .value { font-family:'Playfair Display',serif; font-size:1.5rem; font-weight:800; color:#D4AF37; }
+
+.field { margin-bottom:18px; }
+.field label { display:block; font-size:0.82rem; font-weight:600; color:#0b1f2a; margin-bottom:6px; text-transform:uppercase; letter-spacing:0.5px; }
+.field input, .field select { width:100%; padding:12px 14px; border:1.5px solid #e2e8f0; border-radius:10px; font-family:'Inter',sans-serif; font-size:0.95rem; background:#f8f9fa; }
+.field input:focus, .field select:focus { outline:none; border-color:#D4AF37; background:#fff; }
+.field-row { display:grid; grid-template-columns:1fr 1fr; gap:16px; }
+@media (max-width:600px){ .field-row{grid-template-columns:1fr} }
+
+.pay-btn { background:#0b1f2a; color:#D4AF37; padding:16px 30px; border:none; border-radius:50px; font-weight:700; font-size:1.05rem; cursor:pointer; transition:0.2s; width:100%; font-family:'Inter',sans-serif; box-shadow:0 4px 15px rgba(11,31,42,0.3); }
+.pay-btn:hover { background:#1e293b; transform:translateY(-2px); }
+
+.secure-note { text-align:center; font-size:0.82rem; color:#7f8c8d; margin-top:14px; }
+
+/* SUCCESS */
+.success-box { background:#d4edda; border:2px solid #28a745; border-radius:16px; padding:40px; text-align:center; display:none; }
+.success-box.active { display:block; }
+.success-box .success-icon { font-size:3.5rem; margin-bottom:16px; }
+.success-box h2 { color:#155724; margin-bottom:12px; }
+.success-box p { color:#155724; margin-bottom:20px; }
+.ticket-code { background:#fff; border:2px dashed #28a745; border-radius:10px; padding:20px; margin:20px auto; max-width:400px; font-family:monospace; font-size:1.2rem; font-weight:700; color:#155724; letter-spacing:2px; }
+
+footer { background:#0b1f2a; color:#94a3b8; padding:50px 20px 30px; text-align:center; margin-top:60px; }
+.footer-brand { font-size:1.6rem; font-weight:800; color:#fff; margin-bottom:8px; font-family:'Playfair Display',serif; }
+.footer-brand span { color:#D4AF37; }
+.footer-tagline { font-size:0.85rem; color:#D4AF37; text-transform:uppercase; letter-spacing:2px; margin-bottom:20px; }
+.footer-links { display:flex; justify-content:center; gap:22px; flex-wrap:wrap; margin-bottom:24px; }
+.footer-links a { color:#cbd5e1; font-size:0.9rem; }
+.copyright { font-size:0.8rem; color:#64748b; border-top:1px solid #1e293b; padding-top:20px; max-width:900px; margin:0 auto; }
+</style>
+</head>
+<body>
+
+<nav>
+    <div class="logo">
+        <a href="index.html" class="logo-link">
+            <img src="img/award-logo4.png" alt="HTEA Logo" class="logo-img">
+            <div class="logo-text">
+                <span class="brand-name">HTE<span>A</span></span>
+                <span class="tagline">Hospitality &<br>Tourism Excellence<br>Awards</span>
+            </div>
+        </a>
+    </div>
+    <div class="hamburger" onclick="toggleMenu()">☰</div>
+    <div class="nav-links" id="navLinks">
+        <a href="index.html">Home</a>
+        <a href="pageant.html">Pageant</a>
+        <a href="food-fair.html">Food Fair</a>
+        <a href="sponsorship.html">Sponsorship</a>
+        <a href="tickets.html">Tickets</a>
+        <a href="vote.html">Vote</a>
+        <a href="contact.html" class="nav-cta">Contact Us</a>
+    </div>
+</nav>
+
+<header class="page-hero">
+    <h1>Buy Your <span>KWASHATE 2026</span> Tickets</h1>
+    <p>Secure your seat at the Awards Night, Food Fair, and Mr. & Mrs. KWASHATE pageant. Instant confirmation. Secure payment.</p>
+</header>
+
+<main class="container">
+
+    <!-- TICKET TIERS -->
+    <div class="ticket-grid" id="ticketGrid">
+
+        <div class="ticket-card">
+            <span class="ticket-badge">Food Fair</span>
+            <h3>Food Fair Day Pass</h3>
+            <div class="ticket-type">Public Access</div>
+            <div class="ticket-price">₦5,000<small> / person</small></div>
+            <ul class="ticket-features">
+                <li>Entry to the full Food Fair</li>
+                <li>Access to vendor stalls</li>
+                <li>Live cooking challenge viewing</li>
+                <li>Event program booklet</li>
+            </ul>
+            <button class="ticket-btn" onclick="selectTicket('Food Fair Day Pass', 5000)">Buy Ticket</button>
+        </div>
+
+        <div class="ticket-card featured">
+            <span class="ticket-badge">Best Value</span>
+            <h3>Awards Night VIP</h3>
+            <div class="ticket-type">Premium Seating</div>
+            <div class="ticket-price">₦25,000<small> / person</small></div>
+            <ul class="ticket-features">
+                <li>Premium front-row seating</li>
+                <li>Full Awards Gala access</li>
+                <li>Reserved table (6 seats)</li>
+                <li>Meet-and-greet with winners</li>
+                <li>Complimentary refreshments</li>
+                <li>Event program booklet</li>
+            </ul>
+            <button class="ticket-btn" onclick="selectTicket('Awards Night VIP', 25000)">Buy Ticket</button>
+        </div>
+
+        <div class="ticket-card">
+            <span class="ticket-badge">All Access</span>
+            <h3>Full Weekend Pass</h3>
+            <div class="ticket-type">Food Fair + Awards Night</div>
+            <div class="ticket-price">₦35,000<small> / person</small></div>
+            <ul class="ticket-features">
+                <li>Everything in Food Fair Pass</li>
+                <li>Everything in VIP Pass</li>
+                <li>Priority entry to all events</li>
+                <li>Exclusive behind-the-scenes access</li>
+            </ul>
+            <button class="ticket-btn" onclick="selectTicket('Full Weekend Pass', 35000)">Buy Ticket</button>
+        </div>
+
+    </div>
+
+    <!-- CHECKOUT FORM -->
+    <div class="checkout-section" id="checkoutSection">
+        <h2>Complete Your <span>Purchase</span></h2>
+        <div class="checkout-summary">
+            <div>
+                <div class="label">Selected Ticket</div>
+                <strong id="selectedTicketName">—</strong>
+            </div>
+            <div class="value" id="selectedTicketPrice">₦0</div>
+        </div>
+
+        <form id="checkoutForm" onsubmit="processPayment(event)">
+            <div class="field-row">
+                <div class="field">
+                    <label>Full Name *</label>
+                    <input type="text" id="buyerName" required>
+                </div>
+                <div class="field">
+                    <label>Email Address *</label>
+                    <input type="email" id="buyerEmail" required>
+                </div>
+            </div>
+
+            <div class="field-row">
+                <div class="field">
+                    <label>Phone Number *</label>
+                    <input type="tel" id="buyerPhone" required placeholder="0803 000 0000">
+                </div>
+                <div class="field">
+                    <label>Number of Tickets *</label>
+                    <input type="number" id="ticketQty" min="1" max="20" value="1" required onchange="updateTotal()">
+                </div>
+            </div>
+
+            <div class="checkout-summary" style="margin-top:24px;">
+                <div class="label">Total</div>
+                <div class="value" id="totalPrice">₦0</div>
+            </div>
+
+            <button type="submit" class="pay-btn">🔒 Pay Securely with Paystack</button>
+            <p class="secure-note">Payment processed by Paystack. Your card details are never stored on our servers.</p>
+        </form>
+    </div>
+
+    <!-- SUCCESS -->
+    <div class="success-box" id="successBox">
+        <div class="success-icon">🎉</div>
+        <h2>Payment Successful!</h2>
+        <p>Your ticket has been confirmed. Please save your ticket code below.</p>
+        <div class="ticket-code" id="ticketCode">—</div>
+        <p style="font-size:0.88rem;">A confirmation email has been sent to <strong id="confirmEmail">—</strong></p>
+        <p style="font-size:0.88rem; margin-top:16px;">Present this code at the event entrance.</p>
+    </div>
+
+</main>
+
+<footer>
+    <div class="footer-brand">HTE<span>A</span></div>
+    <div class="footer-tagline">Building the Future of Hospitality Excellence</div>
+    <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="pageant.html">Pageant</a>
+        <a href="food-fair.html">Food Fair</a>
+        <a href="tickets.html">Tickets</a>
+        <a href="vote.html">Vote</a>
+        <a href="contact.html">Contact</a>
+    </div>
+    <div class="copyright">© 2026 HTEA — Hospitality &amp; Tourism Excellence Awards. All rights reserved.</div>
+</footer>
+
+<script>
+// ===== CONFIGURATION =====
+const PAYSTACK_PUBLIC_KEY = 'pk_test_xxxxxxxxxxxxxxxxxxxxxxxx'; // Replace with your Paystack public key
+const CURRENCY = 'NGN';
+
+let selectedTicket = { name: '', price: 0 };
+
+function toggleMenu() {
+    document.getElementById('navLinks').classList.toggle('active');
+}
+
+function selectTicket(name, price) {
+    selectedTicket = { name, price };
+    document.getElementById('selectedTicketName').textContent = name;
+    document.getElementById('selectedTicketPrice').textContent = '₦' + price.toLocaleString();
+    document.getElementById('checkoutSection').classList.add('active');
+    document.getElementById('successBox').classList.remove('active');
+    updateTotal();
+    document.getElementById('checkoutSection').scrollIntoView({ behavior: 'smooth' });
+}
+
+function updateTotal() {
+    const qty = parseInt(document.getElementById('ticketQty').value) || 1;
+    const total = selectedTicket.price * qty;
+    document.getElementById('totalPrice').textContent = '₦' + total.toLocaleString();
+}
+
+function generateTicketCode() {
+    const chars = 'ABCDEFGHJKLMNPQRSTUVWXYZ23456789';
+    let code = 'KWS26-';
+    for (let i = 0; i < 8; i++) {
+        code += chars.charAt(Math.floor(Math.random() * chars.length));
+    }
+    return code;
+}
+
+function processPayment(event) {
+    event.preventDefault();
+
+    const name = document.getElementById('buyerName').value.trim();
+    const email = document.getElementById('buyerEmail').value.trim();
+    const phone = document.getElementById('buyerPhone').value.trim();
+    const qty = parseInt(document.getElementById('ticketQty').value) || 1;
+
+    if (!name || !email || !phone) {
+        alert('Please fill in all fields.');
+        return;
+    }
+
+    if (!email.includes('@')) {
+        alert('Please enter a valid email address.');
+        return;
+    }
+
+    const totalAmount = selectedTicket.price * qty * 100; // Paystack uses kobo
+
+    if (typeof PaystackPop === 'undefined') {
+        alert('Payment system is loading. Please refresh the page and try again.');
+        return;
+    }
+
+    const handler = PaystackPop.setup({
+        key: PAYSTACK_PUBLIC_KEY,
+        email: email,
+        amount: totalAmount,
+        currency: CURRENCY,
+        metadata: {
+            custom_fields: [
+                { display_name: 'Buyer Name', variable_name: 'buyer_name', value: name },
+                { display_name: 'Phone', variable_name: 'phone', value: phone },
+                { display_name: 'Ticket Type', variable_name: 'ticket_type', value: selectedTicket.name },
+                { display_name: 'Quantity', variable_name: 'quantity', value: qty.toString() }
+            ]
+        },
+        callback: function(response) {
+            const ticketCode = generateTicketCode();
+            
+            // Save to localStorage (demo only — use a backend in production)
+            const bookings = JSON.parse(localStorage.getItem('htea_bookings') || '[]');
+            bookings.push({
+                code: ticketCode,
+                name: name,
+                email: email,
+                phone: phone,
+                ticket: selectedTicket.name,
+                qty: qty,
+                amount: selectedTicket.price * qty,
+                reference: response.reference,
+                date: new Date().toISOString()
+            });
+            localStorage.setItem('htea_bookings', JSON.stringify(bookings));
+
+            // Show success
+            document.getElementById('ticketCode').textContent = ticketCode;
+            document.getElementById('confirmEmail').textContent = email;
+            document.getElementById('checkoutSection').classList.remove('active');
+            document.getElementById('successBox').classList.add('active');
+            document.getElementById('successBox').scrollIntoView({ behavior: 'smooth' });
+        },
+        onClose: function() {
+            alert('Payment window closed. You can try again anytime.');
+        }
+    });
+
+    handler.openIframe();
+}
+</script>
+</body>
+</html>
