@@ -1,116 +1,155 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Editions – HTEA</title>
-<meta name="description" content="HTEA rotates across all 36 states + FCT. See past, current, and upcoming editions.">
-<link rel="icon" type="image/png" href="img/award-logo4.png">
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-<style>
-* { margin:0; padding:0; box-sizing:border-box; }
-body { font-family:'Inter',sans-serif; background:#f5f6f8; color:#2c3e50; line-height:1.6; }
-h1,h2,h3,h4 { font-family:'Playfair Display',serif; }
-a { text-decoration:none; color:inherit; }
-nav { background:#0b1f2a; color:#fff; padding:16px 30px; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; box-shadow:0 2px 10px rgba(0,0,0,0.3); position:sticky; top:0; z-index:100; }
-.logo { display:flex; align-items:center; gap:8px; }
-.logo-link { display: flex; align-items: center; text-decoration: none; }
-.logo-img { width: 60px; height: 60px; object-fit: contain; border-radius: 50%; }
-.logo-text { display:flex; flex-direction:column; line-height:1.1; }
-.brand-name { font-size:1.6rem; font-weight:800; color:#fff; }
-.brand-name span { color:#D4AF37; }
-.tagline { font-size:0.6rem; color:#94a3b8; text-transform:uppercase; letter-spacing:2px; }
-.hamburger { display:none; font-size:2rem; cursor:pointer; color:#D4AF37; }
-.nav-links { display:flex; gap:25px; align-items:center; }
-.nav-links a { color:#fff; font-weight:600; font-size:0.9rem; }
-.nav-links a:hover { color:#D4AF37; }
-.nav-cta { background:#D4AF37; color:#0b1f2a !important; padding:8px 20px; border-radius:40px; font-weight:700; }
-@media (max-width:900px){
-  .hamburger{display:block}
-  .nav-links{display:none;width:100%;flex-direction:column;align-items:center;gap:15px;padding:20px 0;background:#0b1f2a;position:absolute;top:90px;left:0;z-index:999;border-bottom:2px solid #D4AF37}
-  .nav-links.active{display:flex}
-  .nav-links a{width:100%;text-align:center;padding:8px 0}
-  .nav-cta{width:80%;text-align:center}
-}
-.page-hero { background:linear-gradient(rgba(11,31,42,0.9),rgba(11,31,42,0.95)),url('https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1200&q=80'); background-size:cover; background-position:center; color:#fff; padding:100px 20px 70px; text-align:center; }
-.page-hero h1 { font-size:3rem; margin-bottom:12px; }
-.page-hero h1 span { color:#D4AF37; }
-.page-hero p { max-width:700px; margin:0 auto; opacity:0.9; font-size:1.1rem; }
-.container { max-width:1100px; margin:0 auto; padding:60px 20px; }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>States | HTEA — Hospitality & Tourism Excellence Awards</title>
+    <meta name="description" content="HTEA rotates across Nigeria's 36 states and the FCT. Each state produces one Face of the Edition, competing for the national title of Face of NIGHATE.">
+    <link rel="icon" type="image/png" href="img/award-logo4.png">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', sans-serif; background: #f5f6f8; color: #2c3e50; line-height: 1.6; }
+        h1, h2, h3, h4 { font-family: 'Playfair Display', serif; }
+        a { text-decoration: none; }
 
-.current-card { background:linear-gradient(135deg,#0b1f2a,#1e293b); border-radius:16px; padding:40px; color:#fff; margin-bottom:40px; border:2px solid #D4AF37; text-align:center; }
-.current-card .label { display:inline-block; background:#D4AF37; color:#0b1f2a; font-weight:700; font-size:0.75rem; padding:5px 14px; border-radius:40px; letter-spacing:1.5px; text-transform:uppercase; margin-bottom:16px; }
-.current-card h2 { font-size:2rem; margin-bottom:12px; }
-.current-card h2 span { color:#D4AF37; }
-.current-card p { color:#cbd5e1; margin-bottom:24px; font-size:1.05rem; }
-.current-card .btns { display:flex; gap:14px; justify-content:center; flex-wrap:wrap; }
-.btn-primary { background:#D4AF37; color:#0b1f2a; padding:14px 30px; border-radius:40px; font-weight:700; font-size:0.95rem; transition:0.2s; display:inline-block; }
-.btn-primary:hover { background:#e6c04c; transform:scale(1.05); }
-.btn-outline { background:transparent; color:#D4AF37; padding:14px 30px; border:2px solid #D4AF37; border-radius:40px; font-weight:700; font-size:0.95rem; transition:0.2s; display:inline-block; }
-.btn-outline:hover { background:#D4AF37; color:#0b1f2a; }
+        /* ===== NAVIGATION ===== */
+        nav { background: #0b1f2a; color: #fff; padding: 16px 30px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; box-shadow: 0 2px 10px rgba(0,0,0,0.3); position: sticky; top: 0; z-index: 100; }
+        .logo { display: flex; align-items: center; }
+        .logo-link { display: flex; align-items: center; text-decoration: none; }
+        .logo-img { width: 60px; height: 60px; object-fit: contain; border-radius: 50%; }
+        .logo-text { display: flex; flex-direction: column; line-height: 1.1; }
+        .brand-name { font-size: 1.6rem; font-weight: 800; color: #fff; letter-spacing: 0.5px; }
+        .brand-name span { color: #D4AF37; }
+        .tagline { font-size: 0.6rem; color: #94a3b8; text-transform: uppercase; letter-spacing: 2px; }
+        .hamburger { display: none; font-size: 2rem; cursor: pointer; color: #D4AF37; user-select: none; }
+        .nav-links { display: flex; gap: 25px; align-items: center; }
+        .nav-links a { color: #fff; font-weight: 600; font-size: 0.9rem; transition: color 0.2s; }
+        .nav-links a:hover { color: #D4AF37; }
+        .nav-cta { background: #D4AF37; color: #0b1f2a !important; padding: 8px 20px; border-radius: 40px; font-weight: 700; transition: 0.2s; }
+        .nav-cta:hover { background: #e6c04c; transform: scale(1.05); }
+        @media (max-width: 900px) {
+            .hamburger { display: block; }
+            .nav-links { display: none; width: 100%; flex-direction: column; align-items: center; gap: 15px; padding: 20px 0; background: #0b1f2a; position: absolute; top: 90px; left: 0; z-index: 999; border-bottom: 2px solid #D4AF37; }
+            .nav-links.active { display: flex; }
+            .nav-links a { width: 100%; text-align: center; padding: 8px 0; }
+            .nav-cta { width: 80%; text-align: center; }
+        }
 
-.editions-table { background:#fff; border-radius:16px; padding:30px; box-shadow:0 4px 20px rgba(0,0,0,0.05); border:1px solid #eef2f7; overflow-x:auto; margin-bottom:40px; }
-table { width:100%; border-collapse:collapse; min-width:600px; }
-thead { background:#0b1f2a; color:#fff; }
-th { padding:16px 18px; text-align:left; font-family:'Inter',sans-serif; font-size:0.8rem; text-transform:uppercase; letter-spacing:1px; font-weight:700; }
-th:first-child { border-top-left-radius:10px; }
-th:last-child { border-top-right-radius:10px; }
-td { padding:18px; border-bottom:1px solid #eef2f7; font-size:0.95rem; }
-tr:last-child td { border-bottom:none; }
-tr:hover td { background:#f8f9fa; }
-.year-cell { font-weight:800; color:#D4AF37; font-family:'Playfair Display',serif; font-size:1.2rem; }
-.status-live { background:#D4AF37; color:#0b1f2a; padding:5px 14px; border-radius:40px; font-size:0.75rem; font-weight:700; text-transform:uppercase; letter-spacing:0.5px; }
-.status-planning { background:#e2e8f0; color:#475569; padding:5px 14px; border-radius:40px; font-size:0.75rem; font-weight:700; text-transform:uppercase; letter-spacing:0.5px; }
-.status-open { background:#0ea5e9; color:#fff; padding:5px 14px; border-radius:40px; font-size:0.75rem; font-weight:700; text-transform:uppercase; letter-spacing:0.5px; }
-.table-link { color:#D4AF37; font-weight:700; font-size:0.9rem; }
-.table-link:hover { text-decoration:underline; }
-.table-disabled { color:#94a3b8; font-size:0.9rem; }
+        /* ===== PAGE HEADER ===== */
+        .page-header { background: linear-gradient(rgba(11,31,42,0.88), rgba(11,31,42,0.95)), url('https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1200&q=80'); background-size: cover; background-position: center; color: #fff; padding: 100px 20px 70px; text-align: center; }
+        .page-header h1 { font-size: 3rem; font-weight: 700; margin-bottom: 16px; }
+        .page-header h1 span { color: #D4AF37; }
+        .page-header .tagline { font-size: 1.15rem; max-width: 700px; margin: 0 auto 12px; opacity: 0.9; line-height: 1.7; color: #fff; text-transform: none; letter-spacing: 0; }
+        .page-header .subtext { font-size: 0.95rem; color: #D4AF37; font-weight: 600; margin-top: 8px; letter-spacing: 1px; }
+        @media (max-width: 768px) { .page-header h1 { font-size: 2.2rem; } }
 
-/* JUDGING ACROSS EDITIONS */
-.judging-section { background:#fff; border-radius:16px; padding:50px; box-shadow:0 4px 20px rgba(0,0,0,0.05); border:1px solid #eef2f7; margin-bottom:40px; }
-.judging-section h2 { font-size:2rem; color:#0b1f2a; margin-bottom:16px; text-align:center; }
-.judging-section h2 span { color:#D4AF37; }
-.judging-section .lead { text-align:center; color:#7f8c8d; font-size:1.05rem; max-width:700px; margin:0 auto 40px; line-height:1.8; }
+        /* ===== CONTAINER ===== */
+        .container { max-width: 1100px; margin: 0 auto; padding: 60px 20px; }
+        .section-title { text-align: center; font-size: 2.4rem; font-weight: 700; margin-bottom: 8px; color: #0b1f2a; }
+        .section-title span { color: #D4AF37; }
+        .section-subtitle { text-align: center; color: #7f8c8d; margin-bottom: 40px; font-size: 1.1rem; }
 
-.judge-diagram { display:grid; grid-template-columns:1fr; gap:24px; margin-bottom:40px; }
-.judge-tier { background:#f8f9fa; border-radius:14px; padding:30px; border-left:6px solid #D4AF37; }
-.judge-tier.rotating { border-left-color:#0ea5e9; }
-.judge-tier .tier-label { display:inline-block; font-size:0.72rem; font-weight:700; padding:5px 14px; border-radius:40px; letter-spacing:1.5px; text-transform:uppercase; margin-bottom:12px; background:#D4AF37; color:#0b1f2a; }
-.judge-tier.rotating .tier-label { background:#0ea5e9; color:#fff; }
-.judge-tier h3 { font-size:1.4rem; color:#0b1f2a; margin-bottom:10px; }
-.judge-tier h3 span { color:#D4AF37; }
-.judge-tier p { color:#2c3e50; font-size:1rem; line-height:1.8; }
+        /* ===== INTRO CARD ===== */
+        .intro-card { background: #fff; border-radius: 16px; padding: 50px; box-shadow: 0 4px 20px rgba(0,0,0,0.05); border: 1px solid #eef2f7; text-align: center; margin-bottom: 50px; }
+        .intro-card h2 { font-size: 2rem; margin-bottom: 16px; color: #0b1f2a; }
+        .intro-card h2 span { color: #D4AF37; }
+        .intro-card p { color: #2c3e50; font-size: 1.1rem; line-height: 1.9; max-width: 800px; margin: 0 auto 16px; }
 
-.edition-panels { background:#f8f9fa; border-radius:14px; padding:30px; }
-.edition-panels h3 { font-size:1.4rem; color:#0b1f2a; margin-bottom:20px; text-align:center; }
-.edition-panels h3 span { color:#D4AF37; }
-.panel-row { display:grid; grid-template-columns:120px 1fr auto; gap:20px; align-items:center; padding:18px 0; border-bottom:1px dashed #e2e8f0; }
-.panel-row:last-child { border-bottom:none; }
-.panel-row .yr { font-weight:800; color:#D4AF37; font-family:'Playfair Display',serif; font-size:1.15rem; }
-.panel-row .details { color:#2c3e50; font-size:0.95rem; }
-.panel-row .details strong { color:#0b1f2a; }
-.panel-row .status-pill { font-size:0.72rem; font-weight:700; padding:5px 12px; border-radius:40px; text-transform:uppercase; letter-spacing:0.5px; white-space:nowrap; }
-.panel-row .pill-active { background:#D4AF37; color:#0b1f2a; }
-.panel-row .pill-pending { background:#e2e8f0; color:#475569; }
-@media (max-width:700px) {
-  .panel-row { grid-template-columns:1fr; gap:6px; text-align:left; }
-  .judging-section { padding:30px; }
-}
+        /* ===== HOW THE ROTATION WORKS ===== */
+        .rotation-section { background: #0b1f2a; color: #fff; border-radius: 16px; padding: 50px; margin-bottom: 50px; border-left: 6px solid #D4AF37; }
+        .rotation-section h2 { font-size: 2rem; color: #D4AF37; margin-bottom: 20px; text-align: center; }
+        .rotation-section .rot-intro { color: #e2e8f0; font-size: 1.05rem; line-height: 1.9; text-align: center; margin-bottom: 30px; }
+        .rotation-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px; }
+        .rotation-card { background: rgba(255,255,255,0.05); border: 1px solid rgba(212,175,55,0.3); border-radius: 12px; padding: 28px; }
+        .rotation-card .rot-icon { font-size: 2rem; margin-bottom: 12px; display: block; }
+        .rotation-card h4 { color: #D4AF37; font-size: 1.15rem; margin-bottom: 10px; font-family: 'Playfair Display', serif; }
+        .rotation-card p { color: #cbd5e1; font-size: 0.95rem; line-height: 1.7; }
 
-@media (max-width:768px){ .page-hero h1{font-size:2.2rem} }
-footer { background:#0b1f2a; color:#94a3b8; padding:50px 20px 30px; text-align:center; margin-top:60px; }
-.footer-brand { font-size:1.6rem; font-weight:800; color:#fff; margin-bottom:8px; font-family:'Playfair Display',serif; }
-.footer-brand span { color:#D4AF37; }
-.footer-tagline { font-size:0.85rem; color:#D4AF37; text-transform:uppercase; letter-spacing:2px; margin-bottom:20px; }
-.footer-edition { background:rgba(212,175,55,0.1); border:1px solid #D4AF37; border-radius:12px; padding:14px 20px; display:inline-block; margin-bottom:24px; font-size:0.9rem; color:#cbd5e1; }
-.footer-edition a { color:#D4AF37; font-weight:700; }
-.footer-links { display:flex; justify-content:center; gap:22px; flex-wrap:wrap; margin-bottom:24px; }
-.footer-links a { color:#cbd5e1; font-size:0.9rem; }
-.footer-links a:hover { color:#D4AF37; }
-.copyright { font-size:0.8rem; color:#64748b; border-top:1px solid #1e293b; padding-top:20px; max-width:900px; margin:0 auto; }
-</style>
+        /* ===== CURRENT EDITION ===== */
+        .current-edition { background: #fff; border-radius: 16px; padding: 50px; box-shadow: 0 4px 20px rgba(0,0,0,0.05); border: 2px solid #D4AF37; margin-bottom: 50px; text-align: center; }
+        .current-edition .ce-badge { display: inline-block; background: #D4AF37; color: #0b1f2a; font-weight: 700; font-size: 0.75rem; padding: 5px 14px; border-radius: 40px; letter-spacing: 1.5px; text-transform: uppercase; margin-bottom: 16px; }
+        .current-edition h2 { font-size: 2rem; color: #0b1f2a; margin-bottom: 16px; }
+        .current-edition h2 span { color: #D4AF37; }
+        .current-edition p { color: #2c3e50; font-size: 1.05rem; line-height: 1.9; max-width: 800px; margin: 0 auto 16px; }
+        .current-edition .ce-cta { margin-top: 24px; }
+        .btn-primary { background: #D4AF37; color: #0b1f2a; padding: 16px 36px; border: none; border-radius: 50px; font-weight: 700; font-size: 1rem; cursor: pointer; display: inline-block; transition: 0.2s; box-shadow: 0 4px 15px rgba(212,175,55,0.4); }
+        .btn-primary:hover { transform: translateY(-3px); box-shadow: 0 6px 20px rgba(212,175,55,0.5); }
+
+        /* ===== STATE GRID ===== */
+        .states-grid-section { background: #fff; border-radius: 16px; padding: 50px; box-shadow: 0 4px 20px rgba(0,0,0,0.05); border: 1px solid #eef2f7; margin-bottom: 50px; }
+        .states-grid-section h2 { font-size: 2rem; color: #0b1f2a; margin-bottom: 12px; text-align: center; }
+        .states-grid-section h2 span { color: #D4AF37; }
+        .states-grid-section .sgs-subtitle { text-align: center; color: #7f8c8d; margin-bottom: 30px; }
+
+        .states-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 12px; }
+        .state-tile { background: #f8f9fa; border-radius: 10px; padding: 16px 18px; border: 1px solid #eef2f7; text-align: left; transition: 0.2s; display: flex; align-items: center; justify-content: space-between; }
+        .state-tile:hover { transform: translateY(-2px); border-color: #D4AF37; background: #fff; }
+        .state-tile .state-name { font-weight: 600; color: #0b1f2a; font-size: 0.95rem; }
+        .state-tile .state-status { font-size: 0.75rem; font-weight: 700; padding: 3px 10px; border-radius: 40px; text-transform: uppercase; letter-spacing: 0.5px; }
+        .state-tile .status-current { background: #D4AF37; color: #0b1f2a; }
+        .state-tile .status-next { background: #0ea5e9; color: #fff; }
+        .state-tile .status-open { background: #e2e8f0; color: #64748b; }
+        .state-tile.active { background: #fff; border-color: #D4AF37; border-width: 2px; box-shadow: 0 4px 15px rgba(212,175,55,0.15); }
+
+        /* ===== ROADMAP ===== */
+        .roadmap-section { background: #fff; border-radius: 16px; padding: 50px; box-shadow: 0 4px 20px rgba(0,0,0,0.05); border: 1px solid #eef2f7; margin-bottom: 50px; }
+        .roadmap-section h2 { font-size: 2rem; color: #0b1f2a; margin-bottom: 12px; text-align: center; }
+        .roadmap-section h2 span { color: #D4AF37; }
+        .roadmap-section .rs-subtitle { text-align: center; color: #7f8c8d; margin-bottom: 30px; }
+
+        .roadmap { position: relative; margin: 40px 0; padding-left: 40px; }
+        .roadmap::before { content: ''; position: absolute; left: 12px; top: 0; bottom: 0; width: 3px; background: linear-gradient(to bottom, #D4AF37, #0b1f2a); }
+        .roadmap-item { position: relative; margin-bottom: 40px; }
+        .roadmap-item::before { content: ''; position: absolute; left: -34px; top: 4px; width: 16px; height: 16px; border-radius: 50%; background: #D4AF37; border: 3px solid #fff; box-shadow: 0 0 0 3px #D4AF37; }
+        .roadmap-item .rm-year { display: inline-block; background: #0b1f2a; color: #D4AF37; font-size: 0.75rem; font-weight: 700; padding: 4px 12px; border-radius: 40px; letter-spacing: 1.5px; margin-bottom: 10px; text-transform: uppercase; }
+        .roadmap-item h4 { font-size: 1.3rem; color: #0b1f2a; margin-bottom: 8px; }
+        .roadmap-item p { color: #7f8c8d; font-size: 0.95rem; line-height: 1.8; }
+
+        /* ===== FACE OF NIGHATE ===== */
+        .nighate-section { background: linear-gradient(135deg, #0b1f2a, #1e293b); color: #fff; border-radius: 16px; padding: 60px 40px; text-align: center; border-top: 4px solid #D4AF37; border-bottom: 4px solid #D4AF37; margin-bottom: 50px; }
+        .nighate-section .crown { font-size: 3.5rem; margin-bottom: 12px; display: block; }
+        .nighate-section h2 { font-size: 2.2rem; color: #D4AF37; margin-bottom: 16px; }
+        .nighate-section p { color: #e2e8f0; font-size: 1.05rem; line-height: 1.9; max-width: 800px; margin: 0 auto 14px; }
+        .nighate-section strong { color: #D4AF37; }
+
+        /* ===== CTA ===== */
+        .final-cta { background: #fff; border-radius: 16px; padding: 50px; box-shadow: 0 4px 20px rgba(0,0,0,0.05); border: 1px solid #eef2f7; text-align: center; }
+        .final-cta h2 { font-size: 2rem; color: #0b1f2a; margin-bottom: 16px; }
+        .final-cta h2 span { color: #D4AF37; }
+        .final-cta p { color: #7f8c8d; font-size: 1.05rem; margin-bottom: 24px; max-width: 700px; margin-left: auto; margin-right: auto; line-height: 1.8; }
+        .cta-buttons { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+        .btn-outline { background: transparent; color: #0b1f2a; padding: 16px 36px; border: 2px solid #0b1f2a; border-radius: 50px; font-weight: 700; font-size: 1rem; display: inline-block; transition: 0.2s; }
+        .btn-outline:hover { background: #0b1f2a; color: #D4AF37; }
+
+        /* ===== FOOTER ===== */
+        footer { background: #0b1f2a; color: #94a3b8; padding: 50px 20px 30px; text-align: center; margin-top: 60px; }
+        footer .footer-brand { font-size: 1.6rem; font-weight: 800; color: #fff; margin-bottom: 8px; font-family: 'Playfair Display', serif; }
+        footer .footer-brand span { color: #D4AF37; }
+        footer .footer-tagline { font-size: 0.85rem; color: #D4AF37; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 20px; }
+        footer .footer-edition { background: rgba(212,175,55,0.1); border: 1px solid #D4AF37; border-radius: 12px; padding: 14px 20px; display: inline-block; margin-bottom: 24px; font-size: 0.9rem; color: #cbd5e1; }
+        footer .footer-edition a { color: #D4AF37; font-weight: 700; }
+        footer .footer-links { display: flex; justify-content: center; gap: 22px; flex-wrap: wrap; margin-bottom: 24px; }
+        footer .footer-links a { color: #cbd5e1; font-size: 0.9rem; }
+        footer .footer-links a:hover { color: #D4AF37; }
+        footer .footer-social { display: flex; justify-content: center; gap: 16px; margin-bottom: 24px; }
+        footer .footer-social a { color: #D4AF37; font-size: 0.9rem; border: 1px solid #D4AF37; padding: 8px 18px; border-radius: 40px; transition: 0.2s; }
+        footer .footer-social a:hover { background: #D4AF37; color: #0b1f2a; }
+        footer .copyright { font-size: 0.8rem; color: #64748b; border-top: 1px solid #1e293b; padding-top: 20px; max-width: 900px; margin: 0 auto; line-height: 1.8; }
+
+        /* ===== FLOATING WHATSAPP ===== */
+        .wa-float { position: fixed; bottom: 74px; right: 24px; background: #25D366; color: #fff; padding: 14px 20px; border-radius: 50px; font-weight: 700; text-decoration: none; box-shadow: 0 4px 15px rgba(37,211,102,0.4); display: flex; align-items: center; gap: 8px; z-index: 999; font-size: 0.95rem; }
+        .wa-float:hover { transform: scale(1.05); }
+
+        @media (max-width: 768px) {
+            .intro-card, .rotation-section, .current-edition, .states-grid-section, .roadmap-section, .nighate-section, .final-cta { padding: 30px; }
+            .states-grid { grid-template-columns: 1fr 1fr; }
+            .roadmap { padding-left: 30px; }
+        }
+    </style>
 </head>
 <body>
+
 <nav>
     <div class="logo">
         <a href="index.html" class="logo-link">
@@ -128,7 +167,7 @@ footer { background:#0b1f2a; color:#94a3b8; padding:50px 20px 30px; text-align:c
         <a href="values.html">Values</a>
         <a href="states.html">States</a>
         <a href="tourism-window.html">Tourism Window</a>
-        <a href="pageant.html">Ambassadors Challenge</a>
+        <a href="pageant.html">Face Off KWASHATE</a>
         <a href="food-fair.html">Food Fair</a>
         <a href="sponsorship.html">Sponsorship</a>
         <a href="past-editions.html">Past Editions</a>
@@ -137,124 +176,205 @@ footer { background:#0b1f2a; color:#94a3b8; padding:50px 20px 30px; text-align:c
     </div>
 </nav>
 
-<header class="page-hero">
-  <h1>Editions & <span>States</span></h1>
-  <p>HTEA is not a one-off event. It is a national movement — one state at a time.</p>
+<header class="page-header">
+    <h1>Rotating Across <span>Nigeria</span></h1>
+    <p class="tagline">HTEA is not a one-off event. It is a national movement. Each year, the awards rotate to a new state — building toward a full national final.</p>
+    <div class="subtext">36 States + FCT</div>
 </header>
 
-<main class="container">
+<section class="container">
 
-  <div class="current-card">
-    <span class="label">🏆 Now Live</span>
-    <h2>2026 Edition: <span>KWASHATE</span></h2>
-    <p>Kwara State Hospitality & Tourism Expo — hosted in Ilorin. Nominations open. Tables available. Sponsorship packages live.</p>
-    <div class="btns">
-      <a href="https://kwashate.netlify.app" class="btn-primary">Visit KWASHATE →</a>
-      <a href="https://kwashate.netlify.app/nominate.html" class="btn-outline">Nominate Now</a>
-    </div>
-  </div>
-
-  <div class="editions-table">
-    <table>
-      <thead>
-        <tr>
-          <th>Year</th>
-          <th>Host State</th>
-          <th>Edition</th>
-          <th>Status</th>
-          <th>Event Site</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td class="year-cell">2026</td>
-          <td><strong>Kwara State</strong></td>
-          <td>KWASHATE 2026</td>
-          <td><span class="status-live">Live</span></td>
-          <td><a href="https://kwashate.netlify.app" class="table-link">Visit →</a></td>
-        </tr>
-        <tr>
-          <td class="year-cell">2027</td>
-          <td>Osun State</td>
-          <td>OSUNHATE 2027</td>
-          <td><span class="status-planning">Planning</span></td>
-          <td><span class="table-disabled">Coming Soon</span></td>
-        </tr>
-        <tr>
-          <td class="year-cell">2028</td>
-          <td>Oyo State</td>
-          <td>OYOHATE 2028</td>
-          <td><span class="status-planning">Planning</span></td>
-          <td><span class="table-disabled">Coming Soon</span></td>
-        </tr>
-        <tr>
-          <td class="year-cell">2029</td>
-          <td>Your State</td>
-          <td>Open for Bidding</td>
-          <td><span class="status-open">Open</span></td>
-          <td><a href="contact.html" class="table-link">Apply to Host →</a></td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-
-  <!-- JUDGING ACROSS EDITIONS -->
-  <div class="judging-section">
-    <h2>Judging Across <span>Editions</span></h2>
-    <p class="lead">Because HTEA travels to a new state each year, the judging structure has two tiers — one permanent, one rotating.</p>
-
-    <div class="judge-diagram">
-      <div class="judge-tier">
-        <span class="tier-label">Permanent · Applies to All Editions</span>
-        <h3>HTEA <span>National Board</span></h3>
-        <p>The National Board is the permanent custodian of the HTEA standard. It stays the same regardless of which state hosts the awards — ensuring that "Best Luxury Hotel" means the same thing in Kwara as it will in Osun, Oyo, or anywhere else.</p>
-      </div>
-
-      <div class="judge-tier rotating">
-        <span class="tier-label">Rotating · Different Panel per Edition</span>
-        <h3>Edition <span>Judging Panel</span></h3>
-        <p>Each host state assembles its own seven-person Judging Panel — 3 from the state's Hotel Owners Association, 2 from the state government, and 2 from the state's business sector. This panel is dissolved after each edition, and a new one is formed for the next state.</p>
-      </div>
+    <!-- ===== INTRO ===== -->
+    <div class="intro-card">
+        <h2>One Platform. <span>Every State.</span></h2>
+        <p>HTEA is designed to rotate across Nigeria's 36 states and the Federal Capital Territory. Each state hosts its own edition — producing its own winners, its own Face of the Edition, and its own celebration of hospitality excellence.</p>
+        <p>Over time, every state in Nigeria will have its own HTEA story, its own cohort of award winners, and its own representative at the national stage.</p>
     </div>
 
-    <div class="edition-panels">
-      <h3>Panel Status by <span>Edition</span></h3>
+    <!-- ===== HOW ROTATION WORKS ===== -->
+    <div class="rotation-section">
+        <h2>How the Rotation Works</h2>
+        <p class="rot-intro">Each year, HTEA moves to a new host state. Every edition is structured to produce three things: award winners, one Face of the Edition, and a pipeline of talent into the national final.</p>
 
-      <div class="panel-row">
-        <div class="yr">2026</div>
-        <div class="details"><strong>KWASHATE Judging Panel</strong> — Kwara State. 7 judges serving the 2026 edition only.</div>
-        <div class="status-pill pill-active">Announcing Soon</div>
-      </div>
-      <div class="panel-row">
-        <div class="yr">2027</div>
-        <div class="details"><strong>OSUNHATE Judging Panel</strong> — Osun State. To be assembled in 2027 under National Board oversight.</div>
-        <div class="status-pill pill-pending">Pending</div>
-      </div>
-      <div class="panel-row">
-        <div class="yr">2028</div>
-        <div class="details"><strong>OYOHATE Judging Panel</strong> — Oyo State. To be assembled in 2028.</div>
-        <div class="status-pill pill-pending">Pending</div>
-      </div>
-      <div class="panel-row">
-        <div class="yr">2029</div>
-        <div class="details"><strong>Open for Bidding</strong> — Host state will assemble its own edition panel when confirmed.</div>
-        <div class="status-pill pill-pending">Open</div>
-      </div>
+        <div class="rotation-grid">
+            <div class="rotation-card">
+                <span class="rot-icon">🏛️</span>
+                <h4>One Host State Per Year</h4>
+                <p>Each edition is anchored in one state, in partnership with local government, hotels, and industry bodies.</p>
+            </div>
+            <div class="rotation-card">
+                <span class="rot-icon">🏆</span>
+                <h4>State-Level Awards</h4>
+                <p>Every edition crowns winners across 18 award categories — recognizing the best in that state's hospitality sector.</p>
+            </div>
+            <div class="rotation-card">
+                <span class="rot-icon">👑</span>
+                <h4>One Face of the Edition</h4>
+                <p>Face Off — the skills-based challenge — produces one winner per edition: the Face of that edition.</p>
+            </div>
+            <div class="rotation-card">
+                <span class="rot-icon">🌍</span>
+                <h4>National Final</h4>
+                <p>Every Face of the Edition competes at the national final for the title of Face of NIGHATE.</p>
+            </div>
+        </div>
     </div>
-  </div>
 
-</main>
+    <!-- ===== CURRENT EDITION ===== -->
+    <div class="current-edition">
+        <span class="ce-badge">🏆 Current Edition</span>
+        <h2>2026 — <span>Kwara State</span></h2>
+        <p>The inaugural HTEA edition is hosted by Kwara State, under the banner <strong>KWASHATE 2026 — the Kwara Edition of the HTEA National Platform</strong>. Hosted at Starwood Hotels O2 Arena, Ilorin.</p>
+        <p>Kwara 2026 will produce 18 award winners and one Face of KWASHATE, who will represent the state at the first national final.</p>
+        <div class="ce-cta">
+            <a href="https://kwashate.netlify.app" class="btn-primary">Visit KWASHATE 2026 →</a>
+        </div>
+    </div>
+
+    <!-- ===== STATES GRID ===== -->
+    <div class="states-grid-section">
+        <h2>States &amp; <span>FCT</span></h2>
+        <p class="sgs-subtitle">All 36 states and the Federal Capital Territory. Status shown per state.</p>
+
+        <div class="states-grid">
+
+            <!-- CURRENT -->
+            <div class="state-tile active">
+                <span class="state-name">Kwara</span>
+                <span class="state-status status-current">2026</span>
+            </div>
+
+            <!-- NEXT -->
+            <div class="state-tile">
+                <span class="state-name">Osun</span>
+                <span class="state-status status-next">2027</span>
+            </div>
+            <div class="state-tile">
+                <span class="state-name">Oyo</span>
+                <span class="state-status status-next">2028</span>
+            </div>
+
+            <!-- OPEN (alphabetical) -->
+            <div class="state-tile"><span class="state-name">Abia</span><span class="state-status status-open">Open</span></div>
+            <div class="state-tile"><span class="state-name">Adamawa</span><span class="state-status status-open">Open</span></div>
+            <div class="state-tile"><span class="state-name">Akwa Ibom</span><span class="state-status status-open">Open</span></div>
+            <div class="state-tile"><span class="state-name">Anambra</span><span class="state-status status-open">Open</span></div>
+            <div class="state-tile"><span class="state-name">Bauchi</span><span class="state-status status-open">Open</span></div>
+            <div class="state-tile"><span class="state-name">Bayelsa</span><span class="state-status status-open">Open</span></div>
+            <div class="state-tile"><span class="state-name">Benue</span><span class="state-status status-open">Open</span></div>
+            <div class="state-tile"><span class="state-name">Borno</span><span class="state-status status-open">Open</span></div>
+            <div class="state-tile"><span class="state-name">Cross River</span><span class="state-status status-open">Open</span></div>
+            <div class="state-tile"><span class="state-name">Delta</span><span class="state-status status-open">Open</span></div>
+            <div class="state-tile"><span class="state-name">Ebonyi</span><span class="state-status status-open">Open</span></div>
+            <div class="state-tile"><span class="state-name">Edo</span><span class="state-status status-open">Open</span></div>
+            <div class="state-tile"><span class="state-name">Ekiti</span><span class="state-status status-open">Open</span></div>
+            <div class="state-tile"><span class="state-name">Enugu</span><span class="state-status status-open">Open</span></div>
+            <div class="state-tile"><span class="state-name">FCT — Abuja</span><span class="state-status status-open">Open</span></div>
+            <div class="state-tile"><span class="state-name">Gombe</span><span class="state-status status-open">Open</span></div>
+            <div class="state-tile"><span class="state-name">Imo</span><span class="state-status status-open">Open</span></div>
+            <div class="state-tile"><span class="state-name">Jigawa</span><span class="state-status status-open">Open</span></div>
+            <div class="state-tile"><span class="state-name">Kaduna</span><span class="state-status status-open">Open</span></div>
+            <div class="state-tile"><span class="state-name">Kano</span><span class="state-status status-open">Open</span></div>
+            <div class="state-tile"><span class="state-name">Katsina</span><span class="state-status status-open">Open</span></div>
+            <div class="state-tile"><span class="state-name">Kebbi</span><span class="state-status status-open">Open</span></div>
+            <div class="state-tile"><span class="state-name">Kogi</span><span class="state-status status-open">Open</span></div>
+            <div class="state-tile"><span class="state-name">Lagos</span><span class="state-status status-open">Open</span></div>
+            <div class="state-tile"><span class="state-name">Nasarawa</span><span class="state-status status-open">Open</span></div>
+            <div class="state-tile"><span class="state-name">Niger</span><span class="state-status status-open">Open</span></div>
+            <div class="state-tile"><span class="state-name">Ogun</span><span class="state-status status-open">Open</span></div>
+            <div class="state-tile"><span class="state-name">Ondo</span><span class="state-status status-open">Open</span></div>
+            <div class="state-tile"><span class="state-name">Plateau</span><span class="state-status status-open">Open</span></div>
+            <div class="state-tile"><span class="state-name">Rivers</span><span class="state-status status-open">Open</span></div>
+            <div class="state-tile"><span class="state-name">Sokoto</span><span class="state-status status-open">Open</span></div>
+            <div class="state-tile"><span class="state-name">Taraba</span><span class="state-status status-open">Open</span></div>
+            <div class="state-tile"><span class="state-name">Yobe</span><span class="state-status status-open">Open</span></div>
+            <div class="state-tile"><span class="state-name">Zamfara</span><span class="state-status status-open">Open</span></div>
+
+        </div>
+    </div>
+
+    <!-- ===== ROADMAP ===== -->
+    <div class="roadmap-section">
+        <h2>Rotation <span>Roadmap</span></h2>
+        <p class="rs-subtitle">The confirmed and planned HTEA editions. Additional states will be added each year.</p>
+
+        <div class="roadmap">
+
+            <div class="roadmap-item">
+                <span class="rm-year">2026</span>
+                <h4>Kwara State — The Inaugural Edition</h4>
+                <p>KWASHATE 2026 launches in Ilorin. 18 award categories. One Face of KWASHATE. The first national finalist in HTEA history.</p>
+            </div>
+
+            <div class="roadmap-item">
+                <span class="rm-year">2027</span>
+                <h4>Osun State — Planned</h4>
+                <p>The second HTEA edition moves to Osun State. A second Face of the Edition will join Kwara's at the national final.</p>
+            </div>
+
+            <div class="roadmap-item">
+                <span class="rm-year">2028</span>
+                <h4>Oyo State — Planned</h4>
+                <p>The third HTEA edition moves to Oyo State, expanding the platform's footprint across the South-West.</p>
+            </div>
+
+            <div class="roadmap-item">
+                <span class="rm-year">2029 →</span>
+                <h4>National Expansion</h4>
+                <p>HTEA expands to additional states across all six geopolitical zones, building toward a full 36-state + FCT national rotation.</p>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- ===== FACE OF NIGHATE ===== -->
+    <div class="nighate-section">
+        <span class="crown">👑</span>
+        <h2>Face of NIGHATE</h2>
+        <p>Every state edition produces one <strong>Face of the Edition</strong>. Those winners converge at the national final — where one emerges as the <strong>Face of NIGHATE</strong>.</p>
+        <p>One winner per state. One national champion. A national movement built on merit, not numbers.</p>
+        <p>The Face of NIGHATE represents Nigeria's hospitality and tourism sector at national and international platforms.</p>
+    </div>
+
+    <!-- ===== CTA ===== -->
+    <div class="final-cta">
+        <h2>Want HTEA in <span>Your State?</span></h2>
+        <p>If you're a hotel owner, industry association, government agency, or event partner interested in hosting HTEA in your state, we want to hear from you.</p>
+        <div class="cta-buttons">
+            <a href="contact.html" class="btn-primary">📩 Contact Us</a>
+            <a href="https://wa.me/2348039661354?text=Hello%20HTEA%20Team!%20I%20am%20interested%20in%20hosting%20HTEA%20in%20my%20state." class="btn-outline">📱 Chat on WhatsApp</a>
+        </div>
+    </div>
+
+</section>
 
 <footer>
-  <div class="footer-brand">HTE<span>A</span></div>
-  <div class="footer-tagline">Building the Future of Hospitality Excellence</div>
-  <div class="footer-edition">Current Edition: <a href="https://kwashate.netlify.app">KWASHATE 2026 — Kwara State →</a></div>
-  <div class="footer-links">
-    <a href="index.html">Home</a><a href="about.html">About</a><a href="values.html">Values</a><a href="states.html">States</a><a href="contact.html">Contact</a>
-  </div>
-  <div class="copyright">© 2026 HTEA. All rights reserved.</div>
+    <div class="footer-brand">HTE<span>A</span></div>
+    <div class="footer-tagline">Building the Future of Hospitality Excellence</div>
+    <div class="footer-edition">
+        Current Edition: <a href="https://kwashate.netlify.app">KWASHATE 2026 — Kwara State →</a>
+    </div>
+    <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="values.html">Values</a>
+        <a href="states.html">States</a>
+        <a href="contact.html">Contact</a>
+    </div>
+    <div class="footer-social">
+        <a href="https://instagram.com/hteanigeria" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://linkedin.com/company/hteanigeria" target="_blank" rel="noopener">LinkedIn</a>
+    </div>
+    <div class="copyright">
+        © 2026 Drecot Consults. All rights reserved.<br>
+        HTEA and KWASHATE are initiatives of Drecot Consults (RC: [insert RC number]).
+    </div>
 </footer>
 
-<script>function toggleMenu(){document.getElementById("navLinks").classList.toggle("active");}</script>
+<a href="https://wa.me/2348039661354?text=Hello%20HTEA%20Team!%20I%20need%20more%20information." class="wa-float">💬 Chat with us</a>
+
+<script>
+    function toggleMenu() { document.getElementById("navLinks").classList.toggle("active"); }
+</script>
 </body>
 </html>

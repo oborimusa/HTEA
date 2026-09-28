@@ -1,126 +1,143 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Tourism Window – HTEA</title>
-<meta name="description" content="Nigeria Tourism Window — official resources from the Federal Ministry of Art, Culture, Tourism and the Creative Economy, NIHOTOUR, and the National Digital Events Calendar.">
-<link rel="icon" type="image/png" href="img/award-logo4.png">
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-<style>
-* { margin:0; padding:0; box-sizing:border-box; }
-body { font-family:'Inter',sans-serif; background:#f5f6f8; color:#2c3e50; line-height:1.6; }
-h1,h2,h3,h4 { font-family:'Playfair Display',serif; }
-a { text-decoration:none; color:inherit; }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tourism Window | HTEA — Hospitality & Tourism Excellence Awards</title>
+    <meta name="description" content="The Tourism Window — HTEA's showcase of Nigeria's tourism destinations, attractions, and cultural heritage. Connecting local tourism to national recognition.">
+    <link rel="icon" type="image/png" href="img/award-logo4.png">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', sans-serif; background: #f5f6f8; color: #2c3e50; line-height: 1.6; }
+        h1, h2, h3, h4 { font-family: 'Playfair Display', serif; }
+        a { text-decoration: none; }
 
-/* NAV */
-nav { background:#0b1f2a; color:#fff; padding:16px 30px; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; box-shadow:0 2px 10px rgba(0,0,0,0.3); position:sticky; top:0; z-index:100; }
-.logo { display:flex; align-items:center; gap:8px; }
-.logo-link { display:flex; align-items:center; gap:10px; text-decoration:none; }
-.logo-img { width:60px; height:60px; object-fit:contain; border-radius:50%; }
-.logo-text { display:flex; flex-direction:column; line-height:1.1; }
-.brand-name { font-size:1.6rem; font-weight:800; color:#fff; }
-.brand-name span { color:#D4AF37; }
-.tagline { font-size:0.6rem; color:#94a3b8; text-transform:uppercase; letter-spacing:2px; }
-.hamburger { display:none; font-size:2rem; cursor:pointer; color:#D4AF37; }
-.nav-links { display:flex; gap:25px; align-items:center; }
-.nav-links a { color:#fff; font-weight:600; font-size:0.9rem; }
-.nav-links a:hover { color:#D4AF37; }
-.nav-cta { background:#D4AF37; color:#0b1f2a !important; padding:8px 20px; border-radius:40px; font-weight:700; }
-@media (max-width:900px){
-  .hamburger{display:block}
-  .nav-links{display:none;width:100%;flex-direction:column;align-items:center;gap:15px;padding:20px 0;background:#0b1f2a;position:absolute;top:90px;left:0;z-index:999;border-bottom:2px solid #D4AF37}
-  .nav-links.active{display:flex}
-  .nav-links a{width:100%;text-align:center;padding:8px 0}
-  .nav-cta{width:80%;text-align:center}
-}
+        /* ===== NAVIGATION ===== */
+        nav { background: #0b1f2a; color: #fff; padding: 16px 30px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; box-shadow: 0 2px 10px rgba(0,0,0,0.3); position: sticky; top: 0; z-index: 100; }
+        .logo { display: flex; align-items: center; }
+        .logo-link { display: flex; align-items: center; text-decoration: none; }
+        .logo-img { width: 60px; height: 60px; object-fit: contain; border-radius: 50%; }
+        .logo-text { display: flex; flex-direction: column; line-height: 1.1; }
+        .brand-name { font-size: 1.6rem; font-weight: 800; color: #fff; letter-spacing: 0.5px; }
+        .brand-name span { color: #D4AF37; }
+        .tagline { font-size: 0.6rem; color: #94a3b8; text-transform: uppercase; letter-spacing: 2px; }
+        .hamburger { display: none; font-size: 2rem; cursor: pointer; color: #D4AF37; user-select: none; }
+        .nav-links { display: flex; gap: 25px; align-items: center; }
+        .nav-links a { color: #fff; font-weight: 600; font-size: 0.9rem; transition: color 0.2s; }
+        .nav-links a:hover { color: #D4AF37; }
+        .nav-cta { background: #D4AF37; color: #0b1f2a !important; padding: 8px 20px; border-radius: 40px; font-weight: 700; transition: 0.2s; }
+        .nav-cta:hover { background: #e6c04c; transform: scale(1.05); }
+        @media (max-width: 900px) {
+            .hamburger { display: block; }
+            .nav-links { display: none; width: 100%; flex-direction: column; align-items: center; gap: 15px; padding: 20px 0; background: #0b1f2a; position: absolute; top: 90px; left: 0; z-index: 999; border-bottom: 2px solid #D4AF37; }
+            .nav-links.active { display: flex; }
+            .nav-links a { width: 100%; text-align: center; padding: 8px 0; }
+            .nav-cta { width: 80%; text-align: center; }
+        }
 
-/* PAGE HERO */
-.page-hero { background:linear-gradient(rgba(11,31,42,0.9),rgba(11,31,42,0.95)),url('https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1200&q=80'); background-size:cover; background-position:center; color:#fff; padding:100px 20px 70px; text-align:center; }
-.page-hero h1 { font-size:3rem; margin-bottom:12px; }
-.page-hero h1 span { color:#D4AF37; }
-.page-hero p { max-width:750px; margin:0 auto; opacity:0.9; font-size:1.1rem; line-height:1.8; }
+        /* ===== PAGE HEADER ===== */
+        .page-header { background: linear-gradient(rgba(11,31,42,0.88), rgba(11,31,42,0.95)), url('https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1200&q=80'); background-size: cover; background-position: center; color: #fff; padding: 100px 20px 70px; text-align: center; }
+        .page-header h1 { font-size: 3rem; font-weight: 700; margin-bottom: 16px; }
+        .page-header h1 span { color: #D4AF37; }
+        .page-header .tagline { font-size: 1.15rem; max-width: 700px; margin: 0 auto 12px; opacity: 0.9; line-height: 1.7; color: #fff; text-transform: none; letter-spacing: 0; }
+        @media (max-width: 768px) { .page-header h1 { font-size: 2.2rem; } }
 
-/* CONTAINER */
-.container { max-width:1100px; margin:0 auto; padding:60px 20px; }
+        /* ===== CONTAINER ===== */
+        .container { max-width: 1100px; margin: 0 auto; padding: 60px 20px; }
+        .section-title { text-align: center; font-size: 2.4rem; font-weight: 700; margin-bottom: 8px; color: #0b1f2a; }
+        .section-title span { color: #D4AF37; }
+        .section-subtitle { text-align: center; color: #7f8c8d; margin-bottom: 40px; font-size: 1.1rem; }
 
-/* INTRO CARD */
-.intro-card { background:#fff; border-radius:16px; padding:40px; border:1px solid #eef2f7; box-shadow:0 4px 20px rgba(0,0,0,0.05); margin-bottom:40px; text-align:center; }
-.intro-card h2 { font-size:2rem; color:#0b1f2a; margin-bottom:16px; }
-.intro-card h2 span { color:#D4AF37; }
-.intro-card p { font-size:1.05rem; color:#2c3e50; line-height:1.9; max-width:800px; margin:0 auto; }
+        /* ===== INTRO ===== */
+        .intro-card { background: #fff; border-radius: 16px; padding: 50px; box-shadow: 0 4px 20px rgba(0,0,0,0.05); border: 1px solid #eef2f7; text-align: center; margin-bottom: 50px; }
+        .intro-card h2 { font-size: 2rem; margin-bottom: 16px; color: #0b1f2a; }
+        .intro-card h2 span { color: #D4AF37; }
+        .intro-card p { color: #2c3e50; font-size: 1.1rem; line-height: 1.9; max-width: 800px; margin: 0 auto 16px; }
 
-/* RESOURCE CARDS */
-.resources-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:28px; margin-bottom:50px; }
-.resource-card { background:#fff; border-radius:16px; padding:40px 30px; border:1px solid #eef2f7; box-shadow:0 4px 20px rgba(0,0,0,0.05); text-align:center; transition:0.3s; display:flex; flex-direction:column; }
-.resource-card:hover { transform:translateY(-6px); border-color:#D4AF37; box-shadow:0 8px 30px rgba(0,0,0,0.1); }
-.resource-icon { font-size:3rem; margin-bottom:18px; }
-.resource-card h3 { font-size:1.4rem; color:#0b1f2a; margin-bottom:12px; }
-.resource-card p { font-size:0.95rem; color:#7f8c8d; line-height:1.8; margin-bottom:24px; flex-grow:1; }
-.resource-btn { display:inline-block; background:#D4AF37; color:#0b1f2a; padding:12px 28px; border-radius:40px; font-weight:700; font-size:0.95rem; transition:0.2s; margin-top:auto; }
-.resource-btn:hover { background:#e6c04c; transform:scale(1.05); }
-.resource-btn-outline { display:inline-block; background:transparent; color:#0b1f2a; padding:12px 28px; border:2px solid #0b1f2a; border-radius:40px; font-weight:700; font-size:0.95rem; transition:0.2s; margin-top:auto; }
-.resource-btn-outline:hover { background:#0b1f2a; color:#fff; }
+        /* ===== WHAT THE WINDOW IS ===== */
+        .what-section { background: #0b1f2a; color: #fff; border-radius: 16px; padding: 50px; margin-bottom: 50px; border-left: 6px solid #D4AF37; }
+        .what-section h2 { font-size: 2rem; color: #D4AF37; margin-bottom: 20px; text-align: center; }
+        .what-section .what-intro { color: #e2e8f0; font-size: 1.05rem; line-height: 1.9; text-align: center; margin-bottom: 30px; max-width: 850px; margin-left: auto; margin-right: auto; }
+        .what-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px; }
+        .what-card { background: rgba(255,255,255,0.05); border: 1px solid rgba(212,175,55,0.3); border-radius: 12px; padding: 28px; }
+        .what-card .what-icon { font-size: 2rem; margin-bottom: 12px; display: block; }
+        .what-card h4 { color: #D4AF37; font-size: 1.15rem; margin-bottom: 10px; font-family: 'Playfair Display', serif; }
+        .what-card p { color: #cbd5e1; font-size: 0.95rem; line-height: 1.7; }
 
-/* KWASHATE LISTING CARD */
-.listing-card { background:linear-gradient(135deg,#0b1f2a,#1e293b); border-radius:16px; padding:50px 40px; color:#fff; margin-bottom:50px; border:2px solid #D4AF37; text-align:center; }
-.listing-badge { display:inline-block; background:#D4AF37; color:#0b1f2a; font-weight:700; font-size:0.75rem; padding:6px 16px; border-radius:40px; letter-spacing:1.5px; text-transform:uppercase; margin-bottom:20px; }
-.listing-card h2 { font-size:2rem; margin-bottom:16px; color:#fff; }
-.listing-card h2 span { color:#D4AF37; }
-.listing-card p { color:#cbd5e1; font-size:1.05rem; line-height:1.8; max-width:700px; margin:0 auto 28px; }
-.listing-card .btn-row { display:flex; gap:14px; justify-content:center; flex-wrap:wrap; }
-.btn-primary { background:#D4AF37; color:#0b1f2a; padding:14px 30px; border-radius:40px; font-weight:700; font-size:0.95rem; transition:0.2s; display:inline-block; }
-.btn-primary:hover { background:#e6c04c; transform:scale(1.05); }
-.btn-outline { background:transparent; color:#D4AF37; padding:14px 30px; border:2px solid #D4AF37; border-radius:40px; font-weight:700; font-size:0.95rem; transition:0.2s; display:inline-block; }
-.btn-outline:hover { background:#D4AF37; color:#0b1f2a; }
+        /* ===== FEATURES GRID ===== */
+        .features-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; margin-bottom: 50px; }
+        .feature-card { background: #fff; border-radius: 16px; padding: 36px 30px; border: 1px solid #eef2f7; box-shadow: 0 4px 20px rgba(0,0,0,0.05); transition: 0.3s; display: flex; flex-direction: column; }
+        .feature-card:hover { transform: translateY(-6px); border-color: #D4AF37; box-shadow: 0 8px 30px rgba(0,0,0,0.1); }
+        .feature-card .fc-icon { font-size: 2.8rem; margin-bottom: 16px; display: block; }
+        .feature-card h3 { font-size: 1.3rem; color: #0b1f2a; margin-bottom: 12px; }
+        .feature-card h3 span { color: #D4AF37; }
+        .feature-card p { color: #7f8c8d; font-size: 0.95rem; line-height: 1.8; }
 
-/* EMBER CONTEXT */
-.ember-section { background:#fff; border-radius:16px; padding:50px 40px; border:1px solid #eef2f7; box-shadow:0 4px 20px rgba(0,0,0,0.05); margin-bottom:50px; }
-.ember-section h2 { font-size:2rem; color:#0b1f2a; margin-bottom:20px; text-align:center; }
-.ember-section h2 span { color:#D4AF37; }
-.ember-section p { font-size:1.05rem; color:#2c3e50; line-height:1.9; max-width:850px; margin:0 auto 16px; }
-.ember-section p:last-child { margin-bottom:0; }
+        /* ===== HOW IT WORKS ===== */
+        .how-section { background: #fff; border-radius: 16px; padding: 50px; box-shadow: 0 4px 20px rgba(0,0,0,0.05); border: 1px solid #eef2f7; margin-bottom: 50px; text-align: center; }
+        .how-section h2 { font-size: 2rem; color: #0b1f2a; margin-bottom: 12px; }
+        .how-section h2 span { color: #D4AF37; }
+        .how-section .how-subtitle { color: #7f8c8d; margin-bottom: 30px; }
+        .how-steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; }
+        .how-step { background: #f8f9fa; border-radius: 12px; padding: 30px; text-align: center; border: 1px solid #eef2f7; }
+        .how-step .number { font-size: 2.5rem; font-weight: 800; color: #D4AF37; margin-bottom: 8px; }
+        .how-step h4 { font-size: 1.1rem; color: #0b1f2a; margin-bottom: 8px; }
+        .how-step p { color: #7f8c8d; font-size: 0.9rem; line-height: 1.7; }
 
-/* AUTHORITY LOGOS */
-.authorities { background:#f8f9fa; border-radius:16px; padding:40px; border:1px solid #eef2f7; margin-bottom:50px; text-align:center; }
-.authorities h3 { font-size:1.3rem; color:#0b1f2a; margin-bottom:28px; }
-.authorities h3 span { color:#D4AF37; }
-.auth-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:24px; }
-.auth-item { background:#fff; border-radius:12px; padding:24px 16px; border:1px solid #eef2f7; }
-.auth-item .auth-icon { font-size:2.5rem; margin-bottom:12px; }
-.auth-item h4 { font-size:0.95rem; color:#0b1f2a; margin-bottom:6px; }
-.auth-item p { font-size:0.8rem; color:#7f8c8d; line-height:1.6; }
+        /* ===== WHO CAN PARTICIPATE ===== */
+        .who-section { background: #fff; border-radius: 16px; padding: 50px; box-shadow: 0 4px 20px rgba(0,0,0,0.05); border: 1px solid #eef2f7; margin-bottom: 50px; }
+        .who-section h2 { font-size: 2rem; color: #0b1f2a; margin-bottom: 12px; text-align: center; }
+        .who-section h2 span { color: #D4AF37; }
+        .who-section .who-subtitle { text-align: center; color: #7f8c8d; margin-bottom: 30px; }
+        .who-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 24px; }
+        .who-card { background: #f8f9fa; border-radius: 12px; padding: 28px; border: 1px solid #eef2f7; }
+        .who-card h4 { font-size: 1.1rem; color: #0b1f2a; margin-bottom: 12px; padding-bottom: 10px; border-bottom: 2px solid #D4AF37; }
+        .who-card p { color: #7f8c8d; font-size: 0.92rem; line-height: 1.7; }
 
-/* CONTACT CTA */
-.contact-cta { background:#0b1f2a; border-radius:16px; padding:50px 40px; text-align:center; color:#fff; }
-.contact-cta h2 { font-size:2rem; margin-bottom:14px; }
-.contact-cta h2 span { color:#D4AF37; }
-.contact-cta p { color:#cbd5e1; font-size:1.05rem; margin-bottom:28px; max-width:700px; margin-left:auto; margin-right:auto; }
-.contact-cta a { background:#D4AF37; color:#0b1f2a; padding:14px 34px; border-radius:40px; font-weight:700; font-size:1rem; display:inline-block; transition:0.2s; }
-.contact-cta a:hover { background:#e6c04c; transform:scale(1.05); }
+        /* ===== KAWRA SPOTLIGHT ===== */
+        .kwara-section { background: linear-gradient(135deg, #0b1f2a, #1e293b); color: #fff; border-radius: 16px; padding: 60px 40px; text-align: center; border-top: 4px solid #D4AF37; border-bottom: 4px solid #D4AF37; margin-bottom: 50px; }
+        .kwara-section h2 { font-size: 2.2rem; color: #D4AF37; margin-bottom: 16px; }
+        .kwara-section p { color: #e2e8f0; font-size: 1.05rem; line-height: 1.9; max-width: 850px; margin: 0 auto 14px; }
+        .kwara-section strong { color: #D4AF37; }
 
-/* FOOTER */
-footer { background:#0b1f2a; color:#94a3b8; padding:50px 20px 30px; text-align:center; margin-top:60px; }
-.footer-brand { font-size:1.6rem; font-weight:800; color:#fff; margin-bottom:8px; font-family:'Playfair Display',serif; }
-.footer-brand span { color:#D4AF37; }
-.footer-tagline { font-size:0.85rem; color:#D4AF37; text-transform:uppercase; letter-spacing:2px; margin-bottom:20px; }
-.footer-edition { background:rgba(212,175,55,0.1); border:1px solid #D4AF37; border-radius:12px; padding:14px 20px; display:inline-block; margin-bottom:24px; font-size:0.9rem; color:#cbd5e1; }
-.footer-edition a { color:#D4AF37; font-weight:700; }
-.footer-links { display:flex; justify-content:center; gap:22px; flex-wrap:wrap; margin-bottom:24px; }
-.footer-links a { color:#cbd5e1; font-size:0.9rem; }
-.footer-links a:hover { color:#D4AF37; }
-.copyright { font-size:0.8rem; color:#64748b; border-top:1px solid #1e293b; padding-top:20px; max-width:900px; margin:0 auto; }
+        /* ===== CTA ===== */
+        .final-cta { background: #fff; border-radius: 16px; padding: 50px; box-shadow: 0 4px 20px rgba(0,0,0,0.05); border: 1px solid #eef2f7; text-align: center; }
+        .final-cta h2 { font-size: 2rem; color: #0b1f2a; margin-bottom: 16px; }
+        .final-cta h2 span { color: #D4AF37; }
+        .final-cta p { color: #7f8c8d; font-size: 1.05rem; margin-bottom: 24px; max-width: 700px; margin-left: auto; margin-right: auto; line-height: 1.8; }
+        .cta-buttons { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+        .btn-primary { background: #D4AF37; color: #0b1f2a; padding: 16px 36px; border: none; border-radius: 50px; font-weight: 700; font-size: 1rem; cursor: pointer; display: inline-block; transition: 0.2s; box-shadow: 0 4px 15px rgba(212,175,55,0.4); }
+        .btn-primary:hover { transform: translateY(-3px); box-shadow: 0 6px 20px rgba(212,175,55,0.5); }
+        .btn-outline { background: transparent; color: #0b1f2a; padding: 16px 36px; border: 2px solid #0b1f2a; border-radius: 50px; font-weight: 700; font-size: 1rem; display: inline-block; transition: 0.2s; }
+        .btn-outline:hover { background: #0b1f2a; color: #D4AF37; }
 
-@media (max-width:768px){
-  .page-hero h1{font-size:2.2rem}
-  .intro-card,.ember-section,.contact-cta,.listing-card,.authorities{padding:30px}
-  .resource-card{padding:30px 24px}
-}
-</style>
+        /* ===== FOOTER ===== */
+        footer { background: #0b1f2a; color: #94a3b8; padding: 50px 20px 30px; text-align: center; margin-top: 60px; }
+        footer .footer-brand { font-size: 1.6rem; font-weight: 800; color: #fff; margin-bottom: 8px; font-family: 'Playfair Display', serif; }
+        footer .footer-brand span { color: #D4AF37; }
+        footer .footer-tagline { font-size: 0.85rem; color: #D4AF37; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 20px; }
+        footer .footer-edition { background: rgba(212,175,55,0.1); border: 1px solid #D4AF37; border-radius: 12px; padding: 14px 20px; display: inline-block; margin-bottom: 24px; font-size: 0.9rem; color: #cbd5e1; }
+        footer .footer-edition a { color: #D4AF37; font-weight: 700; }
+        footer .footer-links { display: flex; justify-content: center; gap: 22px; flex-wrap: wrap; margin-bottom: 24px; }
+        footer .footer-links a { color: #cbd5e1; font-size: 0.9rem; }
+        footer .footer-links a:hover { color: #D4AF37; }
+        footer .footer-social { display: flex; justify-content: center; gap: 16px; margin-bottom: 24px; }
+        footer .footer-social a { color: #D4AF37; font-size: 0.9rem; border: 1px solid #D4AF37; padding: 8px 18px; border-radius: 40px; transition: 0.2s; }
+        footer .footer-social a:hover { background: #D4AF37; color: #0b1f2a; }
+        footer .copyright { font-size: 0.8rem; color: #64748b; border-top: 1px solid #1e293b; padding-top: 20px; max-width: 900px; margin: 0 auto; line-height: 1.8; }
+
+        /* ===== FLOATING WHATSAPP ===== */
+        .wa-float { position: fixed; bottom: 74px; right: 24px; background: #25D366; color: #fff; padding: 14px 20px; border-radius: 50px; font-weight: 700; text-decoration: none; box-shadow: 0 4px 15px rgba(37,211,102,0.4); display: flex; align-items: center; gap: 8px; z-index: 999; font-size: 0.95rem; }
+        .wa-float:hover { transform: scale(1.05); }
+
+        @media (max-width: 768px) {
+            .intro-card, .what-section, .how-section, .who-section, .kwara-section, .final-cta { padding: 30px; }
+        }
+    </style>
 </head>
 <body>
 
-<!-- NAV -->
 <nav>
     <div class="logo">
         <a href="index.html" class="logo-link">
@@ -138,7 +155,7 @@ footer { background:#0b1f2a; color:#94a3b8; padding:50px 20px 30px; text-align:c
         <a href="values.html">Values</a>
         <a href="states.html">States</a>
         <a href="tourism-window.html">Tourism Window</a>
-        <a href="pageant.html">Ambassadors Challenge</a>
+        <a href="pageant.html">Face Off KWASHATE</a>
         <a href="food-fair.html">Food Fair</a>
         <a href="sponsorship.html">Sponsorship</a>
         <a href="past-editions.html">Past Editions</a>
@@ -147,113 +164,198 @@ footer { background:#0b1f2a; color:#94a3b8; padding:50px 20px 30px; text-align:c
     </div>
 </nav>
 
-<!-- PAGE HERO -->
-<header class="page-hero">
-    <h1>Nigeria <span>Tourism Window</span></h1>
-    <p>Official resources and national initiatives connecting HTEA to Nigeria's federal tourism strategy — powered by the Federal Ministry of Art, Culture, Tourism and the Creative Economy, NIHOTOUR, and MyCityApp.</p>
+<header class="page-header">
+    <h1>The Tourism <span>Window</span></h1>
+    <p class="tagline">HTEA's showcase of Nigeria's tourism destinations, attractions, and cultural heritage.</p>
 </header>
 
-<main class="container">
+<section class="container">
 
-    <!-- INTRO -->
+    <!-- ===== INTRO ===== -->
     <div class="intro-card">
-        <h2>Why This <span>Matters</span></h2>
-        <p>HTEA is more than an awards platform. We are a national gateway into Nigeria's hospitality and tourism ecosystem. This page connects our audience — hoteliers, restaurateurs, tour operators, and investors — to the official federal infrastructure designed to serve them.</p>
+        <h2>Every Edition Opens a <span>Window</span></h2>
+        <p>Each HTEA edition spotlights the host state's tourism ecosystem — its destinations, attractions, cultural sites, and the businesses that make travel in Nigeria worth it. This is the Tourism Window.</p>
+        <p>It is not a trade show. It is a national showcase of what makes each state a destination — and a platform for tourism operators to be recognised, connected, and celebrated.</p>
     </div>
 
-    <!-- RESOURCES -->
-    <div class="section-title" style="text-align:center; font-size:2rem; font-weight:700; margin-bottom:8px; color:#0b1f2a;">Official <span style="color:#D4AF37;">Resources</span></div>
-    <p style="text-align:center; color:#7f8c8d; margin-bottom:40px; font-size:1.05rem;">Two federal platforms every hospitality and tourism operator should know</p>
+    <!-- ===== WHAT THE WINDOW IS ===== -->
+    <div class="what-section">
+        <h2>What the Tourism Window Does</h2>
+        <p class="what-intro">The Tourism Window connects three audiences: tourism operators, industry decision-makers, and the public. It does this by giving each edition a dedicated platform to showcase the host state's tourism assets.</p>
 
-    <div class="resources-grid">
+        <div class="what-grid">
 
-        <!-- National Tourism Calendar -->
-        <div class="resource-card">
-            <div class="resource-icon">🗓️</div>
-            <h3>National Tourism Calendar</h3>
-            <p>Discover festivals, concerts, cultural events, exhibitions, and tourism experiences across all 36 states + FCT. Powered by MyCityApp under the Federal Ministry of Art, Culture, Tourism and the Creative Economy.</p>
-            <a href="https://mycityapp.io" target="_blank" rel="noopener" class="resource-btn">Explore Calendar →</a>
-        </div>
-
-        <!-- NIHOTOUR NRP -->
-        <div class="resource-card">
-            <div class="resource-icon">🎓</div>
-            <h3>NIHOTOUR Registration Portal</h3>
-            <p>Hospitality and tourism practitioners can now register with NIHOTOUR's National Registration Portal (NRP) for official identification, certification, and verification. Registration is becoming a prerequisite for operators in the sector.</p>
-            <a href="https://nihotour.gov.ng" target="_blank" rel="noopener" class="resource-btn-outline">Register with NIHOTOUR →</a>
-        </div>
-
-    </div>
-
-    <!-- KWASHATE LISTING -->
-    <div class="listing-card">
-        <span class="listing-badge">✓ Listed on the National Tourism Calendar</span>
-        <h2>KWASHATE 2026 is <span>Officially Listed</span></h2>
-        <p>KWASHATE 2026 — the Kwara State edition of HTEA — has been submitted to Nigeria's National Digital Events and Experiences Calendar. It will be discoverable by Nigerians, the diaspora, and international visitors throughout the 2026 tourism season.</p>
-        <div class="btn-row">
-            <a href="https://kwashate.netlify.app" class="btn-primary">Visit KWASHATE 2026 →</a>
-            <a href="https://mycityapp.io" class="btn-outline">View on National Calendar</a>
-        </div>
-    </div>
-
-    <!-- EMBER CONTEXT -->
-    <div class="ember-section">
-        <h2>Part of <span>Ember to Remember 2026</span></h2>
-        <p>HTEA and KWASHATE 2026 are part of Nigeria's <strong>100-day national tourism season</strong> (September–December 2026), a federal initiative designed to connect culture, tourism, hospitality, and the creative economy into one coordinated national experience.</p>
-        <p>The initiative brings together festivals, awards, exhibitions, and cultural events across the country, positioning Nigeria as a destination for diaspora return, international tourism, and domestic discovery.</p>
-        <p>By participating, HTEA strengthens its alignment with the federal tourism strategy — giving sponsors and partners direct visibility on a national stage.</p>
-    </div>
-
-    <!-- AUTHORITIES -->
-    <div class="authorities">
-        <h3>Backed by <span>National Institutions</span></h3>
-        <div class="auth-grid">
-            <div class="auth-item">
-                <div class="auth-icon">🏛️</div>
-                <h4>Federal Ministry of Art, Culture, Tourism & the Creative Economy</h4>
-                <p>Leads Nigeria's national tourism strategy</p>
+            <div class="what-card">
+                <span class="what-icon">🗺️</span>
+                <h4>Destination Showcase</h4>
+                <p>Hotels, resorts, tour operators, and attractions exhibit at a dedicated section of each edition — putting their services in front of industry buyers and the public.</p>
             </div>
-            <div class="auth-item">
-                <div class="auth-icon">🎓</div>
-                <h4>NIHOTOUR</h4>
-                <p>National Institute for Hospitality & Tourism</p>
+
+            <div class="what-card">
+                <span class="what-icon">🏛️</span>
+                <h4>Cultural Heritage</h4>
+                <p>Local heritage sites, festivals, and cultural experiences are featured — connecting cultural custodians with the tourism industry that can bring visitors to them.</p>
             </div>
-            <div class="auth-item">
-                <div class="auth-icon">📱</div>
-                <h4>MyCityApp</h4>
-                <p>Powers the National Digital Events Calendar</p>
+
+            <div class="what-card">
+                <span class="what-icon">🤝</span>
+                <h4>B2B Connections</h4>
+                <p>Tourism operators meet travel agencies, corporate event planners, and hospitality decision-makers — creating partnerships that extend beyond the event.</p>
+            </div>
+
+            <div class="what-card">
+                <span class="what-icon">🏆</span>
+                <h4>Award Recognition</h4>
+                <p>Tourism operators compete for dedicated categories — including Best Tour Operator, Best Local Tourist Attraction, and Best Sustainable Tourism Initiative.</p>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- ===== FEATURES ===== -->
+    <div class="section-title">What the Window <span>Offers</span></div>
+    <div class="section-subtitle">Four ways the Tourism Window creates value for host states and operators.</div>
+
+    <div class="features-grid">
+
+        <div class="feature-card">
+            <span class="fc-icon">📣</span>
+            <h3>State <span>Spotlight</span></h3>
+            <p>Every edition puts the host state's tourism assets on a national platform — through digital features, press coverage, and on-site showcases that reach decision-makers across Nigeria.</p>
+        </div>
+
+        <div class="feature-card">
+            <span class="fc-icon">🎤</span>
+            <h3>Speaking <span>Platform</span></h3>
+            <p>Tourism operators, cultural custodians, and state tourism officials are given stage time at each edition to present their destination to an audience of industry leaders and the public.</p>
+        </div>
+
+        <div class="feature-card">
+            <span class="fc-icon">🛍️</span>
+            <h3>Market <span>Access</span></h3>
+            <p>Tourism businesses connect directly with the buyers — travel agencies, corporate planners, and hospitality managers — who can fill their rooms, tours, and venues.</p>
+        </div>
+
+        <div class="feature-card">
+            <span class="fc-icon">🌱</span>
+            <h3>Sustainable <span>Tourism</span></h3>
+            <p>A dedicated category recognises tourism operators who build responsibly — protecting Nigeria's natural and cultural assets while growing the industry.</p>
+        </div>
+
+    </div>
+
+    <!-- ===== HOW IT WORKS ===== -->
+    <div class="how-section">
+        <h2>How It <span>Works</span></h2>
+        <p class="how-subtitle">Four steps from application to national recognition.</p>
+
+        <div class="how-steps">
+            <div class="how-step">
+                <div class="number">01</div>
+                <h4>Apply</h4>
+                <p>Tourism operators, hotels, attractions, and cultural sites apply for the Tourism Window showcase.</p>
+            </div>
+            <div class="how-step">
+                <div class="number">02</div>
+                <h4>Verify</h4>
+                <p>Our team verifies eligibility — business registration, operating history, and category criteria.</p>
+            </div>
+            <div class="how-step">
+                <div class="number">03</div>
+                <h4>Showcase</h4>
+                <p>Verified participants exhibit at the event and pitch their destination to industry guests and the public.</p>
+            </div>
+            <div class="how-step">
+                <div class="number">04</div>
+                <h4>Get Recognised</h4>
+                <p>Winners in tourism categories are crowned at the Awards Gala, and featured across HTEA platforms.</p>
             </div>
         </div>
     </div>
 
-    <!-- CONTACT CTA -->
-    <div class="contact-cta">
-        <h2>Want to <span>Partner</span> With HTEA?</h2>
-        <p>If you represent a government agency, tourism board, or hospitality institution and would like to collaborate, we would love to hear from you.</p>
-        <a href="contact.html">Get In Touch →</a>
+    <!-- ===== WHO CAN PARTICIPATE ===== -->
+    <div class="who-section">
+        <h2>Who Can <span>Participate?</span></h2>
+        <p class="who-subtitle">The Tourism Window is open to businesses, institutions, and cultural custodians.</p>
+
+        <div class="who-grid">
+
+            <div class="who-card">
+                <h4>🏨 Hospitality &amp; Lodging</h4>
+                <p>Hotels, resorts, guest houses, and short-stay accommodations.</p>
+            </div>
+
+            <div class="who-card">
+                <h4>🎯 Tour Operators</h4>
+                <p>Local tour companies, guided experience providers, and destination management companies.</p>
+            </div>
+
+            <div class="who-card">
+                <h4>🏛️ Cultural Sites &amp; Festivals</h4>
+                <p>Heritage sites, cultural festivals, museums, and traditional institutions.</p>
+            </div>
+
+            <div class="who-card">
+                <h4>🚌 Travel &amp; Transport</h4>
+                <p>Airlines, transport operators, car rentals, and travel agencies serving the tourism sector.</p>
+            </div>
+
+            <div class="who-card">
+                <h4>🌿 Nature &amp; Eco-Tourism</h4>
+                <p>National parks, nature reserves, and sustainable tourism initiatives.</p>
+            </div>
+
+            <div class="who-card">
+                <h4>🎨 Creative &amp; Cultural</h4>
+                <p>Cultural performers, craftspeople, and creative businesses that support tourism experiences.</p>
+            </div>
+
+        </div>
     </div>
 
-</main>
+    <!-- ===== KWARA SPOTLIGHT ===== -->
+    <div class="kwara-section">
+        <h2>2026 — Kwara State Tourism Window</h2>
+        <p>The inaugural Tourism Window opens at <strong>KWASHATE 2026</strong> — the Kwara Edition of HTEA. Kwara State's tourism assets will be showcased to a national audience, including industry leaders, media, and government officials.</p>
+        <p>From the <strong>Owú Waterfalls</strong> to the <strong>Esie Museum</strong>, from Ilorin's cultural heritage to the state's growing hospitality sector — Kwara's tourism story will be told at a national level.</p>
+    </div>
 
-<!-- FOOTER -->
+    <!-- ===== CTA ===== -->
+    <div class="final-cta">
+        <h2>Bring Your Destination to the <span>Window</span></h2>
+        <p>If you run a tourism business, cultural site, or hospitality destination in Kwara State, the Tourism Window is your platform. Reach out to learn how to participate.</p>
+        <div class="cta-buttons">
+            <a href="https://wa.me/2348039661354?text=Hello%20HTEA%20Team!%20I%20want%20to%20participate%20in%20the%20Tourism%20Window." class="btn-primary">📋 Apply via WhatsApp</a>
+            <a href="contact.html" class="btn-outline">Contact Us</a>
+        </div>
+    </div>
+
+</section>
+
 <footer>
     <div class="footer-brand">HTE<span>A</span></div>
     <div class="footer-tagline">Building the Future of Hospitality Excellence</div>
-    <div class="footer-edition">Current Edition: <a href="https://kwashate.netlify.app">KWASHATE 2026 — Kwara State →</a></div>
+    <div class="footer-edition">
+        Current Edition: <a href="https://kwashate.netlify.app">KWASHATE 2026 — Kwara State →</a>
+    </div>
     <div class="footer-links">
         <a href="index.html">Home</a>
         <a href="about.html">About</a>
         <a href="values.html">Values</a>
         <a href="states.html">States</a>
-        <a href="pageant.html">Pageant</a>
-        <a href="food-fair.html">Food Fair</a>
-        <a href="tickets.html">Tickets</a>
-        <a href="vote.html">Vote</a>
-        <a href="tourism-window.html">Tourism Window</a>
         <a href="contact.html">Contact</a>
     </div>
-    <div class="copyright">© 2026 HTEA — Hospitality & Tourism Excellence Awards. All rights reserved.</div>
+    <div class="footer-social">
+        <a href="https://instagram.com/hteanigeria" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://linkedin.com/company/hteanigeria" target="_blank" rel="noopener">LinkedIn</a>
+    </div>
+    <div class="copyright">
+        © 2026 Drecot Consults. All rights reserved.<br>
+        HTEA and KWASHATE are initiatives of Drecot Consults (RC: [insert RC number]).
+    </div>
 </footer>
+
+<a href="https://wa.me/2348039661354?text=Hello%20HTEA%20Team!%20I%20need%20more%20information." class="wa-float">💬 Chat with us</a>
 
 <script>
     function toggleMenu() { document.getElementById("navLinks").classList.toggle("active"); }

@@ -1,60 +1,145 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Our Values – HTEA</title>
-<meta name="description" content="The core values that guide every HTEA event.">
-<link rel="icon" type="image/png" href="img/award-logo4.png">
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-<style>
-* { margin:0; padding:0; box-sizing:border-box; }
-body { font-family:'Inter',sans-serif; background:#f5f6f8; color:#2c3e50; line-height:1.6; }
-h1,h2,h3,h4 { font-family:'Playfair Display',serif; }
-a { text-decoration:none; color:inherit; }
-nav { background:#0b1f2a; color:#fff; padding:16px 30px; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; box-shadow:0 2px 10px rgba(0,0,0,0.3); position:sticky; top:0; z-index:100; }
-.logo { display:flex; align-items:center; gap:8px; }
-.logo-link { display: flex; align-items: center; text-decoration: none; }
-.logo-img { width: 60px; height: 60px; object-fit: contain; border-radius: 50%; }
-.logo-text { display:flex; flex-direction:column; line-height:1.1; }
-.brand-name { font-size:1.6rem; font-weight:800; color:#fff; }
-.brand-name span { color:#D4AF37; }
-.tagline { font-size:0.6rem; color:#94a3b8; text-transform:uppercase; letter-spacing:2px; }
-.hamburger { display:none; font-size:2rem; cursor:pointer; color:#D4AF37; }
-.nav-links { display:flex; gap:25px; align-items:center; }
-.nav-links a { color:#fff; font-weight:600; font-size:0.9rem; }
-.nav-links a:hover { color:#D4AF37; }
-.nav-cta { background:#D4AF37; color:#0b1f2a !important; padding:8px 20px; border-radius:40px; font-weight:700; }
-@media (max-width:900px){
-  .hamburger{display:block}
-  .nav-links{display:none;width:100%;flex-direction:column;align-items:center;gap:15px;padding:20px 0;background:#0b1f2a;position:absolute;top:90px;left:0;z-index:999;border-bottom:2px solid #D4AF37}
-  .nav-links.active{display:flex}
-  .nav-links a{width:100%;text-align:center;padding:8px 0}
-  .nav-cta{width:80%;text-align:center}
-}
-.page-hero { background:linear-gradient(rgba(11,31,42,0.9),rgba(11,31,42,0.95)),url('https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1200&q=80'); background-size:cover; background-position:center; color:#fff; padding:100px 20px 70px; text-align:center; }
-.page-hero h1 { font-size:3rem; margin-bottom:12px; }
-.page-hero h1 span { color:#D4AF37; }
-.page-hero p { max-width:700px; margin:0 auto; opacity:0.9; font-size:1.1rem; }
-.container { max-width:1100px; margin:0 auto; padding:60px 20px; }
-.values-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:30px; }
-.value-card { background:#fff; border-radius:16px; padding:40px 30px; text-align:center; border:1px solid #eef2f7; box-shadow:0 4px 20px rgba(0,0,0,0.05); transition:0.3s; }
-.value-card:hover { transform:translateY(-6px); box-shadow:0 8px 30px rgba(0,0,0,0.1); border-color:#D4AF37; }
-.value-card .icon { font-size:3rem; margin-bottom:16px; display:block; }
-.value-card h3 { font-size:1.5rem; color:#0b1f2a; margin-bottom:12px; }
-.value-card p { color:#7f8c8d; font-size:0.95rem; line-height:1.8; }
-@media (max-width:768px){ .page-hero h1{font-size:2.2rem} }
-footer { background:#0b1f2a; color:#94a3b8; padding:50px 20px 30px; text-align:center; margin-top:60px; }
-.footer-brand { font-size:1.6rem; font-weight:800; color:#fff; margin-bottom:8px; font-family:'Playfair Display',serif; }
-.footer-brand span { color:#D4AF37; }
-.footer-tagline { font-size:0.85rem; color:#D4AF37; text-transform:uppercase; letter-spacing:2px; margin-bottom:24px; }
-.footer-links { display:flex; justify-content:center; gap:22px; flex-wrap:wrap; margin-bottom:24px; }
-.footer-links a { color:#cbd5e1; font-size:0.9rem; }
-.footer-links a:hover { color:#D4AF37; }
-.copyright { font-size:0.8rem; color:#64748b; border-top:1px solid #1e293b; padding-top:20px; max-width:900px; margin:0 auto; }
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Values | HTEA — Hospitality & Tourism Excellence Awards</title>
+    <meta name="description" content="The values that guide HTEA — integrity, excellence, transparency, and national impact. The foundation of Nigeria's hospitality and tourism awards platform.">
+    <link rel="icon" type="image/png" href="img/award-logo4.png">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', sans-serif; background: #f5f6f8; color: #2c3e50; line-height: 1.6; }
+        h1, h2, h3, h4 { font-family: 'Playfair Display', serif; }
+        a { text-decoration: none; }
+
+        /* ===== NAVIGATION ===== */
+        nav { background: #0b1f2a; color: #fff; padding: 16px 30px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; box-shadow: 0 2px 10px rgba(0,0,0,0.3); position: sticky; top: 0; z-index: 100; }
+        .logo { display: flex; align-items: center; }
+        .logo-link { display: flex; align-items: center; text-decoration: none; }
+        .logo-img { width: 60px; height: 60px; object-fit: contain; border-radius: 50%; }
+        .logo-text { display: flex; flex-direction: column; line-height: 1.1; }
+        .brand-name { font-size: 1.6rem; font-weight: 800; color: #fff; letter-spacing: 0.5px; }
+        .brand-name span { color: #D4AF37; }
+        .tagline { font-size: 0.6rem; color: #94a3b8; text-transform: uppercase; letter-spacing: 2px; }
+        .hamburger { display: none; font-size: 2rem; cursor: pointer; color: #D4AF37; user-select: none; }
+        .nav-links { display: flex; gap: 25px; align-items: center; }
+        .nav-links a { color: #fff; font-weight: 600; font-size: 0.9rem; transition: color 0.2s; }
+        .nav-links a:hover { color: #D4AF37; }
+        .nav-cta { background: #D4AF37; color: #0b1f2a !important; padding: 8px 20px; border-radius: 40px; font-weight: 700; transition: 0.2s; }
+        .nav-cta:hover { background: #e6c04c; transform: scale(1.05); }
+        @media (max-width: 900px) {
+            .hamburger { display: block; }
+            .nav-links { display: none; width: 100%; flex-direction: column; align-items: center; gap: 15px; padding: 20px 0; background: #0b1f2a; position: absolute; top: 90px; left: 0; z-index: 999; border-bottom: 2px solid #D4AF37; }
+            .nav-links.active { display: flex; }
+            .nav-links a { width: 100%; text-align: center; padding: 8px 0; }
+            .nav-cta { width: 80%; text-align: center; }
+        }
+
+        /* ===== PAGE HEADER ===== */
+        .page-header { background: linear-gradient(rgba(11,31,42,0.88), rgba(11,31,42,0.95)), url('https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1200&q=80'); background-size: cover; background-position: center; color: #fff; padding: 100px 20px 70px; text-align: center; }
+        .page-header h1 { font-size: 3rem; font-weight: 700; margin-bottom: 16px; }
+        .page-header h1 span { color: #D4AF37; }
+        .page-header .tagline { font-size: 1.15rem; max-width: 650px; margin: 0 auto 12px; opacity: 0.9; line-height: 1.7; color: #fff; text-transform: none; letter-spacing: 0; }
+        @media (max-width: 768px) { .page-header h1 { font-size: 2.2rem; } }
+
+        /* ===== CONTAINER ===== */
+        .container { max-width: 1100px; margin: 0 auto; padding: 60px 20px; }
+        .section-title { text-align: center; font-size: 2.4rem; font-weight: 700; margin-bottom: 8px; color: #0b1f2a; }
+        .section-title span { color: #D4AF37; }
+        .section-subtitle { text-align: center; color: #7f8c8d; margin-bottom: 40px; font-size: 1.1rem; }
+
+        /* ===== INTRO ===== */
+        .intro-card { background: #fff; border-radius: 16px; padding: 50px; box-shadow: 0 4px 20px rgba(0,0,0,0.05); border: 1px solid #eef2f7; text-align: center; margin-bottom: 50px; }
+        .intro-card h2 { font-size: 2rem; margin-bottom: 16px; color: #0b1f2a; }
+        .intro-card h2 span { color: #D4AF37; }
+        .intro-card p { color: #2c3e50; font-size: 1.1rem; line-height: 1.9; max-width: 800px; margin: 0 auto; }
+
+        /* ===== CORE VALUES GRID ===== */
+        .values-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; margin-bottom: 50px; }
+
+        .value-card { background: #fff; border-radius: 16px; padding: 36px 30px; border: 1px solid #eef2f7; box-shadow: 0 4px 20px rgba(0,0,0,0.05); transition: 0.3s; position: relative; display: flex; flex-direction: column; }
+        .value-card:hover { transform: translateY(-6px); border-color: #D4AF37; box-shadow: 0 8px 30px rgba(0,0,0,0.1); }
+        .value-card .vc-icon { font-size: 3rem; margin-bottom: 16px; display: block; }
+        .value-card h3 { font-size: 1.4rem; color: #0b1f2a; margin-bottom: 14px; }
+        .value-card h3 span { color: #D4AF37; }
+        .value-card p { color: #7f8c8d; font-size: 0.95rem; line-height: 1.8; }
+
+        /* ===== PROMISE SECTION ===== */
+        .promise-section { background: #0b1f2a; color: #fff; border-radius: 16px; padding: 60px 40px; text-align: center; border-left: 6px solid #D4AF37; margin-bottom: 50px; }
+        .promise-section h2 { font-size: 2.2rem; color: #D4AF37; margin-bottom: 20px; }
+        .promise-section p { color: #e2e8f0; font-size: 1.1rem; line-height: 1.9; max-width: 850px; margin: 0 auto 16px; }
+        .promise-section strong { color: #D4AF37; }
+
+        /* ===== PRINCIPLES ===== */
+        .principles-section { background: #fff; border-radius: 16px; padding: 50px; box-shadow: 0 4px 20px rgba(0,0,0,0.05); border: 1px solid #eef2f7; margin-bottom: 50px; }
+        .principles-section h2 { font-size: 2rem; color: #0b1f2a; margin-bottom: 12px; text-align: center; }
+        .principles-section h2 span { color: #D4AF37; }
+        .principles-section .ps-subtitle { text-align: center; color: #7f8c8d; margin-bottom: 30px; }
+
+        .principles-list { list-style: none; max-width: 800px; margin: 0 auto; }
+        .principles-list li { padding: 18px 0 18px 50px; position: relative; font-size: 1.02rem; color: #2c3e50; border-bottom: 1px dashed #eef2f7; line-height: 1.7; }
+        .principles-list li:last-child { border-bottom: none; }
+        .principles-list li::before { content: "✓"; position: absolute; left: 0; top: 18px; width: 30px; height: 30px; background: #D4AF37; color: #0b1f2a; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.9rem; }
+        .principles-list li strong { color: #0b1f2a; }
+
+        /* ===== INTEGRITY / JUDGING ===== */
+        .integrity-section { background: #fff; border-radius: 16px; padding: 50px; box-shadow: 0 4px 20px rgba(0,0,0,0.05); border: 1px solid #eef2f7; margin-bottom: 50px; }
+        .integrity-section h2 { font-size: 2rem; color: #0b1f2a; margin-bottom: 12px; text-align: center; }
+        .integrity-section h2 span { color: #D4AF37; }
+        .integrity-section .is-subtitle { text-align: center; color: #7f8c8d; margin-bottom: 30px; }
+        .integrity-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 24px; }
+        .integrity-card { background: #f8f9fa; border-radius: 12px; padding: 28px; border: 1px solid #eef2f7; }
+        .integrity-card h4 { font-size: 1.1rem; color: #0b1f2a; margin-bottom: 12px; padding-bottom: 10px; border-bottom: 2px solid #D4AF37; }
+        .integrity-card p { color: #7f8c8d; font-size: 0.92rem; line-height: 1.7; }
+
+        /* ===== WHAT WE STAND AGAINST ===== */
+        .against-section { background: #0b1f2a; color: #fff; border-radius: 16px; padding: 50px; margin-bottom: 50px; border-left: 6px solid #ef4444; }
+        .against-section h2 { font-size: 2rem; color: #f87171; margin-bottom: 20px; text-align: center; }
+        .against-section .as-intro { color: #e2e8f0; font-size: 1.05rem; text-align: center; margin-bottom: 30px; line-height: 1.8; }
+        .against-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px; }
+        .against-card { background: rgba(239,68,68,0.08); border: 1px solid rgba(239,68,68,0.3); border-radius: 12px; padding: 24px; }
+        .against-card .ac-icon { font-size: 1.8rem; margin-bottom: 10px; display: block; }
+        .against-card h4 { color: #f87171; font-size: 1.05rem; margin-bottom: 8px; font-family: 'Playfair Display', serif; }
+        .against-card p { color: #cbd5e1; font-size: 0.9rem; line-height: 1.7; }
+
+        /* ===== CTA ===== */
+        .final-cta { background: #fff; border-radius: 16px; padding: 50px; box-shadow: 0 4px 20px rgba(0,0,0,0.05); border: 1px solid #eef2f7; text-align: center; }
+        .final-cta h2 { font-size: 2rem; color: #0b1f2a; margin-bottom: 16px; }
+        .final-cta h2 span { color: #D4AF37; }
+        .final-cta p { color: #7f8c8d; font-size: 1.05rem; margin-bottom: 24px; max-width: 700px; margin-left: auto; margin-right: auto; line-height: 1.8; }
+        .cta-buttons { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+        .btn-primary { background: #D4AF37; color: #0b1f2a; padding: 16px 36px; border: none; border-radius: 50px; font-weight: 700; font-size: 1rem; cursor: pointer; display: inline-block; transition: 0.2s; box-shadow: 0 4px 15px rgba(212,175,55,0.4); }
+        .btn-primary:hover { transform: translateY(-3px); box-shadow: 0 6px 20px rgba(212,175,55,0.5); }
+        .btn-outline { background: transparent; color: #0b1f2a; padding: 16px 36px; border: 2px solid #0b1f2a; border-radius: 50px; font-weight: 700; font-size: 1rem; display: inline-block; transition: 0.2s; }
+        .btn-outline:hover { background: #0b1f2a; color: #D4AF37; }
+
+        /* ===== FOOTER ===== */
+        footer { background: #0b1f2a; color: #94a3b8; padding: 50px 20px 30px; text-align: center; margin-top: 60px; }
+        footer .footer-brand { font-size: 1.6rem; font-weight: 800; color: #fff; margin-bottom: 8px; font-family: 'Playfair Display', serif; }
+        footer .footer-brand span { color: #D4AF37; }
+        footer .footer-tagline { font-size: 0.85rem; color: #D4AF37; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 20px; }
+        footer .footer-edition { background: rgba(212,175,55,0.1); border: 1px solid #D4AF37; border-radius: 12px; padding: 14px 20px; display: inline-block; margin-bottom: 24px; font-size: 0.9rem; color: #cbd5e1; }
+        footer .footer-edition a { color: #D4AF37; font-weight: 700; }
+        footer .footer-links { display: flex; justify-content: center; gap: 22px; flex-wrap: wrap; margin-bottom: 24px; }
+        footer .footer-links a { color: #cbd5e1; font-size: 0.9rem; }
+        footer .footer-links a:hover { color: #D4AF37; }
+        footer .footer-social { display: flex; justify-content: center; gap: 16px; margin-bottom: 24px; }
+        footer .footer-social a { color: #D4AF37; font-size: 0.9rem; border: 1px solid #D4AF37; padding: 8px 18px; border-radius: 40px; transition: 0.2s; }
+        footer .footer-social a:hover { background: #D4AF37; color: #0b1f2a; }
+        footer .copyright { font-size: 0.8rem; color: #64748b; border-top: 1px solid #1e293b; padding-top: 20px; max-width: 900px; margin: 0 auto; line-height: 1.8; }
+
+        /* ===== FLOATING WHATSAPP ===== */
+        .wa-float { position: fixed; bottom: 74px; right: 24px; background: #25D366; color: #fff; padding: 14px 20px; border-radius: 50px; font-weight: 700; text-decoration: none; box-shadow: 0 4px 15px rgba(37,211,102,0.4); display: flex; align-items: center; gap: 8px; z-index: 999; font-size: 0.95rem; }
+        .wa-float:hover { transform: scale(1.05); }
+
+        @media (max-width: 768px) {
+            .intro-card, .promise-section, .principles-section, .integrity-section, .against-section, .final-cta { padding: 30px; }
+        }
+    </style>
 </head>
 <body>
+
 <nav>
     <div class="logo">
         <a href="index.html" class="logo-link">
@@ -72,7 +157,7 @@ footer { background:#0b1f2a; color:#94a3b8; padding:50px 20px 30px; text-align:c
         <a href="values.html">Values</a>
         <a href="states.html">States</a>
         <a href="tourism-window.html">Tourism Window</a>
-        <a href="pageant.html">Ambassadors Challenge</a>
+        <a href="pageant.html">Face Off KWASHATE</a>
         <a href="food-fair.html">Food Fair</a>
         <a href="sponsorship.html">Sponsorship</a>
         <a href="past-editions.html">Past Editions</a>
@@ -81,46 +166,201 @@ footer { background:#0b1f2a; color:#94a3b8; padding:50px 20px 30px; text-align:c
     </div>
 </nav>
 
-<header class="page-hero">
-  <h1>Our Core <span>Values</span></h1>
-  <p>The principles that guide every HTEA event, every nomination, and every award.</p>
+<header class="page-header">
+    <h1>Our <span>Values</span></h1>
+    <p class="tagline">The principles that guide HTEA — and the standards we hold ourselves to in every edition.</p>
 </header>
 
-<main class="container">
-  <div class="values-grid">
-    <div class="value-card">
-      <span class="icon">🏆</span>
-      <h3>Excellence</h3>
-      <p>We demand the highest standards from ourselves and our nominees. Every award is a mark of true distinction.</p>
+<section class="container">
+
+    <!-- ===== INTRO ===== -->
+    <div class="intro-card">
+        <h2>More Than <span>An Award</span></h2>
+        <p>HTEA is not just about trophies. It is a platform with a responsibility — to the industry, to the states we work in, and to the people who trust us to recognise excellence fairly. These values are how we honour that responsibility.</p>
     </div>
-    <div class="value-card">
-      <span class="icon">🤝</span>
-      <h3>Integrity</h3>
-      <p>We operate with complete transparency. Every nomination and judging process is fair and open.</p>
+
+    <!-- ===== CORE VALUES ===== -->
+    <div class="section-title">Core <span>Values</span></div>
+    <div class="section-subtitle">Six principles that define every HTEA edition.</div>
+
+    <div class="values-grid">
+
+        <div class="value-card">
+            <span class="vc-icon">⚖️</span>
+            <h3>Integrity <span>First</span></h3>
+            <p>No favouritism. No sponsorship pressure on outcomes. No hidden criteria. Awards are earned, not bought. We will turn down money that comes with strings attached to judging.</p>
+        </div>
+
+        <div class="value-card">
+            <span class="vc-icon">🏆</span>
+            <h3>Excellence <span>Without Exception</span></h3>
+            <p>We celebrate the best, and we hold ourselves to the same standard. From event execution to judging process to communication with nominees, HTEA operates at a level worthy of the industry it honours.</p>
+        </div>
+
+        <div class="value-card">
+            <span class="vc-icon">🔍</span>
+            <h3>Transparency</h3>
+            <p>Categories are published. Criteria are public. Judging panels are known. Winners are announced openly. Nothing about HTEA happens behind closed doors.</p>
+        </div>
+
+        <div class="value-card">
+            <span class="vc-icon">🇳🇬</span>
+            <h3>National Impact</h3>
+            <p>HTEA rotates across Nigeria's 36 states and the FCT. Every edition leaves behind a stronger hospitality ecosystem, better standards, and a cohort of recognised professionals.</p>
+        </div>
+
+        <div class="value-card">
+            <span class="vc-icon">🌍</span>
+            <h3>Cultural Heritage</h3>
+            <p>Nigeria's hospitality sector is built on local culture. HTEA honours that — celebrating cuisine, traditions, and the stories that make Nigerian hospitality distinct.</p>
+        </div>
+
+        <div class="value-card">
+            <span class="vc-icon">🤝</span>
+            <h3>Merit Over Seniority</h3>
+            <p>Students and professionals compete on the same stage. A hotel in Kwara gets the same standard of evaluation as a hotel in Lagos. Excellence has no rank, age, or location.</p>
+        </div>
+
     </div>
-    <div class="value-card">
-      <span class="icon">🌍</span>
-      <h3>National Reach</h3>
-      <p>As a rotating platform, we bring recognition and opportunity to every state in Nigeria.</p>
+
+    <!-- ===== PROMISE ===== -->
+    <div class="promise-section">
+        <h2>Our Promise to the Industry</h2>
+        <p>We commit to a platform where <strong>every nominee is verified</strong>, <strong>every judge is independent</strong>, <strong>every vote is counted fairly</strong>, and <strong>every award is earned</strong>.</p>
+        <p>We commit to publishing the criteria, the panel, and the process — because a platform that cannot be scrutinised cannot be trusted.</p>
+        <p>We commit to treating every nominee with respect — whether they win or not.</p>
     </div>
-    <div class="value-card">
-      <span class="icon">🌟</span>
-      <h3>Celebration</h3>
-      <p>We create unforgettable experiences that celebrate culture, talent, and the joy of hospitality.</p>
+
+    <!-- ===== PRINCIPLES ===== -->
+    <div class="principles-section">
+        <h2>How We <span>Operate</span></h2>
+        <p class="ps-subtitle">The operating principles behind every HTEA decision.</p>
+
+        <ul class="principles-list">
+            <li><strong>Sponsorship never buys an award.</strong> Sponsors support the platform. They do not influence judging. Sponsorship agreements explicitly exclude any award outcome.</li>
+            <li><strong>Judging criteria are published before nominations open.</strong> Every nominee knows what they are being scored on.</li>
+            <li><strong>Judges are independent.</strong> The National Board and each Edition Judging Panel are drawn from outside the HTEA organisation.</li>
+            <li><strong>Conflicts of interest are declared.</strong> Any judge with a personal or business relationship with a nominee must recuse themselves.</li>
+            <li><strong>Voting and scoring are auditable.</strong> Public votes and judges' scores are recorded and can be reviewed on request.</li>
+            <li><strong>Winners are announced once.</strong> No re-runs, no retractions, unless a verification failure is proven after the event — in which case the award is withdrawn publicly.</li>
+            <li><strong>Nominees are verified before shortlisting.</strong> CAC registration, operating years, and category criteria are checked.</li>
+            <li><strong>Communication is respectful.</strong> All nominees are treated professionally, win or lose.</li>
+        </ul>
     </div>
-  </div>
-</main>
+
+    <!-- ===== INTEGRITY / JUDGING ===== -->
+    <div class="integrity-section">
+        <h2>Judging &amp; <span>Integrity</span></h2>
+        <p class="is-subtitle">The structural safeguards that protect the integrity of every HTEA award.</p>
+
+        <div class="integrity-grid">
+
+            <div class="integrity-card">
+                <h4>🏛️ National Board</h4>
+                <p>Permanent custodians of the HTEA standard. Approves categories, oversees every edition, signs off on each local panel, and handles disputes and appeals.</p>
+            </div>
+
+            <div class="integrity-card">
+                <h4>📋 Edition Judging Panel</h4>
+                <p>Each host state assembles its own panel — drawn from hotel associations, government, and the business sector. Local insight, national standards.</p>
+            </div>
+
+            <div class="integrity-card">
+                <h4>🗳️ Public Voting</h4>
+                <p>Public votes carry weight in specific categories but do not determine winners alone. Judges' scores and public votes are combined against published weightings.</p>
+            </div>
+
+            <div class="integrity-card">
+                <h4>📂 Verification</h4>
+                <p>Every nominee is verified for eligibility before shortlisting. False claims of eligibility lead to disqualification.</p>
+            </div>
+
+            <div class="integrity-card">
+                <h4>📜 Dispute Resolution</h4>
+                <p>Any nominee may file a written objection within 7 days of shortlisting. The National Board reviews and responds in writing.</p>
+            </div>
+
+            <div class="integrity-card">
+                <h4>🔒 Data Protection</h4>
+                <p>All nominee and contestant data is handled in compliance with the Nigeria Data Protection Act 2023.</p>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- ===== WHAT WE STAND AGAINST ===== -->
+    <div class="against-section">
+        <h2>What We Stand Against</h2>
+        <p class="as-intro">HTEA exists partly because these practices are too common in Nigerian awards. We reject them openly.</p>
+
+        <div class="against-grid">
+
+            <div class="against-card">
+                <span class="ac-icon">💰</span>
+                <h4>Pay-to-Win Awards</h4>
+                <p>Where sponsors or nominees can buy their way to a trophy. Not on HTEA. Sponsorship and judging are completely separated.</p>
+            </div>
+
+            <div class="against-card">
+                <span class="ac-icon">🎭</span>
+                <h4>Fake Nomination Lists</h4>
+                <p>Where "nominees" are invented to fill a stage. Every HTEA nominee is a real, verified business or individual.</p>
+            </div>
+
+            <div class="against-card">
+                <span class="ac-icon">📸</span>
+                <h4>Photo-Op Partnerships</h4>
+                <p>Where government or corporate logos appear on a flyer without any signed agreement. HTEA only lists real, confirmed partners.</p>
+            </div>
+
+            <div class="against-card">
+                <span class="ac-icon">🗣️</span>
+                <h4>Unverified Claims</h4>
+                <p>Where event organisers claim attendee numbers, government approval, or media partners they don't have. We publish only what we can prove.</p>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- ===== CTA ===== -->
+    <div class="final-cta">
+        <h2>Hold Us to <span>These Standards</span></h2>
+        <p>If you see HTEA fail to live up to any value on this page, tell us. A platform that cannot be held accountable cannot be trusted.</p>
+        <div class="cta-buttons">
+            <a href="contact.html" class="btn-primary">📩 Contact Us</a>
+            <a href="about.html" class="btn-outline">Learn More About HTEA</a>
+        </div>
+    </div>
+
+</section>
 
 <footer>
-  <div class="footer-brand">HTE<span>A</span></div>
-  <div class="footer-tagline">Building the Future of Hospitality Excellence</div>
-  <div class="footer-edition">Current Edition: <a href="https://kwashate.netlify.app">KWASHATE 2026 — Kwara State →</a></div>
-  <div class="footer-links">
-    <a href="index.html">Home</a><a href="about.html">About</a><a href="values.html">Values</a><a href="states.html">States</a><a href="contact.html">Contact</a>
-  </div>
-  <div class="copyright">© 2026 HTEA. All rights reserved.</div>
+    <div class="footer-brand">HTE<span>A</span></div>
+    <div class="footer-tagline">Building the Future of Hospitality Excellence</div>
+    <div class="footer-edition">
+        Current Edition: <a href="https://kwashate.netlify.app">KWASHATE 2026 — Kwara State →</a>
+    </div>
+    <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="values.html">Values</a>
+        <a href="states.html">States</a>
+        <a href="contact.html">Contact</a>
+    </div>
+    <div class="footer-social">
+        <a href="https://instagram.com/hteanigeria" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://linkedin.com/company/hteanigeria" target="_blank" rel="noopener">LinkedIn</a>
+    </div>
+    <div class="copyright">
+        © 2026 Drecot Consults. All rights reserved.<br>
+        HTEA and KWASHATE are initiatives of Drecot Consults (RC: 6904955).
+    </div>
 </footer>
 
-<script>function toggleMenu(){document.getElementById("navLinks").classList.toggle("active");}</script>
+<a href="https://wa.me/2348039661354?text=Hello%20HTEA%20Team!%20I%20need%20more%20information." class="wa-float">💬 Chat with us</a>
+
+<script>
+    function toggleMenu() { document.getElementById("navLinks").classList.toggle("active"); }
+</script>
 </body>
 </html>
