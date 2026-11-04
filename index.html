@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HTEA – Hospitality & Tourism Excellence Awards</title>
-    <meta name="description" content="HTEA is a national awards platform celebrating excellence in Nigeria's hospitality and tourism sector. Current edition: KWASHATE 2026 in Kwara State.">
+    <title>HTEA 2026 — Osun Edition | Hospitality & Tourism Excellence Awards</title>
+    <meta name="description" content="HTEA is a national awards platform dedicated to celebrating excellence in hospitality and tourism. Launching its inaugural edition in Osun State.">
     <link rel="icon" type="image/png" href="img/award-logo4.png">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
@@ -12,6 +12,9 @@
         body { font-family: 'Inter', sans-serif; background: #f5f6f8; color: #2c3e50; line-height: 1.6; }
         h1, h2, h3, h4 { font-family: 'Playfair Display', serif; }
         a { text-decoration: none; }
+
+        /* ===== ANNOUNCEMENT BAR ===== */
+        .announcement-bar { background: #D4AF37; color: #0b1f2a; text-align: center; padding: 10px; font-weight: 700; font-size: 0.9rem; letter-spacing: 0.5px; }
 
         /* ===== NAVIGATION ===== */
         nav { background: #0b1f2a; color: #fff; padding: 16px 30px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; box-shadow: 0 2px 10px rgba(0,0,0,0.3); position: sticky; top: 0; z-index: 100; }
@@ -76,7 +79,7 @@
             .ce-right { justify-content: center; }
         }
 
-        /* ===== EXPERIENCE SECTION ===== */
+        /* ===== THE HTEA EXPERIENCE ===== */
         .experience-section { background: #f8f9fa; padding: 70px 0; border-top: 1px solid #eef2f7; border-bottom: 1px solid #eef2f7; }
         .experience-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 28px; margin-bottom: 30px; }
         .experience-card { background: #fff; border-radius: 16px; padding: 40px 30px; border: 1px solid #eef2f7; box-shadow: 0 4px 20px rgba(0,0,0,0.05); transition: 0.3s; position: relative; display: flex; flex-direction: column; }
@@ -90,23 +93,17 @@
         .exp-list li { padding: 7px 0 7px 22px; position: relative; font-size: 0.88rem; color: #2c3e50; }
         .exp-list li::before { content: "✓"; position: absolute; left: 0; color: #D4AF37; font-weight: 700; }
         .experience-note { text-align: center; color: #7f8c8d; font-size: 0.9rem; font-style: italic; margin-top: 20px; }
-        @media (max-width: 768px) {
-            .experience-section { padding: 40px 0; }
-            .experience-card { padding: 30px 24px; }
-        }
 
-        /* ===== CONTAINER ===== */
+        /* ===== CONTAINER & SECTIONS ===== */
         .container { max-width: 1100px; margin: 0 auto; padding: 60px 20px; }
         .section-title { text-align: center; font-size: 2.4rem; font-weight: 700; margin-bottom: 8px; color: #0b1f2a; }
         .section-title span { color: #D4AF37; }
         .section-subtitle { text-align: center; color: #7f8c8d; margin-bottom: 40px; font-size: 1.1rem; }
 
-        /* ===== BRAND STATEMENT ===== */
         .brand-statement { background: #fff; border-radius: 16px; padding: 50px; box-shadow: 0 4px 20px rgba(0,0,0,0.05); border: 1px solid #eef2f7; text-align: center; margin-bottom: 50px; }
         .brand-statement h2 { font-size: 2.2rem; margin-bottom: 16px; }
         .brand-statement p { color: #2c3e50; font-size: 1.15rem; line-height: 1.8; max-width: 800px; margin: 0 auto; }
 
-        /* ===== AWARD CATEGORIES ===== */
         .categories-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 24px; margin-bottom: 50px; }
         .cat-card { background: #fff; border-radius: 16px; padding: 30px; border: 1px solid #eef2f7; box-shadow: 0 4px 20px rgba(0,0,0,0.05); }
         .cat-card h3 { font-size: 1.3rem; color: #0b1f2a; margin-bottom: 16px; padding-bottom: 12px; border-bottom: 2px solid #D4AF37; }
@@ -114,37 +111,6 @@
         .cat-card li { padding: 8px 0 8px 22px; position: relative; font-size: 0.95rem; color: #2c3e50; border-bottom: 1px dashed #eef2f7; }
         .cat-card li:last-child { border-bottom: none; }
         .cat-card li::before { content: "★"; position: absolute; left: 0; color: #D4AF37; font-size: 0.8rem; }
-        .new-tag { background: #0ea5e9; color: #fff; font-size: 0.7rem; padding: 3px 9px; border-radius: 6px; margin-left: 8px; vertical-align: middle; font-family: 'Inter', sans-serif; font-weight: 600; }
-
-        /* ===== JUDGING & INTEGRITY ===== */
-        .judges-intro { background: #fff; border-radius: 16px; padding: 40px; border: 1px solid #eef2f7; box-shadow: 0 4px 20px rgba(0,0,0,0.05); margin-bottom: 30px; text-align: center; }
-        .judges-intro p { font-size: 1.05rem; color: #2c3e50; line-height: 1.9; max-width: 800px; margin: 0 auto; }
-        .judges-intro p strong { color: #D4AF37; }
-        .tier-label { display: inline-block; font-size: 0.75rem; font-weight: 700; padding: 5px 14px; border-radius: 40px; letter-spacing: 1.5px; text-transform: uppercase; margin-bottom: 12px; }
-        .tier-permanent { background: #D4AF37; color: #0b1f2a; }
-        .tier-rotating { background: #0ea5e9; color: #fff; }
-        .tier-block { background: #fff; border-radius: 16px; padding: 40px; border: 1px solid #eef2f7; box-shadow: 0 4px 20px rgba(0,0,0,0.05); margin-bottom: 30px; }
-        .tier-block h3 { font-size: 1.7rem; color: #0b1f2a; margin-bottom: 8px; text-align: center; }
-        .tier-block h3 span { color: #D4AF37; }
-        .tier-block .tier-desc { text-align: center; color: #7f8c8d; font-size: 0.95rem; margin-bottom: 30px; max-width: 700px; margin-left: auto; margin-right: auto; line-height: 1.7; }
-        .tier-block.national { border-left: 6px solid #D4AF37; }
-        .tier-block.edition { border-left: 6px solid #0ea5e9; }
-        .tba-box { background: #f8f9fa; border: 2px dashed #D4AF37; border-radius: 12px; padding: 36px 24px; text-align: center; }
-        .tba-box .tba-icon { font-size: 2.5rem; margin-bottom: 12px; }
-        .tba-box h4 { font-size: 1.2rem; color: #0b1f2a; margin-bottom: 8px; }
-        .tba-box p { color: #7f8c8d; font-size: 0.95rem; max-width: 600px; margin: 0 auto; line-height: 1.7; }
-
-        /* ===== OFFICIAL PARTNERS ===== */
-        .partners-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 24px; margin-bottom: 50px; }
-        .partner-card { background: #fff; border-radius: 16px; padding: 30px; border: 1px solid #eef2f7; box-shadow: 0 4px 20px rgba(0,0,0,0.05); text-align: center; transition: 0.3s; }
-        .partner-card:hover { transform: translateY(-6px); border-color: #D4AF37; box-shadow: 0 8px 30px rgba(0,0,0,0.1); }
-        .partner-badge { display: inline-block; background: #D4AF37; color: #0b1f2a; font-size: 0.7rem; font-weight: 700; padding: 5px 12px; border-radius: 40px; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 16px; }
-        .partner-logo { width: 120px; height: 120px; background: white; border-radius: 12px; margin: 0 auto 16px; display: flex; align-items: center; justify-content: center; border: 1px solid #eef2f7; padding: 12px; overflow: hidden; }
-        .partner-logo img { max-width: 100%; max-height: 100%; width: auto; height: auto; object-fit: contain; display: block; }
-        .partner-card h4 { font-size: 1.1rem; color: #0b1f2a; margin-bottom: 8px; }
-        .partner-card p { font-size: 0.9rem; color: #7f8c8d; line-height: 1.7; margin-bottom: 16px; }
-        .partner-link { color: #D4AF37; font-weight: 700; font-size: 0.9rem; }
-        .partner-link:hover { text-decoration: underline; }
 
         /* ===== WHY PARTNER ===== */
         .why-partner { background: #fff; border-radius: 16px; padding: 50px; box-shadow: 0 4px 20px rgba(0,0,0,0.05); border: 1px solid #eef2f7; margin-bottom: 50px; }
@@ -157,83 +123,35 @@
         .benefit-card p { color: #7f8c8d; font-size: 0.9rem; line-height: 1.7; }
         .why-partner .cta-row { text-align: center; margin-top: 40px; padding-top: 30px; border-top: 1px solid #eef2f7; }
 
-        /* ===== VISION & MISSION ===== */
-        .vision-mission { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin-bottom: 50px; }
-        .vm-card { background: #0b1f2a; border-radius: 16px; padding: 40px; border-left: 6px solid #D4AF37; }
-        .vm-card h3 { color: #D4AF37; font-size: 1.8rem; margin-bottom: 12px; }
-        .vm-card p { color: #e2e8f0; font-size: 1.1rem; line-height: 1.8; }
-        @media (max-width: 768px) { .vision-mission { grid-template-columns: 1fr; } }
-
-        /* ===== HOW IT WORKS ===== */
-        .how-it-works { background: #fff; border-radius: 16px; padding: 50px; box-shadow: 0 4px 20px rgba(0,0,0,0.05); border: 1px solid #eef2f7; text-align: center; margin-bottom: 50px; }
-        .how-it-works h2 { font-size: 2.2rem; margin-bottom: 16px; }
-        .how-it-works h2 span { color: #D4AF37; }
-        .steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; margin-top: 40px; }
-        .step { background: #f8f9fa; border-radius: 12px; padding: 30px; text-align: center; border: 1px solid #eef2f7; }
-        .step .number { font-size: 2.5rem; font-weight: 800; color: #D4AF37; margin-bottom: 8px; }
-        .step h4 { font-size: 1.2rem; color: #0b1f2a; margin-bottom: 8px; }
-        .step p { color: #7f8c8d; font-size: 0.9rem; line-height: 1.7; }
-
-        /* ===== ROTATION SHOWCASE ===== */
-        .rotation-showcase { background: #fff; border-radius: 16px; padding: 50px; box-shadow: 0 4px 20px rgba(0,0,0,0.05); border: 1px solid #eef2f7; text-align: center; margin-bottom: 50px; }
-        .rotation-showcase h2 { font-size: 2.2rem; margin-bottom: 16px; }
-        .rotation-showcase .states { display: flex; justify-content: center; gap: 30px; flex-wrap: wrap; margin-top: 30px; }
-        .state-pill { background: #0b1f2a; color: #D4AF37; padding: 12px 30px; border-radius: 40px; font-weight: 700; font-size: 1.1rem; border: 2px solid #D4AF37; }
-        .state-pill.active { background: #D4AF37; color: #0b1f2a; }
-
-        /* ===== TEAM ===== */
-        .people-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 24px; margin-bottom: 50px; }
-        .person-card { background: #fff; border-radius: 16px; padding: 28px; text-align: center; border: 1px solid #eef2f7; box-shadow: 0 4px 20px rgba(0,0,0,0.05); transition: 0.3s; }
-        .person-card:hover { transform: translateY(-6px); border-color: #D4AF37; box-shadow: 0 8px 30px rgba(0,0,0,0.1); }
-        .person-card .avatar { width: 90px; height: 90px; border-radius: 50%; background: #e2e8f0; margin: 0 auto 16px; display: flex; align-items: center; justify-content: center; color: #94a3b8; font-size: 0.75rem; font-weight: 600; overflow: hidden; }
-        .person-card .avatar img { width: 100%; height: 100%; object-fit: cover; }
-        .person-card h4 { font-size: 1.05rem; color: #0b1f2a; margin-bottom: 4px; }
-        .person-card .role { font-size: 0.82rem; color: #D4AF37; font-weight: 600; margin-bottom: 10px; text-transform: uppercase; letter-spacing: 0.5px; }
-        .person-card p { font-size: 0.88rem; color: #7f8c8d; line-height: 1.6; }
-
         /* ===== CONTACT ===== */
         .contact-section { background: #fff; border-radius: 16px; padding: 50px; box-shadow: 0 4px 20px rgba(0,0,0,0.05); border: 1px solid #eef2f7; text-align: center; }
         .contact-section h2 { font-size: 2.2rem; margin-bottom: 16px; }
         .contact-section h2 span { color: #D4AF37; }
-        .contact-section p { color: #7f8c8d; margin-bottom: 24px; }
-        .contact-details { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; margin-bottom: 30px; }
+        .contact-details { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; margin: 30px 0; }
         .contact-item { display: flex; align-items: center; gap: 8px; background: #f8f9fa; padding: 12px 24px; border-radius: 40px; border: 1px solid #eef2f7; }
         .contact-item .icon { font-size: 1.5rem; }
         .contact-item .info { font-weight: 600; color: #0b1f2a; }
-        .contact-item a { color: #0b1f2a; }
-        .socials { display: flex; justify-content: center; gap: 16px; flex-wrap: wrap; margin-top: 20px; }
-        .social-btn { background: #0b1f2a; color: #D4AF37; padding: 10px 22px; border-radius: 40px; font-weight: 600; font-size: 0.9rem; border: 1px solid #D4AF37; transition: 0.2s; }
-        .social-btn:hover { background: #D4AF37; color: #0b1f2a; }
 
         /* ===== FOOTER ===== */
         footer { background: #0b1f2a; color: #94a3b8; padding: 50px 20px 30px; text-align: center; margin-top: 60px; }
         footer .footer-brand { font-size: 1.6rem; font-weight: 800; color: #fff; margin-bottom: 8px; font-family: 'Playfair Display', serif; }
         footer .footer-brand span { color: #D4AF37; }
         footer .footer-tagline { font-size: 0.85rem; color: #D4AF37; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 20px; }
-        footer .footer-edition { background: rgba(212,175,55,0.1); border: 1px solid #D4AF37; border-radius: 12px; padding: 14px 20px; display: inline-block; margin-bottom: 24px; font-size: 0.9rem; color: #cbd5e1; }
-        footer .footer-edition a { color: #D4AF37; font-weight: 700; }
         footer .footer-links { display: flex; justify-content: center; gap: 22px; flex-wrap: wrap; margin-bottom: 24px; }
         footer .footer-links a { color: #cbd5e1; font-size: 0.9rem; }
         footer .footer-links a:hover { color: #D4AF37; }
-        footer .footer-social { display: flex; justify-content: center; gap: 16px; margin-bottom: 24px; }
-        footer .footer-social a { color: #D4AF37; font-size: 0.9rem; border: 1px solid #D4AF37; padding: 8px 18px; border-radius: 40px; transition: 0.2s; }
-        footer .footer-social a:hover { background: #D4AF37; color: #0b1f2a; }
         footer .copyright { font-size: 0.8rem; color: #64748b; border-top: 1px solid #1e293b; padding-top: 20px; max-width: 900px; margin: 0 auto; line-height: 1.8; }
 
         /* ===== FLOATING WHATSAPP ===== */
-        .wa-float { position: fixed; bottom: 74px; right: 24px; background: #25D366; color: #fff; padding: 14px 20px; border-radius: 50px; font-weight: 700; text-decoration: none; box-shadow: 0 4px 15px rgba(37,211,102,0.4); display: flex; align-items: center; gap: 8px; z-index: 999; font-size: 0.95rem; }
+        .wa-float { position: fixed; bottom: 24px; right: 24px; background: #25D366; color: #fff; padding: 14px 20px; border-radius: 50px; font-weight: 700; text-decoration: none; box-shadow: 0 4px 15px rgba(37,211,102,0.4); display: flex; align-items: center; gap: 8px; z-index: 999; font-size: 0.95rem; }
         .wa-float:hover { transform: scale(1.05); }
-
-        @media (max-width: 768px) {
-            .brand-statement, .why-partner, .how-it-works, .contact-section, .rotation-showcase, .tier-block, .judges-intro { padding: 30px; }
-            .contact-details { gap: 12px; }
-            .contact-item { padding: 10px 16px; font-size: 0.85rem; }
-            .state-pill { padding: 10px 20px; font-size: 0.9rem; }
-            .tier-block h3 { font-size: 1.4rem; }
-        }
     </style>
 </head>
 <body>
+
+<div class="announcement-bar">
+    📢 Strategic Update: Our inaugural edition will now launch in Osun State. New dates and host venue coming soon.
+</div>
 
 <nav>
     <div class="logo">
@@ -251,24 +169,20 @@
         <a href="about.html">About</a>
         <a href="values.html">Values</a>
         <a href="states.html">States</a>
-        <a href="tourism-window.html">Tourism Window</a>
-        <a href="pageant.html">Face Off KWASHATE</a>
-        <a href="food-fair.html">Food Fair</a>
+        <a href="pageant.html">Face Off</a>
         <a href="sponsorship.html">Sponsorship</a>
-        <a href="past-editions.html">Past Editions</a>
-        <a href="https://kwashate.netlify.app">KWASHATE</a>
         <a href="contact.html" class="nav-cta">Contact Us</a>
     </div>
 </nav>
 
 <header class="hero">
     <h1>Building the Future of <span>Hospitality Excellence</span></h1>
-    <p class="tagline">HTEA is a national awards platform dedicated to celebrating excellence in hospitality and tourism. Each year, the event rotates to a new state, creating a national movement of excellence.</p>
+    <p class="tagline">HTEA is a national awards platform dedicated to celebrating the best in hospitality and tourism. Our inaugural edition launches in Osun State.</p>
     <div class="hero-buttons">
         <a href="contact.html" class="btn-primary">🎟️ Become a Sponsor</a>
         <a href="about.html" class="btn-outline">Learn More</a>
     </div>
-    <div class="state-badge">🏆 2026 Edition Hosted by <strong>Kwara State</strong></div>
+    <div class="state-badge">🏆 Inaugural Edition Hosted by <strong>Osun State</strong></div>
 
     <div class="hero-stats">
         <div><strong>18</strong><span>Award Categories</span></div>
@@ -278,36 +192,32 @@
     </div>
 </header>
 
-<!-- ===== CURRENT EDITION BANNER ===== -->
 <section class="current-edition">
     <div class="current-edition-inner">
         <div class="ce-left">
-            <span class="ce-label">🏆 Now Live</span>
-            <h2>2026 Edition: <span>KWASHATE</span></h2>
-            <p>KWASHATE 2026 — the Kwara Edition of the HTEA National Platform. Hosted in Ilorin. Nominations open. Tables available. Sponsorship packages live.</p>
+            <span class="ce-label">🚀 Coming Soon</span>
+            <h2>2027 Edition: <span>Face of Osun</span></h2>
+            <p>The Osun State Edition of the HTEA National Platform. Hosted in Osogbo. Nominations and sponsorship packages will be announced shortly.</p>
         </div>
         <div class="ce-right">
-            <a href="https://kwashate.netlify.app" class="ce-btn">Visit KWASHATE →</a>
-            <a href="https://kwashate.netlify.app/nominate.html" class="ce-btn-outline">Nominate Now</a>
+            <a href="contact.html" class="ce-btn">Partner With Us →</a>
+            <a href="nominate.html" class="ce-btn-outline">Express Interest</a>
         </div>
     </div>
 </section>
 
-<!-- ===== THE KWASHATE EXPERIENCE ===== -->
 <section class="experience-section">
     <div class="container">
-
-        <div class="section-title">The KWASHATE <span>Experience</span></div>
-        <div class="section-subtitle">Three programs. One celebration of Kwara's hospitality excellence.</div>
+        <div class="section-title">The HTEA <span>Experience</span></div>
+        <div class="section-subtitle">Three programs. One celebration of Osun's hospitality excellence.</div>
 
         <div class="experience-grid">
-
-            <!-- Card 1: Award Night -->
+            <!-- Card 1: Award -->
             <div class="experience-card">
                 <div class="exp-icon">🏆</div>
                 <div class="exp-badge">Award Night</div>
                 <h3>The HTEA Gold Award</h3>
-                <p>The crowning moment. 18 categories. 4 sectors. One black-tie gala honoring the hotels, restaurants, transport companies, and tourism innovators defining Kwara's hospitality standard.</p>
+                <p>The crowning moment. 18 categories. 4 sectors. One black-tie gala honoring the hotels, restaurants, transport companies, and tourism innovators defining Osun's hospitality standard.</p>
                 <ul class="exp-list">
                     <li>18 award categories</li>
                     <li>Live voting results</li>
@@ -320,12 +230,12 @@
             <div class="experience-card featured">
                 <div class="exp-icon">🍽️</div>
                 <div class="exp-badge">Food Exhibition</div>
-                <h3>KWASHATE Food Fair</h3>
-                <p>A celebration of Nigerian cuisine and Kwara's local vendors. Restaurants, caterers, and food entrepreneurs exhibit, sell, and compete — while the pageant's cooking challenge unfolds on stage.</p>
+                <h3>HTEA Food Fair</h3>
+                <p>A celebration of Nigerian cuisine and Osun's local vendors. Restaurants, caterers, and food entrepreneurs exhibit, sell, and compete.</p>
                 <ul class="exp-list">
                     <li>Vendor stalls & tasting</li>
                     <li>Live cooking competition</li>
-                    <li>Local Kwara ingredients showcase</li>
+                    <li>Local Osun ingredients showcase</li>
                     <li>Open to the public</li>
                 </ul>
             </div>
@@ -333,9 +243,9 @@
             <!-- Card 3: Pageant -->
             <div class="experience-card">
                 <div class="exp-icon">👑</div>
-                <div class="exp-badge">Pageant</div>
-                <h3>Face Off KWASHATE</h3>
-                <p>Hospitality professionals compete for the title of Face of KWASHATE. One winner per state edition. They cook. They present. They handle real guest scenarios — dressed in the uniform of the department they represent.</p>
+                <div class="exp-badge">Challenge</div>
+                <h3>Face Off Osun</h3>
+                <p>Hospitality professionals and students compete for the title of Face of Osun. One winner per state edition. They cook, present, and handle real guest scenarios.</p>
                 <ul class="exp-list">
                     <li>Front Office • Housekeeping • F&B</li>
                     <li>Live cooking challenge</li>
@@ -343,16 +253,11 @@
                     <li>Winner becomes an official HTEA ambassador</li>
                 </ul>
             </div>
-
         </div>
-
-        <p class="experience-note">All three programs take place during KWASHATE 2026 in Ilorin, Kwara State.</p>
-
     </div>
 </section>
 
 <section class="container">
-
     <div class="brand-statement" id="about">
         <h2>Nigeria's <span style="color:#D4AF37;">Hospitality Awards Platform</span></h2>
         <p>HTEA (Hospitality & Tourism Excellence Awards) is a national platform that recognizes and celebrates the champions of Nigeria's hospitality and tourism industry. From hotels and restaurants to travel companies and tourism innovators, we honor those who set the standard for excellence.</p>
@@ -363,215 +268,56 @@
 
     <div class="categories-grid">
         <div class="cat-card">
-            <h3>🏨 Hotels <span class="new-tag">8</span></h3>
+            <h3>🏨 Hotels</h3>
             <ul>
-                <li>Luxury Hotel</li>
-                <li>Green Hotel</li>
-                <li>Business Hotel</li>
-                <li>Design Hotel</li>
-                <li>Historical Hotel</li>
-                <li>Innovative Hotel</li>
-                <li>Hotel GM (General Manager)</li>
-                <li>Guest House</li>
+                <li>Best Luxury Hotel</li>
+                <li>Best Green Hotel</li>
+                <li>Best Business Hotel</li>
+                <li>Best Hotel GM</li>
+                <li>Best Guest House</li>
             </ul>
         </div>
         <div class="cat-card">
-            <h3>🍔 Restaurants & Fast-Food <span class="new-tag">4</span></h3>
+            <h3>🍔 Restaurants</h3>
             <ul>
-                <li>Restaurant</li>
-                <li>Fast-Food</li>
-                <li>African Restaurant</li>
-                <li>Continental Restaurant</li>
+                <li>Best Restaurant</li>
+                <li>Best Fast-Food</li>
+                <li>Best African Restaurant</li>
+                <li>Best Catering Services</li>
             </ul>
         </div>
         <div class="cat-card">
-            <h3>🚌 Transport <span class="new-tag">3</span></h3>
+            <h3>🚌 Transport</h3>
             <ul>
-                <li>Transport Company</li>
-                <li>Operating Airline</li>
-                <li>Traveling Agency</li>
+                <li>Best Transport Company</li>
+                <li>Best Operating Airline</li>
+                <li>Best Traveling Agency</li>
             </ul>
         </div>
         <div class="cat-card">
-            <h3>🌍 Travel & Tourism <span class="new-tag">NEW · 3</span></h3>
+            <h3>🌍 Travel & Tourism</h3>
             <ul>
-                <li>Local Tourist Attraction</li>
-                <li>Tour Operator in Kwara State</li>
-                <li>Sustainable Tourism Initiative</li>
+                <li>Best Local Tourist Attraction</li>
+                <li>Best Tour Operator in Osun</li>
+                <li>Best Sustainable Tourism Initiative</li>
             </ul>
         </div>
     </div>
 
-    <!-- ===== JUDGING & INTEGRITY (DEFERRED) ===== -->
-    <div class="section-title">Judging & <span>Integrity</span></div>
-    <div class="section-subtitle">Built on a two-tier system for national consistency and local insight</div>
-
-    <div class="judges-intro">
-        <p>HTEA operates a <strong>two-tier judging system</strong>. A permanent <strong>National Board</strong> sets the standard and oversees every edition. Each host state then assembles its own <strong>Edition Judging Panel</strong> to score local nominees. This keeps the brand consistent nationally while ensuring judges understand the local market.</p>
-    </div>
-
-    <!-- TIER 1: NATIONAL BOARD -->
-    <div class="tier-block national">
-        <div style="text-align:center;">
-            <span class="tier-label tier-permanent">Permanent</span>
-        </div>
-        <h3>HTEA <span>National Board</span></h3>
-        <p class="tier-desc">Custodians of the HTEA standard. The National Board approves the 18 categories, oversees the integrity of every edition, signs off on each local panel, and handles disputes and appeals.</p>
-
-        <div class="tba-box">
-            <div class="tba-icon">🏛️</div>
-            <h4>National Board — Being Constituted</h4>
-            <p>The HTEA National Board is currently being constituted and will be formally announced ahead of the 2026 Awards Night. Names, credentials, and bios will be published here.</p>
-        </div>
-    </div>
-
-    <!-- TIER 2: KWASHATE 2026 PANEL -->
-    <div class="tier-block edition">
-        <div style="text-align:center;">
-            <span class="tier-label tier-rotating">Rotating · 2026 Edition</span>
-        </div>
-        <h3>KWASHATE 2026 <span>Judging Panel</span></h3>
-        <p class="tier-desc">The KWASHATE 2026 Judging Panel will be assembled from Kwara State — including representatives from the Hotel Owners Association, government, and the business sector.</p>
-
-        <div class="tba-box">
-            <div class="tba-icon">📋</div>
-            <h4>Panel — To Be Announced</h4>
-            <p>The KWASHATE 2026 Judging Panel will be announced once nominations close. Panel composition will be published here with names and credentials.</p>
-        </div>
-    </div>
-
-    <!-- ===== OFFICIAL PARTNERS ===== -->
-    <div class="section-title">Official <span>Partners</span></div>
-    <div class="section-subtitle">Trusted organizations supporting HTEA and KWASHATE 2026</div>
-
-    <div class="partners-grid">
-
-        <div class="partner-card">
-            <div class="partner-badge">Official Web Partner</div>
-            <div class="partner-logo">
-                <img src="img/onestack-logo.png" alt="OneStack Digital Agency">
-            </div>
-            <h4>OneStack Digital Agency</h4>
-            <p>Designs, builds, and maintains the HTEA and KWASHATE digital platforms.</p>
-            <a href="https://onestackda.com" target="_blank" class="partner-link">Visit Site →</a>
-        </div>
-
-        <div class="partner-card">
-            <div class="partner-badge">Official Printing Partner</div>
-            <div class="partner-logo">
-                <img src="img/drecot-printing-logo.png" alt="Drecot Printing Press logo">
-            </div>
-            <h4>Drecot Printing Press</h4>
-            <p>Produces all HTEA print materials — certificates, trophy plaques, and event collateral.</p>
-            <a href="https://drecotprintingpress.netlify.app" target="_blank" class="partner-link">Visit Site →</a>
-        </div>
-
-        <div class="partner-card">
-            <div class="partner-badge">Talent Partner</div>
-            <div class="partner-logo">
-                <img src="img/hospitalityrecruit-logo.jpg" alt="HospitalityRecruit logo">
-            </div>
-            <h4>HospitalityRecruit</h4>
-            <p>Connects HTEA winners and nominees with elite hospitality employers across Africa.</p>
-            <a href="https://hospitalityrecruit.netlify.app" target="_blank" class="partner-link">Visit Site →</a>
-        </div>
-
-        <div class="partner-card">
-            <div class="partner-badge" style="background: #0ea5e9; color: #fff;">Launch Partner</div>
-            <div class="partner-logo">
-                <img src="img/cutevenue-logo.jpg" alt="CuteVenue logo">
-            </div>
-            <h4>CuteVenue</h4>
-            <p>Nigeria's smartest event hall booking platform — launching 2026. HTEA is proud to support their launch.</p>
-            <span class="partner-link">Coming Soon</span>
-        </div>
-
-    </div>
-
-    <!-- ===== WHY PARTNER ===== -->
     <div class="why-partner">
         <h2>Why Partner <span>With Us?</span></h2>
         <p style="text-align: center; color:#7f8c8d; margin-bottom: 20px;">HTEA offers unmatched visibility and networking opportunities for brands that want to connect with the hospitality and tourism industry's top decision-makers.</p>
         <div class="benefits">
             <div class="benefit-card"><span class="icon">🎯</span><h4>Targeted Audience</h4><p>Reach hotel owners, restaurant managers, and government officials.</p></div>
-            <div class="benefit-card"><span class="icon">📈</span><h4>National Reach — The Face of NIGHATE</h4><p>HTEA rotates across all 36 states and the FCT. Each state produces one Face of the Edition. Those winners converge at the national final for the title of Face of NIGHATE.</p></div>
+            <div class="benefit-card"><span class="icon">📈</span><h4>National Reach</h4><p>Rotate across all 36 states + FCT, ensuring long-term brand exposure.</p></div>
             <div class="benefit-card"><span class="icon">🏆</span><h4>Branding & Visibility</h4><p>Sponsorship includes naming rights, award categories, and stage presence.</p></div>
-            <div class="benefit-card"><span class="icon">🤝</span><h4>Networking Hub</h4><p>Connect with industry leaders, government officials, and potential partners.</p></div>
         </div>
         <div class="cta-row">
-            <p style="color:#2c3e50; margin-bottom: 16px; font-weight: 600;">Sponsor the 2026 Edition and reach Kwara's hospitality elite.</p>
-            <a href="https://kwashate.netlify.app" class="btn-primary">Sponsor KWASHATE 2026 →</a>
+            <p style="color:#2c3e50; margin-bottom: 16px; font-weight: 600;">Sponsor the Inaugural Edition and reach Osun's hospitality elite.</p>
+            <a href="contact.html" class="btn-primary">Become a Sponsor →</a>
         </div>
     </div>
 
-    <!-- ===== VISION & MISSION ===== -->
-    <div class="vision-mission">
-        <div class="vm-card">
-            <h3>✨ Our Vision</h3>
-            <p>To become the leading hospitality and tourism awards platform in Nigeria, recognized for celebrating excellence, promoting cultural heritage, and driving economic growth through world-class events — rotating to a new state each year to build a national movement.</p>
-        </div>
-        <div class="vm-card">
-            <h3>🎯 Our Mission</h3>
-            <p>To create a prestigious platform that celebrates, rewards, and empowers the champions of Nigeria's hospitality and tourism industry — through recognition, networking, and business growth.</p>
-        </div>
-    </div>
-
-    <!-- ===== HOW IT WORKS ===== -->
-    <div class="how-it-works">
-        <h2>How It <span>Works</span></h2>
-        <p style="color:#7f8c8d; margin-bottom: 20px;">A transparent, four-step process that ensures fairness.</p>
-        <div class="steps">
-            <div class="step"><div class="number">01</div><h4>Nomination</h4><p>Hotels, restaurants, and travel companies self-nominate or get nominated by peers.</p></div>
-            <div class="step"><div class="number">02</div><h4>Verification</h4><p>Our team verifies eligibility (CAC registration, operating years, etc.).</p></div>
-            <div class="step"><div class="number">03</div><h4>Public Voting</h4><p>The public votes for their favorites across all categories.</p></div>
-            <div class="step"><div class="number">04</div><h4>Awards Night</h4><p>Winners are crowned at the prestigious HTEA Gala.</p></div>
-        </div>
-    </div>
-
-    <!-- ===== ROTATION SHOWCASE ===== -->
-    <div class="rotation-showcase" id="states">
-        <h2>Rotating <span style="color:#D4AF37;">Across Nigeria</span></h2>
-        <p>HTEA is not a one-off event. It is a national movement. Each year, the awards rotate to a new state.</p>
-        <div class="states">
-            <span class="state-pill active">Kwara State 2026</span>
-            <span class="state-pill">Osun State 2027</span>
-            <span class="state-pill">Oyo State 2028</span>
-            <span class="state-pill">Your State 2029</span>
-        </div>
-    </div>
-
-    <!-- ===== TEAM ===== -->
-    <div class="section-title">Meet the <span>Team</span></div>
-    <div class="section-subtitle">The people behind HTEA</div>
-
-    <div class="people-grid">
-        <div class="person-card">
-            <div class="avatar"><img src="img/musa.jpeg" alt="Dahiru Obori"></div>
-            <h4>Dahiru Obori</h4>
-            <div class="role">Founder & CEO</div>
-            <p>A 35-year hospitality veteran. Founder of HospitalityRecruit, Drecot Consults, and OneStack Digital Agency. YouWin! awardee. Leads HTEA as Founder & CEO.</p>
-        </div>
-        <div class="person-card">
-            <div class="avatar"><img src="img/testimonial-2.jpg" alt="Adedayo Olawale"></div>
-            <h4>Adedayo Olawale</h4>
-            <div class="role">Head of Operations</div>
-            <p>Operations lead overseeing event delivery, logistics, and vendor coordination across HTEA editions.</p>
-        </div>
-        <div class="person-card">
-            <div class="avatar"><img src="img/testimonial-1.jpg" alt="Augustina Ibeh"></div>
-            <h4>Augustina Ibeh</h4>
-            <div class="role">Head of Partnerships</div>
-            <p>A 5-year marketing and business development professional. Founder of T Data Connect, with deep experience across the hospitality industry. Serves HTEA as Head of Partnerships.</p>
-        </div>
-        <div class="person-card">
-            <div class="avatar"><img src="img/olaseyi.jpeg" alt="Dare Oluwasheyi Isaac"></div>
-            <h4>Dare, Oluwasheyi Isaac</h4>
-            <div class="role">Head of Finance</div>
-            <p>A 15-year accounting veteran. ICAN-certified and specializes in hospitality-sector financial management. Founder of Distinct Global Ventures & General Merchandise and former Accountant at Rotana Hotel Ltd. Serves HTEA as Head of Finance.</p>
-        </div>
-    </div>
-
-    <!-- ===== CONTACT ===== -->
     <div class="contact-section" id="contact">
         <h2>Get In <span style="color:#D4AF37;">Touch</span></h2>
         <p>Ready to partner with a national hospitality awards platform?</p>
@@ -580,33 +326,21 @@
             <div class="contact-item"><span class="icon">📧</span><span class="info"><a href="mailto:drecotconsults@gmail.com">drecotconsults@gmail.com</a></span></div>
         </div>
         <a href="https://wa.me/2348039661354?text=Hello%20HTEA%20Team!%20I%20would%20like%20to%20partner%20with%20you." class="btn-primary">📱 Chat on WhatsApp</a>
-        <div class="socials">
-            <a href="https://instagram.com/hteanigeria" target="_blank" rel="noopener" class="social-btn">📸 Instagram</a>
-            <a href="https://linkedin.com/company/hteanigeria" target="_blank" rel="noopener" class="social-btn">💼 LinkedIn</a>
-        </div>
     </div>
 </section>
 
 <footer>
     <div class="footer-brand">HTE<span>A</span></div>
     <div class="footer-tagline">Building the Future of Hospitality Excellence</div>
-    <div class="footer-edition">
-        Current Edition: <a href="https://kwashate.netlify.app">KWASHATE 2026 — Kwara State →</a>
-    </div>
     <div class="footer-links">
         <a href="index.html">Home</a>
         <a href="about.html">About</a>
-        <a href="values.html">Values</a>
         <a href="states.html">States</a>
         <a href="contact.html">Contact</a>
     </div>
-    <div class="footer-social">
-        <a href="https://instagram.com/hteanigeria" target="_blank" rel="noopener">Instagram</a>
-        <a href="https://linkedin.com/company/hteanigeria" target="_blank" rel="noopener">LinkedIn</a>
-    </div>
     <div class="copyright">
         © 2026 Drecot Consults. All rights reserved.<br>
-        HTEA and KWASHATE are initiatives of Drecot Consults (RC: 6904955).
+        HTEA is an initiative of Drecot Consults (RC: 6904955).
     </div>
 </footer>
 
@@ -616,4 +350,4 @@
     function toggleMenu() { document.getElementById("navLinks").classList.toggle("active"); }
 </script>
 </body>
-</html>
+</html> 
