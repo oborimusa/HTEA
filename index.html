@@ -74,7 +74,10 @@
         .contact-details { display: flex; justify-content: center; gap: 12px; flex-wrap: wrap; margin: 20px 0; }
         .contact-item { display: flex; align-items: center; gap: 6px; background: #f8f9fa; padding: 10px 16px; border-radius: 40px; border: 1px solid #eef2f7; font-size:0.85rem; }
         footer { background: #0b1f2a; color: #94a3b8; padding: 30px 18px 20px; text-align: center; margin-top: 40px; width:100%; }
-        .wa-float { position: fixed; bottom: 18px; right: 18px; background: #25D366; color: #fff; padding: 12px 16px; border-radius: 50px; font-weight: 700; text-decoration: none; box-shadow: 0 4px 15px rgba(37,211,102,0.4); z-index: 999; font-size:0.85rem; }
+        .wa-float { position: fixed; bottom: 85px; right: 16px; background: #25D366; color: #fff; padding: 12px 16px; border-radius: 50px; font-weight: 700; text-decoration: none; box-shadow: 0 4px 15px rgba(37,211,102,0.4); z-index: 9999; font-size:0.85rem; }
+        @media (max-width: 768px) {
+        .wa-float { bottom: 90px; right: 12px; }
+        }
         @media (max-width: 768px) {
             .hamburger { display: block; }
             .nav-links { display: none; width: 100%; flex-direction: column; align-items: center; gap: 12px; padding: 18px 0; background: #0b1f2a; position: absolute; top: 74px; left: 0; z-index: 999; border-bottom: 2px solid #D4AF37; }
