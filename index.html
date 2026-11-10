@@ -36,7 +36,15 @@
         .current-edition-inner { max-width: 1100px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; gap: 30px; flex-wrap: wrap; }
         .ce-label { display: inline-block; background: #D4AF37; color: #0b1f2a; font-weight: 700; font-size: 0.75rem; padding: 5px 14px; border-radius: 40px; text-transform: uppercase; margin-bottom: 12px; }
         .ce-left h2 { color: #fff; font-size: 1.9rem; margin-bottom: 8px; } .ce-left h2 span { color: #D4AF37; } .ce-left p { color: #cbd5e1; font-size: 1rem; line-height: 1.7; }
-        .ce-btn { background: #D4AF37; color: #0b1f2a; padding: 14px 28px; border-radius: 40px; font-weight: 700; } .ce-btn-outline { background: transparent; color: #D4AF37; padding: 14px 28px; border: 2px solid #D4AF37; border-radius: 40px; font-weight: 700; }
+              .current-edition-inner { max-width: 1100px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; gap: 30px; flex-wrap: wrap; }
+        .ce-right { display: flex; gap: 14px; flex-wrap: wrap; align-items: center; justify-content: flex-start; }
+        .ce-btn { background: #D4AF37; color: #0b1f2a; padding: 14px 28px; border-radius: 40px; font-weight: 700; display:inline-block; white-space:nowrap; flex:0 0 auto; text-align:center; }
+        .ce-btn-outline { background: transparent; color: #D4AF37; padding: 14px 28px; border: 2px solid #D4AF37; border-radius: 40px; font-weight: 700; display:inline-block; white-space:nowrap; flex:0 0 auto; text-align:center; }
+        @media (max-width: 768px) {
+            .current-edition-inner { flex-direction: column; text-align: center; }
+            .ce-right { justify-content: center; width:100%; }
+            .ce-btn, .ce-btn-outline { width: 100%; max-width:280px; }
+        }
         .experience-section { background: #f8f9fa; padding: 70px 0; }
         .experience-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 28px; }
         .experience-card { background: #fff; border-radius: 16px; padding: 40px 30px; border: 1px solid #eef2f7; box-shadow: 0 4px 20px rgba(0,0,0,0.05); display: flex; flex-direction: column; }
