@@ -14,10 +14,7 @@
         h1, h2, h3, h4 { font-family: 'Playfair Display', serif; word-wrap: break-word; overflow-wrap: break-word; }
         a { text-decoration: none; }
         p { word-wrap: break-word; overflow-wrap: break-word; }
-
         .announcement-bar { background: #D4AF37; color: #0b1f2a; text-align: center; padding: 12px 15px; font-weight: 800; font-size: 0.85rem; line-height:1.4; }
-
-        /* NAV - MOBILE FIXED */
         nav { background: #0b1f2a; color: #fff; padding: 14px 18px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; position: sticky; top: 0; z-index: 1000; width:100%; }
         .logo-link { display: flex; align-items: center; }
         .logo-img { width: 48px; height: 48px; object-fit: contain; border-radius: 50%; flex-shrink:0; }
@@ -28,8 +25,6 @@
         .nav-links { display: flex; gap: 18px; align-items: center; }
         .nav-links a { color: #fff; font-weight: 600; font-size: 0.85rem; white-space:nowrap; }
         .nav-cta { background: #D4AF37; color: #0b1f2a !important; padding: 7px 16px; border-radius: 40px; font-weight: 700; }
-
-        /* HERO - MOBILE FIXED */
         .hero { background: linear-gradient(rgba(11,31,42,0.92), rgba(11,31,42,0.97)), url('https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1200&q=80'); background-size: cover; background-position: center; color: #fff; padding: 60px 18px 50px; text-align: center; width:100%; }
         .hero h1 { font-size: 2.4rem; font-weight: 700; margin-bottom: 14px; line-height: 1.25; }
         .hero h1 span { background: linear-gradient(135deg, #D4AF37, #f5e6a3, #D4AF37); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
@@ -40,8 +35,6 @@
         .state-badge { background: rgba(212,175,55,0.15); border: 1px solid #D4AF37; border-radius: 40px; padding: 10px 18px; font-size: 0.85rem; color: #D4AF37; font-weight: 700; display: inline-block; margin-top: 22px; line-height:1.4; max-width:100%; }
         .hero-stats { background: rgba(255,255,255,0.05); border-radius: 16px; padding: 18px 12px; margin-top: 30px; display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; border: 1px solid rgba(212,175,55,0.2); max-width:900px; margin-left:auto; margin-right:auto; }
         .hero-stats div { text-align: center; } .hero-stats strong { display: block; font-size: 1.6rem; font-weight: 800; color: #D4AF37; } .hero-stats span { font-size: 0.7rem; color:#cbd5e1; line-height:1.3; display:block; margin-top:4px; }
-
-        /* CURRENT EDITION */
         .current-edition { background: linear-gradient(135deg, #0b1f2a, #1e293b); border-top: 3px solid #D4AF37; border-bottom: 3px solid #D4AF37; padding: 30px 18px; width:100%; }
         .current-edition-inner { max-width: 1100px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; gap: 20px; flex-wrap: wrap; }
         .ce-left { flex: 1; min-width: 260px; }
@@ -50,7 +43,6 @@
         .ce-right { display: flex; gap: 10px; flex-wrap: wrap; align-items: center; }
         .ce-btn { background: #D4AF37; color: #0b1f2a; padding: 12px 20px; border-radius: 40px; font-weight: 700; font-size:0.85rem; display:inline-block; white-space:nowrap; text-align:center; }
         .ce-btn-outline { background: transparent; color: #D4AF37; padding: 12px 20px; border: 2px solid #D4AF37; border-radius: 40px; font-weight: 700; font-size:0.85rem; display:inline-block; white-space:nowrap; text-align:center; }
-
         .experience-section { background: #f8f9fa; padding: 40px 0; width:100%; }
         .container { max-width: 1100px; margin: 0 auto; padding: 40px 18px; width:100%; }
         .section-title { text-align: center; font-size: 1.9rem; font-weight: 700; margin-bottom: 8px; color: #0b1f2a; line-height:1.3; } .section-title span { color: #D4AF37; }
@@ -65,36 +57,30 @@
         .exp-list { list-style: none; margin-top: auto; padding-top: 16px; border-top: 1px dashed #eef2f7; }
         .exp-list li { padding: 6px 0 6px 20px; position: relative; font-size: 0.85rem; color: #2c3e50; line-height:1.4; }
         .exp-list li::before { content: "✓"; position: absolute; left: 0; color: #D4AF37; font-weight: 700; }
-
         .founder-wrapper { background:#fff; border-radius:16px; padding:24px 18px; box-shadow:0 4px 20px rgba(0,0,0,0.05); border:1px solid #eef2f7; margin-bottom:40px; width:100%; }
         .founder-flex { display:flex; gap:24px; flex-wrap:wrap; align-items:flex-start; }
         .founder-left { flex:1; min-width:260px; } .founder-right { flex:1; min-width:260px; background:#fffcf0; border:1px solid #f5e6a3; border-radius:12px; padding:20px; }
-
         .categories-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; margin-bottom: 40px; }
         .cat-card { background: #fff; border-radius: 16px; padding: 22px 16px; border: 1px solid #eef2f7; box-shadow: 0 4px 20px rgba(0,0,0,0.05); text-align:center; width:100%; }
         .cat-card h3 { font-size: 1rem; color: #0b1f2a; margin-bottom: 6px; line-height:1.3; } .cat-card p { font-size:0.8rem; color:#64748b; line-height:1.4; }
-
         .sponsor-tiers { background: #0b1f2a; border-radius:16px; padding:30px 18px; color:#fff; margin-bottom:40px; border:2px solid #D4AF37; width:100%; }
         .sponsor-tiers h2 { text-align:center; font-size:1.6rem; margin-bottom:10px; line-height:1.3; } .sponsor-tiers h2 span { color:#D4AF37; }
-        .tier-grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(200px,1fr)); gap:16px; margin-top:24px; }
-        .tier-card { background: rgba(255,255,255,0.05); border:1px solid rgba(212,175,55,0.3); border-radius:12px; padding:20px 16px; text-align:center; width:100%; }
+        .tier-grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(220px,1fr)); gap:16px; margin-top:24px; }
+        .tier-card { background: rgba(255,255,255,0.05); border:1px solid rgba(212,175,55,0.3); border-radius:12px; padding:20px 16px; text-align:center; width:100%; position:relative; }
+        .tier-card.featured-gold { border:2px solid #D4AF37; background: rgba(212,175,55,0.12); transform: scale(1.02); }
         .tier-card h4 { color:#D4AF37; font-size:1rem; margin-bottom:6px; } .tier-card .price { font-size:1.2rem; font-weight:800; color:#fff; margin-bottom:8px; } .tier-card p { color:#94a3b8; font-size:0.8rem; line-height:1.5; }
-
+        .tier-label { position:absolute; top:-10px; left:50%; transform:translateX(-50%); background:#D4AF37; color:#0b1f2a; font-size:0.65rem; font-weight:800; padding:4px 10px; border-radius:20px; white-space:nowrap; }
         .contact-section { background: #fff; border-radius: 16px; padding: 30px 18px; box-shadow: 0 4px 20px rgba(0,0,0,0.05); border: 1px solid #eef2f7; text-align: center; width:100%; }
         .contact-details { display: flex; justify-content: center; gap: 12px; flex-wrap: wrap; margin: 20px 0; }
         .contact-item { display: flex; align-items: center; gap: 6px; background: #f8f9fa; padding: 10px 16px; border-radius: 40px; border: 1px solid #eef2f7; font-size:0.85rem; }
-
         footer { background: #0b1f2a; color: #94a3b8; padding: 30px 18px 20px; text-align: center; margin-top: 40px; width:100%; }
         .wa-float { position: fixed; bottom: 18px; right: 18px; background: #25D366; color: #fff; padding: 12px 16px; border-radius: 50px; font-weight: 700; text-decoration: none; box-shadow: 0 4px 15px rgba(37,211,102,0.4); z-index: 999; font-size:0.85rem; }
-
-        /* ===== MOBILE FIXES ===== */
         @media (max-width: 768px) {
             .hamburger { display: block; }
             .nav-links { display: none; width: 100%; flex-direction: column; align-items: center; gap: 12px; padding: 18px 0; background: #0b1f2a; position: absolute; top: 74px; left: 0; z-index: 999; border-bottom: 2px solid #D4AF37; }
             .nav-links.active { display: flex; }
             .nav-links a { width: 100%; text-align: center; padding: 8px 0; font-size:0.9rem; }
             .nav-cta { width: 80%; text-align: center; }
-
             .hero { padding: 40px 16px 30px; }
             .hero h1 { font-size: 1.7rem; line-height:1.3; }
             .hero .tagline { font-size: 0.9rem; line-height:1.6; }
@@ -103,12 +89,10 @@
             .hero-stats span { font-size: 0.65rem; }
             .hero-buttons { flex-direction: column; align-items: center; }
             .btn-primary, .btn-outline { width: 100%; max-width: 280px; }
-
             .current-edition-inner { flex-direction: column; text-align: center; }
             .ce-left h2 { font-size: 1.3rem; }
             .ce-right { justify-content: center; width:100%; }
             .ce-btn, .ce-btn-outline { width: 100%; max-width: 300px; }
-
             .section-title { font-size: 1.5rem; }
             .experience-grid { grid-template-columns: 1fr; }
             .founder-flex { flex-direction: column; }
@@ -118,10 +102,6 @@
             .contact-details { flex-direction: column; align-items: center; }
             .state-badge { font-size:0.8rem; padding:8px 14px; }
         }
-        @media (max-width: 400px) {
-            .hero h1 { font-size: 1.5rem; }
-            .announcement-bar { font-size:0.75rem; }
-        }
     </style>
 </head>
 <body>
@@ -129,14 +109,14 @@
 <nav>
     <div class="logo"><a href="index.html" class="logo-link"><img src="img/award-logo4.png" alt="HTEA Logo" class="logo-img"><div class="logo-text"><span class="brand-name">HTE<span>A</span></span><span class="tagline">Hospitality &<br>Tourism Excellence<br>Awards</span></div></a></div>
     <div class="hamburger" onclick="toggleMenu()">☰</div>
-    <div class="nav-links" id="navLinks"><a href="index.html">Home</a><a href="#awards">8 Awards</a><a href="#food">Food Fair</a><a href="#founder">Our Story</a><a href="sponsorship.html" class="nav-cta">Sponsor N30k+</a></div>
+    <div class="nav-links" id="navLinks"><a href="index.html">Home</a><a href="#awards">8 Awards</a><a href="#food">Food Fair</a><a href="#founder">Our Story</a><a href="sponsorship.html" class="nav-cta">Sponsor</a></div>
 </nav>
 <header class="hero">
     <h1>Osun's Hospitality <span>Excellence Platform</span></h1>
     <p class="tagline">A 2-day festival honoring hotels, restaurants and tourism operators who create jobs in Osun State. 8 Excellence Awards, Osun Top Hands Skills Showcase, and Local Food Exhibition.</p>
-    <div class="hero-buttons"><a href="#awards" class="btn-primary">🏆 See 8 Awards</a><a href="https://wa.me/2348039661354?text=Hello%20HTEA%20I%20want%20to%20sponsor%20Osun%202027" class="btn-outline">Sponsor N30k</a></div>
+    <div class="hero-buttons"><a href="#awards" class="btn-primary">🏆 See 8 Awards</a><a href="https://wa.me/2348039661354?text=Hello%20HTEA%20I%20want%20to%20sponsor%20Osun%202027" class="btn-outline">Sponsor</a></div>
     <div class="state-badge">📅 April 23-24, 2027 • Osogbo, Osun State • 2-Day Festival</div>
-    <div class="hero-stats"><div><strong>8</strong><span>Excellence Awards<br>(No Best vs Best)</span></div><div><strong>2</strong><span>Days Festival<br>Awards + Food</span></div><div><strong>N30k</strong><span>Entry Sponsor<br>For Osun Hotels</span></div><div><strong>20</strong><span>Food Stands<br>N20k Only</span></div></div>
+    <div class="hero-stats"><div><strong>8</strong><span>Excellence Awards<br>(No Best vs Best)</span></div><div><strong>2</strong><span>Days Festival<br>Awards + Food</span></div><div><strong>N30k</strong><span>Osun Hotels<br>Only</span></div><div><strong>20</strong><span>Food Stands<br>N20k Only</span></div></div>
 </header>
 <section class="current-edition">
     <div class="current-edition-inner">
@@ -147,11 +127,11 @@
 <section class="experience-section">
     <div class="container">
         <div class="section-title">The HTEA <span>Osun Experience</span></div>
-        <div class="section-subtitle">No "Best" to shame anyone. Every nominee is recognized for Excellence. Ogas Friday night, families Saturday.</div>
+        <div class="section-subtitle">No "Best" to shame anyone. Every nominee is recognized for Excellence.</div>
         <div class="experience-grid">
             <div class="experience-card"><div class="exp-icon">🏆</div><div class="exp-badge">Friday April 23 - 6PM</div><h3>Excellence Awards Night</h3><p>Not "Best". We honor Excellence. All hotels, restaurants & tour operators who meet standard get recognized. 8 Categories only.</p><ul class="exp-list"><li>8 Excellence Awards (not 18)</li><li>No ranking - all nominees honored</li><li>Black-tie for GMs & Owners</li><li>Media & networking</li></ul></div>
             <div class="experience-card featured"><div class="exp-icon">🍲</div><div class="exp-badge">Saturday April 24 - 10AM</div><h3>Osun Local Food Exhibition</h3><p>Families come for food. 20 restaurants pay N20k for a stand to sell Ikokore, Ofada, Iyan. You provide space only. They bring food.</p><ul class="exp-list"><li>20 Stands @ N20k per stand</li><li>Vendors bring own food & staff</li><li>Friday winners get free big stand</li><li>Open to families & public</li></ul></div>
-            <div class="experience-card"><div class="exp-icon">🙌</div><div class="exp-badge">Saturday April 24 - 11AM</div><h3>Osun Top Hands</h3><p><strong>Maiden Edition of Face of Nigeria.</strong> For Osun 2027: 10 staff from Osun only compete in Bed-making, Table-setting, Guest Welcome. National tour starts 2028.</p><ul class="exp-list"><li>10 Contestants from Osun only</li><li>3 Real Skills: Housekeeping, F&B, Front Office</li><li>Judged by Friday award winners</li><li>Certificate + N50k + Recommendation</li></ul></div>
+            <div class="experience-card"><div class="exp-icon">🙌</div><div class="exp-badge">Saturday April 24 - 11AM</div><h3>Osun Top Hands</h3><p><strong>Maiden Edition of Face of Nigeria.</strong> For Osun 2027: 10 staff from Osun only compete in Bed-making, Table-setting, Guest Welcome.</p><ul class="exp-list"><li>10 Contestants from Osun only</li><li>3 Real Skills: Housekeeping, F&B, Front Office</li><li>Judged by Friday award winners</li><li>Certificate + N50k + Recommendation</li></ul></div>
         </div>
     </div>
 </section>
@@ -175,20 +155,49 @@
             <div class="founder-right">
                 <h4 style="color:#0b1f2a; font-size:1rem; margin-bottom:6px;">Founder's Note</h4>
                 <p style="font-size:0.75rem; color:#D4AF37; font-weight:700; margin-bottom:12px;">38 YEARS STORY</p>
-                <p style="color:#334155; font-size:0.9rem; line-height:1.7; margin-bottom:10px;">"I started as a Security Guard in a Lagos hotel 38 years ago. Worked as Event Promoter in Jos, rose to Admin/HR Officer, Manager and Deputy General Manager in Ilorin before resigning."</p>
+                <p style="color:#334155; font-size:0.9rem; line-height:1.7; margin-bottom:10px;">"I started as a Security Guard in a Lagos hotel 38 years ago. Worked as Event Promoter in Jos, rose to Admin/HR Officer, Manager and Deputy General Manager in Ilorin."</p>
                 <p style="color:#334155; font-size:0.9rem; line-height:1.7; margin-bottom:10px;">"For 38 years, hospitality fed my family. HTEA is my thank you. That's why we don't shame hotels with 'Best vs Best'. We honor Excellence."</p>
                 <p style="color:#0b1f2a; font-size:0.85rem; font-weight:700; margin-top:12px;">- Founder, HTEA Nigeria<br><span style="font-weight:400; color:#64748b; font-size:0.8rem;">38 Years: Lagos • Jos • Ilorin • Now Osun</span></p>
             </div>
         </div>
     </div>
-    <div id="awards"><div class="section-title">8 Excellence <span>Awards Only</span></div><div class="section-subtitle">Every hotel/restaurant that has maintained excellence and created jobs in Osun gets honored. All nominees are winners.</div>
+    <div id="awards"><div class="section-title">8 Excellence <span>Awards Only</span></div><div class="section-subtitle">Every hotel/restaurant that has maintained excellence and created jobs in Osun gets honored.</div>
         <div class="categories-grid"><div class="cat-card"><div>🏨</div><h3>Excellence Award - Osogbo Zone</h3><p>For Hotels in Osogbo</p></div><div class="cat-card"><div>🏨</div><h3>Excellence Award - Ife Zone</h3><p>For Hotels in Ife</p></div><div class="cat-card"><div>🏨</div><h3>Excellence Award - Ilesa/Ede Zone</h3><p>For Hotels in Ilesa, Ede, Ikirun</p></div><div class="cat-card"><div>🏡</div><h3>Excellence Award - Boutique & Lodges</h3><p>For Guest Houses & Lodges</p></div><div class="cat-card" id="food"><div>🍲</div><h3>Culinary Excellence Award</h3><p>For Restaurants - Winner gets free Food Fair stand</p></div><div class="cat-card"><div>🍹</div><h3>Nightlife & Entertainment Excellence</h3><p>For Lounges, Bars, Clubs</p></div><div class="cat-card"><div>🚌</div><h3>Tourism & Travel Excellence</h3><p>For Tour Operators & Transport</p></div><div class="cat-card"><div>👑</div><h3>Lifetime Service Excellence</h3><p>For Elders who built Osun hospitality</p></div></div>
     </div>
-    <div class="sponsor-tiers"><h2>Sponsorship - <span>Built for Osogbo Reality</span></h2><p style="text-align:center; color:#94a3b8; font-size:0.85rem;">Priced so every hotel in Osun can pay. No N5M Lagos price.</p><div class="tier-grid"><div class="tier-card"><h4>PLATINUM - HOST</h4><div class="price">N2M - 1 Slot</div><p>Osun State Govt / Big Brand. Logo on all materials, opening speech.</p></div><div class="tier-card"><h4>GOLD - CATEGORY</h4><div class="price">N500k - 8 Slots</div><p>Own one Excellence Award. You present that award on stage.</p></div><div class="tier-card"><h4>SILVER - TOP HANDS</h4><div class="price">N200k - 3 Slots</div><p>Sponsor one skill: Bed-making, Table-setting, Guest Welcome.</p></div><div class="tier-card"><h4>BRONZE - SUPPORTING</h4><div class="price">N30k - Unlimited</div><p>For ALL hotels/restaurants in Osun. Logo on website, 1 nomination slot.</p></div></div><div style="background:rgba(212,175,55,0.1); border-radius:12px; padding:18px; margin-top:24px; text-align:center; border:1px dashed #D4AF37;"><h4 style="color:#D4AF37; margin-bottom:6px; font-size:0.9rem;">🍲 FOOD EXHIBITION STANDS - EXTRA REVENUE</h4><p style="color:#cbd5e1; font-size:0.85rem; line-height:1.5;">20 Stands @ N20,000 each = N400,000 extra. Vendors bring their own food, staff, plates. You give space only.</p><a href="https://wa.me/2348039661354?text=I%20want%20to%20book%20food%20stand%20for%20Osun%202027" class="btn-primary" style="margin-top:14px; background:#fff; color:#0b1f2a; padding:12px 20px; font-size:0.85rem;">Book Food Stand N20k →</a></div></div>
-    <div class="contact-section"><h2>Sponsor <span style="color:#D4AF37;">From N30k</span></h2><p style="font-size:0.9rem;">Every hotel in Osun can be part of history. WhatsApp us now.</p><div class="contact-details"><div class="contact-item">📞 08127706378 / 08039661354</div><div class="contact-item">📧 drecotconsults@gmail.com</div></div><a href="https://wa.me/2348039661354?text=Hello%20HTEA%20I%20want%20to%20sponsor%20N30k%20Bronze%20for%20Osun%202027" class="btn-primary">📱 Chat on WhatsApp to Pay</a><p style="margin-top:16px; font-size:0.75rem; color:#94a3b8; line-height:1.4;">Venue: Osogbo, Osun State (TBC) | Date: April 23-24, 2027 | Friday 6PM & Saturday 10AM</p></div>
+
+    <!-- FIXED SPONSOR TIERS - TERA FOOD FIX -->
+    <div class="sponsor-tiers">
+        <h2>Sponsorship - <span>For Every Level</span></h2>
+        <p style="text-align:center; color:#94a3b8; font-size:0.85rem; line-height:1.5;">Osun Hotels from N30k | Corporate Brands from N200k | Title Sponsor N2M. No confusion.</p>
+        <div class="tier-grid">
+            <div class="tier-card">
+                <div class="tier-label">TITLE - GOVT / BIG BRAND</div>
+                <h4 style="margin-top:10px;">PLATINUM - HOST</h4><div class="price">N2M - 1 Slot</div><p>Osun State Govt / Big Brand. Logo on all materials, opening speech. "HTEA Osun Powered by You".</p>
+            </div>
+            <div class="tier-card featured-gold">
+                <div class="tier-label">🔥 FOR TERA FOODS & CORPORATE BRANDS</div>
+                <h4 style="margin-top:10px;">GOLD - CATEGORY SPONSOR</h4><div class="price">N500k - 8 Slots</div><p><strong>Best for Tera Foods, Goldberg, Indomie.</strong> Own one Excellence Award. You present that award on stage. Logo on certificate. Press interview.</p>
+            </div>
+            <div class="tier-card">
+                <div class="tier-label">FOR FOOD BRANDS</div>
+                <h4 style="margin-top:10px;">SILVER - TOP HANDS / FOOD FAIR TITLE</h4><div class="price">N200k - N300k</div><p>Sponsor Food Exhibition Title or one skill: Bed-making, Table-setting, Guest Welcome. Logo on Food Fair stage + aprons.</p>
+            </div>
+            <div class="tier-card" style="border:1px dashed #64748b; background: rgba(255,255,255,0.03);">
+                <div class="tier-label" style="background:#64748b; color:#fff;">FOR OSUN HOTELS ONLY</div>
+                <h4 style="margin-top:10px; color:#94a3b8;">BRONZE - OSUN HOTELS SUPPORTING</h4><div class="price" style="color:#94a3b8;">N30k</div><p>For hotels & restaurants INSIDE Osun State only. Not for corporate brands. Logo on website, 1 nomination slot, certificate of support.<br><span style="color:#D4AF37; font-weight:700;">Corporate brands like Tera Foods see Gold/Silver above.</span></p>
+            </div>
+        </div>
+        <div style="background:rgba(212,175,55,0.1); border-radius:12px; padding:18px; margin-top:24px; text-align:center; border:1px dashed #D4AF37;">
+            <h4 style="color:#D4AF37; margin-bottom:6px; font-size:0.9rem;">🍲 FOOD EXHIBITION STANDS - EXTRA REVENUE</h4>
+            <p style="color:#cbd5e1; font-size:0.85rem; line-height:1.5;">20 Stands @ N20,000 each = N400,000 extra. Vendors bring their own food, staff, plates. You give space only. Friday Culinary winner gets free big stand.</p>
+            <a href="https://wa.me/2348039661354?text=I%20want%20to%20book%20food%20stand%20for%20Osun%202027" class="btn-primary" style="margin-top:14px; background:#fff; color:#0b1f2a; padding:12px 20px; font-size:0.85rem;">Book Food Stand N20k →</a>
+        </div>
+    </div>
+
+    <div class="contact-section"><h2>Sponsor <span style="color:#D4AF37;">From N30k (Hotels) to N2M (Title)</span></h2><p style="font-size:0.9rem;">Osun Hotels: N30k | Corporate Brands: N200k-N500k | Title Sponsor: N2M</p><div class="contact-details"><div class="contact-item">📞 08127706378 / 08039661354</div><div class="contact-item">📧 drecotconsults@gmail.com</div></div><a href="https://wa.me/2348039661354?text=Hello%20HTEA%20I%20want%20to%20sponsor%20Osun%202027" class="btn-primary">📱 Chat on WhatsApp</a><p style="margin-top:16px; font-size:0.75rem; color:#94a3b8; line-height:1.4;">Venue: Osogbo, Osun State (TBC) | Date: April 23-24, 2027 | Friday 6PM & Saturday 10AM</p></div>
 </section>
-<footer><div style="font-size:1.4rem; font-weight:800; color:#fff; margin-bottom:8px; font-family:'Playfair Display',serif;">HTE<span style="color:#D4AF37;">A</span> OSUN 2027</div><div style="font-size:0.8rem; color:#D4AF37; letter-spacing:2px; margin-bottom:12px; line-height:1.4;">Organized by Drecot Consults RC 6904955</div><div style="font-size:0.7rem; color:#64748b; border-top:1px solid #1e293b; padding-top:16px; max-width:900px; margin:0 auto; line-height:1.6;">© 2026 Drecot Consults. RC: 6904955.<br>April 23-24, 2027 | Osogbo | 8 Excellence Awards | 20 Food Stands @ N20k | Sponsorship from N30k</div></footer>
-<a href="https://wa.me/2348039661354?text=Hello%20HTEA%20Osun%202027%20I%20want%20to%20sponsor" class="wa-float">💬 Sponsor N30k</a>
+<footer><div style="font-size:1.4rem; font-weight:800; color:#fff; margin-bottom:8px; font-family:'Playfair Display',serif;">HTE<span style="color:#D4AF37;">A</span> OSUN 2027</div><div style="font-size:0.8rem; color:#D4AF37; letter-spacing:2px; margin-bottom:12px; line-height:1.4;">Organized by Drecot Consults RC 6904955</div><div style="font-size:0.7rem; color:#64748b; border-top:1px solid #1e293b; padding-top:16px; max-width:900px; margin:0 auto; line-height:1.6;">© 2026 Drecot Consults. RC: 6904955.<br>April 23-24, 2027 | Osogbo | 8 Excellence Awards | 20 Food Stands @ N20k | Sponsorship from N30k Hotels / N500k Corporate</div></footer>
+<a href="https://wa.me/2348039661354?text=Hello%20HTEA%20Osun%202027%20I%20want%20to%20sponsor" class="wa-float">💬 Sponsor</a>
 <script>function toggleMenu() { document.getElementById("navLinks").classList.toggle("active"); }</script>
 </body>
 </html> 
