@@ -3,18 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>HTEA Osun 2027 — Celebrating Owners & Staff | Chapter One to Abuja</title>
-    <meta name="description" content="HTEA Osun 2027 - We celebrate the owner who built it and the staff who keeps it running. April 23-24 in Osogbo. By Drecot Consults RC 6904955.">
+    <title>HTEA Osun 2027 — Celebrating Owners & Staff | Exhibition Before Gala</title>
+    <meta name="description" content="HTEA Osun 2027 - April 23 Food Exhibition + Top Hands Practicals, April 24 Gala Awards + Finals. One Champion. By Drecot Consults RC 6904955.">
     <link rel="icon" type="image/png" href="img/award-logo4.png">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        html, body { overflow-x: hidden; width: 100%; max-width: 100vw; }
+        /* ===== GLOBAL RESET & OVERFLOW FIXES ===== */
+        * { 
+            margin: 0; 
+            padding: 0; 
+            box-sizing: border-box !important; 
+        }
+        html, body { 
+            overflow-x: hidden; 
+            width: 100%;
+            max-width: 100vw;
+        }
         body { font-family: 'Inter', sans-serif; background: #f5f6f8; color: #2c3e50; line-height: 1.6; }
         h1, h2, h3, h4 { font-family: 'Playfair Display', serif; word-wrap: break-word; overflow-wrap: break-word; }
         a { text-decoration: none; }
         p, span, div { word-wrap: break-word; overflow-wrap: break-word; }
         
+        /* ===== ANNOUNCEMENT & NAV ===== */
         .announcement-bar { background: #D4AF37; color: #0b1f2a; text-align: center; padding: 12px 15px; font-weight: 800; font-size: 0.85rem; line-height:1.4; width: 100%; }
         
         nav { background: #0b1f2a; color: #fff; padding: 12px 16px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; position: sticky; top: 0; z-index: 1000; width:100%; }
@@ -28,34 +38,42 @@
         .nav-links a { color: #fff; font-weight: 600; font-size: 0.85rem; white-space:nowrap; }
         .nav-cta { background: #D4AF37; color: #0b1f2a !important; padding: 7px 16px; border-radius: 40px; font-weight: 700; }
         
+        /* ===== HERO ===== */
         .hero { background: linear-gradient(rgba(11,31,42,0.92), rgba(11,31,42,0.97)), url('https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1200&q=80'); background-size: cover; background-position: center; color: #fff; padding: 60px 16px 40px; text-align: center; width:100%; }
         .hero h1 { font-size: 2.5rem; font-weight: 800; margin-bottom: 16px; line-height: 1.15; max-width:850px; margin-left:auto; margin-right:auto; }
         .hero h1 span { color: #D4AF37; }
         .hero .hero-sub { font-size: 1.05rem; max-width: 780px; margin: 0 auto 18px; line-height: 1.8; color: #cbd5e1; }
         .hero .hero-purpose { font-size: 0.95rem; max-width: 750px; margin: 18px auto; line-height:1.7; color:#f1f5f9; background: rgba(212,175,55,0.12); border:1px solid rgba(212,175,55,0.3); border-radius:12px; padding:14px; }
         .hero-buttons { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; margin-top: 24px; }
-        .btn-primary { background: #D4AF37; color: #0b1f2a; padding: 14px 24px; border-radius: 50px; font-weight: 700; font-size: 0.95rem; display: inline-block; text-align:center; min-width:150px; }
-        .btn-outline { background: transparent; color: #fff; padding: 14px 24px; border: 2px solid #D4AF37; border-radius: 50px; font-weight: 700; font-size: 0.95rem; display: inline-block; text-align:center; min-width:150px; }
+        .btn-primary { background: #D4AF37; color: #0b1f2a; padding: 14px 24px; border-radius: 50px; font-weight: 700; font-size: 0.95rem; display: inline-block; text-align:center; min-width:150px; transition: 0.2s; }
+        .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 4px 15px rgba(212,175,55,0.4); }
+        .btn-outline { background: transparent; color: #fff; padding: 14px 24px; border: 2px solid #D4AF37; border-radius: 50px; font-weight: 700; font-size: 0.95rem; display: inline-block; text-align:center; min-width:150px; transition: 0.2s; }
+        .btn-outline:hover { background: #D4AF37; color: #0b1f2a; }
         
         .hero-stats { background: rgba(255,255,255,0.05); border-radius: 16px; padding: 16px 10px; margin-top: 32px; display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; border: 1px solid rgba(212,175,55,0.2); max-width:900px; margin-left:auto; margin-right:auto; width: 100%; }
         .hero-stats div { text-align: center; } .hero-stats strong { display: block; font-size: 1.5rem; font-weight: 800; color: #D4AF37; } .hero-stats span { font-size: 0.7rem; color:#cbd5e1; line-height:1.3; display:block; margin-top:4px; }
         
+        /* ===== CURRENT EDITION ===== */
         .current-edition { background: linear-gradient(135deg, #0b1f2a, #1e293b); border-top: 3px solid #D4AF37; border-bottom: 3px solid #D4AF37; padding: 30px 16px; width:100%; }
         .current-edition-inner { max-width: 1100px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; gap: 20px; flex-wrap: wrap; }
         .ce-left { flex: 1; min-width: 250px; }
         .ce-label { display: inline-block; background: #D4AF37; color: #0b1f2a; font-weight: 700; font-size: 0.7rem; padding: 5px 12px; border-radius: 40px; text-transform: uppercase; margin-bottom: 10px; }
         .ce-left h2 { color: #fff; font-size: 1.4rem; margin-bottom: 8px; line-height:1.3; } .ce-left h2 span { color: #D4AF37; } .ce-left p { color: #cbd5e1; font-size: 0.9rem; line-height: 1.6; }
         .ce-right { display: flex; gap: 10px; flex-wrap: wrap; align-items: center; }
-        .ce-btn { background: #D4AF37; color: #0b1f2a; padding: 12px 20px; border-radius: 40px; font-weight: 700; font-size:0.85rem; display:inline-block; white-space:nowrap; text-align:center; }
-        .ce-btn-outline { background: transparent; color: #D4AF37; padding: 12px 20px; border: 2px solid #D4AF37; border-radius: 40px; font-weight: 700; font-size:0.85rem; display:inline-block; white-space:nowrap; text-align:center; }
+        .ce-btn { background: #D4AF37; color: #0b1f2a; padding: 12px 20px; border-radius: 40px; font-weight: 700; font-size:0.85rem; display:inline-block; white-space:nowrap; text-align:center; transition: 0.2s; }
+        .ce-btn:hover { background: #e6c04c; }
+        .ce-btn-outline { background: transparent; color: #D4AF37; padding: 12px 20px; border: 2px solid #D4AF37; border-radius: 40px; font-weight: 700; font-size:0.85rem; display:inline-block; white-space:nowrap; text-align:center; transition: 0.2s; }
+        .ce-btn-outline:hover { background: #D4AF37; color: #0b1f2a; }
         
+        /* ===== EXPERIENCE SECTION ===== */
         .experience-section { background: #f8f9fa; padding: 20px 0 40px; width:100%; }
         .container { max-width: 1100px; margin: 0 auto; padding: 40px 16px; width:100%; }
         .section-title { text-align: center; font-size: 1.9rem; font-weight: 700; margin-bottom: 8px; color: #0b1f2a; line-height:1.3; } .section-title span { color: #D4AF37; }
         .section-subtitle { text-align: center; color: #64748b; margin-bottom: 30px; font-size: 0.95rem; max-width:700px; margin-left:auto; margin-right:auto; line-height:1.6; padding:0 10px; }
         
         .experience-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
-        .experience-card { background: #fff; border-radius: 16px; padding: 24px 18px; border: 1px solid #eef2f7; box-shadow: 0 4px 20px rgba(0,0,0,0.05); display: flex; flex-direction: column; width:100%; }
+        .experience-card { background: #fff; border-radius: 16px; padding: 24px 18px; border: 1px solid #eef2f7; box-shadow: 0 4px 20px rgba(0,0,0,0.05); display: flex; flex-direction: column; width:100%; transition: 0.3s; }
+        .experience-card:hover { transform: translateY(-5px); border-color: #D4AF37; }
         .experience-card.featured { border: 2px solid #D4AF37; box-shadow: 0 8px 30px rgba(212,175,55,0.15); }
         .exp-icon { font-size: 2.5rem; margin-bottom: 12px; text-align: center; }
         .exp-badge { display: inline-block; background: #0b1f2a; color: #D4AF37; font-size: 0.65rem; font-weight: 700; padding: 5px 12px; border-radius: 40px; text-transform: uppercase; margin: 0 auto 12px; text-align:center; }
@@ -65,17 +83,37 @@
         .exp-list li { padding: 6px 0 6px 20px; position: relative; font-size: 0.85rem; color: #2c3e50; line-height:1.4; }
         .exp-list li::before { content: "✓"; position: absolute; left: 0; color: #D4AF37; font-weight: 700; }
         
+        /* ===== FOUNDER SECTION ===== */
         .founder-wrapper { background:#fff; border-radius:16px; padding:20px 16px; box-shadow:0 4px 20px rgba(0,0,0,0.05); border:1px solid #eef2f7; margin-bottom:40px; width:100%; }
         .founder-flex { display:flex; gap:20px; flex-wrap:wrap; align-items:flex-start; }
         .founder-left { flex:1; min-width:250px; } 
         .founder-right { flex:1; min-width:250px; background:#fffcf0; border:1px solid #f5e6a3; border-radius:12px; padding:18px; }
         
-        .drecot-badge { background: #0b1f2a; color: #D4AF37; display: block; padding: 18px 10px; border-radius: 8px; font-weight: 700; font-size: 0.8rem; margin-bottom: 16px; line-height: 1.5; width: auto; text-align: center; white-space: normal; word-wrap: break-word; }
+        /* ===== FIXED DRECOT BUTTON ===== */
+        .drecot-badge {
+            background: #0b1f2a;
+            color: #D4AF37;
+            display: block;
+            padding: 14px 12px;
+            border-radius: 8px;
+            font-weight: 700;
+            font-size: 0.8rem;
+            margin-bottom: 16px;
+            line-height: 1.5;
+            width: 100%; /* Perfect fit within the card */
+            text-align: center;
+            white-space: normal; /* Wraps text perfectly */
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+        }
         
+        /* ===== AWARDS GRID ===== */
         .categories-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 14px; margin-bottom: 40px; }
-        .cat-card { background: #fff; border-radius: 16px; padding: 20px 14px; border: 1px solid #eef2f7; box-shadow: 0 4px 20px rgba(0,0,0,0.05); text-align:center; width:100%; }
+        .cat-card { background: #fff; border-radius: 16px; padding: 20px 14px; border: 1px solid #eef2f7; box-shadow: 0 4px 20px rgba(0,0,0,0.05); text-align:center; width:100%; transition: 0.3s; }
+        .cat-card:hover { border-color: #D4AF37; }
         .cat-card h3 { font-size: 0.95rem; color: #0b1f2a; margin-bottom: 6px; line-height:1.3; } .cat-card p { font-size:0.8rem; color:#64748b; line-height:1.4; }
         
+        /* ===== SPONSOR TIERS ===== */
         .sponsor-tiers { background: #0b1f2a; border-radius:16px; padding:24px 16px; color:#fff; margin-bottom:40px; border:2px solid #D4AF37; width:100%; }
         .sponsor-tiers h2 { text-align:center; font-size:1.5rem; margin-bottom:10px; line-height:1.3; } .sponsor-tiers h2 span { color:#D4AF37; }
         .tier-grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(200px,1fr)); gap:16px; margin-top:24px; }
@@ -84,38 +122,57 @@
         .tier-card h4 { color:#D4AF37; font-size:0.95rem; margin-bottom:6px; } .tier-card .price { font-size:1.1rem; font-weight:800; color:#fff; margin-bottom:8px; } .tier-card p { color:#94a3b8; font-size:0.8rem; line-height:1.5; }
         .tier-label { position:absolute; top:-10px; left:50%; transform:translateX(-50%); background:#D4AF37; color:#0b1f2a; font-size:0.6rem; font-weight:800; padding:4px 10px; border-radius:20px; white-space:nowrap; }
         
+        /* ===== CONTACT & FOOTER ===== */
         .contact-section { background: #fff; border-radius: 16px; padding: 24px 16px; box-shadow: 0 4px 20px rgba(0,0,0,0.05); border: 1px solid #eef2f7; text-align: center; width:100%; }
         .contact-details { display: flex; justify-content: center; gap: 10px; flex-wrap: wrap; margin: 20px 0; }
         .contact-item { display: flex; align-items: center; gap: 6px; background: #f8f9fa; padding: 10px 14px; border-radius: 40px; border: 1px solid #eef2f7; font-size:0.8rem; word-break: break-all; }
         
         footer { background: #0b1f2a; color: #94a3b8; padding: 24px 16px 20px; text-align: center; margin-top: 40px; width:100%; }
-        .wa-float { position: fixed; bottom: 85px; right: 16px; background: #25D366; color: #fff; padding: 12px 16px; border-radius: 50px; font-weight: 700; text-decoration: none; box-shadow: 0 4px 15px rgba(37,211,102,0.4); z-index: 9999; font-size:0.85rem; }
+        .wa-float { position: fixed; bottom: 85px; right: 16px; background: #25D366; color: #fff; padding: 12px 16px; border-radius: 50px; font-weight: 700; text-decoration: none; box-shadow: 0 4px 15px rgba(37,211,102,0.4); z-index: 9999; font-size:0.85rem; transition: 0.2s; }
+        .wa-float:hover { transform: scale(1.05); }
         
+        /* ===== MOBILE RESPONSIVENESS ===== */
         @media (max-width: 768px) {
+            .wa-float { bottom: 80px; right: 10px; padding: 10px 14px; font-size:0.8rem; }
             .hamburger { display: block; }
             .nav-links { display: none; width: 100%; flex-direction: column; align-items: center; gap: 10px; padding: 16px 0; background: #0b1f2a; position: absolute; top: 68px; left: 0; z-index: 999; border-bottom: 2px solid #D4AF37; }
             .nav-links.active { display: flex; }
+            .nav-links a { width: 100%; text-align: center; padding: 8px 0; font-size:0.9rem; }
+            .nav-cta { width: 80%; text-align: center; }
+            
             .hero { padding: 36px 14px 28px; }
-            .hero h1 { font-size: 1.7rem; }
-            .hero .hero-sub { font-size: 0.9rem; }
+            .hero h1 { font-size: 1.7rem; line-height:1.3; }
+            .hero .hero-sub { font-size: 0.9rem; line-height:1.5; }
             .hero-buttons { flex-direction: column; align-items: center; width:100%; }
-            .btn-primary, .btn-outline { width: 100%; max-width: 280px; }
-            .hero-stats { grid-template-columns: repeat(2, 1fr); }
+            .btn-primary, .btn-outline { width: 100%; max-width: 280px; padding: 12px 20px; font-size:0.9rem; }
+            
+            .hero-stats { grid-template-columns: repeat(2, 1fr); gap: 10px; padding: 14px 8px; }
+            .hero-stats strong { font-size: 1.3rem; }
+            .hero-stats span { font-size: 0.65rem; }
+            
             .current-edition-inner { flex-direction: column; text-align: center; }
+            .ce-left h2 { font-size: 1.25rem; }
             .ce-right { justify-content: center; width:100%; flex-direction: column; }
-            .ce-btn, .ce-btn-outline { width: 100%; }
+            .ce-btn, .ce-btn-outline { width: 100%; max-width: 100%; padding: 12px 16px; font-size:0.85rem; }
+            
+            .section-title { font-size: 1.5rem; }
+            .section-subtitle { font-size:0.9rem; padding: 0; }
             .experience-grid { grid-template-columns: 1fr; }
-            .founder-flex { flex-direction: column; }
+            
+            .founder-flex { flex-direction: column; gap: 16px; }
+            .founder-wrapper { padding:16px 12px; }
+            
             .categories-grid { grid-template-columns: 1fr; }
             .tier-grid { grid-template-columns: 1fr; }
-            .contact-details { flex-direction: column; align-items: center; }
+            
+            .contact-details { flex-direction: column; align-items: center; gap: 8px; }
             .contact-item { width: 100%; justify-content: center; }
         }
     </style>
 </head>
 <body>
 
-<div class="announcement-bar">✅ CONFIRMED: HTEA OSUN 2027 celebrates Owners & Staff - April 23-24, 2027 in Osogbo. Organized by Drecot Consults (RC 6904955).</div>
+<div class="announcement-bar">✅ HTEA OSUN 2027: April 23 Exhibition + Practicals | April 24 Gala + ONE Champion. Celebrating Owners & Staff. RC 6904955</div>
 
 <nav>
     <div class="logo">
@@ -131,53 +188,52 @@
     <div class="nav-links" id="navLinks">
         <a href="index.html">Home</a>
         <a href="#awards">8 Awards</a>
-        <a href="#food">Food Fair</a>
+        <a href="#program">Program</a>
         <a href="#founder">Our Story</a>
-        <a href="#sponsor" class="nav-cta">Sponsor</a>
+        <a href="#sponsor" class="nav-cta">Join Founders N30k</a>
     </div>
 </nav>
 
 <header class="hero">
-    <div style="display:inline-block; background:rgba(212,175,55,0.15); border:1px solid #D4AF37; color:#D4AF37; padding:6px 14px; border-radius:30px; font-weight:800; font-size:0.7rem; letter-spacing:1px; margin-bottom:18px;">CHAPTER ONE • OSUN TO ABUJA NATIONAL TRAIN</div>
+    <div style="display:inline-block; background:rgba(212,175,55,0.15); border:1px solid #D4AF37; color:#D4AF37; padding:6px 14px; border-radius:30px; font-weight:800; font-size:0.7rem; letter-spacing:1px; margin-bottom:18px;">CHAPTER ONE • OSUN TO ABUJA • 37 STATES, 1 CHAMPION PER STATE</div>
     <h1>We Celebrate The <span>Owner</span> Who Built It & The <span>Staff</span> Who Keeps It Running</h1>
-    <p class="hero-sub">For 38 years I was that staff — from Security Guard in Lagos to Deputy General Manager in Ilorin. I know the owner who borrowed money to buy mattress, and the housekeeper who makes that bed at 6am. No award in Osun celebrates both.</p>
-    <div class="hero-purpose"><strong style="color:#D4AF37;">HTEA Osun 2027 Purpose:</strong> Friday April 23 we honor the Owners with 8 Excellence Awards. Saturday April 24 we honor the Hands with Osun Top Hands Skills. Owners + Staff = Hospitality.</div>
+    <p class="hero-sub">For 38 years I was that staff — from Security Guard in Lagos to Deputy General Manager in Ilorin. I know the owner who borrowed to buy mattress, and the housekeeper who makes that bed at 6am. No award in Osun celebrates both.</p>
+    <div class="hero-purpose"><strong style="color:#D4AF37;">New Flow - Exhibition Before Gala:</strong> Friday April 23 (10AM-4PM) Food Exhibition + Top Hands Practicals (Cooking, Bed, Table). Saturday April 24 (6PM) Gala Night - 8 Owners Awards + Top Hands Real-Life Q&A Final + <strong>ONE Champion Crowned.</strong></div>
     <div class="hero-buttons">
-        <a href="#awards" class="btn-primary">April 23: Honor The Owners →</a>
-        <a href="#food" class="btn-outline">April 24: Honor The Hands →</a>
+        <a href="#program" class="btn-primary">See New 2-Day Program →</a>
+        <a href="#awards" class="btn-outline">8 Awards for Owners</a>
     </div>
     <div class="hero-stats">
-        <div><strong>8</strong><span>Excellence Awards<br>Owners & Hotels</span></div>
-        <div><strong>3</strong><span>Top Hands Skills<br>Staff Competition</span></div>
-        <div><strong>₦30k</strong><span>Founding Supporters<br>Osun Hotels Only</span></div>
-        <div><strong>20</strong><span>Food Stands<br>Families & Public</span></div>
+        <div><strong>8</strong><span>Excellence Awards<br>For Owners</span></div>
+        <div><strong>1</strong><span>Champion Only<br>Not 3 - Cost Effective</span></div>
+        <div><strong>₦30k</strong><span>Founding Supporter<br>Chapter One Price</span></div>
+        <div><strong>2 Days</strong><span>Exhibition First<br>Then Gala</span></div>
     </div>
 </header>
 
-<!-- NATIONAL TRAIN -->
 <section class="container" style="padding-top:20px; padding-bottom:0;">
 <div style="background:#0b1f2a; color:#fff; border-radius:16px; padding:30px 20px; margin-bottom:30px; border:1px solid #D4AF37; text-align:center;">
-        <div style="background:#D4AF37; color:#0b1f2a; display:inline-block; padding:6px 14px; border-radius:30px; font-weight:800; font-size:0.7rem; letter-spacing:1px; margin-bottom:14px;">NATIONAL VISION</div>
-        <h2 style="font-size:1.7rem; margin-bottom:12px; font-family:'Playfair Display',serif;">Osun is <span style="color:#D4AF37;">Chapter One</span> of a National Train to Abuja</h2>
-        <p style="color:#cbd5e1; font-size:0.9rem; line-height:1.7; margin-bottom:20px; max-width:700px; margin-left:auto; margin-right:auto;">Hotels that support Osun as Founding Supporters will be listed permanently as Founders on the national platform. Osun founding price N30k will never be this cheap again when we reach Lagos & Abuja.</p>
+        <div style="background:#D4AF37; color:#0b1f2a; display:inline-block; padding:6px 14px; border-radius:30px; font-weight:800; font-size:0.7rem; letter-spacing:1px; margin-bottom:14px;">NATIONAL VISION - 37 CHAMPIONS TO ABUJA</div>
+        <h2 style="font-size:1.7rem; margin-bottom:12px; font-family:'Playfair Display',serif;">Osun is <span style="color:#D4AF37;">Chapter One</span> - One Champion Per State</h2>
+        <p style="color:#cbd5e1; font-size:0.9rem; line-height:1.7; margin-bottom:20px; max-width:700px; margin-left:auto; margin-right:auto;">If we produce 3 winners per state x 37 = 111 people - too cumbersome and expensive. ONE champion per state x 37 = 37 champions on stage in Abuja. Manageable, prestigious, affordable.</p>
         <div style="display:flex; justify-content:center; gap:8px; flex-wrap:wrap; align-items:center; margin-top:10px; font-size:0.8rem; font-weight:700;">
-            <div style="background:#fff; color:#0b1f2a; padding:10px 14px; border-radius:30px; border:2px solid #D4AF37;">OSUN 2027<br><span style="color:#D4AF37; font-size:0.65rem;">● ACTIVE - CHAPTER 1</span></div>
+            <div style="background:#fff; color:#0b1f2a; padding:10px 14px; border-radius:30px; border:2px solid #D4AF37;">OSUN 2027<br><span style="color:#D4AF37; font-size:0.65rem;">● 1 CHAMPION - ACTIVE</span></div>
             <div style="color:#D4AF37;">→</div>
-            <div style="background:rgba(255,255,255,0.1); padding:10px 14px; border-radius:30px; border:1px solid #334155;">OYO 2028<br><span style="color:#94a3b8; font-size:0.65rem;">NEXT</span></div>
+            <div style="background:rgba(255,255,255,0.1); padding:10px 14px; border-radius:30px; border:1px solid #334155;">OYO 2028<br><span style="color:#94a3b8; font-size:0.65rem;">1 CHAMPION</span></div>
             <div style="color:#D4AF37;">→</div>
             <div style="background:rgba(255,255,255,0.1); padding:10px 14px; border-radius:30px; border:1px solid #334155;">LAGOS 2029</div>
             <div style="color:#D4AF37;">→</div>
-            <div style="background:#D4AF37; color:#0b1f2a; padding:10px 14px; border-radius:30px;">ABUJA NATIONAL<br><span style="font-size:0.65rem;">GRAND FINALE</span></div>
+            <div style="background:#D4AF37; color:#0b1f2a; padding:10px 14px; border-radius:30px;">ABUJA - 37 CHAMPIONS<br><span style="font-size:0.65rem;">1 NATIONAL TOP HAND</span></div>
         </div>
 </div>
 </section>
 
-<section class="current-edition">
+<section class="current-edition" id="program">
     <div class="current-edition-inner">
         <div class="ce-left">
-            <span class="ce-label">📅 2-Day Festival - Owners + Staff</span>
-            <h2>HTEA OSUN 2027: <span>2 Days, 2 Celebrations</span></h2>
-            <p><strong>Friday April 23, 6PM:</strong> Excellence Awards Night - Celebrating Owners & Hotels (For GMs & Owners)<br><strong>Saturday April 24, 10AM-4PM:</strong> Food Exhibition + Osun Top Hands - Celebrating Staff & Families</p>
+            <span class="ce-label">✅ CORRECTED FLOW - EXHIBITION BEFORE GALA</span>
+            <h2>New Program: <span>Exhibition First, Gala After</span></h2>
+            <p><strong>Friday April 23, 10AM-4PM (DAY):</strong> Food Exhibition (20 stands) + Top Hands Practicals (Cooking, Bed, Table) - Judges score 70%<br><strong>Saturday April 24, 6PM (NIGHT):</strong> Gala Night - 8 Owner Awards + Top 3 Real-Life Q&A Final (30%) + ONE Champion Crowned</p>
         </div>
         <div class="ce-right">
             <a href="https://wa.me/2348039661354" class="ce-btn">Book Food Stand ₦20k →</a>
@@ -188,32 +244,32 @@
 
 <section class="experience-section">
     <div class="container">
-        <div class="section-title">We Honor <span>Both Sides</span> of Hospitality</div>
-        <div class="section-subtitle">Every hotel needs an owner who risked money and a staff who risks sleep. HTEA celebrates both. That's why we have two days.</div>
+        <div class="section-title">Exhibition <span>Before</span> Gala - Less Exhaustion, More Class</div>
+        <div class="section-subtitle">Cooking and practicals Friday daytime (no pressure), real-life scenario questions Saturday gala night (showtime). One champion, not three.</div>
         
         <div class="experience-grid">
             <div class="experience-card">
-                <div class="exp-icon">🏆</div>
-                <div class="exp-badge">Friday April 23 - 6PM - FOR OWNERS</div>
-                <h3>Excellence Awards Night</h3>
-                <p>For the owner who borrowed to build, who pays salary even when rooms are empty. 8 Excellence Awards — not ranking, recognition.</p>
-                <ul class="exp-list"><li>8 Excellence Awards (Owners)</li><li>No shaming, only celebrating</li><li>Black-tie for GMs & Owners</li><li>Founding Supporter certificates</li></ul>
+                <div class="exp-icon">🍲</div>
+                <div class="exp-badge">DAY 1 - FRIDAY APRIL 23 - 10AM-4PM - FOR PUBLIC</div>
+                <h3>Osun Food Exhibition + Practicals</h3>
+                <p>20 food vendors sell Ikokore, Ofada etc @ N20k per stand. Inside exhibition, 10 contestants do cooking, bed making, table setting. Judges score 70% quietly. Families come, no exhaustion.</p>
+                <ul class="exp-list"><li>20 Stands @ N20k = N400k revenue</li><li>Cooking test inside exhibition</li><li>Bed & Table practicals same day</li><li>Top 3 selected, rest - scores sealed</li></ul>
             </div>
             
             <div class="experience-card featured">
-                <div class="exp-icon">🍲</div>
-                <div class="exp-badge">Saturday April 24 - 10AM - FOR FAMILIES</div>
-                <h3>Osun Local Food Exhibition</h3>
-                <p>Families come to taste Osun. 20 restaurants pay ₦20k for a stand to sell Ikokore, Ofada, Iyan, etc. You provide space; they bring food & make sales.</p>
-                <ul class="exp-list"><li>20 Stands @ ₦20k = ₦400k</li><li>Vendors bring own food & staff</li><li>Friday winners get free big stand</li><li>Open to public - gate fee extra</li></ul>
+                <div class="exp-icon">🏆</div>
+                <div class="exp-badge">DAY 2 - SATURDAY APRIL 24 - 6PM - FOR OWNERS</div>
+                <h3>Gala Night - Owners Awards</h3>
+                <p>For the owner who risked capital. 8 Excellence Awards. No ranking, only recognition. GMs and owners in black-tie. This is why hotels support - they are celebrated.</p>
+                <ul class="exp-list"><li>8 Excellence Awards (Owners)</li><li>No shaming, only celebrating</li><li>Founding Supporters honored on stage</li><li>Media coverage for owners</li></ul>
             </div>
             
-            <div class="experience-card">
-                <div class="exp-icon">🙌</div>
-                <div class="exp-badge">Saturday April 24 - 11AM - FOR STAFF</div>
-                <h3>Osun Top Hands</h3>
-                <p><strong>For the staff who never gets award.</strong> Housekeepers, waiters, front desk. 10 staff from Osun compete in real hotel skills.</p>
-                <ul class="exp-list"><li>Bed-making (Housekeeping)</li><li>Table-setting (Waiters)</li><li>Guest Welcome (Front Office)</li><li>Certificate + Trophy + Cash for winners</li></ul>
+            <div class="experience-card" style="border:2px solid #0b1f2a;">
+                <div class="exp-icon">👑</div>
+                <div class="exp-badge" style="background:#D4AF37; color:#0b1f2a;">DAY 2 - SATURDAY APRIL 24 - 8PM - ONE CHAMPION</div>
+                <h3>Top Hands Final - One Champion</h3>
+                <p><strong>One champion per state - realistic for Abuja.</strong> Top 3 from Friday practicals come on gala stage for real-life scenario Q&A. Judges score 30%. Total 100%. One winner crowned.</p>
+                <ul class="exp-list"><li>Q: Guest says food cold - what do you do?</li><li>Q: Guest drops wallet - what do you do?</li><li>Champion: Trophy + N50k + Abuja slot</li><li>Runners-up: Certificate only - cost saving</li></ul>
             </div>
         </div>
     </div>
@@ -223,101 +279,98 @@
     <div class="founder-wrapper" id="founder">
         <div class="founder-flex">
             <div class="founder-left">
-                <div class="drecot-badge">ORGANIZED BY DRECOT CONSULTS - RC 6904955 - 38 YEARS IN HOSPITALITY</div>
-                <h2 style="font-size:1.6rem; margin-bottom:12px; color:#0b1f2a; line-height:1.3;">A Corporate Platform With a <span style="color:#D4AF37;">Personal Story</span></h2>
-                <p style="color:#334155; font-size:0.9rem; line-height:1.7; margin-bottom:14px;">HTEA Osun 2027 is an initiative of <strong>Drecot Consults (RC: 6904955)</strong> - a registered hospitality consulting firm. It is not a one-man show. It is guided by an Advisory Council and executed by a secretariat. Our purpose is to celebrate owners and employees — the two pillars the industry forgets.</p>
+                <div class="drecot-badge">ORGANIZED BY DRECOT CONSULTS - RC 6904955 - 38 YEARS FROM GUARD TO DGM</div>
+                <h2 style="font-size:1.6rem; margin-bottom:12px; color:#0b1f2a; line-height:1.3;">Why <span style="color:#D4AF37;">One Champion</span> & <span style="color:#D4AF37;">Exhibition First?</span></h2>
+                <p style="color:#334155; font-size:0.9rem; line-height:1.7; margin-bottom:14px;">3 winners x 37 states = 111 winners - too cumbersome, stage cannot contain, cost N3.7m extra. ONE champion x 37 = 37 champions in Abuja - prestigious and manageable. Exhibition before gala allows contestants to cook without exhaustion, and gala night gets real-life questions that GMs want to see when hiring.</p>
                 <div style="background:#f8f9fa; border:1px solid #eef2f7; border-radius:12px; padding:16px; margin-top:16px;">
-                    <h4 style="color:#0b1f2a; font-size:0.8rem; margin-bottom:10px; text-transform:uppercase;">Advisory Council (In Formation)</h4>
+                    <h4 style="color:#0b1f2a; font-size:0.8rem; margin-bottom:10px; text-transform:uppercase;">Scoring - One Champion Model</h4>
                     <ul style="list-style:none; font-size:0.85rem; color:#475569; line-height:1.9;">
-                        <li>• <strong>Chairman:</strong> Retired Director, Osun Culture & Tourism (TBA)</li>
-                        <li>• <strong>Member:</strong> President, Hoteliers Association, Osun</li>
-                        <li>• <strong>Member:</strong> GM, Leading Hotel in Osogbo</li>
-                        <li>• <strong>Secretariat:</strong> Drecot Consults</li>
+                        <li>• <strong>Friday Practicals (70%):</strong> Cooking 25% + Bed 20% + Table 25%</li>
+                        <li>• <strong>Saturday Q&A Final (30%):</strong> Real-life scenarios</li>
+                        <li>• <strong>Result:</strong> 1 Champion + 2 Runners-up (certificate only)</li>
+                        <li>• <strong>Abuja:</strong> 37 Champions compete for 1 National Top Hand</li>
                     </ul>
                 </div>
             </div>
             
             <div class="founder-right">
-                <h4 style="color:#0b1f2a; font-size:1rem; margin-bottom:6px;">Founder's Note - Why I Care</h4>
-                <p style="font-size:0.75rem; color:#D4AF37; font-weight:700; margin-bottom:12px;">38 YEARS FROM SECURITY GUARD TO DGM</p>
-                <p style="color:#334155; font-size:0.9rem; line-height:1.7; margin-bottom:10px;">"I started as a Security Guard in a Lagos hotel 38 years ago. Worked as an Event Promoter in Jos, rose to Admin/HR Officer, Manager, and eventually Deputy General Manager."</p>
-                <p style="color:#334155; font-size:0.9rem; line-height:1.7; margin-bottom:10px;">"I know what it feels like to work all night and nobody says thank you. And I know what it feels like to be the owner who cannot sleep because salary must be paid. HTEA is my thank you to both."</p>
-                <p style="color:#0b1f2a; font-size:0.85rem; font-weight:700; margin-top:12px;">- Founder, HTEA Nigeria<br><span style="font-weight:400; color:#64748b; font-size:0.8rem;">38 Years: Lagos • Jos • Ilorin • Now Osun</span></p>
+                <h4 style="color:#0b1f2a; font-size:1rem; margin-bottom:6px;">Founder's Note - Owners & Staff</h4>
+                <p style="font-size:0.75rem; color:#D4AF37; font-weight:700; margin-bottom:12px;">38 YEARS - I WAS BOTH</p>
+                <p style="color:#334155; font-size:0.9rem; line-height:1.7; margin-bottom:10px;">"I started as Security Guard, became Deputy General Manager. I know owner who cannot sleep because salary must be paid. I know staff who works all night and nobody says thank you. HTEA celebrates both."</p>
+                <p style="color:#334155; font-size:0.9rem; line-height:1.7; margin-bottom:10px;">"Exhibition before gala, one champion per state - this is how we keep cost low and prestige high from Osun to Abuja."</p>
+                <p style="color:#0b1f2a; font-size:0.85rem; font-weight:700; margin-top:12px;">- Founder, HTEA Nigeria<br><span style="font-weight:400; color:#64748b; font-size:0.8rem;">Lagos • Jos • Ilorin • Now Osun Chapter One</span></p>
             </div>
         </div>
     </div>
 
     <div id="awards">
         <div class="section-title">8 Excellence <span>Awards</span> - For Owners Who Built Osun</div>
-        <div class="section-subtitle">Every hotel that has maintained standard and created jobs gets honored. No ranking, no shaming.</div>
+        <div class="section-subtitle">April 24 Gala Night - Celebrating owners who risked money to create jobs.</div>
         <div class="categories-grid">
-            <div class="cat-card"><div>🏨</div><h3>Excellence Award - Osogbo Zone</h3><p>Celebrating Owner - Osogbo Hotels</p></div>
-            <div class="cat-card"><div>🏨</div><h3>Excellence Award - Ife Zone</h3><p>Celebrating Owner - Ife Hotels</p></div>
-            <div class="cat-card"><div>🏨</div><h3>Excellence Award - Ilesa/Ede Zone</h3><p>Celebrating Owner - Ilesa, Ede, Ikirun</p></div>
-            <div class="cat-card"><div>🏡</div><h3>Excellence Award - Boutique & Lodges</h3><p>Celebrating Owner - Guest Houses</p></div>
-            <div class="cat-card" id="food"><div>🍲</div><h3>Culinary Excellence Award</h3><p>Celebrating Owner - Restaurants</p></div>
-            <div class="cat-card"><div>🍹</div><h3>Nightlife & Entertainment Excellence</h3><p>Celebrating Owner - Lounges, Bars</p></div>
-            <div class="cat-card"><div>🚌</div><h3>Tourism & Travel Excellence</h3><p>Celebrating Owner - Tour Operators</p></div>
-            <div class="cat-card"><div>👑</div><h3>Lifetime Service Excellence</h3><p>Celebrating Elder who built Osun hospitality</p></div>
+            <div class="cat-card"><div>🏨</div><h3>Excellence - Osogbo Zone</h3><p>Celebrating Owner</p></div>
+            <div class="cat-card"><div>🏨</div><h3>Excellence - Ife Zone</h3><p>Celebrating Owner</p></div>
+            <div class="cat-card"><div>🏨</div><h3>Excellence - Ilesa/Ede Zone</h3><p>Celebrating Owner</p></div>
+            <div class="cat-card"><div>🏡</div><h3>Excellence - Boutique & Lodges</h3><p>Celebrating Owner</p></div>
+            <div class="cat-card"><div>🍲</div><h3>Culinary Excellence</h3><p>Celebrating Owner - Restaurant</p></div>
+            <div class="cat-card"><div>🍹</div><h3>Nightlife Excellence</h3><p>Celebrating Owner - Lounge/Bar</p></div>
+            <div class="cat-card"><div>🚌</div><h3>Tourism & Travel Excellence</h3><p>Celebrating Owner - Operator</p></div>
+            <div class="cat-card"><div>👑</div><h3>Lifetime Excellence</h3><p>Elder who built Osun hospitality</p></div>
         </div>
     </div>
 
     <div class="sponsor-tiers" id="sponsor">
-        <h2>Sponsorship - <span>Support Owners & Staff</span></h2>
-        <p style="text-align:center; color:#94a3b8; font-size:0.85rem; line-height:1.5;">Osun Hotels from ₦30k as Founding Supporters (Chapter One price) | Corporate Brands from ₦200k | Title Sponsor ₦2M. Founders lock price for Abuja.</p>
+        <h2>Sponsorship - <span>Founding Price N30k - One Champion Model</span></h2>
+        <p style="text-align:center; color:#94a3b8; font-size:0.85rem; line-height:1.5;">Osun Hotels N30k Founding (Chapter One price locks Abuja rate) | Corporate N200k-500k | Title N2M. One champion saves cost, increases prestige.</p>
         
         <div class="tier-grid">
             <div class="tier-card">
                 <div class="tier-label">TITLE - GOVT / BIG BRAND</div>
-                <h4 style="margin-top:10px;">PLATINUM - HOST</h4><div class="price">₦2,000,000 - 1 Slot</div><p>Osun State Govt / Big Brand. Logo on all materials, opening speech. "Powered by You". Founding Platinum for Abuja.</p>
+                <h4 style="margin-top:10px;">PLATINUM - HOST</h4><div class="price">₦2,000,000 - 1 Slot</div><p>Osun Govt / Big Brand. Opening speech. Hosts 37 champions journey to Abuja.</p>
             </div>
-            
             <div class="tier-card featured-gold">
                 <div class="tier-label">🔥 FOR CORPORATE BRANDS</div>
-                <h4 style="margin-top:10px;">GOLD - CATEGORY SPONSOR</h4><div class="price">₦500,000 - 8 Slots</div><p><strong>Best for FMCGs, Banks, Telecoms.</strong> Own one Excellence Award. Present award to Owner on stage. Founding Gold for Abuja.</p>
+                <h4 style="margin-top:10px;">GOLD - CATEGORY SPONSOR</h4><div class="price">₦500,000 - 8 Slots</div><p>Own one Owner Excellence Award. Present award to owner on stage. Founding Gold for Abuja.</p>
             </div>
-            
             <div class="tier-card">
                 <div class="tier-label">FOR FOOD / SKILLS BRANDS</div>
-                <h4 style="margin-top:10px;">SILVER - TOP HANDS / FOOD FAIR</h4><div class="price">₦200,000 - ₦300,000</div><p>Sponsor Top Hands (celebrating staff) or Food Exhibition. Logo on stage + aprons. Founding Silver for Abuja.</p>
+                <h4 style="margin-top:10px;">SILVER - ONE CHAMPION SPONSOR</h4><div class="price">₦300,000</div><p>Sponsor ONE Champion journey: trophy, N50k, Abuja slot. Logo on Top Hands stage + aprons. One face, one story - best for media.</p>
             </div>
-            
             <div class="tier-card" style="border:1px dashed #D4AF37; background: rgba(212,175,55,0.1);">
                 <div class="tier-label" style="background:#D4AF37; color:#0b1f2a;">FOR OSUN HOTELS - FOUNDERS</div>
-                <h4 style="margin-top:10px; color:#D4AF37;">BRONZE - FOUNDING SUPPORTER</h4><div class="price" style="color:#fff;">₦30,000 - Founding Price</div><p>For hotels & restaurants INSIDE Osun only. Logo on website, 1 nomination for Top Hands staff, certificate. Founders permanent on national site.</p>
+                <h4 style="margin-top:10px; color:#D4AF37;">BRONZE - FOUNDING SUPPORTER</h4><div class="price" style="color:#fff;">₦30,000</div><p>Osun hotels only. Logo on site, 1 staff nomination for Top Hands, certificate. Permanent Founders list for Abuja. Price never this low again.</p>
             </div>
         </div>
         
         <div style="background:rgba(212,175,55,0.1); border-radius:12px; padding:18px; margin-top:24px; text-align:center; border:1px dashed #D4AF37;">
-            <h4 style="color:#D4AF37; margin-bottom:6px; font-size:0.9rem;">🍲 FOOD EXHIBITION STANDS - Celebrating Culinary Owners & Staff</h4>
-            <p style="color:#cbd5e1; font-size:0.85rem; line-height:1.5;">20 Stands @ ₦20,000 each = ₦400,000 extra. Vendors bring their own food, staff, plates. You provide space only. Friday Culinary winner gets free big stand.</p>
-            <a href="https://wa.me/2348039661354?text=I%20want%20to%20book%20food%20stand%20for%20Osun%202027" class="btn-primary" style="margin-top:14px; background:#fff; color:#0b1f2a; padding:12px 20px; font-size:0.85rem;">Book Food Stand ₦20k →</a>
+            <h4 style="color:#D4AF37; margin-bottom:6px; font-size:0.9rem;">🍲 FOOD EXHIBITION - April 23 BEFORE Gala</h4>
+            <p style="color:#cbd5e1; font-size:0.85rem; line-height:1.5;">20 Stands @ N20k = N400k revenue. Vendors bring food, staff, plates. You provide space. Exhibition builds crowd for gala. Contestants cook inside exhibition Friday, Q&A Saturday - no exhaustion.</p>
+            <a href="https://wa.me/2348039661354?text=I%20want%20to%20book%20food%20stand%20April%2023%20Osun" class="btn-primary" style="margin-top:14px; background:#fff; color:#0b1f2a; padding:12px 20px; font-size:0.85rem;">Book Food Stand N20k →</a>
         </div>
     </div>
 
     <div class="contact-section">
-        <h2>Support <span style="color:#D4AF37;">Owners & Staff</span> - Chapter One</h2>
-        <p style="font-size:0.9rem;">Osun Hotels: ₦30k Founding | Corporate: ₦200k-₦500k | Title: ₦2M | Founders lock Abuja rate</p>
+        <h2>Join <span style="color:#D4AF37;">Founders N30k</span> - One Champion to Abuja</h2>
+        <p style="font-size:0.9rem;">April 23 Exhibition + Practicals | April 24 Gala + Owners Awards + Q&A Final + One Champion | 37 champions to Abuja</p>
         <div class="contact-details">
             <div class="contact-item">📞 08127706378 / 08039661354</div>
             <div class="contact-item">📧 drecotconsults@gmail.com</div>
         </div>
-        <a href="https://wa.me/2348039661354?text=Hello%20HTEA%20Osun%202027%20I%20want%20to%20be%20Founding%20Supporter%20Chapter%20One" class="btn-primary">📱 Join Founders on WhatsApp</a>
-        <p style="margin-top:16px; font-size:0.75rem; color:#94a3b8; line-height:1.4;">Venue: Osogbo, Osun State (TBC) | Date: April 23-24, 2027 | Friday 6PM Owners Night & Saturday 10AM Staff & Families</p>
+        <a href="https://wa.me/2348039661354?text=Hello%20HTEA%20I%20want%20to%20be%20Founding%20Supporter%20N30k%20One%20Champion%20model" class="btn-primary">📱 Join Founders on WhatsApp</a>
+        <p style="margin-top:16px; font-size:0.75rem; color:#94a3b8; line-height:1.4;">Drecot Consults RC 6904955 | April 23 Exhibition (Day) + April 24 Gala (Night) | One Champion Per State = 37 to Abuja</p>
     </div>
 </section>
 
 <footer>
     <div style="font-size:1.4rem; font-weight:800; color:#fff; margin-bottom:8px; font-family:'Playfair Display',serif;">HTE<span style="color:#D4AF37;">A</span> OSUN 2027</div>
-    <div style="font-size:0.8rem; color:#D4AF37; letter-spacing:1px; margin-bottom:12px; line-height:1.4;">Celebrating The Owner Who Built It & The Staff Who Keeps It Running<br>Chapter One of National Train to Abuja</div>
-    <div style="font-size:0.7rem; color:#64748b; border-top:1px solid #1e293b; padding-top:16px; max-width:900px; margin:0 auto; line-height:1.6;">© 2026 Drecot Consults. RC: 6904955.<br>April 23-24, 2027 | Osogbo | 8 Excellence Awards for Owners | 3 Top Hands Skills for Staff | 20 Food Stalls</div>
+    <div style="font-size:0.8rem; color:#D4AF37; letter-spacing:1px; margin-bottom:12px; line-height:1.4;">Celebrating The Owner Who Built It & The Staff Who Keeps It Running<br>Exhibition Before Gala | One Champion Per State | Chapter One to Abuja</div>
+    <div style="font-size:0.7rem; color:#64748b; border-top:1px solid #1e293b; padding-top:16px; max-width:900px; margin:0 auto; line-height:1.6;">© 2026 Drecot Consults RC 6904955<br>April 23 Exhibition + Practicals | April 24 Gala + 8 Owner Awards + Q&A Final + One Champion | 37 Champions to Abuja National</div>
 </footer>
 
-<a href="https://wa.me/2348039661354?text=Hello%20HTEA%20Osun%202027%20I%20want%20to%20be%20Founding%20Supporter" class="wa-float">💬 Join Founders</a>
+<a href="https://wa.me/2348039661354?text=Hello%20HTEA%20I%20want%20to%20be%20Founding%20Supporter" class="wa-float">💬 Join Founders</a>
 
 <script>
     function toggleMenu() { document.getElementById("navLinks").classList.toggle("active"); }
 </script>
 </body>
 </html>
- 
+```
