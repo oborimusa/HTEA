@@ -1,1 +1,224 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>The HTEA HR System | Certify, Retain, Replace</title>
+    <meta name="description" content="The ultimate HR solution for Osun hotels. We test your staff, track them with a digital QR code, and replace them if they leave. Powered by HospitalityRecruit.">
+    <link rel="icon" type="image/png" href="img/award-logo4.png">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        /* ===== GLOBAL RESET & OVERFLOW FIXES ===== */
+        * { margin: 0; padding: 0; box-sizing: border-box !important; }
+        html, body { overflow-x: hidden; width: 100%; max-width: 100vw; }
+        body { font-family: 'Inter', sans-serif; background: #f5f6f8; color: #2c3e50; line-height: 1.6; }
+        h1, h2, h3, h4 { font-family: 'Playfair Display', serif; word-wrap: break-word; overflow-wrap: break-word; }
+        a { text-decoration: none; }
+        p, span, div { word-wrap: break-word; overflow-wrap: break-word; }
+        
+        /* ===== ANNOUNCEMENT & NAV ===== */
+        .announcement-bar { background: #D4AF37; color: #0b1f2a; text-align: center; padding: 12px 15px; font-weight: 800; font-size: 0.85rem; line-height: 1.4; width: 100%; }
+        
+        nav { background: #0b1f2a; color: #fff; padding: 12px 16px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; position: sticky; top: 0; z-index: 1000; width: 100%; }
+        .logo-link { display: flex; align-items: center; max-width: 80%; }
+        .logo-img { width: 44px; height: 44px; object-fit: contain; border-radius: 50%; flex-shrink: 0; }
+        .logo-text { display: flex; flex-direction: column; line-height: 1.1; margin-left: 8px; }
+        .brand-name { font-size: 1.3rem; font-weight: 800; color: #fff; }
+        .brand-name span { color: #D4AF37; }
+        .tagline { font-size: 0.5rem; color: #94a3b8; text-transform: uppercase; letter-spacing: 1px; }
+        
+        .hamburger { display: none; font-size: 1.8rem; cursor: pointer; color: #D4AF37; padding: 4px; }
+        .nav-links { display: flex; gap: 18px; align-items: center; }
+        .nav-links a { color: #fff; font-weight: 600; font-size: 0.85rem; white-space: nowrap; }
+        .nav-cta { background: #D4AF37; color: #0b1f2a !important; padding: 7px 16px; border-radius: 40px; font-weight: 700; }
+        
+        /* ===== HERO ===== */
+        .hero { background: linear-gradient(rgba(11,31,42,0.92), rgba(11,31,42,0.97)), url('https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?auto=format&fit=crop&w=1200&q=80'); background-size: cover; background-position: center; color: #fff; padding: 80px 16px 60px; text-align: center; width: 100%; }
+        .hero h1 { font-size: 2.8rem; font-weight: 800; margin-bottom: 16px; line-height: 1.15; max-width: 850px; margin-left: auto; margin-right: auto; }
+        .hero h1 span { color: #D4AF37; }
+        .hero .hero-sub { font-size: 1.1rem; max-width: 750px; margin: 0 auto 24px; line-height: 1.8; color: #cbd5e1; }
+        
+        /* ===== THE MODEL SECTION ===== */
+        .container { max-width: 1100px; margin: 0 auto; padding: 60px 16px; width: 100%; }
+        .section-title { text-align: center; font-size: 2.2rem; font-weight: 700; margin-bottom: 12px; color: #0b1f2a; line-height: 1.3; }
+        .section-title span { color: #D4AF37; }
+        .section-subtitle { text-align: center; color: #64748b; margin-bottom: 40px; font-size: 1rem; max-width: 750px; margin-left: auto; margin-right: auto; line-height: 1.6; }
+        
+        .step-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; }
+        .step-card { background: #fff; border-radius: 16px; padding: 30px 24px; border-top: 5px solid #D4AF37; box-shadow: 0 4px 20px rgba(0,0,0,0.05); position: relative; }
+        .step-num { background: #0b1f2a; color: #D4AF37; width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 1.2rem; margin-bottom: 16px; }
+        .step-card h3 { font-size: 1.3rem; color: #0b1f2a; margin-bottom: 12px; }
+        .step-card p { color: #475569; font-size: 0.95rem; line-height: 1.7; }
+        
+        /* ===== THE TECH SECTION ===== */
+        .tech-section { background: #0b1f2a; color: #fff; padding: 60px 16px; width: 100%; }
+        .tech-inner { max-width: 1100px; margin: 0 auto; display: flex; gap: 40px; align-items: center; flex-wrap: wrap; }
+        .tech-text { flex: 1; min-width: 300px; }
+        .tech-text h2 { font-size: 2rem; color: #D4AF37; margin-bottom: 16px; line-height: 1.3; }
+        .tech-text p { color: #cbd5e1; font-size: 1rem; line-height: 1.8; margin-bottom: 16px; }
+        .tech-image { flex: 1; min-width: 300px; text-align: center; }
+        .tech-image img { max-width: 100%; width: 350px; border-radius: 16px; border: 2px solid #D4AF37; box-shadow: 0 8px 30px rgba(0,0,0,0.5); }
+        
+        /* ===== THE REPLACEMENT SECTION ===== */
+        .replacement-section { background: #f8f9fa; padding: 60px 16px; border-top: 1px solid #eef2f7; width: 100%; }
+        .rep-inner { max-width: 800px; margin: 0 auto; text-align: center; }
+        .rep-inner h2 { font-size: 2rem; color: #0b1f2a; margin-bottom: 16px; }
+        .rep-inner p { font-size: 1.05rem; color: #475569; line-height: 1.8; margin-bottom: 20px; }
+        .rep-highlight { background: #fff; border: 2px solid #D4AF37; border-radius: 12px; padding: 24px; margin: 30px 0; box-shadow: 0 4px 15px rgba(212,175,55,0.1); }
+        .rep-highlight h3 { color: #D4AF37; font-size: 1.4rem; margin-bottom: 10px; }
+        
+        /* ===== PRICING ===== */
+        .pricing-section { padding: 60px 16px; width: 100%; }
+        .price-card { max-width: 500px; margin: 0 auto; background: #fff; border-radius: 16px; border: 2px solid #D4AF37; box-shadow: 0 8px 30px rgba(212,175,55,0.15); overflow: hidden; text-align: center; }
+        .price-head { background: #0b1f2a; padding: 24px; color: #fff; }
+        .price-head h3 { color: #D4AF37; font-size: 1.5rem; margin-bottom: 8px; }
+        .price-head .amount { font-size: 2.5rem; font-weight: 800; font-family: 'Playfair Display', serif; }
+        .price-body { padding: 30px; }
+        .price-body ul { list-style: none; text-align: left; margin-bottom: 30px; }
+        .price-body li { padding: 10px 0; border-bottom: 1px dashed #eef2f7; color: #334155; font-size: 0.95rem; }
+        .price-body li::before { content: "✓"; color: #D4AF37; font-weight: 800; margin-right: 10px; }
+        
+        .btn-primary { background: #D4AF37; color: #0b1f2a; padding: 16px 32px; border-radius: 50px; font-weight: 700; font-size: 1rem; display: inline-block; text-align: center; width: 100%; transition: 0.2s; border: none; cursor: pointer; }
+        .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 4px 15px rgba(212,175,55,0.4); background: #e6c04c; }
+        
+        /* ===== FOOTER ===== */
+        footer { background: #0b1f2a; color: #94a3b8; padding: 30px 16px 20px; text-align: center; margin-top: 40px; width: 100%; }
+        .wa-float { position: fixed; bottom: 85px; right: 16px; background: #25D366; color: #fff; padding: 12px 16px; border-radius: 50px; font-weight: 700; text-decoration: none; box-shadow: 0 4px 15px rgba(37,211,102,0.4); z-index: 9999; font-size: 0.85rem; }
+        
+        /* ===== MOBILE RESPONSIVENESS ===== */
+        @media (max-width: 768px) {
+            .wa-float { bottom: 80px; right: 10px; padding: 10px 14px; font-size: 0.8rem; }
+            .hamburger { display: block; }
+            .nav-links { display: none; width: 100%; flex-direction: column; align-items: center; gap: 10px; padding: 16px 0; background: #0b1f2a; position: absolute; top: 68px; left: 0; z-index: 999; border-bottom: 2px solid #D4AF37; }
+            .nav-links.active { display: flex; }
+            .nav-links a { width: 100%; text-align: center; padding: 8px 0; font-size: 0.9rem; }
+            .nav-cta { width: 80%; text-align: center; }
+            
+            .hero { padding: 50px 14px 40px; }
+            .hero h1 { font-size: 1.9rem; line-height: 1.3; }
+            .hero .hero-sub { font-size: 0.95rem; }
+            
+            .tech-inner { flex-direction: column; text-align: center; }
+            .tech-text h2 { font-size: 1.6rem; }
+            .tech-image img { width: 100%; max-width: 300px; }
+            
+            .section-title { font-size: 1.6rem; }
+            .step-grid { grid-template-columns: 1fr; }
+            .price-body { padding: 20px; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="announcement-bar">✅ THE HR SYSTEM: We Don't Just Certify Your Staff. We Retain Them. And If They Leave, We Replace Them.</div>
+
+<nav>
+    <div class="logo">
+        <a href="index.html" class="logo-link">
+            <img src="img/award-logo4.png" alt="HTEA Logo" class="logo-img">
+            <div class="logo-text">
+                <span class="brand-name">HTE<span>A</span></span>
+                <span class="tagline">Hospitality &<br>Tourism Excellence<br>Awards</span>
+            </div>
+        </a>
+    </div>
+    <div class="hamburger" onclick="toggleMenu()">☰</div>
+    <div class="nav-links" id="navLinks">
+        <a href="index.html">Home</a>
+        <a href="hr-system.html">HR System</a>
+        <a href="index.html#sponsor" class="nav-cta">Join The Package</a>
+    </div>
+</nav>
+
+<header class="hero">
+    <h1>The HTEA HR System: <span>Certify. Retain. Replace.</span></h1>
+    <p class="hero-sub">The only talent management system built for Nigerian hotels. We test your staff, track them with a digital QR code, and if they leave, our agency (HospitalityRecruit) instantly supplies a verified replacement.</p>
+</header>
+
+<section class="container">
+    <div class="section-title">How It <span>Works</span></div>
+    <div class="section-subtitle">We solve the "Train and Run" problem using technology and a built-in safety net.</div>
+    
+    <div class="step-grid">
+        <div class="step-card">
+            <div class="step-num">1</div>
+            <h3>Certify (The Event)</h3>
+            <p>At the HTEA Osun event, your staff undergoes a live skills challenge. We test them as they are—no extra training. We verify their skills in cooking, bed-making, and guest relations. They get a digital QR profile.</p>
+        </div>
+        <div class="step-card">
+            <div class="step-num">2</div>
+            <h3>Retain (The Tech)</h3>
+            <p>We issue a digital QR code tied to your hotel. If they stay 6 months, you upgrade them to Gold. At 12 months, Platinum. The staff wants to stay because the higher badge unlocks national HTEA finals and 5-star job placements.</p>
+        </div>
+        <div class="step-card">
+            <div class="step-num">3</div>
+            <h3>Replace (The Agency)</h3>
+            <p>If a competitor poaches them anyway, their certificate is instantly voided on the platform. But you don't lose. You log into <strong>HospitalityRecruit</strong>, and we instantly supply a pre-vetted, Level 1 replacement.</p>
+        </div>
+    </div>
+</section>
+
+<section class="tech-section">
+    <div class="tech-inner">
+        <div class="tech-text">
+            <h2>Powered by the HTEA Verified Platform</h2>
+            <p>We don't use paper certificates. We use a real-time digital QR code system.</p>
+            <p>Any employer or guest can scan a staff member's badge. The system instantly checks the database to see if they are still valid, who they work for, and their Tier Level.</p>
+            <p>If the staff leaves your hotel, their QR code changes to <strong>"VOID"</strong>. They cannot use their old achievements to get a job elsewhere without starting over.</p>
+        </div>
+        <div class="tech-image">
+            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=600&q=80" alt="QR Verification System">
+        </div>
+    </div>
+</section>
+
+<section class="replacement-section">
+    <div class="rep-inner">
+        <h2>The Ultimate Safety Net</h2>
+        <p>You cannot force an employee to stay. But you can protect your hotel's investment. When you partner with HTEA, you are automatically plugged into the <strong>HospitalityRecruit</strong> talent pipeline.</p>
+        
+        <div class="rep-highlight">
+            <h3>🔥 The "No-Stress" Guarantee</h3>
+            <p style="margin-bottom: 0; font-size: 1rem;">If you lose a certified staff member, you don't have to spend months advertising, interviewing, and re-training. You simply call HospitalityRecruit, and we send you a replacement from our database of verified Level 1 professionals.</p>
+        </div>
+        <p>We turn a retention crisis into a seamless operational transition.</p>
+    </div>
+</section>
+
+<section class="pricing-section">
+    <div class="section-title">The Hotel <span>Retention Package</span></div>
+    <div class="section-subtitle">Everything you need to protect your staff and your budget.</div>
+    
+    <div class="price-card">
+        <div class="price-head">
+            <h3>Bronze Hotel Package</h3>
+            <div class="amount">₦150,000</div>
+        </div>
+        <div class="price-body">
+            <ul>
+                <li>Entry for 3 staff into the HTEA Skills Challenge</li>
+                <li>Digital QR Verification Profiles for all 3 staff</li>
+                <li>2 VIP Seats at the Saturday Gala</li>
+                <li>Hotel Plaque: "Certified Employer 2027"</li>
+                <li>Access to HospitalityRecruit replacement pool</li>
+                <li>Discount on replacement fees if staff leaves</li>
+            </ul>
+            <a href="https://wa.me/2348039661354?text=Hello%20HTEA%20I%20want%20the%20N150k%20HR%20System%20Hotel%20Package" class="btn-primary">Get The HR Package →</a>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <div style="font-size:1.4rem;font-weight:800;color:#fff;margin-bottom:8px;font-family:'Playfair Display',serif;">HTE<span style="color:#D4AF37;">A</span> OSUN 2027</div>
+    <div style="font-size:0.8rem;color:#D4AF37;letter-spacing:1px;margin-bottom:12px;line-height:1.4;">Certify. Retain. Replace.<br>Powered by HospitalityRecruit</div>
+    <div style="font-size:0.7rem;color:#64748b;border-top:1px solid #1e293b;padding-top:16px;max-width:900px;margin:0 auto;line-height:1.6;">© 2026 Drecot Consults RC 6904955<br>38 Years: Lagos (Security) • Jos (Event Promoter) • Ilorin (DGM) | The HTEA HR System</div>
+</footer>
+
+<a href="https://wa.me/2348039661354?text=Hello%20HTEA%20I%20want%20the%20HR%20System" class="wa-float">💬 Get The Package</a>
+
+<script>
+    function toggleMenu() { document.getElementById("navLinks").classList.toggle("active"); }
+</script>
+</body>
+  </html> 
