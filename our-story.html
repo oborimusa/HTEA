@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Our Story | 38 Years in Hospitality | HTEA Osun 2027</title>
+    <meta name="description" content="From Security Guard in Lagos to Deputy GM in Ilorin, and now a Software Engineer building HR tech. Read the 38-year journey of Obori Dahiru and why HTEA was created.">
+    <link rel="icon" type="image/png" href="img/award-logo4.png">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        /* ===== GLOBAL RESET ===== */
+        * { margin: 0; padding: 0; box-sizing: border-box !important; }
+        html, body { overflow-x: hidden; width: 100%; max-width: 100vw; }
+        body { font-family: 'Inter', sans-serif; background: #f5f6f8; color: #2c3e50; line-height: 1.6; }
+        h1, h2, h3, h4 { font-family: 'Playfair Display', serif; word-wrap: break-word; overflow-wrap: break-word; }
+        a { text-decoration: none; }
+        p, span, div { word-wrap: break-word; overflow-wrap: break-word; }
+
+        /* ===== NAV ===== */
+        .announcement-bar { background: #D4AF37; color: #0b1f2a; text-align: center; padding: 12px 15px; font-weight: 800; font-size: 0.85rem; line-height: 1.4; width: 100%; }
+        nav { background: #0b1f2a; color: #fff; padding: 12px 16px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; position: sticky; top: 0; z-index: 1000; width: 100%; }
+        .logo-link { display: flex; align-items: center; max-width: 80%; }
+        .logo-img { width: 44px; height: 44px; object-fit: contain; border-radius: 50%; flex-shrink: 0; }
+        .logo-text { display: flex; flex-direction: column; line-height: 1.1; margin-left: 8px; }
+        .brand-name { font-size: 1.3rem; font-weight: 800; color: #fff; }
+        .brand-name span { color: #D4AF37; }
+        .tagline { font-size: 0.5rem; color: #94a3b8; text-transform: uppercase; letter-spacing: 1px; }
+        .hamburger { display: none; font-size: 1.8rem; cursor: pointer; color: #D4AF37; padding: 4px; }
+        .nav-links { display: flex; gap: 18px; align-items: center; }
+        .nav-links a { color: #fff; font-weight: 600; font-size: 0.85rem; white-space: nowrap; }
+        .nav-cta { background: #D4AF37; color: #0b1f2a !important; padding: 7px 16px; border-radius: 40px; font-weight: 700; }
+
+        /* ===== HERO ===== */
+        .hero { background: linear-gradient(rgba(11,31,42,0.92), rgba(11,31,42,0.97)), url('https://images.unsplash.com/photo-1542314831-c6a4d1424b94?auto=format&fit=crop&w=1200&q=80'); background-size: cover; background-position: center; color: #fff; padding: 80px 16px 60px; text-align: center; width: 100%; }
+        .hero h1 { font-size: 2.8rem; font-weight: 800; margin-bottom: 16px; line-height: 1.15; }
+        .hero h1 span { color: #D4AF37; }
+        .hero p { font-size: 1.1rem; max-width: 750px; margin: 0 auto; color: #cbd5e1; line-height: 1.8; font-style: italic; }
+
+        /* ===== STORY SECTION ===== */
+        .container { max-width: 900px; margin: 0 auto; padding: 60px 16px; width: 100%; }
+        
+        .story-card { background: #fff; border-radius: 16px; padding: 40px; box-shadow: 0 4px 20px rgba(0,0,0,0.05); border-top: 5px solid #D4AF37; margin-bottom: 40px; }
+        .story-card h2 { color: #0b1f2a; font-size: 2rem; margin-bottom: 20px; }
+        .story-card p { font-size: 1.05rem; line-height: 1.9; color: #334155; margin-bottom: 20px; }
+        .story-card strong { color: #0b1f2a; }
+
+        .timeline-marker { display: flex; align-items: center; gap: 15px; margin-bottom: 20px; }
+        .timeline-icon { background: #0b1f2a; color: #D4AF37; width: 50px; height: 50px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; flex-shrink: 0; }
+        .timeline-marker h3 { color: #D4AF37; font-size: 1.4rem; margin: 0; }
+
+        .quote-box { background: #fffcf0; border-left: 4px solid #D4AF37; padding: 24px; border-radius: 0 8px 8px 0; margin: 30px 0; font-style: italic; font-size: 1.1rem; color: #0b1f2a; }
+
+        .founder-photo { text-align: center; margin-bottom: 30px; }
+        .founder-photo img { width: 200px; height: 200px; border-radius: 50%; object-fit: cover; border: 4px solid #D4AF37; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+
+        /* ===== CTA ===== */
+        .cta-section { background: #0b1f2a; color: #fff; padding: 60px 16px; text-align: center; border-top: 3px solid #D4AF37; border-bottom: 3px solid #D4AF37; width: 100%; }
+        .cta-section h2 { font-size: 2rem; color: #D4AF37; margin-bottom: 16px; }
+        .cta-section p { color: #cbd5e1; font-size: 1.05rem; max-width: 700px; margin: 0 auto 24px; }
+        .btn-primary { background: #D4AF37; color: #0b1f2a; padding: 16px 32px; border-radius: 50px; font-weight: 700; font-size: 1rem; display: inline-block; text-align: center; transition: 0.2s; }
+        .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 4px 15px rgba(212,175,55,0.4); background: #e6c04c; }
+
+        /* ===== FOOTER ===== */
+        footer { background: #0b1f2a; color: #94a3b8; padding: 30px 16px 20px; text-align: center; width: 100%; }
+        .wa-float { position: fixed; bottom: 85px; right: 16px; background: #25D366; color: #fff; padding: 12px 16px; border-radius: 50px; font-weight: 700; text-decoration: none; box-shadow: 0 4px 15px rgba(37,211,102,0.4); z-index: 9999; font-size: 0.85rem; }
+
+        /* ===== MOBILE ===== */
+        @media (max-width: 768px) {
+            .wa-float { bottom: 80px; right: 10px; padding: 10px 14px; font-size: 0.8rem; }
+            .hamburger { display: block; }
+            .nav-links { display: none; width: 100%; flex-direction: column; align-items: center; gap: 10px; padding: 16px 0; background: #0b1f2a; position: absolute; top: 68px; left: 0; z-index: 999; border-bottom: 2px solid #D4AF37; }
+            .nav-links.active { display: flex; }
+            .nav-links a { width: 100%; text-align: center; padding: 8px 0; font-size: 0.9rem; }
+            
+            .hero h1 { font-size: 2rem; }
+            .story-card { padding: 24px; }
+            .story-card h2 { font-size: 1.6rem; }
+            .timeline-marker h3 { font-size: 1.2rem; }
+            .timeline-icon { width: 40px; height: 40px; font-size: 1.2rem; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="announcement-bar">✅ HTEA OSUN 2027: The Man Behind The Mission. 38 Years in Hospitality.</div>
+
+<nav>
+    <div class="logo">
+        <a href="index.html" class="logo-link">
+            <img src="img/award-logo4.png" alt="HTEA Logo" class="logo-img">
+            <div class="logo-text">
+                <span class="brand-name">HTE<span>A</span></span>
+                <span class="tagline">Hospitality &<br>Tourism Excellence<br>Awards</span>
+            </div>
+        </a>
+    </div>
+    <div class="hamburger" onclick="toggleMenu()">☰</div>
+    <div class="nav-links" id="navLinks">
+        <a href="index.html">Home</a>
+        <a href="program.html">The Program</a>
+        <a href="hr-system.html">HR System</a>
+        <a href="our-story.html">Our Story</a>
+        <a href="index.html#sponsor" class="nav-cta">Partner With Us</a>
+    </div>
+</nav>
+
+<header class="hero">
+    <h1>From The <span>Security Post</span><br>To The <span>General Manager's Desk</span></h1>
+    <p>"I didn't learn hospitality in a classroom. I learned it from the ground up."</p>
+</header>
+
+<div class="container">
+    
+    <div class="founder-photo">
+        <!-- Replace with your actual photo URL if you have one hosted -->
+        <img src="img/award-logo4.png" alt="Obori Dahiru">
+        <h2 style="font-family: 'Playfair Display', serif; font-size: 1.8rem; color: #0b1f2a; margin-top: 15px;">Obori Dahiru</h2>
+        <p style="color: #D4AF37; font-weight: 700; text-transform: uppercase; letter-spacing: 1px;">Founder, HTEA & Drecot Consults</p>
+    </div>
+
+    <div class="story-card">
+        <div class="timeline-marker">
+            <div class="timeline-icon">🛡️</div>
+            <h3>Lagos: The Foundation</h3>
+        </div>
+        <p>38 years ago, my journey into the Nigerian hospitality industry began—not in a suit, but in a security uniform. I started as a Security Guard at a hotel in Lagos. I stood at the gate, watched the guests arrive, and observed how the front desk handled them.</p>
+        <p>I didn't just watch; I learned. I learned that hospitality is discipline. It is the details—the way a door is opened, the way a complaint is handled. Lagos taught me that the guest experience starts from the moment they step onto the property, long before they reach the room.</p>
+    </div>
+
+    <div class="story-card">
+        <div class="timeline-marker">
+            <div class="timeline-icon">🎪</div>
+            <h3>Jos: Events & The People</h3>
+        </div>
+        <p>My journey took me to Jos, where I transitioned into event promotion and hospitality management. Organizing events in a new city taught me the power of human connection. I learned how to manage large crowds, coordinate vendors, and handle high-pressure situations.</p>
+        <p>But it was also in Jos that I saw the first signs of the "Brain Drain" problem. I trained young men and women to manage events, set up stages, and serve guests. As soon as they became highly skilled, a bigger promoter would offer them ₦10k more, and they would leave. I learned that training without a retention strategy is a loss to the business.</p>
+    </div>
+
+    <div class="story-card">
+        <div class="timeline-marker">
+            <div class="timeline-icon">👔</div>
+            <h3>Ilorin: Leadership & The Pain of Loss</h3>
+        </div>
+        <p>In Ilorin, I rose through the ranks—from Admin/HR Officer to Manager, and eventually to <strong>Deputy General Manager (Admin)</strong>. I was no longer just observing; I was running the operations. I was responsible for hiring, training, and retaining staff.</p>
+        <div class="quote-box">
+            "In Ilorin, I trained 23 of my staff. Within one year, 18 of them left for a competitor because of a ₦10,000 salary increase. I felt the pain of losing my best hands to the market. I realized that paper certificates and loyalty pledges do not stop staff from leaving. Owners need a system."
+        </div>
+        <p>I saw hotel owners spend millions on recruitment and training, only to lose their investment. I saw staff struggle without proper certification to advance their careers. The industry was stuck in a cycle of high turnover and low standards.</p>
+    </div>
+
+    <div class="story-card">
+        <div class="timeline-marker">
+            <div class="timeline-icon">💻</div>
+            <h3>Osogbo: The Tech Solution</h3>
+        </div>
+        <p>Today, I am a Software Engineer. I didn't just complain about the problem; I built the solution. I founded Drecot Consults and HospitalityRecruit to bridge the gap between skilled talent and quality hotels.</p>
+        <p>The <strong>HTEA HR System</strong> was born out of this 38-year experience. It is the only system designed to solve the Nigerian "Train & Run" problem.</p>
+        <p>We don't use paper certificates. We use a digital QR verification platform. We don't just certify your staff; we track their retention and replace them if they leave. We are turning a retention crisis into a talent ecosystem.</p>
+    </div>
+
+    <div class="story-card" style="background: #0b1f2a; color: #fff; border-top: 5px solid #D4AF37;">
+        <div class="timeline-marker">
+            <div class="timeline-icon" style="background: #D4AF37; color: #0b1f2a;">🏆</div>
+            <h3 style="color: #D4AF37;">The Mission</h3>
+        </div>
+        <p style="color: #cbd5e1;">HTEA Osun 2027 is not just an award show. It is the launchpad for a national movement. We are celebrating the owners who built the industry, and we are certifying the staff who keep it running.</p>
+        <p style="color: #cbd5e1;">After Osun, we are taking this to Oyo, Ekiti, Kwara, and eventually Abuja. We are building the infrastructure for a world-class Nigerian hospitality sector.</p>
+        <p style="color: #D4AF37; font-weight: 700; margin-bottom: 0;">Lagos taught me discipline. Jos taught me events and people. Ilorin taught me leadership and retention. Osun is where I bring it all together.</p>
+    </div>
+
+</div>
+
+<section class="cta-section">
+    <h2>Partner With A Veteran</h2>
+    <p>You are not just working with an event organizer. You are working with someone who has lived every level of this industry.</p>
+    <a href="index.html#sponsor" class="btn-primary">Become a Partner Today →</a>
+</section>
+
+<footer>
+    <div style="font-size:1.4rem;font-weight:800;color:#fff;margin-bottom:8px;font-family:'Playfair Display',serif;">HTE<span style="color:#D4AF37;">A</span> OSUN 2027</div>
+    <div style="font-size:0.8rem;color:#D4AF37;letter-spacing:1px;margin-bottom:12px;line-height:1.4;">38 Years: Lagos • Jos • Ilorin • Now Osun<br>Celebrating The Owner Who Built It & The Staff Who Keeps It Running</div>
+    <div style="font-size:0.7rem;color:#64748b;border-top:1px solid #1e293b;padding-top:16px;max-width:900px;margin:0 auto;line-height:1.6;">© 2026 Drecot Consults RC 6904955</div>
+</footer>
+
+<a href="https://wa.me/2348039661354?text=Hello%20HTEA%20I%20want%20to%20partner" class="wa-float">💬 Chat With Us</a>
+
+<script>
+    function toggleMenu() { document.getElementById("navLinks").classList.toggle("active"); }
+</script>
+</body>
+  </html> 
