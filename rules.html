@@ -1,1 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Competition Rules & Judging Criteria | HTEA Osun 2027</title>
+    <meta name="description" content="The official rules, eligibility, and judging criteria for the HTEA Osun 2027 Top Hands Skills Challenge. Transparent, fair, and professional.">
+    <link rel="icon" type="image/png" href="img/award-logo4.png">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        /* ===== GLOBAL RESET ===== */
+        * { margin: 0; padding: 0; box-sizing: border-box !important; }
+        html, body { overflow-x: hidden; width: 100%; max-width: 100vw; }
+        body { font-family: 'Inter', sans-serif; background: #f5f6f8; color: #2c3e50; line-height: 1.6; }
+        h1, h2, h3, h4 { font-family: 'Playfair Display', serif; word-wrap: break-word; overflow-wrap: break-word; }
+        a { text-decoration: none; }
+        p, span, div { word-wrap: break-word; overflow-wrap: break-word; }
 
+        /* ===== NAV ===== */
+        .announcement-bar { background: #D4AF37; color: #0b1f2a; text-align: center; padding: 12px 15px; font-weight: 800; font-size: 0.85rem; line-height: 1.4; width: 100%; }
+        nav { background: #0b1f2a; color: #fff; padding: 12px 16px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; position: sticky; top: 0; z-index: 1000; width: 100%; }
+        .logo-link { display: flex; align-items: center; max-width: 80%; }
+        .logo-img { width: 44px; height: 44px; object-fit: contain; border-radius: 50%; flex-shrink: 0; }
+        .logo-text { display: flex; flex-direction: column; line-height: 1.1; margin-left: 8px; }
+        .brand-name { font-size: 1.3rem; font-weight: 800; color: #fff; }
+        .brand-name span { color: #D4AF37; }
+        .tagline { font-size: 0.5rem; color: #94a3b8; text-transform: uppercase; letter-spacing: 1px; }
+        .hamburger { display: none; font-size: 1.8rem; cursor: pointer; color: #D4AF37; padding: 4px; }
+        .nav-links { display: flex; gap: 18px; align-items: center; }
+        .nav-links a { color: #fff; font-weight: 600; font-size: 0.85rem; white-space: nowrap; }
+        .nav-cta { background: #D4AF37; color: #0b1f2a !important; padding: 7px 16px; border-radius: 40px; font-weight: 700; }
+
+        /* ===== HERO ===== */
+        .hero { background: linear-gradient(rgba(11,31,42,0.92), rgba(11,31,42,0.97)), url('https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=1200&q=80'); background-size: cover; background-position: center; color: #fff; padding: 80px 16px 60px; text-align: center; width: 100%; }
+        .hero h1 { font-size: 2.8rem; font-weight: 800; margin-bottom: 16px; line-height: 1.15; }
+        .hero h1 span { color: #D4AF37; }
+        .hero p { font-size: 1.1rem; max-width: 750px; margin: 0 auto; color: #cbd5e1; line-height: 1.8; }
+
+        /* ===== CONTENT ===== */
+        .container { max-width: 900px; margin: 0 auto; padding: 60px 16px; width: 100%; }
+        
+        .rule-card { background: #fff; border-radius: 12px; padding: 30px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); margin-bottom: 30px; border-left: 4px solid #D4AF37; }
+        .rule-card h2 { color: #0b1f2a; font-size: 1.6rem; margin-bottom: 16px; border-bottom: 2px solid #f0f0f0; padding-bottom: 10px; }
+        .rule-card h3 { color: #0b1f2a; font-size: 1.2rem; margin: 20px 0 10px; }
+        .rule-card p { font-size: 1rem; color: #475569; line-height: 1.8; margin-bottom: 12px; }
+        .rule-card ul { list-style: none; padding-left: 0; margin-bottom: 16px; }
+        .rule-card li { padding: 8px 0 8px 24px; position: relative; font-size: 0.95rem; color: #334155; border-bottom: 1px dashed #f0f0f0; }
+        .rule-card li:last-child { border-bottom: none; }
+        .rule-card li::before { content: "•"; position: absolute; left: 0; color: #D4AF37; font-weight: 800; font-size: 1.5rem; line-height: 1; top: 6px; }
+
+        .highlight-box { background: #fffcf0; border: 1px solid #f5e6a3; border-left: 4px solid #D4AF37; padding: 20px; border-radius: 8px; margin: 20px 0; }
+        .highlight-box p { margin-bottom: 0; color: #0b1f2a; font-weight: 600; }
+
+        .scoring-table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+        .scoring-table th { background: #0b1f2a; color: #D4AF37; padding: 12px; text-align: left; font-size: 0.95rem; }
+        .scoring-table td { padding: 12px; border-bottom: 1px solid #eee; font-size: 0.95rem; color: #334155; }
+        .scoring-table tr:nth-child(even) { background: #f9f9f9; }
+
+        /* ===== CTA ===== */
+        .cta-section { background: #0b1f2a; color: #fff; padding: 60px 16px; text-align: center; border-top: 3px solid #D4AF37; border-bottom: 3px solid #D4AF37; width: 100%; }
+        .cta-section h2 { font-size: 2rem; color: #D4AF37; margin-bottom: 16px; }
+        .cta-section p { color: #cbd5e1; font-size: 1.05rem; max-width: 700px; margin: 0 auto 24px; }
+        .btn-primary { background: #D4AF37; color: #0b1f2a; padding: 16px 32px; border-radius: 50px; font-weight: 700; font-size: 1rem; display: inline-block; text-align: center; transition: 0.2s; }
+        .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 4px 15px rgba(212,175,55,0.4); background: #e6c04c; }
+
+        /* ===== FOOTER ===== */
+        footer { background: #0b1f2a; color: #94a3b8; padding: 30px 16px 20px; text-align: center; width: 100%; }
+        .wa-float { position: fixed; bottom: 85px; right: 16px; background: #25D366; color: #fff; padding: 12px 16px; border-radius: 50px; font-weight: 700; text-decoration: none; box-shadow: 0 4px 15px rgba(37,211,102,0.4); z-index: 9999; font-size: 0.85rem; }
+
+        /* ===== MOBILE ===== */
+        @media (max-width: 768px) {
+            .wa-float { bottom: 80px; right: 10px; padding: 10px 14px; font-size: 0.8rem; }
+            .hamburger { display: block; }
+            .nav-links { display: none; width: 100%; flex-direction: column; align-items: center; gap: 10px; padding: 16px 0; background: #0b1f2a; position: absolute; top: 68px; left: 0; z-index: 999; border-bottom: 2px solid #D4AF37; }
+            .nav-links.active { display: flex; }
+            .nav-links a { width: 100%; text-align: center; padding: 8px 0; font-size: 0.9rem; }
+            
+            .hero h1 { font-size: 2rem; }
+            .rule-card { padding: 20px; }
+            .rule-card h2 { font-size: 1.4rem; }
+            .scoring-table th, .scoring-table td { padding: 8px; font-size: 0.85rem; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="announcement-bar">✅ HTEA OSUN 2027: Official Rules & Judging Criteria. Fair, Transparent, Professional.</div>
+
+<nav>
+    <div class="logo">
+        <a href="index.html" class="logo-link">
+            <img src="img/award-logo4.png" alt="HTEA Logo" class="logo-img">
+            <div class="logo-text">
+                <span class="brand-name">HTE<span>A</span></span>
+                <span class="tagline">Hospitality &<br>Tourism Excellence<br>Awards</span>
+            </div>
+        </a>
+    </div>
+    <div class="hamburger" onclick="toggleMenu()">☰</div>
+    <div class="nav-links" id="navLinks">
+        <a href="index.html">Home</a>
+        <a href="program.html">The Program</a>
+        <a href="hr-system.html">HR System</a>
+        <a href="our-story.html">Our Story</a>
+        <a href="index.html#sponsor" class="nav-cta">Partner With Us</a>
+    </div>
+</nav>
+
+<header class="hero">
+    <h1>Competition <span>Rules & Criteria</span></h1>
+    <p>The HTEA Top Hands Challenge is a skills-based competition. We don't judge looks. We judge professionalism, speed, and hospitality excellence.</p>
+</header>
+
+<div class="container">
+
+    <div class="rule-card">
+        <h2>1. Eligibility & Registration</h2>
+        <p>To ensure fairness and credibility, the following rules apply to all contestants:</p>
+        <ul>
+            <li><strong>Employment:</strong> All contestants must be currently employed by a registered hotel, restaurant, or catering business in Osun State.</li>
+            <li><strong>Experience:</strong> Must have a minimum of 6 months of active experience in their respective department (Front Office, Housekeeping, or F&B).</li>
+            <li><strong>Registration:</strong> Contestants must be entered by their employer via the official HTEA Hotel Package. We do not accept walk-in entries on the day of the event.</li>
+            <li><strong>Identification:</strong> Contestants must present a valid staff ID or a letter of introduction from their employer on the day of the event.</li>
+        </ul>
+    </div>
+
+    <div class="rule-card">
+        <h2>2. The Challenge Rounds</h2>
+        <p>The competition is divided into two days, testing both practical skills and real-world problem-solving.</p>
+        
+        <h3>Day 1: The Practical Challenge (Friday, April 23)</h3>
+        <p>Contestants will perform live on the main stage in front of an audience and media. They will be tested on:</p>
+        <ul>
+            <li><strong>Culinary (For Kitchen/Catering staff):</strong> Preparing a signature Osun dish within a strict time limit.</li>
+            <li><strong>Housekeeping (For Housekeeping staff):</strong> Bed making to a 5-star standard under time pressure.</li>
+            <li><strong>F&B Service (For Waiters/Front Desk):</strong> Table setting, napkin folding, and guest greeting.</li>
+        </ul>
+
+        <h3>Day 2: The Scenario Final (Saturday, April 24)</h3>
+        <p>Only the Top 3 highest-scoring contestants from Day 1 will advance to the Gala Night. They will face a live Q&A with the judges, testing their ability to handle real-life hospitality crises (e.g., handling an angry VIP, dealing with a sudden power outage, or a guest with dietary requirements).</p>
+    </div>
+
+    <div class="rule-card">
+        <h2>3. Judging & Scoring Matrix</h2>
+        <p>Our judging panel consists of independent industry experts. Scores are based on a strict 100-point system:</p>
+        
+        <table class="scoring-table">
+            <tr>
+                <th>Criteria</th>
+                <th>Weight</th>
+                <th>What Judges Look For</th>
+            </tr>
+            <tr>
+                <td>Technical Skill</td>
+                <td>40%</td>
+                <td>Accuracy, speed, hygiene, and standard of the final output.</td>
+            </tr>
+            <tr>
+                <td>Presentation & Attitude</td>
+                <td>20%</td>
+                <td>Uniform, posture, confidence, and communication.</td>
+            </tr>
+            <tr>
+                <td>Problem Solving (Q&A)</td>
+                <td>30%</td>
+                <td>Composure under pressure and common sense in handling scenarios.</td>
+            </tr>
+            <tr>
+                <td>Creativity</td>
+                <td>10%</td>
+                <td>Cultural storytelling (using local ingredients) and unique approaches.</td>
+            </tr>
+        </table>
+        
+        <div class="highlight-box">
+            <p>⚖️ <strong>Fairness Rule:</strong> No contestant will be judged by a manager or owner from their own hotel. Judges must declare any conflict of interest before scoring.</p>
+        </div>
+    </div>
+
+    <div class="rule-card">
+        <h2>4. Disqualification</h2>
+        <p>A contestant will be immediately disqualified if they:</p>
+        <ul>
+            <li>Arrive more than 15 minutes late to their scheduled round.</li>
+            <li>Use pre-prepared ingredients or props that were not approved by the organizers.</li>
+            <li>Show disrespect to judges, organizers, or other contestants.</li>
+        </ul>
+    </div>
+
+    <div class="rule-card">
+        <h2>5. Prizes & Certification</h2>
+        <p><strong>The Champion (1st Place):</strong> Trophy for the hotel, ₦50,000 cash, and an automatic slot at the National Finals in Abuja.</p>
+        <p><strong>The Runners-Up (2nd & 3rd Place):</strong> Certificates of excellence and a digital Level 1 HTEA Profile.</p>
+        <p><strong>The Hotel:</strong> The winning hotel receives the "Certified Employer 2027" plaque and priority access to the HospitalityRecruit replacement pool.</p>
+    </div>
+
+</div>
+
+<section class="cta-section">
+    <h2>Ready to Enter Your Staff?</h2>
+    <p>Secure the ₦150,000 Bronze Hotel Package today and give your team the stage they deserve.</p>
+    <a href="https://wa.me/2348039661354?text=Hello%20HTEA%20I%20want%20to%20register%20my%20staff%20for%20the%20challenge" class="btn-primary">Register Via WhatsApp →</a>
+</section>
+
+<footer>
+    <div style="font-size:1.4rem;font-weight:800;color:#fff;margin-bottom:8px;font-family:'Playfair Display',serif;">HTE<span style="color:#D4AF37;">A</span> OSUN 2027</div>
+    <div style="font-size:0.8rem;color:#D4AF37;letter-spacing:1px;margin-bottom:12px;line-height:1.4;">Official Rules & Criteria<br>Fair. Transparent. Professional.</div>
+    <div style="font-size:0.7rem;color:#64748b;border-top:1px solid #1e293b;padding-top:16px;max-width:900px;margin:0 auto;line-height:1.6;">© 2026 Drecot Consults RC 6904955</div>
+</footer>
+
+<a href="https://wa.me/2348039661354?text=Hello%20HTEA%20I%20have%20a%20question%20about%20the%20rules" class="wa-float">💬 Chat With Us</a>
+
+<script>
+    function toggleMenu() { document.getElementById("navLinks").classList.toggle("active"); }
+</script>
+</body>
+      </html> 
