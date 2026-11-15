@@ -1,1 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Register | HTEA Osun 2027</title>
+    <meta name="description" content="Register for HTEA Osun 2027. Book a hotel package, register as a student, or book a vendor stand for the Food Fair.">
+    <link rel="icon" type="image/png" href="img/award-logo4.png">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        /* ===== GLOBAL RESET & OVERFLOW FIXES ===== */
+        * { margin: 0; padding: 0; box-sizing: border-box !important; }
+        html, body { overflow-x: hidden; width: 100%; max-width: 100vw; }
+        body { font-family: 'Inter', sans-serif; background: #f5f6f8; color: #2c3e50; line-height: 1.6; }
+        h1, h2, h3, h4 { font-family: 'Playfair Display', serif; word-wrap: break-word; overflow-wrap: break-word; }
+        a { text-decoration: none; }
+        p, span, div { word-wrap: break-word; overflow-wrap: break-word; }
+        
+        /* ===== NAV ===== */
+        .announcement-bar { background: #D4AF37; color: #0b1f2a; text-align: center; padding: 12px 15px; font-weight: 800; font-size: 0.85rem; line-height: 1.4; width: 100%; }
+        nav { background: #0b1f2a; color: #fff; padding: 12px 16px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; position: sticky; top: 0; z-index: 1000; width: 100%; }
+        .logo-link { display: flex; align-items: center; max-width: 80%; }
+        .logo-img { width: 44px; height: 44px; object-fit: contain; border-radius: 50%; flex-shrink: 0; }
+        .logo-text { display: flex; flex-direction: column; line-height: 1.1; margin-left: 8px; }
+        .brand-name { font-size: 1.3rem; font-weight: 800; color: #fff; }
+        .brand-name span { color: #D4AF37; }
+        .tagline { font-size: 0.5rem; color: #94a3b8; text-transform: uppercase; letter-spacing: 1px; }
+        .hamburger { display: none; font-size: 1.8rem; cursor: pointer; color: #D4AF37; padding: 4px; }
+        .nav-links { display: flex; gap: 18px; align-items: center; }
+        .nav-links a { color: #fff; font-weight: 600; font-size: 0.85rem; white-space: nowrap; }
+        .nav-cta { background: #D4AF37; color: #0b1f2a !important; padding: 7px 16px; border-radius: 40px; font-weight: 700; }
 
+        /* ===== HERO ===== */
+        .hero { background: linear-gradient(rgba(11,31,42,0.92), rgba(11,31,42,0.97)), url('https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&w=1200&q=80'); background-size: cover; background-position: center; color: #fff; padding: 80px 16px 60px; text-align: center; width: 100%; }
+        .hero h1 { font-size: 2.8rem; font-weight: 800; margin-bottom: 16px; line-height: 1.15; }
+        .hero h1 span { color: #D4AF37; }
+        .hero p { font-size: 1.1rem; max-width: 750px; margin: 0 auto; color: #cbd5e1; line-height: 1.8; }
+
+        /* ===== FORM SECTION ===== */
+        .container { max-width: 700px; margin: 0 auto; padding: 60px 16px; width: 100%; }
+        
+        .form-card { background: #fff; border-radius: 16px; padding: 40px; box-shadow: 0 4px 20px rgba(0,0,0,0.05); border-top: 5px solid #D4AF37; }
+        .form-card h2 { color: #0b1f2a; font-size: 1.8rem; margin-bottom: 10px; text-align: center; }
+        .form-card p.subtitle { text-align: center; color: #64748b; font-size: 0.95rem; margin-bottom: 30px; }
+        
+        .form-group { margin-bottom: 20px; }
+        .form-group label { display: block; font-weight: 600; margin-bottom: 8px; color: #0b1f2a; font-size: 0.95rem; }
+        .form-group input, .form-group select, .form-group textarea { width: 100%; padding: 14px; border: 1px solid #cbd5e1; border-radius: 8px; font-family: 'Inter', sans-serif; font-size: 1rem; background: #f8fafc; transition: 0.2s; }
+        .form-group input:focus, .form-group select:focus, .form-group textarea:focus { outline: none; border-color: #D4AF37; background: #fff; box-shadow: 0 0 0 3px rgba(212,175,55,0.2); }
+        
+        .form-group textarea { resize: vertical; height: 100px; }
+        
+        .btn-submit { background: #D4AF37; color: #0b1f2a; padding: 16px 32px; border-radius: 50px; font-weight: 700; font-size: 1.1rem; display: inline-block; text-align: center; width: 100%; transition: 0.2s; border: none; cursor: pointer; margin-top: 10px; }
+        .btn-submit:hover { transform: translateY(-2px); box-shadow: 0 4px 15px rgba(212,175,55,0.4); background: #e6c04c; }
+
+        .secure-note { text-align: center; font-size: 0.85rem; color: #64748b; margin-top: 20px; }
+
+        /* ===== FOOTER ===== */
+        footer { background: #0b1f2a; color: #94a3b8; padding: 30px 16px 20px; text-align: center; width: 100%; }
+        .wa-float { position: fixed; bottom: 85px; right: 16px; background: #25D366; color: #fff; padding: 12px 16px; border-radius: 50px; font-weight: 700; text-decoration: none; box-shadow: 0 4px 15px rgba(37,211,102,0.4); z-index: 9999; font-size: 0.85rem; }
+
+        /* ===== MOBILE ===== */
+        @media (max-width: 768px) {
+            .wa-float { bottom: 80px; right: 10px; padding: 10px 14px; font-size: 0.8rem; }
+            .hamburger { display: block; }
+            .nav-links { display: none; width: 100%; flex-direction: column; align-items: center; gap: 10px; padding: 16px 0; background: #0b1f2a; position: absolute; top: 68px; left: 0; z-index: 999; border-bottom: 2px solid #D4AF37; }
+            .nav-links.active { display: flex; }
+            .nav-links a { width: 100%; text-align: center; padding: 8px 0; font-size: 0.9rem; }
+            
+            .hero h1 { font-size: 2rem; }
+            .form-card { padding: 24px; }
+            .form-card h2 { font-size: 1.5rem; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="announcement-bar">✅ HTEA OSUN 2027: Secure Your Spot. Hotel Packages, Student Entries & Food Stands.</div>
+
+<nav>
+    <div class="logo">
+        <a href="index.html" class="logo-link">
+            <img src="img/award-logo4.png" alt="HTEA Logo" class="logo-img">
+            <div class="logo-text">
+                <span class="brand-name">HTE<span>A</span></span>
+                <span class="tagline">Hospitality &<br>Tourism Excellence<br>Awards</span>
+            </div>
+        </a>
+    </div>
+    <div class="hamburger" onclick="toggleMenu()">☰</div>
+    <div class="nav-links" id="navLinks">
+        <a href="index.html">Home</a>
+        <a href="program.html">The Program</a>
+        <a href="hr-system.html">HR System</a>
+        <a href="our-story.html">Our Story</a>
+        <a href="rules.html">Rules</a>
+        <a href="sponsor.html">Sponsor</a>
+        <a href="register.html" class="nav-cta">Register Now</a>
+    </div>
+</nav>
+
+<header class="hero">
+    <h1>Register for <span>HTEA Osun 2027</span></h1>
+    <p>Whether you are a hotel entering your staff, a student looking for a career breakthrough, or a vendor ready to sell, fill out the form below to begin.</p>
+</header>
+
+<div class="container">
+    <div class="form-card">
+        <h2>Registration Form</h2>
+        <p class="subtitle">Fill this form and our team will contact you within 24 hours with payment details and next steps.</p>
+
+        <!-- NETLIFY FORM -->
+        <form name="hte-registration" method="POST" netlify>
+            <!-- Hidden field for Netlify form detection -->
+            <input type="hidden" name="form-name" value="hte-registration" />
+
+            <div class="form-group">
+                <label for="name">Full Name / Contact Person *</label>
+                <input type="text" id="name" name="name" placeholder="e.g. John Doe" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email Address *</label>
+                <input type="email" id="email" name="email" placeholder="e.g. john@example.com" required>
+            </div>
+
+            <div class="form-group">
+                <label for="phone">Phone Number (WhatsApp) *</label>
+                <input type="tel" id="phone" name="phone" placeholder="e.g. 08123456789" required>
+            </div>
+
+            <div class="form-group">
+                <label for="category">I am registering as: *</label>
+                <select id="category" name="category" required>
+                    <option value="">Select Category...</option>
+                    <option value="Hotel Package (₦150k)">Hotel (₦150k Package - 3 Staff)</option>
+                    <option value="Student Entry (₦20k)">Student / Practitioner (₦20k Entry)</option>
+                    <option value="Vendor Stand (₦20k)">Food Fair Vendor (₦20k Stand)</option>
+                    <option value="Sponsor">Corporate Sponsor</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="business">Business / School Name</label>
+                <input type="text" id="business" name="business" placeholder="e.g. Heritage Hotel / UNIOSUN">
+            </div>
+
+            <div class="form-group">
+                <label for="message">Additional Information</label>
+                <textarea id="message" name="message" placeholder="Tell us what you are looking for, or list the names of the staff you are entering."></textarea>
+            </div>
+
+            <button type="submit" class="btn-submit">Submit Registration →</button>
+        </form>
+        
+        <p class="secure-note">🔒 Your information is secure. We will never share your data.</p>
+    </div>
+</div>
+
+<footer>
+    <div style="font-size:1.4rem;font-weight:800;color:#fff;margin-bottom:8px;font-family:'Playfair Display',serif;">HTE<span style="color:#D4AF37;">A</span> OSUN 2027</div>
+    <div style="font-size:0.8rem;color:#D4AF37;letter-spacing:1px;margin-bottom:12px;line-height:1.4;">Certify. Retain. Replace.<br>Powered by HospitalityRecruit</div>
+    <div style="font-size:0.7rem;color:#64748b;border-top:1px solid #1e293b;padding-top:16px;max-width:900px;margin:0 auto;line-height:1.6;">
+        © 2026 Drecot Consults RC 6904955. All rights reserved.<br>
+        <a href="privacy.html" style="color:#D4AF37;">Privacy Policy</a> | 
+        <a href="terms.html" style="color:#D4AF37;">Terms of Service</a>
+    </div>
+</footer>
+
+<a href="https://wa.me/2348039661354?text=Hello%20HTEA%20I%20have%20a%20question%20about%20registration" class="wa-float">💬 Chat With Us</a>
+
+<script>
+    function toggleMenu() { document.getElementById("navLinks").classList.toggle("active"); }
+</script>
+</body>
+              </html> 
