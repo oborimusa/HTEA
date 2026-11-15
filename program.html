@@ -52,12 +52,15 @@
         .content-box { background: #fff; padding: 24px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); border-left: 4px solid #0b1f2a; }
         .content-box h3 { color: #0b1f2a; font-size: 1.3rem; margin-bottom: 10px; }
         .content-box p { color: #475569; font-size: 0.95rem; line-height: 1.7; margin-bottom: 12px; }
-        .content-box ul { list-style: none; padding-left: 0; }
+        .content-box ul { list-style: none; padding-left: 0; margin-bottom: 12px; }
         .content-box li { padding: 6px 0 6px 24px; position: relative; font-size: 0.9rem; color: #334155; }
         .content-box li::before { content: "✓"; position: absolute; left: 0; color: #D4AF37; font-weight: 800; }
 
         .highlight-box { background: #fffcf0; border: 1px solid #f5e6a3; border-left: 4px solid #D4AF37; }
         .highlight-box h3 { color: #D4AF37; }
+
+        .rules-link { color: #D4AF37; font-weight: 700; text-decoration: underline; font-size: 0.9rem; display: inline-block; margin-top: 10px; }
+        .rules-link:hover { color: #0b1f2a; }
 
         /* ===== CTA ===== */
         .cta-section { background: #0b1f2a; color: #fff; padding: 60px 16px; text-align: center; border-top: 3px solid #D4AF37; border-bottom: 3px solid #D4AF37; width: 100%; }
@@ -106,6 +109,7 @@
         <a href="index.html">Home</a>
         <a href="program.html">The Program</a>
         <a href="hr-system.html">HR System</a>
+        <a href="our-story.html">Our Story</a>
         <a href="index.html#sponsor" class="nav-cta">Partner With Us</a>
     </div>
 </nav>
@@ -113,11 +117,10 @@
 <header class="hero">
     <h1>The Official <span>2-Day Program</span></h1>
     <p>From the heat of the live cooking challenge to the glamour of the black-tie gala. Here is exactly how HTEA Osun 2027 will unfold.</p>
-    <!-- ADD THIS LINK -->
     <div style="margin-top: 24px;">
-        <a href="rules.html" style="color: #0b1f2a; background: #D4AF37; padding: 10px 24px; border-radius: 40px; font-weight: 700; display: inline-block; font-size: 0.9rem;">📖 View Competition Rules</a>
+        <a href="rules.html" class="btn-primary" style="font-size: 0.9rem; padding: 10px 24px;">📖 View Competition Rules</a>
     </div>
-</header> 
+</header>
 
 <div class="container">
 
@@ -151,6 +154,7 @@
                     <li><strong>Round 2:</strong> Housekeeping (5-star bed making under time constraints).</li>
                     <li><strong>Round 3:</strong> F&B (Table setting and napkin folding).</li>
                 </ul>
+                <a href="rules.html" class="rules-link">Read the full judging criteria and rules →</a>
             </div>
         </div>
 
@@ -211,17 +215,6 @@
             </div>
         </div>
 
-        <div class="content-box highlight-box">
-    <h3>👑 The Top Hand Final (30% of Score)</h3>
-    <p>The Top 3 contestants from Friday return to the stage...</p>
-    <ul>
-        <li>Live Q&A with the judges.</li>
-        <li>Final combined score is calculated (Friday 70% + Saturday 30%).</li>
-    </ul>
-    <!-- ADD THIS LINK -->
-    
-        </div> 
-
         <div class="timeline-item">
             <div class="time-box">8:45 PM</div>
             <div class="content-box">
@@ -229,10 +222,6 @@
                 <p>One winner is crowned the Osun Top Hand 2027. They receive a cash prize, national recognition, and an automatic slot at the Abuja National Finals. Their hotel receives the grand trophy.</p>
             </div>
         </div>
-
-        <div style="margin-top: 15px;">
-        <a href="rules.html" style="color: #D4AF37; font-weight: 700; text-decoration: underline;">Read the full judging criteria and rules →</a>
-        </div> 
 
         <div class="timeline-item">
             <div class="time-box">9:15 PM</div>
@@ -263,4 +252,4 @@
     function toggleMenu() { document.getElementById("navLinks").classList.toggle("active"); }
 </script>
 </body>
-</html>
+            </html> 
