@@ -75,17 +75,29 @@
         
         /* ===== PRICING ===== */
         .pricing-section { padding: 60px 16px; width: 100%; }
-        .price-card { max-width: 500px; margin: 0 auto; background: #fff; border-radius: 16px; border: 2px solid #D4AF37; box-shadow: 0 8px 30px rgba(212,175,55,0.15); overflow: hidden; text-align: center; }
+        .pricing-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; max-width: 900px; margin: 0 auto; }
+        
+        .price-card { background: #fff; border-radius: 16px; border: 2px solid #D4AF37; box-shadow: 0 8px 30px rgba(212,175,55,0.15); overflow: hidden; text-align: center; display: flex; flex-direction: column; }
+        .price-card.student-card { border-color: #25D366; box-shadow: 0 8px 30px rgba(37,211,102,0.15); }
+        
         .price-head { background: #0b1f2a; padding: 24px; color: #fff; }
+        .student-card .price-head { background: #25D366; }
+        
         .price-head h3 { color: #D4AF37; font-size: 1.5rem; margin-bottom: 8px; }
+        .student-card .price-head h3 { color: #fff; }
+        
         .price-head .amount { font-size: 2.5rem; font-weight: 800; font-family: 'Playfair Display', serif; }
-        .price-body { padding: 30px; }
-        .price-body ul { list-style: none; text-align: left; margin-bottom: 20px; }
+        .price-body { padding: 30px; flex-grow: 1; display: flex; flex-direction: column; }
+        .price-body ul { list-style: none; text-align: left; margin-bottom: 20px; flex-grow: 1; }
         .price-body li { padding: 10px 0; border-bottom: 1px dashed #eef2f7; color: #334155; font-size: 0.95rem; }
         .price-body li::before { content: "✓"; color: #D4AF37; font-weight: 800; margin-right: 10px; }
+        .student-card .price-body li::before { color: #25D366; }
         
         .btn-primary { background: #D4AF37; color: #0b1f2a; padding: 16px 32px; border-radius: 50px; font-weight: 700; font-size: 1rem; display: inline-block; text-align: center; width: 100%; transition: 0.2s; border: none; cursor: pointer; }
         .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 4px 15px rgba(212,175,55,0.4); background: #e6c04c; }
+        
+        .btn-student { background: #25D366; color: #fff; }
+        .btn-student:hover { background: #1fa852; box-shadow: 0 4px 15px rgba(37,211,102,0.4); }
         
         /* ===== FOOTER ===== */
         footer { background: #0b1f2a; color: #94a3b8; padding: 30px 16px 20px; text-align: center; margin-top: 40px; width: 100%; }
@@ -110,6 +122,7 @@
             
             .section-title { font-size: 1.6rem; }
             .step-grid { grid-template-columns: 1fr; }
+            .pricing-grid { grid-template-columns: 1fr; }
             .price-body { padding: 20px; }
         }
     </style>
@@ -135,7 +148,7 @@
         <a href="hr-system.html">HR System</a>
         <a href="our-story.html">Our Story</a>
         <a href="rules.html">Rules</a>
-        <a href="index.html#sponsor" class="nav-cta">Join The Package</a>
+        <a href="sponsor.html" class="nav-cta">Partner With Us</a>
     </div>
 </nav>
 
@@ -207,44 +220,76 @@
 </section>
 
 <section class="pricing-section">
-    <div class="section-title">The Hotel <span>Retention Package</span></div>
-    <div class="section-subtitle">Everything you need to protect your staff and your budget.</div>
+    <div class="section-title">Choose Your <span>Package</span></div>
+    <div class="section-subtitle">Whether you are a hotel protecting your staff, or an individual looking for your big break.</div>
     
-    <div class="price-card">
-        <div class="price-head">
-            <h3>Bronze Hotel Package</h3>
-            <div class="amount">₦150,000</div>
-        </div>
-        <div class="price-body">
-            <ul>
-                <li>Entry for 3 staff into the HTEA Skills Challenge</li>
-                <li>Digital QR Verification Profiles for all 3 staff</li>
-                <li>2 VIP Seats at the Saturday Gala</li>
-                <li>Hotel Plaque: "Certified Employer 2027"</li>
-                <li>Access to HospitalityRecruit replacement pool</li>
-                <li>Discount on replacement fees if staff leaves</li>
-            </ul>
-            
-            <!-- RULES LINK ADDED HERE -->
-            <p style="text-align: center; margin-bottom: 15px; font-size: 0.9rem;">
-                Have questions about the challenge? <a href="rules.html" style="color: #0b1f2a; font-weight: 700; text-decoration: underline;">View Competition Rules & Criteria</a>
-            </p>
+    <div class="pricing-grid">
+        
+        <!-- HOTEL PACKAGE -->
+        <div class="price-card">
+            <div class="price-head">
+                <h3>Bronze Hotel Package</h3>
+                <div class="amount">₦150,000</div>
+            </div>
+            <div class="price-body">
+                <ul>
+                    <li>Entry for 3 staff into the HTEA Skills Challenge</li>
+                    <li>Digital QR Verification Profiles for all 3 staff</li>
+                    <li>2 VIP Seats at the Saturday Gala</li>
+                    <li>Hotel Plaque: "Certified Employer 2027"</li>
+                    <li>Access to HospitalityRecruit replacement pool</li>
+                    <li>Discount on replacement fees if staff leaves</li>
+                </ul>
+                
+                <p style="text-align: center; margin-bottom: 15px; font-size: 0.9rem;">
+                    Have questions? <a href="rules.html" style="color: #0b1f2a; font-weight: 700; text-decoration: underline;">View Competition Rules & Criteria</a>
+                </p>
 
-            <a href="https://wa.me/2348039661354?text=Hello%20HTEA%20I%20want%20the%20N150k%20HR%20System%20Hotel%20Package" class="btn-primary">Get The HR Package →</a>
+                <a href="https://wa.me/2348039661354?text=Hello%20HTEA%20I%20want%20the%20N150k%20HR%20System%20Hotel%20Package" class="btn-primary">Get The Hotel Package →</a>
+            </div>
         </div>
+
+        <!-- STUDENT PACKAGE -->
+        <div class="price-card student-card">
+            <div class="price-head">
+                <h3>Student / Practitioner Entry</h3>
+                <div class="amount">₦20,000</div>
+            </div>
+            <div class="price-body">
+                <ul>
+                    <li>Entry into the Student & Practitioner Division</li>
+                    <li>1 Seat at the Saturday Gala</li>
+                    <li>Digital QR Verification Profile (Level 1)</li>
+                    <li>Direct exposure to 50+ Hotel GMs and Owners</li>
+                    <li>Access to the HospitalityRecruit Talent Pool</li>
+                    <li>Chance to win the Grand Prize and represent Osun in Abuja</li>
+                </ul>
+                
+                <p style="text-align: center; margin-bottom: 15px; font-size: 0.9rem;">
+                    Review the <a href="rules.html" style="color: #0b1f2a; font-weight: 700; text-decoration: underline;">Competition Rules</a> before registering.
+                </p>
+
+                <a href="https://wa.me/2348039661354?text=Hello%20HTEA%20I%20am%20a%20student%20and%20I%20want%20to%20register%20for%20the%20skills%20challenge" class="btn-primary btn-student">Register as Student →</a>
+            </div>
+        </div>
+
     </div>
 </section>
 
 <footer>
     <div style="font-size:1.4rem;font-weight:800;color:#fff;margin-bottom:8px;font-family:'Playfair Display',serif;">HTE<span style="color:#D4AF37;">A</span> OSUN 2027</div>
     <div style="font-size:0.8rem;color:#D4AF37;letter-spacing:1px;margin-bottom:12px;line-height:1.4;">Certify. Retain. Replace.<br>Powered by HospitalityRecruit</div>
-    <div style="font-size:0.7rem;color:#64748b;border-top:1px solid #1e293b;padding-top:16px;max-width:900px;margin:0 auto;line-height:1.6;">© 2026 Drecot Consults RC 6904955<br>38 Years: Lagos (Security) • Jos (Event Promoter) • Ilorin (DGM) | The HTEA HR System</div>
+    <div style="font-size:0.7rem;color:#64748b;border-top:1px solid #1e293b;padding-top:16px;max-width:900px;margin:0 auto;line-height:1.6;">
+        © 2026 Drecot Consults RC 6904955. All rights reserved.<br>
+        <a href="privacy.html" style="color:#D4AF37;">Privacy Policy</a> | 
+        <a href="terms.html" style="color:#D4AF37;">Terms of Service</a>
+    </div>
 </footer>
 
-<a href="https://wa.me/2348039661354?text=Hello%20HTEA%20I%20want%20the%20HR%20System" class="wa-float">💬 Get The Package</a>
+<a href="https://wa.me/2348039661354?text=Hello%20HTEA%20I%20want%20to%20know%20more%20about%20the%20HR%20System" class="wa-float">💬 Get The Package</a>
 
 <script>
     function toggleMenu() { document.getElementById("navLinks").classList.toggle("active"); }
 </script>
 </body>
-</html> 
+                </html> 
