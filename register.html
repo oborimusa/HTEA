@@ -93,7 +93,6 @@
         <a href="program.html">The Program</a>
         <a href="hr-system.html">HR System</a>
         <a href="our-story.html">Our Story</a>
-        <a href="awards.html">Awards</a>
         <a href="rules.html">Rules</a>
         <a href="sponsor.html">Sponsor</a>
         <a href="register.html" class="nav-cta">Register Now</a>
@@ -111,9 +110,14 @@
         <p class="subtitle">Fill this form and our team will contact you within 24 hours with payment details and next steps.</p>
 
         <!-- NETLIFY FORM -->
-        <form name="hte-registration" method="POST" netlify>
+        <form name="hte-registration" method="POST" netlify netlify-honeypot="bot-field" action="/thank-you">
             <!-- Hidden field for Netlify form detection -->
             <input type="hidden" name="form-name" value="hte-registration" />
+            
+            <!-- Honeypot field to catch spam bots (Users won't see this) -->
+            <p class="hidden" style="display:none;">
+                <label>Don't fill this out if you're human: <input name="bot-field" /></label>
+            </p>
 
             <div class="form-group">
                 <label for="name">Full Name / Contact Person *</label>
@@ -134,10 +138,10 @@
                 <label for="category">I am registering as: *</label>
                 <select id="category" name="category" required>
                     <option value="">Select Category...</option>
-                    <option value="Hotel Package (₦150k)">Hotel (₦150k Package - 3 Staff)</option>
-                    <option value="Student Entry (₦20k)">Student / Practitioner (₦20k Entry)</option>
-                    <option value="Vendor Stand (₦20k)">Food Fair Vendor (₦20k Stand)</option>
-                    <option value="Sponsor">Corporate Sponsor</option>
+                    <option value="Hotel Package (₦150k)">Hotel Package (₦150,000 - 3 Staff)</option>
+                    <option value="Student Entry (₦20k)">Student / Practitioner Entry (₦20,000)</option>
+                    <option value="Vendor Stand (₦20k)">Food Fair Vendor Stand (₦20,000)</option>
+                    <option value="Sponsor">Corporate Sponsor / Partner</option>
                 </select>
             </div>
 
@@ -174,4 +178,4 @@
     function toggleMenu() { document.getElementById("navLinks").classList.toggle("active"); }
 </script>
 </body>
-              </html> 
+</html> 
