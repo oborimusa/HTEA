@@ -49,7 +49,7 @@
         .hero-stats strong { display: block; font-size: 1.5rem; font-weight: 800; color: #D4AF37; }
         .hero-stats span { font-size: 0.7rem; color: #cbd5e1; line-height: 1.3; display: block; margin-top: 4px; }
         
-        /* ===== ECOSYSTEM SECTION (NEW) ===== */
+        /* ===== ECOSYSTEM SECTION ===== */
         .ecosystem-section { background: #0b1f2a; color: #fff; padding: 50px 16px; border-top: 3px solid #D4AF37; border-bottom: 3px solid #D4AF37; width: 100%; }
         .ecosystem-inner { max-width: 1100px; margin: 0 auto; text-align: center; }
         .ecosystem-inner h2 { color: #D4AF37; font-size: 2rem; margin-bottom: 10px; }
@@ -101,12 +101,15 @@
         .sponsor-tiers h2 { text-align: center; font-size: 1.6rem; margin-bottom: 10px; line-height: 1.3; }
         .sponsor-tiers h2 span { color: #D4AF37; }
         .tier-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; margin-top: 24px; }
-        .tier-card { background: rgba(255,255,255,0.05); border: 1px solid rgba(212,175,55,0.3); border-radius: 12px; padding: 24px 16px; text-align: center; width: 100%; position: relative; }
+        .tier-card { background: rgba(255,255,255,0.05); border: 1px solid rgba(212,175,55,0.3); border-radius: 12px; padding: 24px 16px; text-align: center; width: 100%; position: relative; display: flex; flex-direction: column; }
         .tier-card.featured-gold { border: 2px solid #D4AF37; background: rgba(212,175,55,0.12); }
         .tier-card h4 { color: #D4AF37; font-size: 1rem; margin-bottom: 6px; }
         .tier-card .price { font-size: 1.2rem; font-weight: 800; color: #fff; margin-bottom: 8px; }
-        .tier-card p { color: #94a3b8; font-size: 0.85rem; line-height: 1.5; }
+        .tier-card p { color: #94a3b8; font-size: 0.85rem; line-height: 1.5; margin-bottom: 15px; flex-grow: 1; }
         .tier-label { position: absolute; top: -10px; left: 50%; transform: translateX(-50%); background: #D4AF37; color: #0b1f2a; font-size: 0.6rem; font-weight: 800; padding: 4px 10px; border-radius: 20px; white-space: nowrap; }
+        
+        .btn-tier { background: #D4AF37; color: #0b1f2a; padding: 10px; border-radius: 40px; font-weight: 700; font-size: 0.85rem; text-align: center; width: 100%; transition: 0.2s; }
+        .btn-tier:hover { background: #e6c04c; }
         
         /* ===== CONTACT & FOOTER ===== */
         .contact-section { background: #fff; border-radius: 16px; padding: 30px 20px; box-shadow: 0 4px 20px rgba(0,0,0,0.05); border: 1px solid #eef2f7; text-align: center; width: 100%; }
@@ -170,8 +173,7 @@
         <a href="rules.html">Rules</a> 
         <a href="vendors.html">Book A Stand</a> 
         <a href="sponsor.html">Partners/Sponsors</a> 
-        <a href="register.html">Register</a> 
-        <a href="#sponsor" class="nav-cta">Partner With Us</a>
+        <a href="register.html" class="nav-cta">Register Now</a>
     </div>
 </nav>
 
@@ -185,7 +187,7 @@
     <div class="hero-purpose">
         <strong style="color:#D4AF37; display:block; margin-bottom:8px; font-size:1.05rem;">The HTEA Ecosystem:</strong>
         <ul style="list-style:none; color:#e2e8f0; font-size:0.95rem; line-height:1.8;">
-            <li>🏆 <strong>The Event:</strong> A 2-day Food Fair, Live Skills Challenge, and Black-Tie Awards Gala.</li>
+            <li>🏆 <strong>The Event:</strong> A 2-day Food Fair, Live Skills Challenge (Professionals & Students), and Black-Tie Awards Gala.</li>
             <li>📱 <strong>The Tech:</strong> Digital QR profiles track staff progression. Staying longer unlocks higher tiers.</li>
             <li>🤝 <strong>The Safety Net:</strong> If poached, HospitalityRecruit instantly supplies a verified replacement.</li>
         </ul>
@@ -193,7 +195,7 @@
     
     <div class="hero-buttons">
         <a href="#sponsor" class="btn-primary">Get The ₦150k Hotel Package →</a>
-        <a href="hr-system.html" class="btn-outline">See The HR System</a>
+        <a href="register.html" class="btn-outline">Student Registration (₦20k)</a>
     </div>
     
     <div class="hero-stats">
@@ -204,7 +206,7 @@
     </div>
 </header>
 
-<!-- NEW: THE ECOSYSTEM SECTION -->
+<!-- THE ECOSYSTEM SECTION -->
 <section class="ecosystem-section" id="ecosystem">
     <div class="ecosystem-inner">
         <h2>Why This Changes Everything</h2>
@@ -235,13 +237,13 @@
         <div class="ce-left">
             <span class="ce-label">✅ THE BULLETPROOF PROGRAM</span>
             <h2>Day 1: <span>Live Challenge & Food Fair</span></h2>
-            <p><strong>Friday April 23, 10AM-4PM:</strong> Open to the public. 20 Food Vendors. Simultaneously on the main stage, 10 contestants compete in live cooking, bed making, and table setting. The media films it. Judges score 70%.</p>
+            <p><strong>Friday April 23, 10AM-4PM:</strong> Open to the public. 20 Food Vendors. Simultaneously on the main stage, 20 contestants (Professionals & Students) compete in live cooking, bed making, and table setting. The media films it. Judges score 70%.</p>
             
             <h2 style="margin-top:15px;">Day 2: <span>Gala & Awards Night</span></h2>
-            <p><strong>Saturday April 24, 6PM:</strong> Black-tie Gala. We honour 8 Hotel Owners with Excellence Awards. The Top 3 from Friday return for a real-life Guest Scenario Q&A (30%). One Champion is crowned the Osun Top Hand.</p>
+            <p><strong>Saturday April 24, 6PM:</strong> Black-tie Gala. We honour 8 Hotel Owners with Excellence Awards. The Top 3 from each division return for a real-life Guest Scenario Q&A (30%). One single Champion is crowned the Face of Osun.</p>
         </div>
         <div class="ce-right">
-            <a href="https://wa.me/2348039661354" class="ce-btn">Book Food Stand →</a>
+            <a href="vendors.html" class="ce-btn">Book Food Stand →</a>
         </div>
     </div>
 </section>
@@ -249,13 +251,13 @@
 <section class="experience-section">
     <div class="container">
         <div class="section-title">The Two-Day <span>Experience</span></div>
-        <div class="section-subtitle">A public exhibition, a live skills challenge, and a black-tie gala.</div>
+        <div class="section-subtitle">A public exhibition, a live skills challenge, and a black-tie gala. Open to Hotel Professionals and Hospitality Students.</div>
         
         <div class="experience-grid">
             <div class="experience-card">
                 <div class="exp-icon">🍲</div>
                 <h3>Food Fair & Live Challenge</h3>
-                <p>20 vendors sell Osun delicacies. 10 staff compete live on stage in cooking, bed making, and table setting. It is public, it is exciting, and it is highly sponsored.</p>
+                <p>20 vendors sell Osun delicacies. 20 contestants compete live on stage in cooking, bed making, and table setting. It is public, it is exciting, and it is highly sponsored.</p>
                 <ul class="exp-list"><li>20 Stands @ ₦20k</li><li>Live skills on the main stage</li><li>Media coverage and filming</li><li>Judges score 70% for the Gala</li></ul>
             </div>
             
@@ -269,7 +271,7 @@
             <div class="experience-card" style="border:2px solid #D4AF37;">
                 <div class="exp-icon">👑</div>
                 <h3>Top Hand Final</h3>
-                <p>Top 3 from Friday come on stage for real-life scenario Q&A. Total 100%. One winner is crowned Osun Top Hand. The certificate belongs to the hotel that sponsored them.</p>
+                <p>Top 3 Professionals and Top 3 Students come on stage for real-life scenario Q&A. One winner is crowned the Face of Osun. The certificate belongs to the hotel that sponsored them.</p>
                 <ul class="exp-list"><li>Real-world Q&A (Guest complaints, VIPs)</li><li>Champion: Trophy + ₦50k + National slot</li><li>Certificate: "Sponsored by [Hotel Name]"</li><li>Runners-up: Certificates only</li></ul>
             </div>
         </div>
@@ -303,27 +305,50 @@
             <div class="tier-card">
                 <div class="tier-label">TITLE - GOVT / BIG BRAND</div>
                 <h4 style="margin-top:10px;">PLATINUM - HOST</h4><div class="price">₦2,000,000</div><p>Osun Govt / Big Brand. Opening speech. Hosts the national rollout journey to Abuja.</p>
+                <a href="sponsor.html" class="btn-tier">Become a Platinum Sponsor</a>
             </div>
             <div class="tier-card featured-gold">
                 <div class="tier-label">🔥 FOR CORPORATE BRANDS</div>
                 <h4 style="margin-top:10px;">GOLD - CATEGORY SPONSOR</h4><div class="price">₦500,000</div><p>Own one Owner Excellence Award. Present award to owner on stage. Direct access to hotel decision-makers.</p>
+                <a href="sponsor.html" class="btn-tier" style="background:#fff;">Become a Gold Sponsor</a>
             </div>
             <div class="tier-card">
                 <div class="tier-label">FOR FOOD / SUPPLY BRANDS</div>
                 <h4 style="margin-top:10px;">SILVER - CHALLENGE SPONSOR</h4><div class="price">₦300,000</div><p>Sponsor the Top Hands Challenge. Logo on stage and aprons. One face, one story - best for media.</p>
+                <a href="sponsor.html" class="btn-tier">Become a Silver Sponsor</a>
             </div>
             <div class="tier-card" style="border:1px dashed #D4AF37; background: rgba(212,175,55,0.1);">
                 <div class="tier-label" style="background:#D4AF37; color:#0b1f2a;">FOR HOTELS - HR PACKAGE</div>
                 <h4 style="margin-top:10px; color:#D4AF37;">BRONZE - HOTEL RETENTION</h4><div class="price" style="color:#fff;">₦150,000</div><p>Enter 3 staff for certification. 2 VIP seats. Digital QR profiles. Access to HospitalityRecruit replacement pool.</p>
+                <a href="hr-system.html" class="btn-tier">Get Hotel Package</a>
+            </div>
+            <div class="tier-card" style="border:1px dashed #25D366; background: rgba(37,211,102,0.1);">
+                <div class="tier-label" style="background:#25D366; color:#fff;">FOR STUDENTS / FREELANCERS</div>
+                <h4 style="margin-top:10px; color:#25D366;">STUDENT ENTRY</h4><div class="price" style="color:#fff;">₦20,000</div><p>Enter the Student Division. 1 Gala seat. Digital QR profile. Direct exposure to 50+ Hotel GMs.</p>
+                <a href="register.html" class="btn-tier" style="background:#25D366; color:#fff;">Register as Student</a>
             </div>
         </div>
     </div>
 
-    <div class="contact-section">    <div style="font-size:0.7rem;color:#64748b;border-top:1px solid #1e293b;padding-top:16px;max-width:900px;margin:0 auto;line-height:1.6;">
+    <div class="contact-section">
+        <h2 style="color:#0b1f2a; margin-bottom:10px;">Get In Touch</h2>
+        <p style="color:#475569;">Ready to partner with a national hospitality awards platform?</p>
+        <div class="contact-details">
+            <div class="contact-item">📞 08127706378 / 08039661354</div>
+            <div class="contact-item">📧 drecotconsults@gmail.com</div>
+        </div>
+        <a href="https://wa.me/2348039661354?text=Hello%20HTEA%20I%20want%20to%20partner" class="btn-primary" style="max-width: 300px;">📱 Chat on WhatsApp</a>
+    </div>
+</section>
+
+<footer>
+    <div style="font-size:1.4rem;font-weight:800;color:#fff;margin-bottom:8px;font-family:'Playfair Display',serif;">HTE<span style="color:#D4AF37;">A</span> OSUN 2027</div>
+    <div style="font-size:0.8rem;color:#D4AF37;letter-spacing:1px;margin-bottom:12px;line-height:1.4;">Certify. Retain. Replace.<br>Powered by HospitalityRecruit</div>
+    <div style="font-size:0.7rem;color:#64748b;border-top:1px solid #1e293b;padding-top:16px;max-width:900px;margin:0 auto;line-height:1.6;">
         © 2026 Drecot Consults RC 6904955. All rights reserved.<br>
         <a href="privacy.html" style="color:#D4AF37;">Privacy Policy</a> | 
         <a href="terms.html" style="color:#D4AF37;">Terms of Service</a>
-    </div> 
+    </div>
 </footer>
 
 <a href="https://wa.me/2348039661354?text=Hello%20HTEA%20I%20want%20to%20partner" class="wa-float">💬 Partner With Us</a>
