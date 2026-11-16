@@ -1,1 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>The Awards | HTEA Osun 2027</title>
+    <meta name="description" content="The 8 Excellence Awards and the Top Hand Skills Challenge at HTEA Osun 2027. Discover the categories for hotels, restaurants, and hospitality professionals.">
+    <link rel="icon" type="image/png" href="img/award-logo4.png">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        /* ===== GLOBAL RESET ===== */
+        * { margin: 0; padding: 0; box-sizing: border-box !important; }
+        html, body { overflow-x: hidden; width: 100%; max-width: 100vw; }
+        body { font-family: 'Inter', sans-serif; background: #f5f6f8; color: #2c3e50; line-height: 1.6; }
+        h1, h2, h3, h4 { font-family: 'Playfair Display', serif; word-wrap: break-word; overflow-wrap: break-word; }
+        a { text-decoration: none; }
+        p, span, div { word-wrap: break-word; overflow-wrap: break-word; }
 
+        /* ===== NAV ===== */
+        .announcement-bar { background: #D4AF37; color: #0b1f2a; text-align: center; padding: 12px 15px; font-weight: 800; font-size: 0.85rem; line-height: 1.4; width: 100%; }
+        nav { background: #0b1f2a; color: #fff; padding: 12px 16px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; position: sticky; top: 0; z-index: 1000; width: 100%; }
+        .logo-link { display: flex; align-items: center; max-width: 80%; }
+        .logo-img { width: 44px; height: 44px; object-fit: contain; border-radius: 50%; flex-shrink: 0; }
+        .logo-text { display: flex; flex-direction: column; line-height: 1.1; margin-left: 8px; }
+        .brand-name { font-size: 1.3rem; font-weight: 800; color: #fff; }
+        .brand-name span { color: #D4AF37; }
+        .tagline { font-size: 0.5rem; color: #94a3b8; text-transform: uppercase; letter-spacing: 1px; }
+        .hamburger { display: none; font-size: 1.8rem; cursor: pointer; color: #D4AF37; padding: 4px; }
+        .nav-links { display: flex; gap: 18px; align-items: center; }
+        .nav-links a { color: #fff; font-weight: 600; font-size: 0.85rem; white-space: nowrap; }
+        .nav-cta { background: #D4AF37; color: #0b1f2a !important; padding: 7px 16px; border-radius: 40px; font-weight: 700; }
+
+        /* ===== HERO ===== */
+        .hero { background: linear-gradient(rgba(11,31,42,0.92), rgba(11,31,42,0.97)), url('https://images.unsplash.com/photo-1579389083078-4e7018379f7e?auto=format&fit=crop&w=1200&q=80'); background-size: cover; background-position: center; color: #fff; padding: 80px 16px 60px; text-align: center; width: 100%; }
+        .hero h1 { font-size: 2.8rem; font-weight: 800; margin-bottom: 16px; line-height: 1.15; }
+        .hero h1 span { color: #D4AF37; }
+        .hero p { font-size: 1.1rem; max-width: 750px; margin: 0 auto; color: #cbd5e1; line-height: 1.8; }
+
+        /* ===== CONTENT ===== */
+        .container { max-width: 1100px; margin: 0 auto; padding: 60px 16px; width: 100%; }
+        .section-title { text-align: center; font-size: 2.2rem; font-weight: 700; margin-bottom: 12px; color: #0b1f2a; line-height: 1.3; }
+        .section-title span { color: #D4AF37; }
+        .section-subtitle { text-align: center; color: #64748b; margin-bottom: 40px; font-size: 1rem; max-width: 750px; margin-left: auto; margin-right: auto; line-height: 1.6; }
+
+        /* ===== AWARDS GRID ===== */
+        .awards-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px; margin-bottom: 60px; }
+        .award-card { background: #fff; border-radius: 16px; padding: 30px; box-shadow: 0 4px 20px rgba(0,0,0,0.05); border-top: 4px solid #D4AF37; display: flex; flex-direction: column; }
+        .award-card h3 { font-size: 1.3rem; color: #0b1f2a; margin-bottom: 10px; line-height: 1.3; }
+        .award-card p { color: #475569; font-size: 0.95rem; line-height: 1.7; margin-bottom: 20px; flex-grow: 1; }
+        .award-tag { display: inline-block; background: #0b1f2a; color: #D4AF37; font-size: 0.7rem; font-weight: 700; padding: 5px 12px; border-radius: 40px; text-transform: uppercase; letter-spacing: 1px; align-self: flex-start; }
+
+        /* ===== HIGHLIGHT BOX ===== */
+        .highlight-box { background: #0b1f2a; color: #fff; border-radius: 16px; padding: 40px; text-align: center; border: 2px solid #D4AF37; margin-bottom: 60px; }
+        .highlight-box h2 { color: #D4AF37; font-size: 2rem; margin-bottom: 16px; }
+        .highlight-box p { color: #cbd5e1; font-size: 1.05rem; max-width: 750px; margin: 0 auto 24px; line-height: 1.8; }
+
+        /* ===== CTA ===== */
+        .cta-section { background: #f8f9fa; color: #0b1f2a; padding: 60px 16px; text-align: center; border-top: 3px solid #D4AF37; width: 100%; }
+        .cta-section h2 { font-size: 2rem; color: #0b1f2a; margin-bottom: 16px; }
+        .cta-section p { color: #475569; font-size: 1.05rem; max-width: 700px; margin: 0 auto 24px; }
+        .btn-primary { background: #D4AF37; color: #0b1f2a; padding: 16px 32px; border-radius: 50px; font-weight: 700; font-size: 1rem; display: inline-block; text-align: center; transition: 0.2s; }
+        .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 4px 15px rgba(212,175,55,0.4); background: #e6c04c; }
+
+        /* ===== FOOTER ===== */
+        footer { background: #0b1f2a; color: #94a3b8; padding: 30px 16px 20px; text-align: center; width: 100%; }
+        .wa-float { position: fixed; bottom: 85px; right: 16px; background: #25D366; color: #fff; padding: 12px 16px; border-radius: 50px; font-weight: 700; text-decoration: none; box-shadow: 0 4px 15px rgba(37,211,102,0.4); z-index: 9999; font-size: 0.85rem; }
+
+        /* ===== MOBILE ===== */
+        @media (max-width: 768px) {
+            .wa-float { bottom: 80px; right: 10px; padding: 10px 14px; font-size: 0.8rem; }
+            .hamburger { display: block; }
+            .nav-links { display: none; width: 100%; flex-direction: column; align-items: center; gap: 10px; padding: 16px 0; background: #0b1f2a; position: absolute; top: 68px; left: 0; z-index: 999; border-bottom: 2px solid #D4AF37; }
+            .nav-links.active { display: flex; }
+            .nav-links a { width: 100%; text-align: center; padding: 8px 0; font-size: 0.9rem; }
+            
+            .hero h1 { font-size: 2rem; }
+            .section-title { font-size: 1.8rem; }
+            .awards-grid { grid-template-columns: 1fr; }
+            .highlight-box { padding: 30px 20px; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="announcement-bar">✅ HTEA OSUN 2027: The 8 Excellence Awards & The Top Hand Challenge.</div>
+
+<nav>
+    <div class="logo">
+        <a href="index.html" class="logo-link">
+            <img src="img/award-logo4.png" alt="HTEA Logo" class="logo-img">
+            <div class="logo-text">
+                <span class="brand-name">HTE<span>A</span></span>
+                <span class="tagline">Hospitality &<br>Tourism Excellence<br>Awards</span>
+            </div>
+        </a>
+    </div>
+    <div class="hamburger" onclick="toggleMenu()">☰</div>
+    <div class="nav-links" id="navLinks">
+        <a href="index.html">Home</a>
+        <a href="awards.html">Awards</a>
+        <a href="program.html">The Program</a>
+        <a href="hr-system.html">HR System</a>
+        <a href="our-story.html">Our Story</a>
+        <a href="rules.html">Rules</a>
+        <a href="sponsor.html">Sponsor</a>
+        <a href="register.html" class="nav-cta">Register Now</a>
+    </div>
+</nav>
+
+<header class="hero">
+    <h1>The <span>Excellence Awards</span></h1>
+    <p>We don't rank businesses as "Best vs. Best." We celebrate the standards of excellence that keep Osun's hospitality industry running.</p>
+</header>
+
+<div class="container">
+
+    <!-- THE 8 EXCELLENCE AWARDS -->
+    <div class="section-title">The 8 Hotel <span>Excellence Awards</span></div>
+    <div class="section-subtitle">These awards celebrate the owners and operators who have built the industry, created jobs, and maintained standards in Osun State.</div>
+
+    <div class="awards-grid">
+        <div class="award-card">
+            <span class="award-tag">Zone Award</span>
+            <h3>Excellence Award - Osogbo Zone</h3>
+            <p>Recognizing the leading hotel/restaurant in the capital city that exemplifies service excellence, community impact, and hospitality standards.</p>
+        </div>
+
+        <div class="award-card">
+            <span class="award-tag">Zone Award</span>
+            <h3>Excellence Award - Ife Zone</h3>
+            <p>Honouring the best in the historic city of Ile-Ife, celebrating businesses that serve both locals and tourists with distinction.</p>
+        </div>
+
+        <div class="award-card">
+            <span class="award-tag">Zone Award</span>
+            <h3>Excellence Award - Ilesa/Ede Zone</h3>
+            <p>Acknowledging outstanding hospitality businesses in the Ilesa, Ede, and Ikirun axis for their contribution to the state's growing tourism map.</p>
+        </div>
+
+        <div class="award-card">
+            <span class="award-tag">Property Award</span>
+            <h3>Excellence Award - Boutique & Lodges</h3>
+            <p>Celebrating the intimate, high-quality guest houses and boutique lodges that provide personalized and memorable guest experiences.</p>
+        </div>
+
+        <div class="award-card">
+            <span class="award-tag">Culinary Award</span>
+            <h3>Culinary Excellence Award</h3>
+            <p>For the restaurant or catering business that delivers outstanding food quality, hygiene, and a true taste of Osun's local and continental cuisine.</p>
+        </div>
+
+        <div class="award-card">
+            <span class="award-tag">Lifestyle Award</span>
+            <h3>Nightlife & Entertainment Excellence</h3>
+            <p>Recognizing the lounges, bars, or clubs that provide safe, vibrant, and world-class entertainment experiences for guests and residents.</p>
+        </div>
+
+        <div class="award-card">
+            <span class="award-tag">Tourism Award</span>
+            <h3>Tourism & Travel Excellence</h3>
+            <p>Honouring the tour operators, travel agencies, or transport companies that make it easy for people to explore the beauty of Osun State.</p>
+        </div>
+
+        <div class="award-card">
+            <span class="award-tag">Legacy Award</span>
+            <h3>Lifetime Service Excellence</h3>
+            <p>A special recognition for an elder or pioneer who has dedicated decades to building the hospitality industry in Osun State.</p>
+        </div>
+    </div>
+
+    <!-- THE TOP HAND CHALLENGE -->
+    <div class="highlight-box">
+        <h2>👑 The Top Hand Skills Challenge</h2>
+        <p>This is not a business award. This is a test of individual skill. Professionals and Students will compete live on stage in cooking, housekeeping, and F&B service. One single winner will be crowned the <strong>Face of Osun Hospitality 2027</strong> and represent the state at the National Finals in Abuja.</p>
+        <a href="rules.html" class="btn-primary">Read The Competition Rules →</a>
+    </div>
+
+    <!-- SPONSOR A CATEGORY -->
+    <div class="section-title">Sponsor An <span>Award Category</span></div>
+    <div class="section-subtitle">Corporate brands can own a specific award category for ₦500,000. Your brand name will be printed on the award, and you will present it on stage.</div>
+
+    <div style="text-align: center;">
+        <a href="sponsor.html" class="btn-primary" style="background: #0b1f2a; color: #D4AF37;">View Sponsorship Tiers →</a>
+    </div>
+
+</div>
+
+<footer>
+    <div style="font-size:1.4rem;font-weight:800;color:#fff;margin-bottom:8px;font-family:'Playfair Display',serif;">HTE<span style="color:#D4AF37;">A</span> OSUN 2027</div>
+    <div style="font-size:0.8rem;color:#D4AF37;letter-spacing:1px;margin-bottom:12px;line-height:1.4;">The 8 Excellence Awards & The Top Hand Challenge<br>April 23 & 24, 2027 | Osogbo</div>
+    <div style="font-size:0.7rem;color:#64748b;border-top:1px solid #1e293b;padding-top:16px;max-width:900px;margin:0 auto;line-height:1.6;">
+        © 2026 Drecot Consults RC 6904955. All rights reserved.<br>
+        <a href="privacy.html" style="color:#D4AF37;">Privacy Policy</a> | 
+        <a href="terms.html" style="color:#D4AF37;">Terms of Service</a>
+    </div>
+</footer>
+
+<a href="https://wa.me/2348039661354?text=Hello%20HTEA%20I%20have%20a%20question%20about%20the%20awards" class="wa-float">💬 Chat With Us</a>
+
+<script>
+    function toggleMenu() { document.getElementById("navLinks").classList.toggle("active"); }
+</script>
+</body>
+          </html> 
