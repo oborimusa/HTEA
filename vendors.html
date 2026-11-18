@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Become a Vendor | HTEA Osun 2027 Food Fair</title>
-    <meta name="description" content="Sell your food to 500+ attendees at the HTEA Osun 2027 Food Fair. Book your vendor stand today for ₦20,000.">
+    <title>Book A Stand | HTEA Osun 2027 Expo & Food Fair</title>
+    <meta name="description" content="Book your exhibition stand at the HTEA Osun 2027 Trade Expo. Sell food to 300+ attendees, or showcase your B2B products to hotel owners.">
     <link rel="icon" type="image/png" href="img/award-logo4.png">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
     <style>
@@ -37,7 +37,7 @@
         .hero p { font-size: 1.15rem; max-width: 750px; margin: 0 auto 30px; color: #cbd5e1; line-height: 1.8; }
 
         /* ===== BENEFITS ===== */
-        .container { max-width: 900px; margin: 0 auto; padding: 60px 16px; width: 100%; }
+        .container { max-width: 1100px; margin: 0 auto; padding: 60px 16px; width: 100%; }
         .section-title { text-align: center; font-size: 2.2rem; font-weight: 700; margin-bottom: 12px; color: #0b1f2a; line-height: 1.3; }
         .section-title span { color: #D4AF37; }
         .section-subtitle { text-align: center; color: #64748b; margin-bottom: 40px; font-size: 1rem; max-width: 750px; margin-left: auto; margin-right: auto; line-height: 1.6; }
@@ -47,21 +47,38 @@
         .benefit-card h3 { font-size: 1.2rem; color: #0b1f2a; margin-bottom: 10px; }
         .benefit-card p { font-size: 0.95rem; color: #475569; }
 
-        /* ===== PRICING ===== */
-        .price-card { max-width: 500px; margin: 0 auto; background: #fff; border-radius: 16px; border: 2px solid #D4AF37; box-shadow: 0 8px 30px rgba(212,175,55,0.15); overflow: hidden; text-align: center; }
+        /* ===== PRICING GRID ===== */
+        .pricing-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; margin-bottom: 40px; }
+        
+        .price-card { background: #fff; border-radius: 16px; border: 2px solid #D4AF37; box-shadow: 0 8px 30px rgba(212,175,55,0.15); overflow: hidden; text-align: center; display: flex; flex-direction: column; }
+        .price-card.b2b-card { border-color: #0b1f2a; box-shadow: 0 8px 30px rgba(11,31,42,0.15); }
+        
         .price-head { background: #0b1f2a; padding: 24px; color: #fff; }
+        .b2b-card .price-head { background: #D4AF37; color: #0b1f2a; }
+        
         .price-head h3 { color: #D4AF37; font-size: 1.5rem; margin-bottom: 8px; }
-        .price-head .amount { font-size: 3rem; font-weight: 800; font-family: 'Playfair Display', serif; }
-        .price-body { padding: 30px; }
-        .price-body ul { list-style: none; text-align: left; margin-bottom: 30px; }
+        .b2b-card .price-head h3 { color: #0b1f2a; }
+        
+        .price-head .amount { font-size: 2.5rem; font-weight: 800; font-family: 'Playfair Display', serif; }
+        .price-body { padding: 30px; flex-grow: 1; display: flex; flex-direction: column; }
+        .price-body ul { list-style: none; text-align: left; margin-bottom: 20px; flex-grow: 1; }
         .price-body li { padding: 10px 0; border-bottom: 1px dashed #eef2f7; color: #334155; font-size: 0.95rem; }
         .price-body li::before { content: "✓"; color: #D4AF37; font-weight: 800; margin-right: 10px; }
-
+        .b2b-card .price-body li::before { color: #0b1f2a; }
+        
         .btn-primary { background: #D4AF37; color: #0b1f2a; padding: 16px 32px; border-radius: 50px; font-weight: 700; font-size: 1rem; display: inline-block; text-align: center; width: 100%; transition: 0.2s; border: none; cursor: pointer; }
         .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 4px 15px rgba(212,175,55,0.4); background: #e6c04c; }
+        
+        .btn-b2b { background: #0b1f2a; color: #fff; }
+        .btn-b2b:hover { background: #1e293b; box-shadow: 0 4px 15px rgba(11,31,42,0.4); }
+
+        /* ===== CTA ===== */
+        .cta-section { background: #0b1f2a; color: #fff; padding: 60px 16px; text-align: center; border-top: 3px solid #D4AF37; border-bottom: 3px solid #D4AF37; width: 100%; }
+        .cta-section h2 { font-size: 2rem; color: #D4AF37; margin-bottom: 16px; }
+        .cta-section p { color: #cbd5e1; font-size: 1.05rem; max-width: 700px; margin: 0 auto 24px; }
 
         /* ===== FOOTER ===== */
-        footer { background: #0b1f2a; color: #94a3b8; padding: 30px 16px 20px; text-align: center; margin-top: 40px; width: 100%; }
+        footer { background: #0b1f2a; color: #94a3b8; padding: 30px 16px 20px; text-align: center; width: 100%; }
         .wa-float { position: fixed; bottom: 85px; right: 16px; background: #25D366; color: #fff; padding: 12px 16px; border-radius: 50px; font-weight: 700; text-decoration: none; box-shadow: 0 4px 15px rgba(37,211,102,0.4); z-index: 9999; font-size: 0.85rem; }
 
         /* ===== MOBILE ===== */
@@ -74,13 +91,14 @@
             
             .hero h1 { font-size: 2.2rem; }
             .section-title { font-size: 1.8rem; }
+            .pricing-grid { grid-template-columns: 1fr; }
             .price-body { padding: 20px; }
         }
     </style>
 </head>
 <body>
 
-<div class="announcement-bar">✅ HTEA OSUN 2027: Sell your food to 500+ attendees at the Osun Food Fair.</div>
+<div class="announcement-bar">✅ HTEA OSUN 2027: Book Your Stand. Food Vendors & B2B Exhibitors Welcome.</div>
 
 <nav>
     <div class="logo">
@@ -97,29 +115,30 @@
         <a href="index.html">Home</a>
         <a href="program.html">The Program</a>
         <a href="hr-system.html">HR System</a>
+        <a href="our-story.html">Our Story</a>
+        <a href="rules.html">Rules</a>
         <a href="sponsor.html">Sponsor</a>
-        <a href="register.html">Register</a>
-        <a href="vendors.html" class="nav-cta">Book a Stand</a>
+        <a href="register.html" class="nav-cta">Register Now</a>
     </div>
 </nav>
 
 <header class="hero">
-    <h1>Showcase Your Cuisine at the <span>Osun Food Fair.</span></h1>
-    <p>Join 20 selected vendors to feed 500+ attendees, hotel owners, media, and government officials at the biggest hospitality gathering in Osun State.</p>
+    <h1>Showcase Your Brand at the <span>HTEA Trade Expo.</span></h1>
+    <p>Join hundreds of attendees, hotel owners, GMs, and media at the biggest hospitality gathering in Osun State. Whether you are selling food or selling B2B software, there is a stand for you.</p>
 </header>
 
 <section class="container">
     <div class="section-title">Why You Should <span>Exhibit</span></div>
-    <div class="section-subtitle">This is not just a food market. It is a networking platform where you can get high-value clients for catering and events.</div>
+    <div class="section-subtitle">This is not just a food market. It is a high-value networking platform where you can get clients for your business.</div>
 
     <div class="benefits-grid">
         <div class="benefit-card">
             <h3>High-Volume Sales</h3>
-            <p>With 500+ expected attendees, you will sell directly to a massive, hungry crowd. Make back your stand fee and turn a profit.</p>
+            <p>With 300+ expected attendees, you will sell directly to a massive crowd. Food vendors make back their stand fee and turn a profit.</p>
         </div>
         <div class="benefit-card">
             <h3>B2B Contracts</h3>
-            <p>Hotel GMs and corporate event planners will be at the event. This is your chance to win catering contracts for their venues.</p>
+            <p>Hotel GMs, owners, and corporate event planners will be at the event. This is your chance to win supply contracts for their venues.</p>
         </div>
         <div class="benefit-card">
             <h3>Free Media Exposure</h3>
@@ -127,31 +146,61 @@
         </div>
     </div>
 
-    <div class="price-card">
-        <div class="price-head">
-            <h3>Food Fair Vendor Stand</h3>
-            <div class="amount">₦20,000</div>
+    <!-- PRICING OPTIONS -->
+    <div class="pricing-grid">
+        
+        <!-- FOOD VENDOR -->
+        <div class="price-card">
+            <div class="price-head">
+                <h3>Food Vendor Stand</h3>
+                <div class="amount">₦20,000</div>
+            </div>
+            <div class="price-body">
+                <p style="color:#475569; font-size:0.9rem; margin-bottom:15px; text-align:center;">For caterers, restaurants, and food entrepreneurs selling to the public.</p>
+                <ul>
+                    <li>1x Standard 3m x 3m Booth Space</li>
+                    <li>1 Table & 2 Chairs provided</li>
+                    <li>Company Name Listed on the Event Programme</li>
+                    <li>Access for 2 Staff Members</li>
+                    <li>Perfect for selling local delicacies</li>
+                </ul>
+                <a href="https://wa.me/2348039661354?text=Hello%20HTEA%20I%20want%20to%20book%20a%20Food%20Vendor%20Stand" class="btn-primary">Book Food Stand Now →</a>
+            </div>
         </div>
-        <div class="price-body">
-            <ul>
-                <li>1x Standard 3m x 3m Booth Space</li>
-                <li>1 Table & 2 Chairs provided</li>
-                <li>Company Name Listed on the Official Event Programme</li>
-                <li>Access for 2 Staff Members</li>
-                <li>Logo on the Food Fair Signage (if registered before deadline)</li>
-            </ul>
-            <a href="https://wa.me/2348039661354?text=Hello%20HTEA%20I%20want%20to%20book%20a%20Vendor%20Stand%20for%20the%20Food%20Fair" class="btn-primary">Book Your Stand Now →</a>
+
+        <!-- B2B EXHIBITOR -->
+        <div class="price-card b2b-card">
+            <div class="price-head">
+                <h3>B2B Exhibitor Stand</h3>
+                <div class="amount">₦50,000</div>
+            </div>
+            <div class="price-body">
+                <p style="color:#475569; font-size:0.9rem; margin-bottom:15px; text-align:center;">For Banks, POS companies, Mattress, Tech, and Hospitality Suppliers.</p>
+                <ul>
+                    <li>1x Premium 4m x 4m Booth Space</li>
+                    <li>2 Tables & 4 Chairs provided</li>
+                    <li>Prime Location near the Main Stage</li>
+                    <li>Access for 4 Staff Members</li>
+                    <li>Direct B2B access to 50+ Hotel Owners</li>
+                </ul>
+                <a href="https://wa.me/2348039661354?text=Hello%20HTEA%20I%20want%20to%20book%20a%20B2B%20Exhibitor%20Stand" class="btn-primary btn-b2b">Book B2B Stand Now →</a>
+            </div>
         </div>
+
     </div>
 </section>
 
 <footer>
     <div style="font-size:1.4rem;font-weight:800;color:#fff;margin-bottom:8px;font-family:'Playfair Display',serif;">HTE<span style="color:#D4AF37;">A</span> OSUN 2027</div>
-    <div style="font-size:0.8rem;color:#D4AF37;letter-spacing:1px;margin-bottom:12px;line-height:1.4;">Food Fair Vendor Booking<br>April 23, 2027 | Osogbo</div>
-    <div style="font-size:0.7rem;color:#64748b;border-top:1px solid #1e293b;padding-top:16px;max-width:900px;margin:0 auto;line-height:1.6;">© 2026 Drecot Consults RC 6904955</div>
+    <div style="font-size:0.8rem;color:#D4AF37;letter-spacing:1px;margin-bottom:12px;line-height:1.4;">Expo Stand Booking<br>April 23, 2027 | Osogbo</div>
+    <div style="font-size:0.7rem;color:#64748b;border-top:1px solid #1e293b;padding-top:16px;max-width:900px;margin:0 auto;line-height:1.6;">
+        © 2026 Drecot Consults RC 6904955. All rights reserved.<br>
+        <a href="privacy.html" style="color:#D4AF37;">Privacy Policy</a> | 
+        <a href="terms.html" style="color:#D4AF37;">Terms of Service</a>
+    </div>
 </footer>
 
-<a href="https://wa.me/2348039661354?text=Hello%20HTEA%20I%20want%20to%20book%20a%20Food%20Stand" class="wa-float">💬 Book a Stand</a>
+<a href="https://wa.me/2348039661354?text=Hello%20HTEA%20I%20want%20to%20book%20a%20stand" class="wa-float">💬 Book a Stand</a>
 
 <script>
     function toggleMenu() { document.getElementById("navLinks").classList.toggle("active"); }
